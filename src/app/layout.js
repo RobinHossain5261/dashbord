@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Navbar from './Navbar/page'
 import './globals.css'
 import { Inter } from 'next/font/google'
 import Image from 'next/image'
@@ -7,6 +6,7 @@ import Image from 'next/image'
 import logo from '../../public/images/Logo.png';
 import SideBar from './components/SideBar/SideBar'
 import Footer from './components/Footer/Footer'
+import Header from './components/Header/Header'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,7 +18,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+      </head>
       <body className={inter.className}>
 
 
@@ -26,8 +28,7 @@ export default function RootLayout({ children }) {
           <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
           <div className="drawer-content">
             {/* Page content here */}
-
-            <Navbar></Navbar>
+            <Header></Header>
             {children}
             <Footer></Footer>
 
@@ -46,9 +47,9 @@ export default function RootLayout({ children }) {
                 </Link>
               </div>
 
-              
+
               <SideBar></SideBar>
-             
+
             </ul>
 
           </div>

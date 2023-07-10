@@ -11,6 +11,11 @@ import photo5 from '@/../public/images/photo5.png';
 import photo6 from '@/../public/images/photo6.png';
 import Image from 'next/image';
 
+export const metadata = {
+    title: 'DashBord-Products',
+    description: 'products order and statas',
+  }
+
 const products = () => {
 
 
@@ -185,7 +190,7 @@ const products = () => {
     ]
 
     return (
-        <div className='p-6'>
+        <div className='p-6 w-full'>
             <h1 className="text-2xl font-semibold">Dashbord</h1>
             <p>Jul 9, 2023</p>
 
@@ -202,7 +207,9 @@ const products = () => {
                         <tbody>
 
                             {
-                                products.map(product => (<tr className='flex justify-between'>
+                                products.map(product => (<tr 
+                                    key={product.id}
+                                className='flex justify-between'>
                                     <td>
                                         <div className="flex items-center space-x-3">
                                             <div className="avatar">
@@ -257,7 +264,9 @@ const products = () => {
                         </thead>
                         <tbody>
                             {
-                                allProducts.map(product => (<tr>
+                                allProducts.map(product => (<tr
+                                key={product.id}
+                                >
                                     <th>
                                         <label>
                                             <input type="checkbox" className="checkbox" />
@@ -313,7 +322,9 @@ const products = () => {
                         </thead>
                         <tbody>
                             {
-                                orderProducts.map(product => (<tr>
+                                orderProducts.map(product => (<tr
+                                key={product.id}
+                                >
 
                                     <td>
                                         <div className="flex items-center space-x-3">

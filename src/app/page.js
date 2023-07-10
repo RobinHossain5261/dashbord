@@ -1,11 +1,12 @@
 import Image from 'next/image'
 import Account from './components/Account/page'
+import Reports from './dashbord/reports/page'
 
 export default function Home() {
   return (
-    <main className="flex  bg-[#F5F5F5]">
+    <main className="flex  bg-[#F7F9FC]">
       
-      {/* <Account></Account> */}
+    <Reports></Reports>
     </main>
   )
 }

@@ -2,14 +2,11 @@ import LineChart from "@/app/components/LineChart/LineChart";
 import PieChart from "@/app/components/PieChart/PieChart";
 import RecentContacts from "@/app/components/RecentContacts/RecentContacts";
 // import PageViewChart from "@/app/components/PageViewChart/PageViewChart";
-
+export const metadata = {
+    title: 'DashBord-Reports',
+    description: '',
+  }
 const Reports = () => {
-
-    const data = [
-        { label: 'Label 1', value: 30 },
-        { label: 'Label 2', value: 50 },
-        { label: 'Label 3', value: 20 },
-      ];
 
     const cards = [
         {
