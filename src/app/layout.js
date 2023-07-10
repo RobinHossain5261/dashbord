@@ -4,9 +4,9 @@ import { Inter } from 'next/font/google'
 import Image from 'next/image'
 
 import logo from '../../public/images/Logo.png';
-import SideBar from './components/SideBar/SideBar'
-import Footer from './components/Footer/Footer'
-import Header from './components/Header/Header'
+import SideBar from './components/SideBar/SideBar';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -31,10 +31,8 @@ export default function RootLayout({ children }) {
             <Header></Header>
             {children}
             <Footer></Footer>
-
-            <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
-
           </div>
+          
           <div className="drawer-side">
             <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
             <ul className="menu p-4 w-80 h-full bg-white text-base-content">

@@ -4,7 +4,7 @@ import RecentContacts from "@/app/components/RecentContacts/RecentContacts";
 // import PageViewChart from "@/app/components/PageViewChart/PageViewChart";
 export const metadata = {
     title: 'DashBord-Reports',
-    description: '',
+    description: 'dahbord reports',
   }
 const Reports = () => {
 

@@ -3,15 +3,13 @@ import photo1 from '@/../public/images/photo1.png';
 import photo2 from '@/../public/images/photo2.png';
 import photo3 from '@/../public/images/photo3.png';
 import Image from 'next/image';
-
 import './task.css';
-
 import ProgressBar from "@ramonak/react-progress-bar";
 
 export const metadata = {
-    title: 'DashBord-Tasks',
-    description: 'Development Tasks',
-}
+    title: 'DashBord-tasks',
+    description: 'dahbord tasks',
+  }
 const tasks = () => {
 
     const tasks = [
@@ -268,7 +266,7 @@ const tasks = () => {
                             >
                                 <hr className='my-5' />
                                 <div className='flex items-center'>
-                                    <Image src={progress.img} alt="buyer" className='mr-3' />
+                                    <Image  src={progress.img} alt="buyer" className='mr-3 w-15 h-15' />
 
                                     <div className='flex-grow'>
                                         <h3 className='text-2xl font-semibold text-[#2E293E] mb-3'>{progress.name}</h3>
@@ -297,7 +295,7 @@ const tasks = () => {
                         </select>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 my-6">
+                    <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 my-6">
                         {
                             cards.map(card => (<div
                                 key={card.id}
@@ -344,7 +342,7 @@ const tasks = () => {
                                     <p className='ml-1'>{card.date}</p>
                                 </div>
                             </div>
-                            <p className='text-lg'>{card.des}</p>
+                            <p className='text-lg text-center'>{card.des}</p>
                         </div>))
                     }
                 </div>

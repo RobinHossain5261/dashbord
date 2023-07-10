@@ -11,7 +11,7 @@
     background-color: #4538D3;
     width: 80%;
     opacity: 0;
-    height:8px;
+    height:6px;
     animation: progressor 2s ease-in-out forwards;
   } 
   
@@ -24,7 +24,7 @@
     background-color: #4538D3;
     width: 70%;
     opacity: 0;
-    height:8px;
+    height:6px;
     animation: progressor 2s ease-in-out forwards;
   } 
  
@@ -33,7 +33,7 @@
     background-color: #4538D3;
     width: 90%;
     opacity: 0;
-    height:8px;
+    height:6px;
     animation: progressor 2s ease-in-out forwards;
   } 
 

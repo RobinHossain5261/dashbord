@@ -360,7 +360,7 @@ function DeleteActiveIcon(props) {
         x="5"
         y="6"
         width="10"
-        height="10"
+        height="10"          
         fill="#8B5CF6"
         stroke="#C4B5FD"
         strokeWidth="2"
