@@ -51,7 +51,7 @@ const SideBar = () => {
           {activeMenu === 'dropdown2' && (
             <ul className="dropdown-menu">
               <li className='text-base'><Link href=''>All Pages</Link></li>
-              <li className='text-base'><Link href=''>Reports</Link></li>
+              <li className='text-base'><Link href='/features/contacts'>Contacts</Link></li>
               <li className='text-base'><Link href=''>Products</Link></li>
               <li className='text-base'><Link href=''>Tasks</Link></li>
             </ul>

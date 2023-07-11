@@ -190,9 +190,9 @@ const products = () => {
     ]
 
     return (
-        <div className='p-6 w-full'>
+        <div className='px-6 pb-6 pt-10'>
             <h1 className="text-2xl font-semibold">Dashbord</h1>
-            <p>Jul 9, 2023</p>
+            <span className='text-sm text-[#2E293E]'>Jul 9, 2023</span>
 
             {/* Recent order */}
             <div className="bg-white rounded p-10 mt-8">
@@ -238,8 +238,8 @@ const products = () => {
             {/* all products details */}
             <div className='p-8 bg-white my-6 rounded'>
                 <div className='flex justify-between items-center'>
-                    <h1 className='text-xl text-[#2E293E]'>Products</h1>
-                    <p className='bg-[#ECEEFB] rounded py-3 px-4 border'>Browse Products</p>
+                    <h3 className='text-xl text-[#2E293E]'>Products</h3>
+                    <span className='bg-[#ECEEFB] rounded py-3 px-4 border'>Browse Products</span>
                 </div>
                 <hr className='my-7' />
 

@@ -1,6 +1,6 @@
 .wrapper {
-    /* border: 1px solid #4538D3; */
-    border-radius: 10px;
+    border-radius: 3px;
+    overflow: hidden;
   }  
   
   .container {

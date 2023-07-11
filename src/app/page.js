@@ -4,8 +4,7 @@ import Reports from './dashbord/reports/page'
 
 export default function Home() {
   return (
-    <main className="flex  bg-[#F7F9FC]">
-      
+    <main className="bg-[#F7F9FC]">  
     <Reports></Reports>
     </main>
   )

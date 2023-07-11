@@ -68,9 +68,9 @@ const Reports = () => {
     ]
 
     return (
-        <div className="p-6">
+        <div className="px-6 pb-6 pt-10">
             <h1 className="text-2xl font-semibold">Dashboard</h1>
-            <p>Jul 8, 2023</p>
+            <span className='text-sm text-[#2E293E]'>Jul 8, 2023</span>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 my-6">
                 {

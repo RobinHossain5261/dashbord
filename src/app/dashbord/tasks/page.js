@@ -237,7 +237,7 @@ const tasks = () => {
 
     return (
 
-        <div className="p-6">
+        <div className="px-6 pt-10 pb-6">
             <h1 className="text-2xl font-semibold text-[#2E293E]">Dashboard</h1>
             <span className='text-[#2E293E] text-sm'>Jul 9, 2023</span>
 
@@ -384,7 +384,7 @@ const tasks = () => {
                                     <span className="w-6 h-6 p-4 bg-[#F1F1FA] text-[#4538D3] flex justify-center items-center rounded">{card.icon}</span>
                                 </div>
                                 <div className="flex mt-4">
-                                    <h3 className="text-[32px] md:text-2xl font-semibold">{card.view}</h3>
+                                    <h3 className="text-[32px]  font-semibold">{card.view}</h3>
                                     <div className='py-1 px-2 rounded ml-4  flex items-center'
                                         style={{ backgroundColor: card.bgColor, color: card.color }}
                                     >

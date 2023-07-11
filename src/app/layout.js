@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
               {/* Sidebar content here */}
 
               <div className='ml-6 mt-7 mb-[60px]'>
-                <Link href='' className="flex items-center normal-case">
+                <Link href='/' className="flex items-center normal-case">
                   <Image src={logo} alt='logo' className='w-[31px] h-9'/>
                   <span className='text-2xl font-semibold ml-2'>DashPro</span>
                 </Link>
