@@ -1,6 +1,6 @@
 .wrapper {
-    border: 1px solid #4538D3;
-    border-radius: 3px;
+    /* border: 1px solid #4538D3; */
+    border-radius: 10px;
   }  
   
   .container {
@@ -13,6 +13,7 @@
     opacity: 0;
     height:6px;
     animation: progressor 2s ease-in-out forwards;
+    border-radius: 3px;
   } 
   
   .label {
@@ -25,6 +26,7 @@
     width: 70%;
     opacity: 0;
     height:6px;
+    border-radius: 3px;
     animation: progressor 2s ease-in-out forwards;
   } 
  
@@ -34,6 +36,7 @@
     width: 90%;
     opacity: 0;
     height:6px;
+    border-radius: 3px;
     animation: progressor 2s ease-in-out forwards;
   } 
 
@@ -46,4 +49,12 @@
     100%{
       opacity: 1;
     }
+  }
+
+  .task-card{
+    box-shadow: 0px 1.00023353099823px 2.00046706199646px 0px rgba(0, 0, 0, 0.20);
+  }
+
+  .icon-shadow{
+    box-shadow: 0px 1.00023353099823px 4px 0px rgba(0, 0, 0, 0.15);
   }

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Footer = () => {
     return (
-        <footer className="lg:flex justify-between p-6 text-center">
+        <footer className="lg:flex justify-between px-6 pb-6 text-center">
             <p>
                 Copyright © DashPro | Designed by Softivus
             </p>

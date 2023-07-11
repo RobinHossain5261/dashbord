@@ -6,11 +6,23 @@ import Image from 'next/image';
 import './task.css';
 import ProgressBar from "@ramonak/react-progress-bar";
 
+
+import { useState, Fragment } from 'react'
+import { Listbox } from '@headlessui/react';
+
+const people = [
+    { id: 1, name: 'This Month', unavailable: false },
+    { id: 2, name: 'This Week', unavailable: false },
+    { id: 3, name: 'This Year', unavailable: false },
+]
+
 export const metadata = {
     title: 'DashBord-tasks',
     description: 'dahbord tasks',
-  }
+}
 const tasks = () => {
+
+    const [selectedPerson, setSelectedPerson] = useState(people[0])
 
     const tasks = [
         {
@@ -224,22 +236,23 @@ const tasks = () => {
     ]
 
     return (
+
         <div className="p-6">
-            <h1 className="text-2xl font-semibold">Dashboard</h1>
-            <p>Jul 9, 2023</p>
+            <h1 className="text-2xl font-semibold text-[#2E293E]">Dashboard</h1>
+            <span className='text-[#2E293E] text-sm'>Jul 9, 2023</span>
 
             {/* task cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 w-full">
                 {
                     tasks.map(task => (<div
                         key={task.id}
-                        className="bg-white py-4 px-6 rounded"
+                        className="bg-white py-4 px-6 rounded task-card"
                     >
                         <div className="flex justify-between">
-                            <span className="text-[#4538D3] p-4 shadow-md rounded text-3xl">{task.icon}</span>
-                            <span>{task.more}</span>
+                            <span className="w-9 h-9 text-[#4538D3] p-3 rounded flex items-center justify-center icon-shadow">{task.icon}</span>
+                            <span className='w-[18px] h-[18px]'>{task.more}</span>
                         </div>
-                        <h2 className="text-2xl font-semibold text-[#2E293E] mt-6 mb-3">{task.name}</h2>
+                        <h4 className="text-2xl font-semibold text-[#2E293E] mt-6 mb-3">{task.name}</h4>
                         <span>{task.progress}</span>
                         <p className="text-[#584E69] text-lg mt-3">{task.complete}</p>
                     </div>))
@@ -247,15 +260,47 @@ const tasks = () => {
             </div>
 
             {/* Team progress */}
-            <div className="my-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className="my-6 grid grid-cols-1 lg:grid-cols-2 gap-6">            
                 <div className="py-8 px-7 rounded bg-white">
                     <div className="flex justify-between mb-7 items-center">
                         <h1 className="text-xl text-[#2E293E]">Team Progress</h1>
-                        <select className="select select-bordered w-full max-w-xs">
-                            <option disabled selected>This month</option>
-                            <option>Han Solo</option>
-                            <option>Greedo</option>
-                        </select>
+
+                        <div>
+                            <Listbox value={selectedPerson} onChange={setSelectedPerson}>
+                                <Listbox.Button
+
+                                    className="lg:flex hidden gap-2 items-center  relative w-full cursor-default rounded-lg text-[#252525] bg-white py-2 px-3 text-left border focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
+                                    {selectedPerson.name}
+                                    <span class="material-symbols-outlined">
+                                        expand_more
+                                    </span>
+                                </Listbox.Button>
+                                <Listbox.Options
+                                    className="absolute mt-1 max-h-60 max-w-60 z-10 text-center overflow-auto rounded-md bg-white py-2  text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+
+                                    {people.map((person) => (
+                                        <Listbox.Option
+                                            key={person.id}
+                                            value={person}
+                                            disabled={person.unavailable}
+                                            as={Fragment}
+                                            className={({ active }) =>
+                                                `relative cursor-default select-none py-2 px-5 ${active ? 'bg-[#4538D3] text-white' : 'text-gray-900'
+                                                }`
+                                            }
+                                        >
+                                            {({ selected }) => (
+                                                <li
+                                                >
+                                                    {selected}
+                                                    {person.name}
+                                                </li>
+                                            )}
+                                        </Listbox.Option>
+                                    ))}
+                                </Listbox.Options>
+                            </Listbox>
+                        </div>
                     </div>
 
                     <div>
@@ -266,10 +311,10 @@ const tasks = () => {
                             >
                                 <hr className='my-5' />
                                 <div className='flex items-center'>
-                                    <Image  src={progress.img} alt="buyer" className='mr-3 w-15 h-15' />
+                                    <Image src={progress.img} alt="buyer" className='mr-3 w-15 h-15' />
 
                                     <div className='flex-grow'>
-                                        <h3 className='text-2xl font-semibold text-[#2E293E] mb-3'>{progress.name}</h3>
+                                        <h4 className='text-2xl font-semibold text-[#2E293E] mb-3'>{progress.name}</h4>
                                         <span>{progress.progress}</span>
                                         <div className='flex justify-between mt-3'>
                                             <span className='text-[#584E69] text-lg'>{progress.complete}</span>
@@ -286,27 +331,61 @@ const tasks = () => {
 
                 {/* Task Reports */}
                 <div className="py-8 px-7 rounded bg-white">
-                    <div className="flex justify-between mb-7 items-center">
-                        <h1 className="text-xl text-[#2E293E]">Tasks Reports</h1>
-                        <select className="select select-bordered w-full max-w-xs">
-                            <option disabled selected>This month</option>
-                            <option>Han Solo</option>
-                            <option>Greedo</option>
-                        </select>
+                    <div className="flex justify-between items-center">
+                        <h4 className="text-xl text-[#2E293E]">Tasks Reports</h4>
+
+                        <div>
+                            <Listbox value={selectedPerson} onChange={setSelectedPerson}>
+                                <Listbox.Button
+
+                                    className="lg:flex hidden gap-2 items-center  relative w-full cursor-default rounded-lg text-[#252525] bg-white py-2 px-3 text-left border focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
+                                    {selectedPerson.name}
+                                    <span class="material-symbols-outlined">
+                                        expand_more
+                                    </span>
+                                </Listbox.Button>
+                                <Listbox.Options
+                                    className="absolute mt-1 max-h-60 max-w-60 z-10 text-center overflow-auto rounded-md bg-white py-2 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+
+                                    {people.map((person) => (
+                                        <Listbox.Option
+                                            key={person.id}
+                                            value={person}
+                                            disabled={person.unavailable}
+                                            as={Fragment}
+                                            className={({ active }) =>
+                                                `relative cursor-default select-none py-2 px-5 ${active ? 'bg-[#4538D3] text-white' : 'text-gray-900'
+                                                }`
+                                            }
+                                        >
+                                            {({ selected }) => (
+                                                <li
+                                                >
+                                                    {selected}
+                                                    {person.name}
+                                                </li>
+                                            )}
+                                        </Listbox.Option>
+                                    ))}
+                                </Listbox.Options>
+                            </Listbox>
+                        </div>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 my-6">
+                    <hr className='my-7'/>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 my-6">
                         {
                             cards.map(card => (<div
                                 key={card.id}
-                                className="bg-white py-4 px-6 rounded shadow-lg">
+                                className="bg-white md:py-1 md:px-1 py-4 px-6 rounded task-card">
                                 <div className="flex justify-between">
-                                    <h3 className="text-base">{card.name}</h3>
-                                    <span className="w-10 h-10 bg-[#F1F1FA] text-[#4538D3] flex justify-center items-center rounded">{card.icon}</span>
+                                    <h3 className="text-base text-[#2E293E]">{card.name}</h3>
+                                    <span className="w-6 h-6 p-4 bg-[#F1F1FA] text-[#4538D3] flex justify-center items-center rounded">{card.icon}</span>
                                 </div>
-                                <div className="flex">
-                                    <h1 className="text-2xl font-semibold">{card.view}</h1>
-                                    <div className='py-1 ] px-2 rounded ml-4  flex '
+                                <div className="flex mt-4">
+                                    <h3 className="text-[32px] md:text-2xl font-semibold">{card.view}</h3>
+                                    <div className='py-1 px-2 rounded ml-4  flex items-center'
                                         style={{ backgroundColor: card.bgColor, color: card.color }}
                                     >
                                         <h5 >{card.increment}</h5>
@@ -324,7 +403,7 @@ const tasks = () => {
             <div>
                 <div className="flex justify-between items-center">
                     <h3 className="text-xl text-[#2E293E]">Task reports</h3>
-                    <p className="border text-[#2E293E] bg-[#ECEEFB] py-3 px-4 rounded">Browse all tasks</p>
+                    <p className="border text-[#2E293E] bg-white py-3 px-4 rounded">Browse all tasks</p>
                 </div>
                 <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {
@@ -333,13 +412,13 @@ const tasks = () => {
                             className="bg-white py-8 px-10 rounded border hover:border-[#4538D3] hover:-skew-y-3 duration-300"
                         >
                             <Image className='w-[120px] h-[120px] mx-auto mb-8' src={card.img} alt="buyer" />
-                            <h2 className='text-[#2E293E] text-2xl font-semibold text-center mb-7'>{card.title}</h2>
-                            <div className='flex justify-between mb-7'>
-                                <p className='text-[#4538D3] rounded border py-1 px-2 bg-[#F6F6FB]'>{card.category}</p>
+                            <h4 className='text-[#2E293E] text-2xl font-semibold text-center mb-7'>{card.title}</h4>
+                            <div className='flex justify-between mb-8'>
+                                <p className='text-[#4538D3] rounded border px-2 bg-[#F6F6FB]'>{card.category}</p>
                                 <div className='border'></div>
                                 <div className='flex'>
                                     <span>{card.icon}</span>
-                                    <p className='ml-1'>{card.date}</p>
+                                    <p className='ml-1 text-sm'>{card.date}</p>
                                 </div>
                             </div>
                             <p className='text-lg text-center'>{card.des}</p>
@@ -347,6 +426,8 @@ const tasks = () => {
                     }
                 </div>
             </div>
+
+            <hr className='mt-6'/>
 
         </div>
     )

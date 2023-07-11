@@ -35,20 +35,21 @@ export default function RootLayout({ children }) {
           
           <div className="drawer-side">
             <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-            <ul className="menu p-4 w-80 h-full bg-white text-base-content">
+            <div className="menu p-4 w-80 h-full bg-white text-base-content">
+
               {/* Sidebar content here */}
 
-              <div className='mb-[60px]'>
-                <Link href='' className="btn btn-ghost normal-case text-xl ">
-                  <Image src={logo} alt='logo' />
-                  DashPro
+              <div className='ml-6 mt-7 mb-[60px]'>
+                <Link href='' className="flex items-center normal-case">
+                  <Image src={logo} alt='logo' className='w-[31px] h-9'/>
+                  <span className='text-2xl font-semibold ml-2'>DashPro</span>
                 </Link>
               </div>
 
-
+              <div>
               <SideBar></SideBar>
-
-            </ul>
+              </div>
+            </div>
 
           </div>
         </div>

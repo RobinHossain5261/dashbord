@@ -113,7 +113,7 @@ const Header = () => {
 
         <div className="dropdown dropdown-end ml-10">
             <label tabIndex={0} className="">
-                <span className="material-symbols-outlined cursor-pointer">grid_view</span>
+                <span className="material-symbols-outlined cursor-pointer w-5 h-5">grid_view</span>
             </label>
             <div tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-64">
                 <div className='flex justify-between'>
@@ -136,7 +136,7 @@ const Header = () => {
         </div>
         <div className="dropdown dropdown-end">
             <label tabIndex={0} className="">
-                <span class="material-symbols-outlined ml-7 cursor-pointer">notifications</span>
+                <span class="material-symbols-outlined ml-7 cursor-pointer w-5 h-5">notifications</span>
             </label>
             <div tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-64">
                 <div className='flex justify-between'>
@@ -163,11 +163,12 @@ const Header = () => {
             </div>
         </div>
 
-        <li><span class="material-symbols-outlined ml-7 cursor-pointer">light_mode</span></li>
+        <li><span class="material-symbols-outlined ml-7 cursor-pointer w-5 h-5">light_mode</span></li>
 
         <div className="dropdown dropdown-end">
-            <label tabIndex={0} className="">
-                <span class="material-symbols-outlined ml-7 cursor-pointer">shopping_bag</span>
+            <label tabIndex={0} className="relative">
+                <span class="material-symbols-outlined ml-7 cursor-pointer w-5 h-5">shopping_bag</span>
+                <span className='absolute text-sm h-[18px] w-[18px]  rounded-full bg-[#4538D3] flex justify-center items-center text-white -right-2 bottom-0'>{carts.length}</span>
             </label>
             <div tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-64">
                 <div className='flex justify-between'>
@@ -193,7 +194,7 @@ const Header = () => {
             </div>
         </div>
 
-        <div className="dropdown dropdown-end mr-6 ml-10">
+        <div className="dropdown dropdown-end ml-10">
             <label tabIndex={0} className="flex items-center cursor-pointer">
                 <div className=''>
                     <div className="w-10 rounded-full mr-3">
@@ -261,73 +262,16 @@ const Header = () => {
                 <label htmlFor="my-drawer-2" className="btn  drawer-button lg:hidden mr-5">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                 </label>
-                <form className='flex iteems-center border px-2 py-2 rounded'>
-                    <input type="text" placeholder='Search...' className='outline-none ' />
-                    <span class="material-symbols-outlined cursor-pointer"> search </span>
+                <form className='hidden lg:flex iteems-center border px-4 py-3 rounded  mt-[25px] mb-[27px]'>
+                    <input type="text" placeholder='Search...' className='outline-none  text-[#2E293E]' />
+                    <span class="material-symbols-outlined cursor-pointer w-4 h-4 text-[#2E293E]"> search </span>
                 </form>
 
             </div>
             <div className="flex-none gap-2">
-                <ul className='flex relative'>
+                <ul className='flex relative pt-[26px] pr-12 pb-7'>
                     {menuItem}
-                </ul>
-
-                {/* <div className="dropdown dropdown-end mr-7">
-                    <div className='flex'>
-                        <label tabIndex={0} className="btn btn-ghost avatar flex">
-                            <div className=''>
-                                <div className="w-10 rounded-full ">
-                                    <Image src={user} alt="User" />
-                                </div>
-                            </div>
-                            <div className='flex-grow'>
-                                <h1>Robin</h1>
-                                <p>Account Setting</p>
-                            </div>
-                        </label>
-                    </div>
-
-                    <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
-                        <span className='mb-1 text-base ml-2'>Welcome Wade!</span>
-                        <li>
-                            <Link href=''>
-                                <span class="material-symbols-outlined mr-1">account_circle</span>
-                                <span className='text-base '>Profile</span>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href=''>
-                                <span class="material-symbols-outlined mr-1">chat</span>
-                                <span className='text-base '>Message</span>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href=''>
-                                <span class="material-symbols-outlined mr-1">task</span>
-                                <span className='text-base '>Taskbord</span>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href=''>
-                                <span class="material-symbols-outlined mr-1">support</span>
-                                <span className='text-base '>Support</span>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href=''>
-                                <span class="material-symbols-outlined mr-1">settings</span>
-                                <span className='text-base '>Settings</span>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href=''>
-                                <span class="material-symbols-outlined mr-1">logout</span>
-                                <span className='text-base '>Logout</span>
-                            </Link>
-                        </li>
-
-                    </ul>
-                </div> */}
+                </ul>               
             </div>
         </div>
     );
