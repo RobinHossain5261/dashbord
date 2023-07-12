@@ -24,131 +24,104 @@ const people = [
     { id: 3, name: '13 Sep - 26 Sep', unavailable: false },
 ]
 
-const allContacts = [
+const allCompanies = [
     {
         id: 1,
-        productsNo: '#2E293E',
         company: 'Google',
+        industry:'Search engine',
         phone: '(+33)7 35 55 84 97',
-        interaction: '$2190.00',
-        email: 'info@example.com',
+        website: 'info@example.com',
+        date:'Oct 1, 2023',
         img: google
     },
     {
         id: 2,
-        productsNo: '#2E293E',
-        company: 'Apple',
-        phone: '(+33)7 35 55 84 97',
-        interaction: '$2190.00',
-        email: 'info@example.com',
-        img: apple
-    },
-    {
-        id: 3,
-        productsNo: '#2E293E',
-        company: 'Dribbble',
-        phone: '(+33)7 35 55 84 97',
-        interaction: '$2190.00',
-        email: 'info@example.com',
-        img: dribbble
-    },
-    {
-        id: 4,
-        productsNo: '#2E293E',
         company: 'Facebook',
+        industry:'Social Media',
         phone: '(+33)7 35 55 84 97',
-        interaction: '$2190.00',
-        email: 'info@example.com',
+        website: 'info@example.com',
+        date:'Sep 1, 2023',
         img: fb
     },
     {
-        id: 5,
-        productsNo: '#2E293E',
-        company: 'Github',
+        id: 3,
+        company: 'You Tube',
+        industry:'Entertaintment',
         phone: '(+33)7 35 55 84 97',
-        interaction: '$2190.00',
-        email: 'info@example.com',
-        img: github
-    },
-    {
-        id: 6,
-        productsNo: '#2E293E',
-        company: 'Linkedin',
-        phone: '(+33)7 35 55 84 97',
-        interaction: '$2190.00',
-        email: 'info@example.com',
-        img: linkedin
-    },
-    {
-        id: 7,
-        productsNo: '#2E293E',
-        company: 'Pinterest',
-        phone: '(+33)7 35 55 84 97',
-        interaction: '$2190.00',
-        email: 'info@example.com',
-        img: pinterest
-    },
-    {
-        id: 8,
-        productsNo: '#2E293E',
-        company: 'Reddit',
-        phone: '(+33)7 35 55 84 97',
-        interaction: '$2190.00',
-        email: 'info@example.com',
-        img: reddit
-    },
-    {
-        id: 9,
-        productsNo: '#2E293E',
-        company: 'Telegram',
-        phone: '(+33)7 35 55 84 97',
-        interaction: '$2190.00',
-        email: 'info@example.com',
-        img: telegram
-    },
-    {
-        id: 10,
-        productsNo: '#2E293E',
-        company: 'Twitter',
-        phone: '(+33)7 35 55 84 97',
-        interaction: '$2190.00',
-        email: 'info@example.com',
-        img: twitter
-    },
-    {
-        id: 11,
-        productsNo: '#2E293E',
-        company: 'Youtube',
-        phone: '(+33)7 35 55 84 97',
-        interaction: '$2190.00',
-        email: 'info@example.com',
+        website: 'info@example.com',
+        date:'Sep 1, 2023',
         img: youtube
     },
     {
-        id: 12,
-        productsNo: '#2E293E',
-        company: 'Twitch',
+        id: 4,
+        company: 'Linkdln',
+        industry:'Social Media',
         phone: '(+33)7 35 55 84 97',
-        interaction: '$2190.00',
-        email: 'info@example.com',
+        website: 'info@example.com',
+        date:'Sep 12, 2023',
+        img: linkedin
+    },
+    {
+        id: 5,
+        company: 'Telegram',
+        industry:'Social Media',
+        phone: '(+33)7 35 55 84 97',
+        website: 'info@example.com',
+        date:'Sep 30, 2023',
+        img: telegram
+    },
+    {
+        id: 6,
+        company: 'Twitter',
+        industry:'Social Media',
+        phone: '(+33)7 35 55 84 97',
+        website: 'info@example.com',
+        date:'Sep 30, 2023',
+        img: twitter
+    },
+    {
+        id: 7,
+        company: 'Dribble',
+        industry:'Development',
+        phone: '(+33)7 35 55 84 97',
+        website: 'info@example.com',
+        date:'Sep 30, 2023',
+        img: dribbble
+    },
+    {
+        id: 8,
+        company: 'Twitch',
+        industry:'Social Media',
+        phone: '(+33)7 35 55 84 97',
+        website: 'info@example.com',
+        date:'Sep 30, 2023',
         img: twitch
     },
     {
-        id: 13,
-        productsNo: '#2E293E',
+        id: 9,
         company: 'Webflow',
+        industry:'Web Development',
         phone: '(+33)7 35 55 84 97',
-        interaction: '$2190.00',
-        email: 'info@example.com',
+        website: 'info@example.com',
+        date:'Sep 30, 2023',
         img: webflow
+    },
+    {
+        id: 10,
+        company: 'Pinterest',
+        industry:'Social Media',
+        phone: '(+33)7 35 55 84 97',
+        website: 'info@example.com',
+        date:'Sep 30, 2023',
+        img: pinterest
     },
 ]
 
-const contacts = () => {
+const companies = () => {
     const [selectedPerson, setSelectedPerson] = useState(people[0])
     return (
         <div className='px-6 pt-10 pb-6'>
-            <h3 className='text-[32px] font-semibold text-[#2E293E]'>Contacts</h3>
+            <h3 className='text-[32px] font-semibold text-[#2E293E]'>Companies</h3>
             <span className='text-sm text-[#2E293E]'>Lorem ipsum dolor sit ammet consectetur.</span>
 
             <div className='mt-8'>
@@ -202,15 +175,21 @@ const contacts = () => {
                         {/* head */}
                         <thead className='bg-[#F5F7FD] text-lg text-[#2E293E]'>
                             <tr>
-                                <th>
-                                    <label>
-                                        <input type="checkbox" className="checkbox" />
-                                    </label>
-                                </th>
-                                <th>Contacts</th>
                                 <th >
                                     <div className='flex items-center'>
                                         <span>Company List</span>
+                                        <span class="material-symbols-outlined text-[#2E293E] ml-2">unfold_less</span>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div className='flex items-center'>
+                                        <span>Indrustry</span>
+                                        <span class="material-symbols-outlined text-[#2E293E] ml-2">unfold_less</span>
+                                    </div>
+                                </th>                               
+                                <th>
+                                    <div className='flex items-center'>
+                                        <span>Website</span>
                                         <span class="material-symbols-outlined text-[#2E293E] ml-2">unfold_less</span>
                                     </div>
                                 </th>
@@ -222,16 +201,11 @@ const contacts = () => {
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
-                                        <span>Email Adress</span>
+                                        <span>Start Date</span>
                                         <span class="material-symbols-outlined text-[#2E293E] ml-2">unfold_less</span>
                                     </div>
                                 </th>
-                                <th>
-                                    <div className='flex items-center'>
-                                        <span>Last Intereactions</span>
-                                        <span class="material-symbols-outlined text-[#2E293E] ml-2">unfold_less</span>
-                                    </div>
-                                </th>
+                                
                                 <th>
                                     <div className='flex items-center'>
                                         <span>Delete</span>
@@ -243,34 +217,25 @@ const contacts = () => {
                         </thead>
                         <tbody>
                             {
-                                allContacts.map(contact => (<tr
-                                    key={contact.id}
+                                allCompanies.map(company => (<tr
+                                    key={company.id}
                                 >
-                                    <th>
-                                        <label>
-                                            <input type="checkbox" className="checkbox" />
-                                        </label>
-                                    </th>
-                                    <td>
-                                        <div className="flex items-center space-x-3">
-                                            <div className="text-base">{contact.productsNo}</div>
-                                        </div>
-                                    </td>
                                     <td>
                                         <div className="flex items-center space-x-3">
                                             <div className="avatar">
                                                 <div className="mask mask-squircle w-8 h-8">
-                                                    <Image src={contact.img} alt="company name" />
+                                                    <Image src={company.img} alt="company name" />
                                                 </div>
                                             </div>
                                             <div>
-                                                <div className="text-base">{contact.company}</div>
+                                                <div className="text-base">{company.company}</div>
                                             </div>
                                         </div>
                                     </td>
-                                    <td className="text-lg">{contact.phone}</td>
-                                    <td className="text-lg">{contact.email}</td>
-                                    <td className="text-lg">{contact.interaction}</td>
+                                    <td className="text-lg">{company.industry}</td>
+                                    <td className="text-lg">{company.website}</td>
+                                    <td className="text-lg">{company.phone}</td>
+                                    <td className="text-lg">{company.date}</td>
                                     <th >
                                         <span class="material-symbols-outlined cursor-pointer mr-1 hover:text-[#4538D3]">
                                             auto_fix
@@ -291,4 +256,4 @@ const contacts = () => {
     );
 };
 
-export default contacts;
+export default companies;

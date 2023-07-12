@@ -378,7 +378,7 @@ const tasks = () => {
                         {
                             cards.map(card => (<div
                                 key={card.id}
-                                className="bg-white md:py-1 md:px-1 py-4 px-6 rounded task-card">
+                                className="bg-white py-4 px-6 md:py-1 md:px-1 lg:py-4 lg:px-6 rounded task-card">
                                 <div className="flex justify-between">
                                     <h3 className="text-base text-[#2E293E]">{card.name}</h3>
                                     <span className="w-6 h-6 p-4 bg-[#F1F1FA] text-[#4538D3] flex justify-center items-center rounded">{card.icon}</span>

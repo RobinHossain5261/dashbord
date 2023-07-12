@@ -8,3 +8,10 @@ body{
     padding:0;
     background-color:#F7F9FC ;
 }
+
+[data-theme='dark'] body{
+    margin:0;
+    padding:0;
+    background-color: #261E35;
+}
+

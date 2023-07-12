@@ -52,8 +52,12 @@ const SideBar = () => {
             <ul className="dropdown-menu">
               <li className='text-base'><Link href=''>All Pages</Link></li>
               <li className='text-base'><Link href='/features/contacts'>Contacts</Link></li>
-              <li className='text-base'><Link href=''>Products</Link></li>
+              <li className='text-base'><Link href='/features/companies'>Companies</Link></li>
+              <li className='text-base'><Link href=''>Projects</Link></li>
               <li className='text-base'><Link href=''>Tasks</Link></li>
+              <li className='text-base'><Link href=''>Board</Link></li>
+              <li className='text-base'><Link href=''>Table</Link></li>
+              <li className='text-base'><Link href=''>Crypto</Link></li>
             </ul>
           )}
         </li>
