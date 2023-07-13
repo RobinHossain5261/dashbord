@@ -26,8 +26,10 @@ export default function RootLayout({ children }) {
 
 
         <div className="drawer lg:drawer-open">
-          <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-          <div className="drawer-content">
+    
+            <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+        
+          <div className="drawer-content overflow-hidden">
             {/* Page content here */}
 
             <Provider>
@@ -40,7 +42,7 @@ export default function RootLayout({ children }) {
 
           <div className="drawer-side">
             <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-            <div className="menu p-4 w-80 h-full bg-white text-base-content">
+            <div className="menu p-4 lg:w-[312px] h-full bg-white text-base-content">
 
               {/* Sidebar content here */}
 
@@ -51,7 +53,7 @@ export default function RootLayout({ children }) {
                 </Link>
               </div>
 
-              <div>
+              <div className='z-1'>
                 <SideBar></SideBar>
               </div>
             </div>

@@ -111,11 +111,11 @@ const Header = () => {
             <SelectBar></SelectBar>
         </div>
 
-        <div className="dropdown dropdown-end ml-10">
+        <div className="dropdown ml-10">
             <label tabIndex={0} className="">
                 <span className="material-symbols-outlined cursor-pointer w-5 h-5">grid_view</span>
             </label>
-            <div tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-64">
+            <div tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 lg:w-60">
                 <div className='flex justify-between'>
                     <h3 className='text-xl font-semibold'>Apps</h3>
                     <span className='text-lg text-[#584E69] hover:text-[#4538D3] cursor-pointer'>View All Apps</span>
@@ -136,9 +136,9 @@ const Header = () => {
         </div>
         <div className="dropdown dropdown-end">
             <label tabIndex={0} className="">
-                <span class="material-symbols-outlined ml-7 cursor-pointer w-5 h-5">notifications</span>
+                <span class="material-symbols-outlined ml-4 md:ml-7 lg:ml-7 cursor-pointer w-5 h-5">notifications</span>
             </label>
-            <div tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-64">
+            <div tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 lg:w-60">
                 <div className='flex justify-between'>
                     <h3 className='text-lg font-semibold'>Notifications</h3>
                     <span className='text-base text-[#584E69] hover:text-[#4538D3] cursor-pointer '>View All</span>
@@ -163,11 +163,11 @@ const Header = () => {
             </div>
         </div>
 
-        <li><span class="material-symbols-outlined ml-7 cursor-pointer w-5 h-5">light_mode</span></li>
+        <li><span class="material-symbols-outlined ml-4 md:ml-7 lg:ml-7 cursor-pointer w-5 h-5">light_mode</span></li>
 
         <div className="dropdown dropdown-end">
             <label tabIndex={0} className="relative">
-                <span class="material-symbols-outlined ml-7 cursor-pointer w-5 h-5">shopping_bag</span>
+                <span class="material-symbols-outlined ml-4 md:ml-7 lg:ml-7 cursor-pointer w-5 h-5">shopping_bag</span>
                 <span className='absolute text-sm h-[18px] w-[18px]  rounded-full bg-[#4538D3] flex justify-center items-center text-white -right-2 bottom-0'>{carts.length}</span>
             </label>
             <div tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-64">
@@ -194,19 +194,19 @@ const Header = () => {
             </div>
         </div>
 
-        <div className="dropdown dropdown-end ml-10">
+        <div className="dropdown dropdown-end ml-7 md:ml-10 lg:ml-10">
             <label tabIndex={0} className="flex items-center cursor-pointer">
-                <div className=''>
+                <div>
                     <div className="w-10 rounded-full mr-3">
                         <Image src={user} alt="User" />
                     </div>
                 </div>
                 <div className='lg:flex items-center hidden'>
                     <div>
-                        <p className='text-base'>Robin</p>
+                        <p className='text-base'>Wade Warren</p>
                         <span className='text-xs'>Account Setting</span>
                     </div>
-                    <span class="material-symbols-outlined text-center">
+                    <span class="material-symbols-outlined text-center w-5 h-5">
                         expand_more
                     </span>
                 </div>
@@ -253,12 +253,14 @@ const Header = () => {
             </ul>
         </div>
 
+
+
     </div>
 
 
     return (
-        <div className="navbar bg-base-100">
-            <div className="flex-1">
+        <div className="navbar bg-white flex justify-between">
+            <div className="">
                 <label htmlFor="my-drawer-2" className="btn  drawer-button lg:hidden mr-5">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                 </label>
@@ -269,9 +271,9 @@ const Header = () => {
 
             </div>
             <div className="flex-none gap-2">
-                <ul className='flex relative pt-[26px] pr-12 pb-7'>
+                <ul className='flex relative pt-[26px] pr-2 md:pr-10 lg:pr-12 pb-7 overflow-hidden'>
                     {menuItem}
-                </ul>               
+                </ul>
             </div>
         </div>
     );

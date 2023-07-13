@@ -242,7 +242,7 @@ const tasks = () => {
             <span className='text-[#2E293E] text-sm'>Jul 9, 2023</span>
 
             {/* task cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 w-full ">
                 {
                     tasks.map(task => (<div
                         key={task.id}
@@ -378,7 +378,7 @@ const tasks = () => {
                         {
                             cards.map(card => (<div
                                 key={card.id}
-                                className="bg-white py-4 px-6 md:py-1 md:px-1 lg:py-4 lg:px-6 rounded task-card">
+                                className="bg-white py-4 px-6 rounded task-card">
                                 <div className="flex justify-between">
                                     <h3 className="text-base text-[#2E293E]">{card.name}</h3>
                                     <span className="w-6 h-6 p-4 bg-[#F1F1FA] text-[#4538D3] flex justify-center items-center rounded">{card.icon}</span>
@@ -409,7 +409,7 @@ const tasks = () => {
                     {
                         reportCards.map(card => (<div
                             key={card.id}
-                            className="bg-white py-8 px-10 rounded border hover:border-[#4538D3] hover:-skew-y-3 duration-300"
+                            className="bg-white py-4 md:py-6 lg:py-8 px-5 md:px-8 lg:px-10 rounded border hover:border-[#4538D3] hover:-skew-y-3 duration-300"
                         >
                             <Image className='w-[120px] h-[120px] mx-auto mb-8' src={card.img} alt="buyer" />
                             <h4 className='text-[#2E293E] text-2xl font-semibold text-center mb-7'>{card.title}</h4>

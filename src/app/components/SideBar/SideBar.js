@@ -16,7 +16,7 @@ const SideBar = () => {
   };
 
   return (
-    <nav className='ml-6 '>
+    <nav className='ml-6'>
       <ul>
         <li className='mb-5 '>
           <button className='text-base flex item-center justify-between' onClick={() => toggleMenu('dropdown1')}>
@@ -38,45 +38,24 @@ const SideBar = () => {
             </ul>
           )}
         </li>
-        <li className='mb-5'>
-          <button className='text-base flex item-center justify-between' onClick={() => toggleMenu('dropdown2')}>
-            <div className='flex items-center'>
-            <span class="material-symbols-outlined w-[15px] h-[15px] mr-3 mb-3">
-                star
-              </span>
-              <span>Features</span>
-            </div>
-            <ChevronDownIcon className="h-4 w-4" />
-          </button>
-          {activeMenu === 'dropdown2' && (
-            <ul className="dropdown-menu">
-              <li className='text-base'><Link href=''>All Pages</Link></li>
-              <li className='text-base'><Link href='/features/contacts'>Contacts</Link></li>
-              <li className='text-base'><Link href='/features/companies'>Companies</Link></li>
-              <li className='text-base'><Link href=''>Projects</Link></li>
-              <li className='text-base'><Link href=''>Tasks</Link></li>
-              <li className='text-base'><Link href=''>Board</Link></li>
-              <li className='text-base'><Link href=''>Table</Link></li>
-              <li className='text-base'><Link href=''>Crypto</Link></li>
-            </ul>
-          )}
-        </li>
+
         <li className='mb-5'>
           <button className='text-base flex item-center justify-between' onClick={() => toggleMenu('dropdown3')}>
             <div className='flex items-center'>
             <span class="material-symbols-outlined w-[15px] h-[15px] mr-3 mb-3">
-                group
+               star
               </span>
-              <span>User Profile</span>
+              <span>Features</span>
             </div>
             <ChevronDownIcon className="h-4 w-4" />
           </button>
           {activeMenu === 'dropdown3' && (
             <ul className="dropdown-menu">
               <li className='text-base'><Link href=''>All Pages</Link></li>
-              <li className='text-base'><Link href=''>Reports</Link></li>
-              <li className='text-base'><Link href=''>Products</Link></li>
-              <li className='text-base'><Link href=''>Tasks</Link></li>
+              <li className='text-base'><Link href='/features/contacts'>Contacts</Link></li>
+              <li className='text-base'><Link href='/features/companies'>Companies</Link></li>
+              <li className='text-base'><Link href='/features/projects'>Projects</Link></li>
+              <li className='text-base'><Link href='/features/table'>Table</Link></li>
             </ul>
           )}
         </li>

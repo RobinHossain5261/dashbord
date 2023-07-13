@@ -197,10 +197,10 @@ const contacts = () => {
                     </div>
                 </div>
 
-                <div className="overflow-x-auto mt-10">
-                    <table className="table">
-                        {/* head */}
-                        <thead className='bg-[#F5F7FD] text-lg text-[#2E293E]'>
+                <div className="overflow-x-auto block mt-10">
+                    <table className="table overflow-hidden w-[150%] lg:w-full">
+                    
+                    <thead className='bg-[#F5F7FD] text-lg text-[#2E293E]'>
                             <tr>
                                 <th>
                                     <label>
@@ -243,8 +243,8 @@ const contacts = () => {
                         </thead>
                         <tbody>
                             {
-                                allContacts.map(contact => (<tr
-                                    key={contact.id}
+                                allContacts.map(contacts => (<tr
+                                    key={contacts.id}
                                 >
                                     <th>
                                         <label>
@@ -253,24 +253,24 @@ const contacts = () => {
                                     </th>
                                     <td>
                                         <div className="flex items-center space-x-3">
-                                            <div className="text-base">{contact.productsNo}</div>
+                                            <div className="text-base">{contacts.productsNo}</div>
                                         </div>
                                     </td>
                                     <td>
                                         <div className="flex items-center space-x-3">
                                             <div className="avatar">
                                                 <div className="mask mask-squircle w-8 h-8">
-                                                    <Image src={contact.img} alt="company name" />
+                                                    <Image src={contacts.img} alt="company name" />
                                                 </div>
                                             </div>
                                             <div>
-                                                <div className="text-base">{contact.company}</div>
+                                                <div className="text-base">{contacts.company}</div>
                                             </div>
                                         </div>
                                     </td>
-                                    <td className="text-lg">{contact.phone}</td>
-                                    <td className="text-lg">{contact.email}</td>
-                                    <td className="text-lg">{contact.interaction}</td>
+                                    <td className="text-lg">{contacts.phone}</td>
+                                    <td className="text-lg ">{contacts.email}</td>
+                                    <td className="text-lg ">{contacts.interaction}</td>
                                     <th >
                                         <span class="material-symbols-outlined cursor-pointer mr-1 hover:text-[#4538D3]">
                                             auto_fix
@@ -281,7 +281,6 @@ const contacts = () => {
                                     </th>
                                 </tr>))
                             }
-
                         </tbody>
                     </table>
                 </div>

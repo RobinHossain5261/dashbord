@@ -126,7 +126,7 @@ const companies = () => {
 
             <div className='mt-8'>
                 <span className='text-white py-3 px-4 bg-[#4538D3] text-sm rounded'>Table view</span>
-                <span className='text-[#2E293E] py-3 px-4 bg-white text-sm rounded ml-6 border-[#2E293E]'>Card view</span>
+                <span className='text-[#2E293E] py-3 px-4 bg-[#ECEEFB] text-sm rounded ml-6 border-[#2E293E]'>Card view</span>
             </div>
 
             <div className='bg-white py-8 px-7 mt-8 rounded'>
@@ -170,9 +170,9 @@ const companies = () => {
                     </div>
                 </div>
 
-                <div className="overflow-x-auto mt-10">
-                    <table className="table">
-                        {/* head */}
+                <div className="overflow-x-auto block mt-10">
+                    <table className="table overflow-hidden w-[150%] lg:w-full">
+                    
                         <thead className='bg-[#F5F7FD] text-lg text-[#2E293E]'>
                             <tr>
                                 <th >
@@ -232,8 +232,8 @@ const companies = () => {
                                             </div>
                                         </div>
                                     </td>
-                                    <td className="text-lg">{company.industry}</td>
-                                    <td className="text-lg">{company.website}</td>
+                                    <td className="text-lg ">{company.industry}</td>
+                                    <td className="text-lg ">{company.website}</td>
                                     <td className="text-lg">{company.phone}</td>
                                     <td className="text-lg">{company.date}</td>
                                     <th >
@@ -246,7 +246,6 @@ const companies = () => {
                                     </th>
                                 </tr>))
                             }
-
                         </tbody>
                     </table>
                 </div>
