@@ -271,7 +271,7 @@ const Header = () => {
 
             </div>
             <div className="flex-none gap-2">
-                <ul className='flex relative pt-[26px] pr-2 md:pr-10 lg:pr-12 pb-7 overflow-hidden'>
+                <ul className='flex relative pt-[26px] pr-2 md:pr-10 lg:pr-12 pb-7 '>
                     {menuItem}
                 </ul>
             </div>

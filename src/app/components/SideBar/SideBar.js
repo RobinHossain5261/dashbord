@@ -55,6 +55,8 @@ const SideBar = () => {
               <li className='text-base'><Link href='/features/contacts'>Contacts</Link></li>
               <li className='text-base'><Link href='/features/companies'>Companies</Link></li>
               <li className='text-base'><Link href='/features/projects'>Projects</Link></li>
+              <li className='text-base'><Link href='/features/tasks'>Tasks</Link></li>
+              <li className='text-base'><Link href='/features/board'>Board</Link></li>
               <li className='text-base'><Link href='/features/table'>Table</Link></li>
             </ul>
           )}

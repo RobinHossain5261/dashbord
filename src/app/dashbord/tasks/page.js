@@ -2,6 +2,9 @@
 import photo1 from '@/../public/images/photo1.png';
 import photo2 from '@/../public/images/photo2.png';
 import photo3 from '@/../public/images/photo3.png';
+import photo4 from '@/../public/images/photo8.png';
+import photo5 from '@/../public/images/photo12.png';
+import photo6 from '@/../public/images/photo7.png';
 import Image from 'next/image';
 import './task.css';
 import ProgressBar from "@ramonak/react-progress-bar";
@@ -209,7 +212,7 @@ const tasks = () => {
             icon: <span class="material-symbols-outlined">
                 calendar_month
             </span>,
-            img: photo1
+            img: photo4
         },
         {
             id: 2,
@@ -220,7 +223,7 @@ const tasks = () => {
             icon: <span class="material-symbols-outlined">
                 calendar_month
             </span>,
-            img: photo2
+            img: photo5
         },
         {
             id: 3,
@@ -231,7 +234,7 @@ const tasks = () => {
             icon: <span class="material-symbols-outlined">
                 calendar_month
             </span>,
-            img: photo3
+            img: photo6
         },
     ]
 
