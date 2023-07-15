@@ -198,7 +198,7 @@ const contacts = () => {
                 </div>
 
                 <div className="overflow-x-auto block mt-10">
-                    <table className="table overflow-hidden w-[150%] lg:w-full">
+                    <table className="table overflow-hidden whitespace-nowrap w-[150%] lg:w-full">
                     
                     <thead className='bg-[#F5F7FD] text-lg text-[#2E293E]'>
                             <tr>
