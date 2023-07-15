@@ -1,12 +1,24 @@
-import LineChart from "@/app/components/LineChart/LineChart";
-import PieChart from "@/app/components/PieChart/PieChart";
+"use client"
 import RecentContacts from "@/app/components/RecentContacts/RecentContacts";
-// import PageViewChart from "@/app/components/PageViewChart/PageViewChart";
+import './reports.css';
+import LineChart from "@/app/components/Chart/LineChart";
+import { Listbox } from "@headlessui/react";
+import { useState, Fragment } from "react";
+
 export const metadata = {
     title: 'DashBord-Reports',
     description: 'dahbord reports',
-  }
+}
+
+const people = [
+    { id: 1, name: 'This Month', unavailable: false },
+    { id: 2, name: 'This Week', unavailable: false },
+    { id: 3, name: 'This Year', unavailable: false },
+]
+
+
 const Reports = () => {
+    const [selectedPerson, setSelectedPerson] = useState(people[0])
 
     const cards = [
         {
@@ -69,32 +81,78 @@ const Reports = () => {
 
     return (
         <div className="px-6 pb-6 pt-10">
-            <h1 className="text-2xl font-semibold">Dashboard</h1>
+            <h3 className="text-[32px] font-semibold text-[#2E293E]">Dashboard</h3>
             <span className='text-sm text-[#2E293E]'>Jul 8, 2023</span>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 my-6">
+            <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 my-6">
                 {
                     cards.map(card => (<div
                         key={card.id}
-                        className="bg-white py-4 px-6 rounded">
+                        className="bg-white py-4 px-6 rounded boxShadow">
                         <div className="flex justify-between">
-                            <h3 className="text-base">{card.name}</h3>
-                            <span className="w-10 h-10 bg-[#F1F1FA] text-[#4538D3] flex justify-center items-center rounded">{card.icon}</span>
+                            <h3 className="text-base text-[#2E293E]">{card.name}</h3>
+                            <span className="p-2 bg-[#F1F1FA] text-[#4538D3] flex justify-center items-center rounded boxShadow">{card.icon}</span>
                         </div>
-                        <div className="flex">
-                            <h1 className="text-2xl font-semibold">{card.view}</h1>
-                            <div className='py-1 ] px-2 rounded ml-4  flex '
+                        <div className="flex items-center">
+                            <h3 className="text-[32px] text-[#2E293E] font-semibold">{card.view}</h3>
+                            <div className=' px-2 rounded ml-4  flex items-center justify-center'
                                 style={{ backgroundColor: card.bgColor, color: card.color }}
                             >
-                                <h5 >{card.increment}</h5>
-                                <span className="ml-1 hover:skew-y-12">{card.trending}</span>
+                                <h5 className="text-sm" >{card.increment}</h5>
+                                <span>{card.trending}</span>
                             </div>
                         </div>
                     </div>))
                 }
-            </div>
+            </section>
 
-            {/* <LineChart></LineChart> */}
+            {/* Line Chart */}
+            <section className="bg-white rounded py-[60px] pl-[60px] pr-[58px] boxShadow">
+                <div className='flex justify-between'>
+                    <h3 className='text-xl text-[#2E293E]'>Monthly page views</h3>
+                    <div>
+                        <Listbox value={selectedPerson} onChange={setSelectedPerson}>
+                            <Listbox.Button
+
+                                className="lg:flex hidden gap-2 items-center  relative w-full cursor-default rounded-lg text-[#252525] bg-white py-2 px-3 text-left border focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
+                                {selectedPerson.name}
+                                <span class="material-symbols-outlined">
+                                    expand_more
+                                </span>
+                            </Listbox.Button>
+                            <Listbox.Options
+                                className="absolute mt-1 max-h-60 max-w-60 z-10 text-center overflow-auto rounded-md bg-white py-2  text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+
+                                {people.map((person) => (
+                                    <Listbox.Option
+                                        key={person.id}
+                                        value={person}
+                                        disabled={person.unavailable}
+                                        as={Fragment}
+                                        className={({ active }) =>
+                                            `relative cursor-default select-none py-2 px-5 ${active ? 'bg-[#4538D3] text-white' : 'text-gray-900'
+                                            }`
+                                        }
+                                    >
+                                        {({ selected }) => (
+                                            <li
+                                            >
+                                                {selected}
+                                                {person.name}
+                                            </li>
+                                        )}
+                                    </Listbox.Option>
+                                ))}
+                            </Listbox.Options>
+                        </Listbox>
+                    </div>
+                </div>
+                <hr className="my-10"/>
+                <div>
+                    <LineChart></LineChart>
+                </div>
+            </section>
+
             <RecentContacts></RecentContacts>
 
         </div>
