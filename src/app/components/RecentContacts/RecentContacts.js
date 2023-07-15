@@ -59,7 +59,7 @@ const buyers=[
 
 
     return (
-        <div className="overflow-x-auto my-6 bg-white rounded">
+        <div className="overflow-x-auto my-6 bg-white rounded whitespace-nowrap">
             <h1>Recent Contacts</h1>
             <table className="table ">
                 {/* head */}
@@ -83,7 +83,7 @@ const buyers=[
                                         </div>
                                     </div>
                                     <div>
-                                        <div className="text-base	">{buyer.name}</div>
+                                        <div className="text-base">{buyer.name}</div>
                                         
                                     </div>
                                 </div>

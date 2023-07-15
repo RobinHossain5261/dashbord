@@ -4,6 +4,9 @@ import './reports.css';
 import LineChart from "@/app/components/Chart/LineChart";
 import { Listbox } from "@headlessui/react";
 import { useState, Fragment } from "react";
+import PageViews from "@/app/components/Chart/PageViews";
+import Users from "@/app/components/Chart/Users";
+import SignUps from "@/app/components/Chart/SignUps";
 
 export const metadata = {
     title: 'DashBord-Reports',
@@ -107,7 +110,7 @@ const Reports = () => {
             </section>
 
             {/* Line Chart */}
-            <section className="bg-white rounded py-[60px] pl-[60px] pr-[58px] boxShadow">
+            <section className="bg-white rounded sm:p-5 py-[60px] pl-[60px] pr-[58px] boxShadow">
                 <div className='flex justify-between'>
                     <h3 className='text-xl text-[#2E293E]'>Monthly page views</h3>
                     <div>
@@ -147,12 +150,62 @@ const Reports = () => {
                         </Listbox>
                     </div>
                 </div>
-                <hr className="my-10"/>
-                <div>
+                <hr className="my-10" />
+                <div >
                     <LineChart></LineChart>
                 </div>
             </section>
 
+
+            {/* Small charts */}
+            <section className="my-6 rounded  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="bg-white rounded boxShadow">
+                    <div className="p-7">
+                        <h5 className="text-base test-[#2E293E] mb-4">Page views</h5>
+                        <div className="flex justify-between">
+                            <h3 className="text-2xl font-semibold">52.8K</h3>
+                            <div className=' px-2 rounded ml-4  flex items-center justify-center bg-[#4538D3] text-white'>
+                                <h5 className="text-sm" >38.5%</h5>
+                                <span class="material-symbols-outlined">trending_up</span>
+                            </div>
+                        </div>
+                        <hr className="mt-4" />
+                    </div>
+                    <PageViews></PageViews>
+                </div>
+
+
+                <div className="bg-white rounded boxShadow">
+                    <div className="p-7">
+                        <h5 className="text-base test-[#2E293E] mb-4">Users</h5>
+                        <div className="flex justify-between">
+                            <h3 className="text-2xl font-semibold">25.6K</h3>
+                            <div className=' px-2 rounded ml-4  flex items-center justify-center bg-[#4538D3] text-white'>
+                                <h5 className="text-sm" >38.5%</h5>
+                                <span class="material-symbols-outlined">trending_up</span>
+                            </div>
+                        </div>
+                        <hr className="mt-4" />
+                    </div>
+                    <Users></Users>
+                </div>
+
+                <div className="bg-white rounded boxShadow">
+                    <div className="p-7">
+                        <h5 className="text-base test-[#2E293E] mb-4">New sign ups</h5>
+                        <div className="flex justify-between">
+                            <h3 className="text-2xl font-semibold">4.5K</h3>
+                            <div className=' px-2 rounded ml-4  flex items-center justify-center bg-[#FFA5A5] text-[#1E192A]'>
+                                <h5 className="text-sm" >4.1%</h5>
+                                <span class="material-symbols-outlined">trending_up</span>
+                            </div>
+                        </div>
+                        <hr className="mt-4" />
+                    </div>
+                    <SignUps></SignUps>
+                </div>
+            </section>
+            
             <RecentContacts></RecentContacts>
 
         </div>
