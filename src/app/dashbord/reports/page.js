@@ -7,6 +7,7 @@ import { useState, Fragment } from "react";
 import PageViews from "@/app/components/Chart/PageViews";
 import Users from "@/app/components/Chart/Users";
 import SignUps from "@/app/components/Chart/SignUps";
+import DoughnutChart from "@/app/components/Chart/DoughnutChart";
 
 export const metadata = {
     title: 'DashBord-Reports',
@@ -164,8 +165,8 @@ const Reports = () => {
                         <h5 className="text-base test-[#2E293E] mb-4">Page views</h5>
                         <div className="flex justify-between">
                             <h3 className="text-2xl font-semibold">52.8K</h3>
-                            <div className=' px-2 rounded ml-4  flex items-center justify-center bg-[#4538D3] text-white'>
-                                <h5 className="text-sm" >38.5%</h5>
+                            <div className=' px-2 rounded  flex items-center justify-center bg-[#4538D3] text-white'>
+                                <h5 className="text-sm">38.5%</h5>
                                 <span class="material-symbols-outlined">trending_up</span>
                             </div>
                         </div>
@@ -205,9 +206,12 @@ const Reports = () => {
                     <SignUps></SignUps>
                 </div>
             </section>
-            
-            <RecentContacts></RecentContacts>
 
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <DoughnutChart></DoughnutChart>
+                <RecentContacts></RecentContacts>
+            </div>
+<hr className="mt-6"/>
         </div>
     )
 }

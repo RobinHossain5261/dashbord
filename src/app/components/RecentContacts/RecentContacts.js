@@ -1,4 +1,5 @@
-
+import { Listbox } from "@headlessui/react";
+import { useState, Fragment } from "react";
 import Image from 'next/image';
 import buyer1 from '../../../../public/images/photo.png';
 import buyer2 from '../../../../public/images/photo1.png';
@@ -7,98 +8,145 @@ import buyer4 from '../../../../public/images/photo3.png';
 import buyer5 from '@/../public/images/photo4.png';
 
 
-const RecentContacts = () => {
-const buyers=[
-    {
-        id:1,
-        name:'Floyd Miles',
-        status:'Successful',
-        email:'info@example.com',
-        time:'1 Year ago',
-        image:buyer1,
-        color:'#4538D3'
-    },
-    {
-        id:2,
-        name:'Devon Lane',
-        status:'Pending',
-        email:'info@example.com',
-        time:'6 month ago',
-        image:buyer2,
-        color:'#725002'
-    },
-    {
-        id:3,
-        name:'Jacob Jones',
-        status:'Override',
-        email:'info@example.com',
-        time:'1 month ago',
-        image:buyer3,
-        color:'#A82500'
-    },
-    {
-        id:4,
-        name:'Cody Fisher',
-        status:'Successful',
-        email:'info@example.com',
-        time:'3 Year ago',
-        image:buyer4,
-        color:'#4538D3'
-    },
-    {
-        id:5,
-        name:'Jane Copper',
-        status:'Successful',
-        email:'info@example.com',
-        time:'1 Year ago',
-        image:buyer5,
-        color:'#4538D3'
-    },
-    
+
+const people = [
+    { id: 1, name: 'This Month', unavailable: false },
+    { id: 2, name: 'This Week', unavailable: false },
+    { id: 3, name: 'This Year', unavailable: false },
 ]
 
+const RecentContacts = () => {
+    const [selectedPerson, setSelectedPerson] = useState(people[0]);
+    const buyers = [
+        {
+            id: 1,
+            name: 'Floyd Miles',
+            status: 'Successful',
+            email: 'info@example.com',
+            time: '1 Year ago',
+            image: buyer1,
+            color: '#4538D3'
+        },
+        {
+            id: 2,
+            name: 'Devon Lane',
+            status: 'Pending',
+            email: 'info@example.com',
+            time: '6 month ago',
+            image: buyer2,
+            color: '#725002'
+        },
+        {
+            id: 3,
+            name: 'Jacob Jones',
+            status: 'Override',
+            email: 'info@example.com',
+            time: '1 month ago',
+            image: buyer3,
+            color: '#A82500'
+        },
+        {
+            id: 4,
+            name: 'Cody Fisher',
+            status: 'Successful',
+            email: 'info@example.com',
+            time: '3 Year ago',
+            image: buyer4,
+            color: '#4538D3'
+        },
+        {
+            id: 5,
+            name: 'Jane Copper',
+            status: 'Successful',
+            email: 'info@example.com',
+            time: '1 Year ago',
+            image: buyer5,
+            color: '#4538D3'
+        },
+
+    ]
 
     return (
-        <div className="overflow-x-auto my-6 bg-white rounded whitespace-nowrap">
-            <h1>Recent Contacts</h1>
-            <table className="table ">
-                {/* head */}
-                <thead className='bg-[#CFD5F6]'>
-                    <tr>
-                        <th className='text-[18px] font-normal text-[#2E293E]'>Full Name</th>
-                        <th className='text-[18px] font-normal text-[#2E293E]'>Status</th>
-                        <th className='text-[18px] font-normal text-[#2E293E]'>Email</th>
-                        <th className='text-[18px] font-normal text-[#2E293E]'>Time</th>
-                    </tr>
-                </thead>
+        <div className="overflow-x-auto py-8 px-5  bg-white rounded whitespace-nowrap">
+            <div className="flex justify-between items-center">
+                <h1 className='text-2xl text-[#2E293E]'>Recent Contacts</h1>
+                <div>
+                    <Listbox value={selectedPerson} onChange={setSelectedPerson}>
+                        <Listbox.Button
 
-                <tbody>
-                    {
-                        buyers.map(buyer=>(<tr>
-                            <td>
-                                <div className="flex items-center space-x-3">
-                                    <div className="avatar">
-                                        <div className="mask mask-squircle w-12 h-12">
-                                            <Image src={buyer.image} alt="buyer" />
+                            className="lg:flex hidden gap-2 items-center  relative w-full cursor-default rounded-lg text-[#252525] bg-white py-2 px-3 text-left border focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
+                            {selectedPerson.name}
+                            <span class="material-symbols-outlined">
+                                expand_more
+                            </span>
+                        </Listbox.Button>
+                        <Listbox.Options
+                            className="absolute mt-1 max-h-60 max-w-60 z-10 text-center overflow-auto rounded-md bg-white py-2  text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+
+                            {people.map((person) => (
+                                <Listbox.Option
+                                    key={person.id}
+                                    value={person}
+                                    disabled={person.unavailable}
+                                    as={Fragment}
+                                    className={({ active }) =>
+                                        `relative cursor-default select-none py-2 px-5 ${active ? 'bg-[#4538D3] text-white' : 'text-gray-900'
+                                        }`
+                                    }
+                                >
+                                    {({ selected }) => (
+                                        <li
+                                        >
+                                            {selected}
+                                            {person.name}
+                                        </li>
+                                    )}
+                                </Listbox.Option>
+                            ))}
+                        </Listbox.Options>
+                    </Listbox>
+                </div>
+            </div>
+            <hr className='my-8' />
+            <div className="overflow-x-auto whitespace-nowrap">
+                <table className="table">
+
+                    <thead className='bg-[#F5F7FD]'>
+                        <tr>
+                            <th className='text-lg text-[#2E293E]'>Full Name</th>
+                            <th className='text-lg text-[#2E293E]'>Status</th>
+                            <th className='text-lg text-[#2E293E]'>Email</th>
+                            <th className='text-lg text-[#2E293E]'>Time</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {
+                            buyers.map(buyer => (<tr>
+                                <td>
+                                    <div className="flex items-center space-x-3">
+                                        <div className="avatar">
+                                            <div className="mask mask-squircle w-12 h-12">
+                                                <Image src={buyer.image} alt="buyer" />
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div className="text-base text-[#2E293E]">{buyer.name}</div>
                                         </div>
                                     </div>
-                                    <div>
-                                        <div className="text-base">{buyer.name}</div>
-                                        
-                                    </div>
-                                </div>
-                            </td>
-                            <td className='text-base' style={{color:buyer.color}}> <li>{buyer.status}</li></td>
-                            <td className='text-[#4538D3]'>{buyer.email}</td>
-                            <td className='text-[#2E293E]'>{buyer.time}</td>
-                            
-                        </tr>))
-                    }
-                
-                  
-                </tbody>
+                                </td>
+                                <td className='text-base' style={{ color: buyer.color }}><li>{buyer.status}</li></td>
+                                <td className='text-[#4538D3] text-base'>{buyer.email}</td>
+                                <td className='text-[#2E293E] text-base'>{buyer.time}</td>
 
-            </table>
+                            </tr>))
+                        }
+
+
+                    </tbody>
+
+                </table>
+            </div>
         </div>
     )
 }
