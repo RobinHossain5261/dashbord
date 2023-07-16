@@ -99,7 +99,7 @@ const table = () => {
   return (
     <div className='px-6 pt-10 pb-6'>
       <h3 className='text-[32px] font-semibold text-[#2E293E]'>Table</h3>
-      <span className='text-sm text-[#2E293E] bg-white'>Lorem ipsum dolor sit ammet consectetur.</span>
+      <span className='text-sm text-[#2E293E]'>Lorem ipsum dolor sit ammet consectetur.</span>
 
       <div className='bg-white py-8 px-7 mt-8 rounded'>
         <div className='flex justify-between'>

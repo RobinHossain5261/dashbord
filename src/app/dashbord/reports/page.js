@@ -111,7 +111,7 @@ const Reports = () => {
             </section>
 
             {/* Line Chart */}
-            <section className="bg-white rounded sm:p-5 py-[60px] pl-[60px] pr-[58px] boxShadow">
+            <section className=" bg-white rounded sm:p-5 py-[60px] pl-[60px] pr-[58px] boxShadow">
                 <div className='flex justify-between'>
                     <h3 className='text-xl text-[#2E293E]'>Monthly page views</h3>
                     <div>
@@ -152,7 +152,7 @@ const Reports = () => {
                     </div>
                 </div>
                 <hr className="my-10" />
-                <div >
+                <div className="h-[400px] ">
                     <LineChart></LineChart>
                 </div>
             </section>

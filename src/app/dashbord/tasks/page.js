@@ -386,9 +386,9 @@ const tasks = () => {
                                     <h3 className="text-base text-[#2E293E]">{card.name}</h3>
                                     <span className="w-6 h-6 p-4 bg-[#F1F1FA] text-[#4538D3] flex justify-center items-center rounded">{card.icon}</span>
                                 </div>
-                                <div className="flex mt-4">
-                                    <h3 className="text-[32px]  font-semibold">{card.view}</h3>
-                                    <div className='py-1 px-2 rounded ml-4  flex items-center'
+                                <div className="flex flex-wrap mt-4">
+                                    <h3 className="text-[32px]  font-semibold mr-4">{card.view}</h3>
+                                    <div className='py-1 px-2 rounded   flex items-center'
                                         style={{ backgroundColor: card.bgColor, color: card.color }}
                                     >
                                         <h5 >{card.increment}</h5>

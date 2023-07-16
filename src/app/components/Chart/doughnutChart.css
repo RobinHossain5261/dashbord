@@ -1,0 +1,10 @@
+.inner {
+    background-color:#F5EFFC;
+    width: 244px;
+    height: 244px;
+    border-radius: 50%;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -450,8 +450,8 @@ const crypto = () => {
 
             {/* Cryto News */}
 
-            <div className='p-6'>
-                <h3 className='text-[32px] text-[Crypto news] mb-10'>Crypto news</h3>
+            <div>
+                <h3 className='text-[32px] text-[#2E293E] mt-6 mb-10'>Crypto news</h3>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                     {
                         news.map(company => (<div

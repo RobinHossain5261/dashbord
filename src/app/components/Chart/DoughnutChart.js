@@ -1,10 +1,11 @@
 import Chart from 'chart.js/auto';
 import React from 'react';
+import './doughnutChart.css';
+
 import { Listbox } from "@headlessui/react";
 import { useState, Fragment } from "react";
 import { Doughnut } from 'react-chartjs-2';
-
-
+import "chartjs-plugin-doughnut-innertext";
 const people = [
     { id: 1, name: 'This Month', unavailable: false },
     { id: 2, name: 'This Week', unavailable: false },
@@ -12,45 +13,38 @@ const people = [
 ]
 const DoughnutChart = () => {
     const [selectedPerson, setSelectedPerson] = useState(people[0]);
-    const chartData = {
-        labels: ['Red', 'Blue', 'Yellow'],
+
+    const doughnutStyle = {
+        width: "244px",
+        height: "40px",
+        position: "absolute",
+        top: "45%",
+        left: "0",
+        marginTop: "-15px",
+        lineHeight: "19px",
+        textAlign: "center",
+        zIndex: "999",
+      };
+
+      const data5 = {
+        labels: ["Red", "Blue", "Yellow"],
         datasets: [
-            {
-                data: [10, 20, 30],
-                backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
-                hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
-                options: {
-                    responsive: true,
-                },
-                options: {
-                    plugins: {
-                        legend: {
-                            display: false
-                        },
-                    },
-                  }
-
-            },
-            
-
+          {
+            label: "# of Votes",
+            data: [30, 20, 40],
+            backgroundColor: ["#64C4F7", "#F8C140", "#FFA5A5"],
+            borderWidth: 0,
+          },
         ],
-    };
+      };
 
-    // const plugins = {
-    //     id:'plugins',
-    //     beforeDatasetsDraw(chart,args,pluginOptions){
-    //      const {ctx,data}=chart;
-
-    //      ctx.save();
-    //      const xCoor=chart.getDatasetMeta(0).data[0].x;
-    //      const yCoor=chart.getDatasetMeta(0).data[0].y;
-    //      ctx.font='bold 30px sans-serif';
-    //      ctx.fillStyle='rgba(54,162,235,1)';
-    //      ctx.textAlign='center';
-    //      ctx.textBaseLine='middle';
-    //      ctx.fillText=('text',xCoor,yCoor);
-    //     }
-    //    }
+      const option5 = {
+        plugins: {
+          legend: {
+            display: false,
+          },
+        },
+      };
 
     return (
         <div className='bg-white py-8 px-[30px] rounded'>
@@ -94,10 +88,18 @@ const DoughnutChart = () => {
                 </div>
             </div>
             <hr className='my-10' />
-            <div className='w-[300px] h-[300px] mx-auto'>
-                <Doughnut data={chartData} />
+            <div className='w-[300px] h-[300px] mx-auto flex items-center justify-center'>
+
+                <div className="inner relative">
+                    <div style={doughnutStyle}>
+                        <h4 className="text-2xl text-[#4538D3] font-semibold">23.6K</h4>
+                        <span className='text-[#2E293E] text-base'>USERS</span>
+                    </div >
+                    <Doughnut data={data5}  options={option5}/>
+                </div>
+
             </div>
-            <div className='flex justify-between mt-10'>
+            <div className='flex justify-around mt-10'>
                 <div>
                     <h5 className='text-xl text-[#4538D3]'>Mobile</h5>
                     <b className='text-[#2E293E] text-2xl'>91.434%</b>

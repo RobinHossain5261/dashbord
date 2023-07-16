@@ -173,6 +173,7 @@ const projects = () => {
                     </div>))
                 }
             </div>
+            <hr className='mt-6'/>
         </div>
     );
 };
