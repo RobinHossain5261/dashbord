@@ -75,9 +75,10 @@ const SideBar = () => {
           {activeMenu === 'dropdown4' && (
             <ul className="dropdown-menu">
               <li className='text-base'><Link href=''>All Pages</Link></li>
-              <li className='text-base'><Link href=''>Reports</Link></li>
-              <li className='text-base'><Link href=''>Products</Link></li>
-              <li className='text-base'><Link href=''>Tasks</Link></li>
+              <li className='text-base'><Link href='/pricing/pricingOne'>Pricing v1</Link></li>
+              <li className='text-base'><Link href='/pricing/pricingTwo'>Pricing v2</Link></li>
+              <li className='text-base'><Link href='/pricing/pricingThree'>Pricing v3</Link></li>
+              <li className='text-base'><Link href='/pricing/pricingSingle'>Pricing Single</Link></li>
             </ul>
           )}
         </li>
