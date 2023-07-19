@@ -245,7 +245,7 @@ const tasks = () => {
                         {/* <span>{task.progress}</span> */}
                         <Progress bgcolor={resolvedTheme === 'dark' ? `${task.color1}` : `${task.color}`} completed={task.completed} />
 
-                        <p className="text-[#584E69] dark:text-[#D1D1D1] text-lg mt-3">{task.complete}</p>
+                        <p className="text-myGrey dark:text-[#D1D1D1] text-lg mt-3">{task.complete}</p>
                     </div>))
                 }
             </div>
@@ -308,8 +308,8 @@ const tasks = () => {
                                         {/* <span>{progress.progress}</span> */}
                                         <Progress bgcolor={resolvedTheme === 'dark' ? `${progress.color1}` : `${progress.color}`} completed={progress.completed} />
                                         <div className='flex justify-between mt-3'>
-                                            <span className='text-[#584E69] dark:text-[#D1D1D1] text-lg'>{progress.complete}</span>
-                                            <span className='text-[#584E69] dark:text-[#D1D1D1] text-lg'>{progress.parcent}</span>
+                                            <span className='text-myGrey dark:text-[#D1D1D1] text-lg'>{progress.complete}</span>
+                                            <span className='text-myGrey dark:text-[#D1D1D1] text-lg'>{progress.parcent}</span>
                                         </div>
                                     </div>
 

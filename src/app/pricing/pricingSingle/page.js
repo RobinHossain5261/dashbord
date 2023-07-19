@@ -76,20 +76,20 @@ const pricingSingle = () => {
                     <p className='text-lg text-myBlack dark:text-myWhite mb-5'>velit viverra sit semper lorem eu cursus vel hendrerit elementum morbi curabitur etiam nibh justo lorem aliquet donec sed sit mi dignissim at ante massa mattis.</p>
 
                     <ol className='mb-7 list-decimal list-inside'>
-                        <li className='text-[#584E69] dark:text-myWhite text-sm mb-4'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
-                        <li className='text-[#584E69] dark:text-myWhite text-sm mb-4'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
-                        <li className='text-[#584E69] dark:text-myWhite text-sm mb-4'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
-                        <li className='text-[#584E69] dark:text-myWhite text-sm mb-4'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
-                        <li className='text-[#584E69] dark:text-myWhite text-sm'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
+                        <li className='text-myGrey dark:text-myWhite text-sm mb-4'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
+                        <li className='text-myGrey dark:text-myWhite text-sm mb-4'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
+                        <li className='text-myGrey dark:text-myWhite text-sm mb-4'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
+                        <li className='text-myGrey dark:text-myWhite text-sm mb-4'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
+                        <li className='text-myGrey dark:text-myWhite text-sm'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
                     </ol>
                    <h5 className='text-xl font-semibold text-myBlack dark:text-white mb-5'>Is the price plan I've chosen appropriate for my company?</h5>
                    <p className='text-lg text-myBlack dark:text-myWhite mb-5'>velit viverra sit semper lorem eu cursus vel hendrerit elementum morbi curabitur etiam nibh justo lorem aliquet donec sed sit mi dignissim at ante massa mattis.</p>
                    <ul className='mb-7 list-disc list-inside'>
-                        <li className='text-[#584E69] dark:text-myWhite text-sm mb-4'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
-                        <li className='text-[#584E69] dark:text-myWhite text-sm mb-4'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
-                        <li className='text-[#584E69] dark:text-myWhite text-sm mb-4'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
-                        <li className='text-[#584E69] dark:text-myWhite text-sm mb-4'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
-                        <li className='text-[#584E69] dark:text-myWhite text-sm '>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
+                        <li className='text-myGrey dark:text-myWhite text-sm mb-4'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
+                        <li className='text-myGrey dark:text-myWhite text-sm mb-4'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
+                        <li className='text-myGrey dark:text-myWhite text-sm mb-4'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
+                        <li className='text-myGrey dark:text-myWhite text-sm mb-4'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
+                        <li className='text-myGrey dark:text-myWhite text-sm '>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
                     </ul>
                 </section>
             </div>

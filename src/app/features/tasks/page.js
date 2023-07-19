@@ -94,11 +94,11 @@ const tasks = () => {
                                 <p className='text-myBlue  dark:text-myGreen dark:bg-[#2C3140] rounded  px-2 bg-[#F6F6FB] '>{card.category}</p>
                                 <div className='border dark:border-darkLine'></div>
                                 <div className='flex'>
-                                    <span className='cursor-pointertext-[#584E69]  dark:text-myWhite'>{card.icon}</span>
-                                    <p className='ml-1 text-sm text-[#584E69] dark:text-myWhite'>{card.date}</p>
+                                    <span className='cursor-pointertext-myGrey  dark:text-myWhite'>{card.icon}</span>
+                                    <p className='ml-1 text-sm text-myGrey dark:text-myWhite'>{card.date}</p>
                                 </div>
                             </div>
-                            <p className='text-lg text-centertext-[#584E69] dark:text-myWhite'>{card.des}</p>
+                            <p className='text-lg text-centertext-myGrey dark:text-myWhite'>{card.des}</p>
                         </div>))
                     }
                 </div>

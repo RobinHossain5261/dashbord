@@ -21,6 +21,7 @@ module.exports = {
         'myLine':'#ECEEFB',
         'darkLine':'#5E586B',
         'myYellow':'#725002',
+        'myGrey':'#584E69'
 
 
       },

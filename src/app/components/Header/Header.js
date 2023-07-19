@@ -119,7 +119,7 @@ const Header = () => {
             <div tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 lg:w-60">
                 <div className='flex justify-between'>
                     <h3 className='text-xl font-semibold'>Apps</h3>
-                    <span className='text-lg text-[#584E69] hover:text-myBlue cursor-pointer'>View All Apps</span>
+                    <span className='text-lg text-myGrey hover:text-myBlue cursor-pointer'>View All Apps</span>
                 </div>
                 <hr className='mb-5' />
                 <div className='grid grid-cols-3 gap-5'>
@@ -142,7 +142,7 @@ const Header = () => {
             <div tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 lg:w-60">
                 <div className='flex justify-between'>
                     <h3 className='text-lg font-semibold'>Notifications</h3>
-                    <span className='text-base text-[#584E69] hover:text-myBlue cursor-pointer '>View All</span>
+                    <span className='text-base text-myGrey hover:text-myBlue cursor-pointer '>View All</span>
                 </div>
                 <hr className='mb-5' />
                 <div className=''>
@@ -178,7 +178,7 @@ const Header = () => {
             <div tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-64">
                 <div className='flex justify-between'>
                     <h3 className='text-lg font-semibold'>My Cart</h3>
-                    <span className='text-base text-[#584E69] hover:text-myBlue cursor-pointer '>{carts.length} Items</span>
+                    <span className='text-base text-myGrey hover:text-myBlue cursor-pointer '>{carts.length} Items</span>
                 </div>
                 <hr className='mb-5' />
                 <div className=''>

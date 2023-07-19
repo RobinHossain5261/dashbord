@@ -17,7 +17,8 @@ body{
     overflow-x: hidden;
     
 }
-:root{
-   --primary:#261E35;  
+
+.cardShadow{
+    box-shadow: 0px 1.00023353099823px 2.00046706199646px 0px rgba(0, 0, 0, 0.20);
 }
 

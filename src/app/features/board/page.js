@@ -76,8 +76,8 @@ const board = () => {
                         <p className='text-lg text-myBlack mb-7 dark:text-myWhite'>{bord.des}</p>
                         <div className='flex items-center justify-between'>
                             <div className='flex  gap-4'>
-                                <span className='text-[#584E69] w-6 h-4 dark:text-myLine'>{bord.file}</span>
-                                <div className='text-[#584E69] flex gap-1'>
+                                <span className='text-myGrey w-6 h-4 dark:text-myLine'>{bord.file}</span>
+                                <div className='text-myGrey flex gap-1'>
                                     <span className='w-6 h-4 dark:text-myLine'> {bord.note}</span>
                                     <span className='text-base dark:text-myLine'>4</span>
                                 </div>

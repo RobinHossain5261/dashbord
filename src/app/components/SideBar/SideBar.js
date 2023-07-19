@@ -40,7 +40,7 @@ const SideBar = () => {
         </li>
 
         <li className='mb-5'>
-          <button className='text-base flex item-center justify-between' onClick={() => toggleMenu('dropdown3')}>
+          <button className='text-base flex item-center justify-between' onClick={() => toggleMenu('dropdown2')}>
             <div className='flex items-center'>
             <span class="material-symbols-outlined w-[15px] h-[15px] mr-3 mb-3">
                star
@@ -49,7 +49,7 @@ const SideBar = () => {
             </div>
             <ChevronDownIcon className="h-4 w-4" />
           </button>
-          {activeMenu === 'dropdown3' && (
+          {activeMenu === 'dropdown2' && (
             <ul className="dropdown-menu">
               <li className='text-base'><Link href=''>All Pages</Link></li>
               <li className='text-base'><Link href='/features/contacts'>Contacts</Link></li>
@@ -59,6 +59,25 @@ const SideBar = () => {
               <li className='text-base'><Link href='/features/board'>Board</Link></li>
               <li className='text-base'><Link href='/features/table'>Table</Link></li>
               <li className='text-base'><Link href='/features/crypto'>Crypto</Link></li>
+            </ul>
+          )}
+        </li>
+        <li className='mb-5'>
+          <button className='text-base flex item-center justify-between' onClick={() => toggleMenu('dropdown3')}>
+            <div className='flex items-center'>
+            <span class="material-symbols-outlined w-[15px] h-[15px] mr-3 mb-3">
+               group
+              </span>
+              <span>User Profile</span>
+            </div>
+            <ChevronDownIcon className="h-4 w-4" />
+          </button>
+          {activeMenu === 'dropdown3' && (
+            <ul className="dropdown-menu">
+              <li className='text-base'><Link href=''>All Pages</Link></li>
+              <li className='text-base'><Link href='/profile/profileOne'>Profile v1</Link></li>
+              <li className='text-base'><Link href='/profile/profileTwo'>Profile v2</Link></li>
+              <li className='text-base'><Link href='/profile/profileThree'>Profile v3</Link></li>
             </ul>
           )}
         </li>

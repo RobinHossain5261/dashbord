@@ -370,7 +370,7 @@ const crypto = () => {
                                 <Image className='w-8 h-8' src={card.img} alt="curency" />
                                 <div>
                                     <h4 className='text-2xl text-myBlack dark:text-white font-semibold'>{card.name}</h4>
-                                    <span className='text-lg text-[#584E69] dark:text-myWhite'>{card.wallet}</span>
+                                    <span className='text-lg text-myGrey dark:text-myWhite'>{card.wallet}</span>
                                 </div>
                             </div>
                             <div>
@@ -386,8 +386,8 @@ const crypto = () => {
                         </div>
 
                         <div className='flex justify-between'>
-                            <h4 className='text-xl text-[#584E69] dark:text-myWhite'>{card.price}</h4>
-                            <h4 className='text-xl text-[#584E69] dark:text-myWhite'>{card.change}</h4>
+                            <h4 className='text-xl text-myGrey dark:text-myWhite'>{card.price}</h4>
+                            <h4 className='text-xl text-myGrey dark:text-myWhite'>{card.change}</h4>
                         </div>
 
                     </div>))
@@ -485,12 +485,12 @@ const crypto = () => {
                             <Image className='rounded' src={company.img} alt="company" />
                             <div className='flex justify-between my-5'>
                                 <div className='flex'>
-                                    <span className="material-symbols-outlined w-6 h-6 text-[#584E69] dark:text-[#D1D1D1]">calendar_month</span>
-                                    <span className='text-[#584E69] dark:text-[#D1D1D1] text-base ml-[10px]'>{company.date}</span>
+                                    <span className="material-symbols-outlined w-6 h-6 text-myGrey dark:text-[#D1D1D1]">calendar_month</span>
+                                    <span className='text-myGrey dark:text-[#D1D1D1] text-base ml-[10px]'>{company.date}</span>
                                 </div>
                                 <div className='flex'>
-                                    <span className="material-symbols-outlined w-6 h-6 text-[#584E69] dark:text-[#D1D1D1]">alarm</span>
-                                    <span className='text-[#584E69] dark:text-[#D1D1D1] text-base ml-[10px]'>{company.time}</span>
+                                    <span className="material-symbols-outlined w-6 h-6 text-myGrey dark:text-[#D1D1D1]">alarm</span>
+                                    <span className='text-myGrey dark:text-[#D1D1D1] text-base ml-[10px]'>{company.time}</span>
                                 </div>
                             </div>
                             <h4 className='text-2xl font-semibold text-myBlack dark:text-white mb-8'>{company.title}</h4>

@@ -156,8 +156,8 @@ const projects = () => {
                         {/* <span>{task.progressBar}</span> */}
                         <Progress bgcolor={resolvedTheme === 'dark' ? `${task.color1}` : `${task.color}`} completed={task.completed} />
                         <div className='mt-2 flex justify-between'>
-                            <p className="text-[#584E69] dark:text-myWhite text-lg">{task.complete}</p>
-                            <p className="text-[#584E69] dark:text-myWhite text-lg">{task.date}</p>
+                            <p className="text-myGrey dark:text-myWhite text-lg">{task.complete}</p>
+                            <p className="text-myGrey dark:text-myWhite text-lg">{task.date}</p>
                         </div>
                     </div>))
                 }
