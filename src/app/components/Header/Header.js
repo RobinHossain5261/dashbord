@@ -17,6 +17,7 @@ import phone4 from '@/../public/images/phone4.png';
 
 import SelectBar from "@/app/components/SelectBar/SelectBar";
 import Link from 'next/link';
+import ThemeButton from '../DarkMode/ThemeButton/ThemeButton';
 
 
 const Header = () => {
@@ -107,7 +108,7 @@ const Header = () => {
 
     const menuItem = <div className='flex items-center'>
 
-        <div classname="fixed border-1">
+        <div classname="border">
             <SelectBar></SelectBar>
         </div>
 
@@ -118,7 +119,7 @@ const Header = () => {
             <div tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 lg:w-60">
                 <div className='flex justify-between'>
                     <h3 className='text-xl font-semibold'>Apps</h3>
-                    <span className='text-lg text-[#584E69] hover:text-[#4538D3] cursor-pointer'>View All Apps</span>
+                    <span className='text-lg text-[#584E69] hover:text-myBlue cursor-pointer'>View All Apps</span>
                 </div>
                 <hr className='mb-5' />
                 <div className='grid grid-cols-3 gap-5'>
@@ -141,7 +142,7 @@ const Header = () => {
             <div tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 lg:w-60">
                 <div className='flex justify-between'>
                     <h3 className='text-lg font-semibold'>Notifications</h3>
-                    <span className='text-base text-[#584E69] hover:text-[#4538D3] cursor-pointer '>View All</span>
+                    <span className='text-base text-[#584E69] hover:text-myBlue cursor-pointer '>View All</span>
                 </div>
                 <hr className='mb-5' />
                 <div className=''>
@@ -163,17 +164,21 @@ const Header = () => {
             </div>
         </div>
 
-        <li><span class="material-symbols-outlined ml-4 md:ml-7 lg:ml-7 cursor-pointer w-5 h-5">light_mode</span></li>
+        <div className='ml-4 md:ml-7 lg:ml-7 mb-2'>
+        <ThemeButton></ThemeButton>
+        </div>
+
+        {/* <li><span class="material-symbols-outlined ml-4 md:ml-7 lg:ml-7 cursor-pointer w-5 h-5">light_mode</span></li> */}
 
         <div className="dropdown dropdown-end">
             <label tabIndex={0} className="relative">
                 <span class="material-symbols-outlined ml-4 md:ml-7 lg:ml-7 cursor-pointer w-5 h-5">shopping_bag</span>
-                <span className='absolute text-sm h-[18px] w-[18px]  rounded-full bg-[#4538D3] flex justify-center items-center text-white -right-2 bottom-0'>{carts.length}</span>
+                <span className='absolute text-sm h-[18px] w-[18px]  rounded-full bg-myBlue flex justify-center items-center text-white -right-2 bottom-0'>{carts.length}</span>
             </label>
             <div tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-64">
                 <div className='flex justify-between'>
                     <h3 className='text-lg font-semibold'>My Cart</h3>
-                    <span className='text-base text-[#584E69] hover:text-[#4538D3] cursor-pointer '>{carts.length} Items</span>
+                    <span className='text-base text-[#584E69] hover:text-myBlue cursor-pointer '>{carts.length} Items</span>
                 </div>
                 <hr className='mb-5' />
                 <div className=''>
@@ -265,8 +270,8 @@ const Header = () => {
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                 </label>
                 <form className='hidden lg:flex iteems-center border px-4 py-3 rounded  mt-[25px] mb-[27px]'>
-                    <input type="text" placeholder='Search...' className='outline-none  text-[#2E293E]' />
-                    <span class="material-symbols-outlined cursor-pointer w-4 h-4 text-[#2E293E]"> search </span>
+                    <input type="text" placeholder='Search...' className='outline-none  text-myBlack' />
+                    <span class="material-symbols-outlined cursor-pointer w-4 h-4 text-myBlack"> search </span>
                 </form>
 
             </div>

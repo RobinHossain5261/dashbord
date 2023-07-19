@@ -20,6 +20,7 @@ const SignUps = () => {
                 backgroundColor: gradient,
                 borderColor:'#FFA5A5',
                 pointRadius: 0,
+                borderWidth:5,
                 tension: 0.4
             }]
         };

@@ -33,7 +33,7 @@ export default function SelectBar() {
             disabled={person.unavailable}
             as={Fragment}
             className={({ active }) =>
-              `relative cursor-default select-none py-2 pl-10 pr-4 ${active ? 'bg-[#4538D3] text-white' : 'text-gray-900'
+              `relative cursor-default select-none py-2 pl-10 pr-4 ${active ? 'bg-myBlue text-white' : 'text-gray-900'
               }`
             }
           >

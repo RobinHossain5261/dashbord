@@ -47,21 +47,21 @@ const DoughnutChart = () => {
       };
 
     return (
-        <div className='bg-white py-8 px-[30px] rounded'>
+        <div className='bg-white dark:bg-darkBg py-8 px-[30px] rounded'>
             <div className='flex justify-between items-center'>
-                <h1 className='text-xl text-[#2E293E]'>Device-users</h1>
+                <h1 className='text-xl text-myBlack dark:text-white'>Device-users</h1>
                 <div>
                     <Listbox value={selectedPerson} onChange={setSelectedPerson}>
                         <Listbox.Button
 
-                            className="lg:flex hidden gap-2 items-center  relative w-full cursor-default rounded-lg text-[#252525] bg-white py-2 px-3 text-left border focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
+                            className="lg:flex hidden gap-2 items-center  relative w-full cursor-default rounded-lg text-[#252525] dark:text-white py-2 px-3 text-left border dark:border-darkLine border-myLine focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
                             {selectedPerson.name}
                             <span class="material-symbols-outlined">
                                 expand_more
                             </span>
                         </Listbox.Button>
                         <Listbox.Options
-                            className="absolute mt-1 max-h-60 max-w-60 z-10 text-center overflow-auto rounded-md bg-white py-2  text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                            className="absolute mt-1 max-h-60 max-w-60 z-10 text-center overflow-auto rounded-md bg-white dark:bg-darkCard py-2  text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
 
                             {people.map((person) => (
                                 <Listbox.Option
@@ -70,7 +70,7 @@ const DoughnutChart = () => {
                                     disabled={person.unavailable}
                                     as={Fragment}
                                     className={({ active }) =>
-                                        `relative cursor-default select-none py-2 px-5 ${active ? 'bg-[#4538D3] text-white' : 'text-gray-900'
+                                        `relative cursor-default select-none py-2 px-5 ${active ? 'bg-myBlue dark:bg-myGreen text-white' : 'text-gray-900 dark:text-white'
                                         }`
                                     }
                                 >
@@ -87,13 +87,13 @@ const DoughnutChart = () => {
                     </Listbox>
                 </div>
             </div>
-            <hr className='my-10' />
+            <hr className='my-10 dark:border-darkLine border-myLine' />
             <div className='w-[300px] h-[300px] mx-auto flex items-center justify-center'>
 
-                <div className="inner relative">
+                <div className="inner relative dark:bg-darkBg">
                     <div style={doughnutStyle}>
-                        <h4 className="text-2xl text-[#4538D3] font-semibold">23.6K</h4>
-                        <span className='text-[#2E293E] text-base'>USERS</span>
+                        <h4 className="text-2xl text-myBlue dark:text-myPink font-semibold">23.6K</h4>
+                        <span className='text-myBlack dark:text-white text-base'>USERS</span>
                     </div >
                     <Doughnut data={data5}  options={option5}/>
                 </div>
@@ -101,18 +101,18 @@ const DoughnutChart = () => {
             </div>
             <div className='flex justify-around mt-10'>
                 <div>
-                    <h5 className='text-xl text-[#4538D3]'>Mobile</h5>
-                    <b className='text-[#2E293E] text-2xl'>91.434%</b>
+                    <h5 className='text-xl text-myBlue dark:text-myGreen text-center'>Mobile</h5>
+                    <b className='text-myBlack text-2xl dark:text-white'>91.434%</b>
                 </div>
                 <div className='w-[1px] bg-[#ECEEFB]'></div>
                 <div>
-                    <h5 className='text-xl text-[#4538D3]'>Web</h5>
-                    <b className='text-[#2E293E] text-2xl'>93.64%</b>
+                    <h5 className='text-xl text-myBlue dark:text-myGreen text-center'>Web</h5>
+                    <b className='text-myBlack dark:text-white text-2xl'>93.64%</b>
                 </div>
                 <div className='w-[1px] bg-[#ECEEFB]'></div>
                 <div>
-                    <h5 className='text-xl text-[#4538D3]'>Other</h5>
-                    <b className='text-[#2E293E] text-2xl'>66.364%</b>
+                    <h5 className='text-xl text-myBlue dark:text-myGreen text-center'>Other</h5>
+                    <b className='text-myBlack dark:text-white text-2xl'>66.364%</b>
                 </div>
             </div>
         </div>

@@ -147,30 +147,30 @@ const allContacts = [
 const contacts = () => {
     const [selectedPerson, setSelectedPerson] = useState(people[0])
     return (
-        <div className='px-6 pt-10 pb-6'>
-            <h3 className='text-[32px] font-semibold text-[#2E293E]'>Contacts</h3>
-            <span className='text-sm text-[#2E293E]'>Lorem ipsum dolor sit ammet consectetur.</span>
+        <div className='px-6 pt-10 pb-6 bg-bgColor dark:bg-darkBg'>
+            <h3 className='text-[32px] font-semibold text-myBlack dark:text-white'>Contacts</h3>
+            <span className='text-sm text-myBlack dark:text-white '>Lorem ipsum dolor sit ammet consectetur.</span>
 
             <div className='mt-8'>
-                <span className='text-white py-3 px-4 bg-[#4538D3] text-sm rounded'>Table view</span>
-                <span className='text-[#2E293E] py-3 px-4 bg-white text-sm rounded ml-6 border-[#2E293E]'>Card view</span>
+                <span className='text-white dark:text-[#1E192A] py-3 px-4 bg-myBlue dark:bg-[#00E177] text-sm rounded'>Table view</span>
+                <span className='text-myBlack dark:text-myWhite border dark:border-darkLine py-3 px-4  text-sm rounded ml-6 border-myLine'>Card view</span>
             </div>
 
-            <div className='bg-white py-8 px-7 mt-8 rounded'>
-                <div className='flex justify-between'>
-                    <h3 className='text-xl'>Contacts List</h3>
+            <div className='bg-white dark:bg-darkCard py-8 px-7 mt-8 rounded'>
+                <div className='flex justify-between items-center'>
+                    <h3 className='text-xl text-myBlack dark:text-myWhite'>Contacts List</h3>
                     <div>
                         <Listbox value={selectedPerson} onChange={setSelectedPerson}>
                             <Listbox.Button
 
-                                className="lg:flex hidden gap-2 items-center  relative w-full cursor-default rounded-lg text-[#252525] bg-white py-2 px-3 text-left border focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
+                                className="lg:flex hidden gap-2 items-center  relative w-full cursor-default rounded-lg text-[#252525] dark:text-[#ECEEFB] dark:border-darkLine py-2 px-3 text-left border focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
                                 {selectedPerson.name}
                                 <span class="material-symbols-outlined">
                                     expand_more
                                 </span>
                             </Listbox.Button>
                             <Listbox.Options
-                                className="absolute mt-1 max-h-60 max-w-60 z-10 text-center overflow-auto rounded-md bg-white py-2  text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                                className="absolute mt-1 max-h-60 max-w-60 z-10 text-center overflow-auto rounded-md bg-white dark:bg-darkCard py-2  text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
 
                                 {people.map((person) => (
                                     <Listbox.Option
@@ -179,7 +179,7 @@ const contacts = () => {
                                         disabled={person.unavailable}
                                         as={Fragment}
                                         className={({ active }) =>
-                                            `relative cursor-default select-none py-2 px-5 ${active ? 'bg-[#4538D3] text-white' : 'text-gray-900'
+                                            `relative cursor-default select-none py-2 px-5 ${active ? 'bg-myBlue dark:bg-myGreen text-white' : 'text-gray-900 dark:text-white'
                                             }`
                                         }
                                     >
@@ -198,44 +198,44 @@ const contacts = () => {
                 </div>
 
                 <div className="overflow-x-auto block mt-10">
-                    <table className="table overflow-hidden whitespace-nowrap w-[150%] lg:w-full">
+                    <table className="table overflow-hidden whitespace-nowrap w-full">
                     
-                    <thead className='bg-[#F5F7FD] text-lg text-[#2E293E]'>
-                            <tr>
+                    <thead className='bg-[#F5F7FD] dark:bg-darkBg text-lg text-myBlack dark:text-white'>
+                            <tr className=' dark:border-darkLine border-myLine'>
                                 <th>
                                     <label>
-                                        <input type="checkbox" className="checkbox" />
+                                        <input type="checkbox" className="checkbox dark:bg-[#1E192A]" />
                                     </label>
                                 </th>
                                 <th>Contacts</th>
                                 <th >
                                     <div className='flex items-center'>
                                         <span>Company List</span>
-                                        <span class="material-symbols-outlined text-[#2E293E] ml-2">unfold_less</span>
+                                        <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_less</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
                                         <span>Phone Number</span>
-                                        <span class="material-symbols-outlined text-[#2E293E] ml-2">unfold_less</span>
+                                        <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_less</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
                                         <span>Email Adress</span>
-                                        <span class="material-symbols-outlined text-[#2E293E] ml-2">unfold_less</span>
+                                        <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_less</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
                                         <span>Last Intereactions</span>
-                                        <span class="material-symbols-outlined text-[#2E293E] ml-2">unfold_less</span>
+                                        <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_less</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
                                         <span>Delete</span>
-                                        <span class="material-symbols-outlined text-[#2E293E] ml-2">unfold_less</span>
+                                        <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_less</span>
                                     </div>
                                 </th>
 
@@ -245,15 +245,16 @@ const contacts = () => {
                             {
                                 allContacts.map(contacts => (<tr
                                     key={contacts.id}
+                                    className='dark:border-darkLine'
                                 >
                                     <th>
                                         <label>
-                                            <input type="checkbox" className="checkbox" />
+                                            <input type="checkbox" className="checkbox dark:bg-[#1E192A]" />
                                         </label>
                                     </th>
                                     <td>
                                         <div className="flex items-center space-x-3">
-                                            <div className="text-base">{contacts.productsNo}</div>
+                                            <div className="text-base text-myBlack dark:text-myWhite">{contacts.productsNo}</div>
                                         </div>
                                     </td>
                                     <td>
@@ -264,15 +265,15 @@ const contacts = () => {
                                                 </div>
                                             </div>
                                             <div>
-                                                <div className="text-base">{contacts.company}</div>
+                                                <div className="text-base text-myBlack dark:text-myWhite">{contacts.company}</div>
                                             </div>
                                         </div>
                                     </td>
-                                    <td className="text-lg">{contacts.phone}</td>
-                                    <td className="text-lg ">{contacts.email}</td>
-                                    <td className="text-lg ">{contacts.interaction}</td>
-                                    <th >
-                                        <span class="material-symbols-outlined cursor-pointer mr-1 hover:text-[#4538D3]">
+                                    <td className="text-lg text-myBlack dark:text-myWhite">{contacts.phone}</td>
+                                    <td className="text-lg  text-myBlack dark:text-myWhite">{contacts.email}</td>
+                                    <td className="text-lg text-myBlack dark:text-myWhite">{contacts.interaction}</td>
+                                    <th className='text-myBlack dark:text-myWhite'>
+                                        <span class="material-symbols-outlined cursor-pointer mr-1 hover:text-myBlue">
                                             auto_fix
                                         </span>
                                         <span class="material-symbols-outlined cursor-pointer hover:text-red-500">
@@ -285,7 +286,7 @@ const contacts = () => {
                     </table>
                 </div>
             </div>
-            <hr className='mt-6' />
+            <hr className='mt-6 dark:border-darkLine border-myLine' />
         </div>
     );
 };

@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import Image from 'next/image';
 import bitcoin from '@/../public/images/bitcoin.png';
@@ -17,9 +18,11 @@ import img5 from '@/../public/images/img5.png';
 import img6 from '@/../public/images/img6.png';
 import img7 from '@/../public/images/img7.png';
 import Link from 'next/link';
+import { useTheme } from 'next-themes';
 
 
 const crypto = () => {
+    const { resolvedTheme, setTheme } = useTheme();
 
     const cards = [
         {
@@ -30,6 +33,7 @@ const crypto = () => {
             price: 'Latest price',
             parcent: '-1.26%',
             color: '#A82500',
+            color1: '#FFA5A5',
             change: '24 change',
             img: bitcoin,
         },
@@ -41,6 +45,7 @@ const crypto = () => {
             price: 'Latest price',
             parcent: '0.0099%',
             color: '#4538D3',
+            color1: '#00E177',
             change: '24 change',
             img: ethereum,
         },
@@ -52,6 +57,7 @@ const crypto = () => {
             price: 'Latest price',
             parcent: '-1.26%',
             color: '#A82500',
+            color1: '#FFA5A5',
             change: '24 change',
             img: monero,
         }
@@ -67,6 +73,7 @@ const crypto = () => {
                 trending_up
             </span>,
             color: '#4538D3',
+            color1: '#00E177',
             cap: '$1,847,421.00',
             volume: '1,376,174.00',
             img: tether
@@ -80,6 +87,7 @@ const crypto = () => {
                 trending_down
             </span>,
             color: '#A82500',
+            color1: '#FFA5A5',
             cap: '$2,797,933.00',
             volume: '$2,323,337.00',
             img: monero
@@ -93,6 +101,7 @@ const crypto = () => {
                 trending_up
             </span>,
             color: '#4538D3',
+            color1: '#00E177',
             cap: '$1,850,497.00',
             volume: '$1,544,962.00',
             img: tron
@@ -106,6 +115,7 @@ const crypto = () => {
                 trending_down
             </span>,
             color: '#A82500',
+            color1: '#FFA5A5',
             cap: '$1,437,001.00',
             volume: '$2,346,052.00',
             img: dash
@@ -119,6 +129,7 @@ const crypto = () => {
                 trending_up
             </span>,
             color: '#4538D3',
+            color1: '#00E177',
             cap: '$1,939,214.00',
             volume: '$2,470,540.00',
             img: dogecoin
@@ -132,6 +143,7 @@ const crypto = () => {
                 trending_down
             </span>,
             color: '#A82500',
+            color1: '#FFA5A5',
             cap: '$1,544,962.00',
             volume: '$2,019,065.00',
             img: bitcoin
@@ -145,6 +157,7 @@ const crypto = () => {
                 trending_up
             </span>,
             color: '#4538D3',
+            color1: '#00E177',
             cap: '$2,346,052.00',
             volume: '$1,774,195.00',
             img: ethereum
@@ -158,6 +171,7 @@ const crypto = () => {
                 trending_up
             </span>,
             color: '#4538D3',
+            color1: '#00E177',
             cap: '$2,474,709.00',
             volume: '$1,166,081.00',
             img: ripple
@@ -171,6 +185,7 @@ const crypto = () => {
                 trending_down
             </span>,
             color: '#A82500',
+            color1: '#FFA5A5',
             cap: '$1,706,959.00',
             volume: '$2,048,664.00',
             img: binance
@@ -184,6 +199,7 @@ const crypto = () => {
                 trending_down
             </span>,
             color: '#A82500',
+            color1: '#FFA5A5',
             cap: '$1,760,576.00',
             volume: '$1,760,576.00',
             img: ellaism
@@ -197,6 +213,7 @@ const crypto = () => {
                 trending_up
             </span>,
             color: '#4538D3',
+            color1: '#00E177',
             cap: '$2,702,244.00',
             volume: '$2,554,502.00',
             img: digibyte
@@ -210,6 +227,7 @@ const crypto = () => {
                 trending_down
             </span>,
             color: '#A82500',
+            color1: '#FFA5A5',
             cap: '$1,970,502.00',
             volume: '$1,962,547.00',
             img: patcoin
@@ -223,6 +241,7 @@ const crypto = () => {
                 trending_up
             </span>,
             color: '#4538D3',
+            color1: '#00E177',
             cap: '$2,660,713.00',
             volume: '$1,850,497.00',
             img: adx
@@ -335,38 +354,40 @@ const crypto = () => {
     ]
 
     return (
-        <div className='px-6 pt-10 pb-6'>
-            <h3 className='text-[32px] font-semibold text-[#2E293E]'>Crypto</h3>
-            <span className='text-sm text-[#2E293E]'>Lorem ipsum dolor sit ammet consectetur.</span>
+        <div className='px-6 pt-10 pb-6 bg-bgColor dark:bg-darkBg'>
+            <h3 className='text-[32px] font-semibold text-myBlack dark:text-white'>Crypto</h3>
+            <span className='text-sm text-myBlack dark:text-white'>Lorem ipsum dolor sit ammet consectetur.</span>
 
             {/* crypto card */}
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                 {
                     cards.map(card => (<div
-                        className='p-5 bg-white rounded mt-8'
+                        className='p-5 bg-white rounded mt-8 dark:bg-darkCard'
                         key={card.id}
                     >
                         <div className='flex justify-between'>
                             <div className='flex gap-3'>
                                 <Image className='w-8 h-8' src={card.img} alt="curency" />
                                 <div>
-                                    <h4 className='text-2xl text-[#2E293E] font-semibold'>{card.name}</h4>
-                                    <span className='text-lg text-[#584E69]'>{card.wallet}</span>
+                                    <h4 className='text-2xl text-myBlack dark:text-white font-semibold'>{card.name}</h4>
+                                    <span className='text-lg text-[#584E69] dark:text-myWhite'>{card.wallet}</span>
                                 </div>
                             </div>
                             <div>
-                                <span className='text-sm text-white bg-[#4538D3] py-1 px-2 rounded'>{card.wallet}</span>
+                                <span className='text-sm text-white dark:text-myGreen dark:bg-[#2C3140] bg-myBlue py-1 px-2 rounded'>{card.wallet}</span>
                             </div>
                         </div>
 
                         <div className='flex justify-between mt-8 mb-2'>
-                            <h5 className='text-xl font-semibold text-[#4538D3]'>{card.amount}</h5>
-                            <span className='text-lg' style={{ color: card.color }}>{card.parcent}</span>
+                            <h5 className='text-xl font-semibold text-myBlue dark:text-myGreen'>{card.amount}</h5>
+                            <span className='text-lg' 
+                            style={{ color:resolvedTheme==='dark' ? `${card.color1}`: `${card.color}`}}>{card.parcent}
+                            </span>
                         </div>
 
                         <div className='flex justify-between'>
-                            <h4 className='text-xl text-[#584E69]'>{card.price}</h4>
-                            <h4 className='text-xl text-[#584E69]'>{card.change}</h4>
+                            <h4 className='text-xl text-[#584E69] dark:text-myWhite'>{card.price}</h4>
+                            <h4 className='text-xl text-[#584E69] dark:text-myWhite'>{card.change}</h4>
                         </div>
 
                     </div>))
@@ -374,44 +395,44 @@ const crypto = () => {
             </div>
 
             {/* crypto table */}
-            <div className='bg-white py-8 px-7 mt-8 rounded'>
+            <div className='bg-white dark:bg-darkCard py-8 px-7 mt-8 rounded'>
                 <div className='flex justify-between'>
-                    <h3 className='text-xl text-[#2E293E]'>Crypto</h3>
-                    <span className="border rounded border-[#ECEEFB] text-[#2E293E] text-sm py-3 px-4">5-10 of 50</span>
+                    <h3 className='text-xl text-myBlack dark:text-myWhite'>Crypto</h3>
+                    <span className="border rounded border-myLine dark:border-darkLine text-myBlack dark:text-myWhite text-sm py-3 px-4">5-10 of 50</span>
                 </div>
                 <div className="overflow-x-auto block mt-10 ">
                     <table className="table overflow-hidden w-[150%] lg:w-full">
 
-                        <thead className='bg-[#F5F7FD] text-lg text-[#2E293E]'>
-                            <tr>
+                        <thead className='bg-[#F5F7FD] dark:bg-darkBg text-lg text-myBlack'>
+                            <tr className='dark:border-darkLine'>
                                 <th >
                                     <div className='flex items-center'>
-                                        <span className='text-lg text-[#2E293E]'># Name</span>
-                                        <span class="material-symbols-outlined text-[#2E293E] ml-2">unfold_more</span>
+                                        <span className='text-lg text-myBlack dark:text-myWhite'># Name</span>
+                                        <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
-                                        <span className='text-lg text-[#2E293E]'>Amount</span>
-                                        <span class="material-symbols-outlined text-[#2E293E] ml-2">unfold_more</span>
+                                        <span className='text-lg text-myBlack dark:text-myWhite'>Amount</span>
+                                        <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
-                                        <span className='text-lg text-[#2E293E]'>24H(%)</span>
-                                        <span class="material-symbols-outlined text-[#2E293E] ml-2">unfold_more</span>
+                                        <span className='text-lg text-myBlack dark:text-myWhite'>24H(%)</span>
+                                        <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
-                                        <span className='text-lg text-[#2E293E]'>Market Cap</span>
-                                        <span class="material-symbols-outlined text-[#2E293E] ml-2">unfold_more</span>
+                                        <span className='text-lg text-myBlack dark:text-myWhite'>Market Cap</span>
+                                        <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
-                                        <span className='text-lg text-[#2E293E]'>Volume(24h)</span>
-                                        <span class="material-symbols-outlined text-[#2E293E] ml-2">unfold_more</span>
+                                        <span className='text-lg text-myBlack dark:text-myWhite'>Volume(24h)</span>
+                                        <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                     </div>
                                 </th>
 
@@ -421,6 +442,7 @@ const crypto = () => {
                             {
                                 cryptos.map(crypto => (<tr
                                     key={crypto.id}
+                                    className='dark:border-darkLine'
                                 >
                                     <td>
                                         <div className="flex items-center space-x-3">
@@ -430,17 +452,19 @@ const crypto = () => {
                                                 </div>
                                             </div>
                                             <div>
-                                                <div className="text-base">{crypto.name}</div>
+                                                <div className="text-base text-myBlack dark:text-myWhite">{crypto.name}</div>
                                             </div>
                                         </div>
                                     </td>
-                                    <td className="text-lg ">{crypto.amount}</td>
-                                    <div className='flex items-center' style={{ color: crypto.color }}>
+                                    <td className="text-lg text-myBlack dark:text-myWhite ">{crypto.amount}</td>
+                                    <div className='flex items-center' 
+                                    style={{ color:resolvedTheme==='dark'? `${crypto.color1}`:`${crypto.color}` }}>
                                         <td className="text-lg ">{crypto.parcent}</td>
                                         <span className="ml-3 w-4 h-4">{crypto.trending}</span>
                                     </div>
-                                    <td className="text-lg ">{crypto.cap}</td>
-                                    <td className="text-lg " style={{ color: crypto.color }}>{crypto.volume}</td>
+                                    <td className="text-lg  text-myBlack dark:text-myWhite">{crypto.cap}</td>
+                                    <td className="text-lg " 
+                                    style={{ color:resolvedTheme==='dark'? `${crypto.color1}`:`${crypto.color}` }}>{crypto.volume}</td>
                                 </tr>))
                             }
                         </tbody>
@@ -450,27 +474,27 @@ const crypto = () => {
 
             {/* Cryto News */}
 
-            <div>
-                <h3 className='text-[32px] text-[#2E293E] mt-6 mb-10'>Crypto news</h3>
+            <div>  
+                <h3 className='text-[32px] text-myBlack dark:text-white mt-6 mb-10'>Crypto news</h3>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                     {
                         news.map(company => (<div
                             key={company.id}
-                            className='py-4 px-5 bg-white rounded'
+                            className='py-4 px-5 bg-white rounded dark:bg-darkCard'
                         >
                             <Image className='rounded' src={company.img} alt="company" />
                             <div className='flex justify-between my-5'>
                                 <div className='flex'>
-                                    <span className="material-symbols-outlined w-6 h-6 text-[#584E69]">calendar_month</span>
-                                    <span className='text-[#584E69] text-base ml-[10px]'>{company.date}</span>
+                                    <span className="material-symbols-outlined w-6 h-6 text-[#584E69] dark:text-[#D1D1D1]">calendar_month</span>
+                                    <span className='text-[#584E69] dark:text-[#D1D1D1] text-base ml-[10px]'>{company.date}</span>
                                 </div>
                                 <div className='flex'>
-                                    <span className="material-symbols-outlined w-6 h-6 text-[#584E69]">alarm</span>
-                                    <span className='text-[#584E69] text-base ml-[10px]'>{company.time}</span>
+                                    <span className="material-symbols-outlined w-6 h-6 text-[#584E69] dark:text-[#D1D1D1]">alarm</span>
+                                    <span className='text-[#584E69] dark:text-[#D1D1D1] text-base ml-[10px]'>{company.time}</span>
                                 </div>
                             </div>
-                            <h4 className='text-2xl font-semibold text-[#2E293E] mb-8'>{company.title}</h4>
-                            <Link href='#' className='text-[#4538D3] flex items-center gap-2 cursor-pointer'>
+                            <h4 className='text-2xl font-semibold text-myBlack dark:text-white mb-8'>{company.title}</h4>
+                            <Link href='#' className='text-myBlue dark:text-myGreen flex items-center gap-2 cursor-pointer'>
                                 <span>View Company</span>
                                 <span class="material-symbols-outlined">arrow_forward</span>
                             </Link>
@@ -480,44 +504,44 @@ const crypto = () => {
             </div>
 
             {/* Trending  */}
-            <div className='bg-white py-8 px-7 mt-6 rounded'>
+            <div className='bg-white dark:bg-darkCard py-8 px-7 mt-6 rounded'>
                 <div className='flex justify-between'>
-                    <h3 className='text-xl text-[#2E293E]'>Trending</h3>
-                    <span className="border rounded border-[#ECEEFB] text-[#2E293E] text-sm py-3 px-4">5-10 of 50</span>
+                    <h3 className='text-xl text-myBlack dark:text-myWhite'>Trending</h3>
+                    <span className="border rounded border-myLine dark:border-darkLine text-myBlack dark:text-myWhite text-sm py-3 px-4">5-10 of 50</span>
                 </div>
                 <div className="overflow-x-auto block mt-10 ">
-                    <table className="table overflow-hidden w-[150%] lg:w-full">
+                    <table className="table overflow-hidden w-full">
 
-                        <thead className='bg-[#F5F7FD] text-lg text-[#2E293E]'>
-                            <tr>
+                        <thead className='bg-[#F5F7FD] dark:bg-darkBg text-lg text-myBlack '>
+                            <tr className='dark:border-darkLine '>
                                 <th >
                                     <div className='flex items-center'>
-                                        <span className='text-lg text-[#2E293E]'># Name</span>
-                                        <span class="material-symbols-outlined text-[#2E293E] ml-2">unfold_more</span>
+                                        <span className='text-lg text-myBlack dark:text-myWhite'># Name</span>
+                                        <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
-                                        <span className='text-lg text-[#2E293E]'>Amount</span>
-                                        <span class="material-symbols-outlined text-[#2E293E] ml-2">unfold_more</span>
+                                        <span className='text-lg text-myBlack dark:text-myWhite'>Amount</span>
+                                        <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
-                                        <span className='text-lg text-[#2E293E]'>24H(%)</span>
-                                        <span class="material-symbols-outlined text-[#2E293E] ml-2">unfold_more</span>
+                                        <span className='text-lg text-myBlack dark:text-myWhite'>24H(%)</span>
+                                        <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
-                                        <span className='text-lg text-[#2E293E]'>Market Cap</span>
-                                        <span class="material-symbols-outlined text-[#2E293E] ml-2">unfold_more</span>
+                                        <span className='text-lg text-myBlack dark:text-myWhite'>Market Cap</span>
+                                        <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
-                                        <span className='text-lg text-[#2E293E]'>Volume(24h)</span>
-                                        <span class="material-symbols-outlined text-[#2E293E] ml-2">unfold_more</span>
+                                        <span className='text-lg text-myBlack dark:text-myWhite'>Volume(24h)</span>
+                                        <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                     </div>
                                 </th>
 
@@ -527,6 +551,7 @@ const crypto = () => {
                             {
                                 tredings.map(crypto => (<tr
                                     key={crypto.id}
+                                    className='dark:border-darkLine'
                                 >
                                     <td>
                                         <div className="flex items-center space-x-3">
@@ -536,24 +561,24 @@ const crypto = () => {
                                                 </div>
                                             </div>
                                             <div>
-                                                <div className="text-base text-[#2E293E]">{crypto.name}</div>
+                                                <div className="text-base text-myBlack dark:text-myWhite">{crypto.name}</div>
                                             </div>
                                         </div>
                                     </td>
-                                    <td className="text-lg text-[#2E293E]">{crypto.amount}</td>
-                                    <div className='flex items-center' style={{ color: crypto.color }}>
+                                    <td className="text-lg text-myBlack dark:text-myWhite">{crypto.amount}</td>
+                                    <div className='flex items-center text-myBlue dark:text-myGreen'>
                                         <td className="text-lg ">{crypto.parcent}</td>
                                         <span className="ml-3 w-4 h-4">{crypto.trending}</span>
                                     </div>
-                                    <td className="text-lg text-[#2E293E]">{crypto.cap}</td>
-                                    <td className="text-lg " style={{ color: crypto.color }}>{crypto.volume}</td>
+                                    <td className="text-lg text-myBlack dark:text-myWhite">{crypto.cap}</td>
+                                    <td className="text-lg text-myBlue dark:text-myGreen">{crypto.volume}</td>
                                 </tr>))
                             }
                         </tbody>
                     </table>
                 </div>
             </div>
-            <hr className='mt-6'/>
+            <hr className='mt-6 border-myLine dark:border-darkLine'/>
         </div>
     );
 };

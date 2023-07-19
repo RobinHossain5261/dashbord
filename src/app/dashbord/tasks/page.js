@@ -7,11 +7,12 @@ import photo5 from '@/../public/images/photo12.png';
 import photo6 from '@/../public/images/photo7.png';
 import Image from 'next/image';
 import './task.css';
-import ProgressBar from "@ramonak/react-progress-bar";
 
 
 import { useState, Fragment } from 'react'
 import { Listbox } from '@headlessui/react';
+import { useTheme } from 'next-themes';
+import Progress from '@/app/components/Progress/Progress';
 
 const people = [
     { id: 1, name: 'This Month', unavailable: false },
@@ -25,7 +26,8 @@ export const metadata = {
 }
 const tasks = () => {
 
-    const [selectedPerson, setSelectedPerson] = useState(people[0])
+    const [selectedPerson, setSelectedPerson] = useState(people[0]);
+    const { resolvedTheme, setTheme } = useTheme();
 
     const tasks = [
         {
@@ -38,13 +40,17 @@ const tasks = () => {
             more: <span class="material-symbols-outlined">
                 more_vert
             </span>,
-            progress: <ProgressBar
-                completed={80}
-                className="wrapper"
-                barContainerClassName="container"
-                completedClassName="barCompleted"
-                labelClassName="label"
-            />
+            color: "#4538D3 ",
+            color1: "#00E177",
+            completed: 80
+            // progress: <ProgressBar
+
+            //     completed={80}
+            //     className="wrapper"
+            //     barContainerClassName="container"
+            //     completedClassName="barCompleted"
+            //     labelClassName="label"
+            // />
         },
         {
             id: 2,
@@ -56,13 +62,9 @@ const tasks = () => {
             more: <span class="material-symbols-outlined">
                 more_vert
             </span>,
-            progress: <ProgressBar
-                completed={70}
-                className="wrapper"
-                barContainerClassName="container"
-                completedClassName="barCompleted1"
-                labelClassName="label"
-            />
+            color: "#4538D3 ",
+            color1: "#00E177",
+            completed: 70
         },
         {
             id: 3,
@@ -74,13 +76,9 @@ const tasks = () => {
             more: <span class="material-symbols-outlined">
                 more_vert
             </span>,
-            progress: <ProgressBar
-                completed={90}
-                className="wrapper"
-                barContainerClassName="container"
-                completedClassName="barCompleted2"
-                labelClassName="label"
-            />
+            color: "#4538D3 ",
+            color1: "#00E177",
+            completed: 80
         },
     ]
 
@@ -91,13 +89,9 @@ const tasks = () => {
             complete: '8 of 10 completed',
             parcent: '80%',
             img: photo1,
-            progress: <ProgressBar
-                completed={80}
-                className="wrapper"
-                barContainerClassName="container"
-                completedClassName="barCompleted"
-                labelClassName="label"
-            />
+            color: "#4538D3 ",
+            color1: "#00E177",
+            completed: 80
         },
         {
             id: 2,
@@ -105,13 +99,9 @@ const tasks = () => {
             complete: '7 of 10 completed',
             parcent: '70%',
             img: photo2,
-            progress: <ProgressBar
-                completed={70}
-                className="wrapper"
-                barContainerClassName="container"
-                completedClassName="barCompleted1"
-                labelClassName="label"
-            />
+            color: "#4538D3 ",
+            color1: "#00E177",
+            completed: 70
         },
         {
             id: 3,
@@ -119,13 +109,9 @@ const tasks = () => {
             complete: '9 of 10 completed',
             parcent: '90%',
             img: photo3,
-            progress: <ProgressBar
-                completed={90}
-                className="wrapper"
-                barContainerClassName="container"
-                completedClassName="barCompleted2"
-                labelClassName="label"
-            />
+            color: "#4538D3 ",
+            color1: "#00E177",
+            completed: 90
         },
         {
             id: 4,
@@ -133,13 +119,9 @@ const tasks = () => {
             complete: '8 of 10 completed',
             parcent: '80%',
             img: photo1,
-            progress: <ProgressBar
-                completed={80}
-                className="wrapper"
-                barContainerClassName="container"
-                completedClassName="barCompleted"
-                labelClassName="label"
-            />
+            color: "#4538D3 ",
+            color1: "#00E177",
+            completed: 80
         },
     ]
 
@@ -238,48 +220,53 @@ const tasks = () => {
         },
     ]
 
+
+
     return (
 
-        <div className="px-6 pt-10 pb-6">
-            <h1 className="text-2xl font-semibold text-[#2E293E]">Dashboard</h1>
-            <span className='text-[#2E293E] text-sm'>Jul 9, 2023</span>
+        <div className="px-6 pt-10 pb-6 bg-bgColor dark:bg-darkBg">
+            <h1 className="text-2xl font-semibold text-myBlack dark:text-white">Dashboard</h1>
+            <span className='text-myBlack text-sm dark:text-white'>Jul 9, 2023</span>
 
             {/* task cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 w-full ">
                 {
                     tasks.map(task => (<div
                         key={task.id}
-                        className="bg-white py-4 px-6 rounded task-card"
+                        className="bg-white dark:bg-darkCard py-4 px-6 rounded task-card"
                     >
                         <div className="flex justify-between">
-                            <span className="w-9 h-9 text-[#4538D3] p-3 rounded flex items-center justify-center icon-shadow">{task.icon}</span>
-                            <span className='w-[18px] h-[18px]'>{task.more}</span>
+                            <div className='bg-white dark:bg-[#1E192A] h-[60px] w-[60px] icon-shadow rounded flex items-center justify-center'>
+                                <span className="text-myBlue dark:text-myGreen p-3 ">{task.icon}</span>
+                            </div>
+                            <span className='w-[18px] h-[18px] dark:text-white'>{task.more}</span>
                         </div>
-                        <h4 className="text-2xl font-semibold text-[#2E293E] mt-6 mb-3">{task.name}</h4>
-                        <span>{task.progress}</span>
-                        <p className="text-[#584E69] text-lg mt-3">{task.complete}</p>
+                        <h4 className="text-2xl font-semibold text-myBlack dark:text-white mt-6 mb-3">{task.name}</h4>
+                        {/* <span>{task.progress}</span> */}
+                        <Progress bgcolor={resolvedTheme === 'dark' ? `${task.color1}` : `${task.color}`} completed={task.completed} />
+
+                        <p className="text-[#584E69] dark:text-[#D1D1D1] text-lg mt-3">{task.complete}</p>
                     </div>))
                 }
             </div>
 
             {/* Team progress */}
-            <div className="my-6 grid grid-cols-1 lg:grid-cols-2 gap-6">            
-                <div className="py-8 px-7 rounded bg-white">
+            <div className="my-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div className="py-8 px-7 rounded bg-white dark:bg-darkCard">
                     <div className="flex justify-between mb-7 items-center">
-                        <h1 className="text-xl text-[#2E293E]">Team Progress</h1>
-
+                        <h1 className="text-xl text-myBlack dark:text-myWhite">Team Progress</h1>
                         <div>
                             <Listbox value={selectedPerson} onChange={setSelectedPerson}>
                                 <Listbox.Button
 
-                                    className="lg:flex hidden gap-2 items-center  relative w-full cursor-default rounded-lg text-[#252525] bg-white py-2 px-3 text-left border focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
+                                    className="lg:flex hidden gap-2 items-center  relative w-full cursor-default rounded-lg text-[#252525] dark:text-myWhite py-2 px-3 text-left border dark:border-darkLine focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
                                     {selectedPerson.name}
                                     <span class="material-symbols-outlined">
                                         expand_more
                                     </span>
                                 </Listbox.Button>
                                 <Listbox.Options
-                                    className="absolute mt-1 max-h-60 max-w-60 z-10 text-center overflow-auto rounded-md bg-white py-2  text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                                    className="absolute mt-1 max-h-60 max-w-60 z-10 text-center overflow-auto rounded-md bg-white dark:bg-darkCard py-2  text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
 
                                     {people.map((person) => (
                                         <Listbox.Option
@@ -288,7 +275,7 @@ const tasks = () => {
                                             disabled={person.unavailable}
                                             as={Fragment}
                                             className={({ active }) =>
-                                                `relative cursor-default select-none py-2 px-5 ${active ? 'bg-[#4538D3] text-white' : 'text-gray-900'
+                                                `relative cursor-default select-none py-2 px-5 ${active ? 'bg-myBlue dark:bg-myGreen text-white' : 'text-gray-900 dark:text-white'
                                                 }`
                                             }
                                         >
@@ -312,16 +299,17 @@ const tasks = () => {
                             teamProgress.map(progress => (<div
                                 key={progress.id}
                             >
-                                <hr className='my-5' />
+                                <hr className='my-5 dark:border-darkLine' />
                                 <div className='flex items-center'>
                                     <Image src={progress.img} alt="buyer" className='mr-3 w-15 h-15' />
 
                                     <div className='flex-grow'>
-                                        <h4 className='text-2xl font-semibold text-[#2E293E] mb-3'>{progress.name}</h4>
-                                        <span>{progress.progress}</span>
+                                        <h4 className='text-2xl font-semibold text-myBlack dark:text-white mb-3'>{progress.name}</h4>
+                                        {/* <span>{progress.progress}</span> */}
+                                        <Progress bgcolor={resolvedTheme === 'dark' ? `${progress.color1}` : `${progress.color}`} completed={progress.completed} />
                                         <div className='flex justify-between mt-3'>
-                                            <span className='text-[#584E69] text-lg'>{progress.complete}</span>
-                                            <span className='text-[#584E69] text-lg'>{progress.parcent}</span>
+                                            <span className='text-[#584E69] dark:text-[#D1D1D1] text-lg'>{progress.complete}</span>
+                                            <span className='text-[#584E69] dark:text-[#D1D1D1] text-lg'>{progress.parcent}</span>
                                         </div>
                                     </div>
 
@@ -333,15 +321,15 @@ const tasks = () => {
                 </div>
 
                 {/* Task Reports */}
-                <div className="py-8 px-7 rounded bg-white">
+                <div className="py-8 px-7 rounded bg-white dark:bg-darkCard">
                     <div className="flex justify-between items-center">
-                        <h4 className="text-xl text-[#2E293E]">Tasks Reports</h4>
+                        <h4 className="text-xl text-myBlack dark:text-myWhite">Tasks Reports</h4>
 
                         <div>
                             <Listbox value={selectedPerson} onChange={setSelectedPerson}>
                                 <Listbox.Button
 
-                                    className="lg:flex hidden gap-2 items-center  relative w-full cursor-default rounded-lg text-[#252525] bg-white py-2 px-3 text-left border focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
+                                    className="lg:flex hidden gap-2 items-center  relative w-full cursor-default rounded-lg text-[#252525] dark:text-myWhite py-2 px-3 text-left border dark:border-darkLine focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
                                     {selectedPerson.name}
                                     <span class="material-symbols-outlined">
                                         expand_more
@@ -357,7 +345,7 @@ const tasks = () => {
                                             disabled={person.unavailable}
                                             as={Fragment}
                                             className={({ active }) =>
-                                                `relative cursor-default select-none py-2 px-5 ${active ? 'bg-[#4538D3] text-white' : 'text-gray-900'
+                                                `relative cursor-default select-none py-2 px-5 ${active ? 'bg-myBlue text-white' : 'text-gray-900'
                                                 }`
                                             }
                                         >
@@ -375,19 +363,21 @@ const tasks = () => {
                         </div>
                     </div>
 
-                    <hr className='my-7'/>
+                    <hr className='my-7 dark:border-darkLine' />
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 my-6">
                         {
                             cards.map(card => (<div
                                 key={card.id}
-                                className="bg-white py-4 px-6 rounded task-card">
+                                className="group bg-white dark:bg-[#1E192A] py-4 px-6 rounded task-card">
                                 <div className="flex justify-between">
-                                    <h3 className="text-base text-[#2E293E]">{card.name}</h3>
-                                    <span className="w-6 h-6 p-4 bg-[#F1F1FA] text-[#4538D3] flex justify-center items-center rounded">{card.icon}</span>
+                                    <h3 className="text-base text-myBlack dark:text-myWhite">{card.name}</h3>
+                                    <div className='group-hover:shadow-xl w-10 h-10 bg-[#EDECFB] dark:bg-[#164C3C] flex items-center justify-center rounded-md'>
+                                        <span className='mt-1 p-2 text-myBlue dark:text-myGreen'>{card.icon}</span>
+                                    </div>
                                 </div>
                                 <div className="flex flex-wrap mt-4">
-                                    <h3 className="text-[32px]  font-semibold mr-4">{card.view}</h3>
+                                    <h3 className="text-[32px] text-myBlack dark:text-white  font-semibold mr-4">{card.view}</h3>
                                     <div className='py-1 px-2 rounded   flex items-center'
                                         style={{ backgroundColor: card.bgColor, color: card.color }}
                                     >
@@ -400,38 +390,37 @@ const tasks = () => {
                     </div>
                 </div>
             </div>
-            <hr className="my-6" />
+            <hr className="my-6 dark:border-darkLine border-myLine" />
 
             {/* Task report card */}
             <div>
                 <div className="flex justify-between items-center">
-                    <h3 className="text-xl text-[#2E293E]">Task reports</h3>
-                    <p className="border text-[#2E293E] bg-white py-3 px-4 rounded">Browse all tasks</p>
+                    <h3 className="text-xl text-myBlack dark:text-myWhite">Task reports</h3>
+                    <p className="border dark:border-darkLine border-myLine text-myBlack dark:text-myWhite  py-3 px-4 rounded">Browse all tasks</p>
                 </div>
                 <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {
                         reportCards.map(card => (<div
                             key={card.id}
-                            className="bg-white py-4 md:py-6 lg:py-8 px-5 md:px-8 lg:px-10 rounded border hover:border-[#4538D3] hover:-skew-y-3 duration-300"
+                            className="bg-white dark:bg-darkCard py-4 md:py-6 lg:py-8 px-5 md:px-8 lg:px-10 rounded  hover:-skew-y-3 duration-300"
                         >
                             <Image className='w-[120px] h-[120px] mx-auto mb-8' src={card.img} alt="buyer" />
-                            <h4 className='text-[#2E293E] text-2xl font-semibold text-center mb-7'>{card.title}</h4>
-                            <div className='flex justify-between mb-8'>
-                                <p className='text-[#4538D3] rounded border px-2 bg-[#F6F6FB]'>{card.category}</p>
+                            <h4 className='text-myBlack dark:text-white text-2xl font-semibold text-center mb-7'>{card.title}</h4>
+                            <div className='flex justify-around mb-8'>
+                                <p className='text-myBlue dark:text-myGreen rounded py-1  px-2 bg-[#F6F6FB] dark:bg-[#2C3241]'>{card.category}</p>
                                 <div className='border'></div>
-                                <div className='flex'>
+                                <div className='flex items-center dark:text-[#ECEEFB]'>
                                     <span>{card.icon}</span>
                                     <p className='ml-1 text-sm'>{card.date}</p>
                                 </div>
                             </div>
-                            <p className='text-lg text-center'>{card.des}</p>
+                            <p className='text-lg text-center dark:text-[#D1D1D1]'>{card.des}</p>
                         </div>))
                     }
                 </div>
             </div>
 
-            <hr className='mt-6'/>
-
+            <hr className='mt-6 dark:border-darkLine' />
         </div>
     )
 }

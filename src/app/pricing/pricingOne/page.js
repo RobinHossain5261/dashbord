@@ -40,11 +40,11 @@ const PricingOne = () => {
     ]
 
     return (
-        <div className='px-6 pt-6 pb-[30px]'>
-            <h2 className='text-[#2E293E] text-[40px] text-center font-semibold mb-5'>Our Pricing</h2>
-            <p className='text-center text-lg text-[#2E293E]'>Vestibulum diam risus, convallis vel blandit eu, iaculis in diam. Fusce <br /> elementum metus sem.Nulla posuere, tortor sed .</p>
+        <div className='px-6 pt-6 pb-[30px] bg-bgColor dark:bg-darkBg'>
+            <h2 className='text-myBlack text-[40px] text-center font-semibold mb-5 dark:text-white'>Our Pricing</h2>
+            <p className='text-center text-lg text-myBlack dark:text-myWhite'>Vestibulum diam risus, convallis vel blandit eu, iaculis in diam. Fusce <br /> elementum metus sem.Nulla posuere, tortor sed .</p>
             <div className='flex items-center justify-center mt-7'>
-                <h4 className='text-lg text-[#2E293E]'>Billed Monthly</h4>
+                <h4 className='text-lg text-myBlack dark:text-white'>Billed Monthly</h4>
                 <div className="form-control mx-[22px]">
                     {/* <label className="cursor-pointer label">
                         <input type="checkbox" className="toggle toggle-primary" checked />
@@ -55,31 +55,31 @@ const PricingOne = () => {
                         role="switch"
                         id="flexSwitchCheckDefault" />
                 </div>
-                <h4 className='text-lg text-[#2E293E] '>Billed Annually</h4>
+                <h4 className='text-lg text-myBlack  dark:text-white'>Billed Annually</h4>
             </div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10'>
                 {
                     cards.map(card => (<div
                         key={card.id}
-                        className='bg-white py-7 px-8 rounded boxShadow text-center border hover:border-[#4538D3]'
+                        className='bg-white dark:bg-darkCard py-7 px-8 rounded boxShadow text-center border hover:border-myBlue dark:hover:border-[#64C4F7] dark:border-darkLine'
                     >
-                        <h5 className='text-[#4538D3] text-xl font-semibold'>{card.package}</h5>
-                        <h4 className='text-[#2E293E] text-2xl font-semibold my-2'>{card.price}</h4>
-                        <p className='text-lg text-[#2E293E]'>{card.des}</p>
+                        <h5 className='text-myBlue dark:text-myGreen text-xl font-semibold'>{card.package}</h5>
+                        <h4 className='text-myBlack dark:text-white text-2xl font-semibold my-2'>{card.price}</h4>
+                        <p className='text-lg text-myBlack dark:text-myWhite'>{card.des}</p>
 
-                        <ul className='mt-8 mb-10'>
-                            <li className='text-lg text-[#2E293E] border-t w-1/2 mx-auto py-5'>{card.event}</li>
-                            <li className='text-lg text-[#2E293E] border-t w-1/2 mx-auto py-5'>{card.campaigns}</li>
-                            <li className='text-lg text-[#2E293E] border-t w-1/2 mx-auto py-5'>{card.users}</li>
-                            <li className='text-lg text-[#2E293E] border-t w-1/2 mx-auto py-5'>{card.database}</li>
-                            <li className='text-lg text-[#2E293E] border-t w-1/2 mx-auto py-5'>{card.security}</li>
+                        <ul className='mt-8 mb-10 '>
+                            <li className='text-lg text-myBlack dark:text-myWhite dark:border-darkLine border-t w-1/2 mx-auto py-5'>{card.event}</li>
+                            <li className='text-lg text-myBlack dark:text-myWhite dark:border-darkLine border-t w-1/2 mx-auto py-5'>{card.campaigns}</li>
+                            <li className='text-lg text-myBlack dark:text-myWhite dark:border-darkLine border-t w-1/2 mx-auto py-5'>{card.users}</li>
+                            <li className='text-lg text-myBlack dark:text-myWhite dark:border-darkLine border-t w-1/2 mx-auto py-5'>{card.database}</li>
+                            <li className='text-lg text-myBlack dark:text-myWhite dark:border-darkLine border-t w-1/2 mx-auto py-5'>{card.security}</li>
                         </ul>
-                        <button className="btn btn-outline btn-primary w-full">Selecet Plan</button>
+                        <button className="btn btn-outline btn-primary dark:btn-outline dark:btn-success w-full">Selecet Plan</button>
                     </div>))
                 }
             </div>
-            <hr className='mt-6' />
+            <hr className='mt-6 border-myLine dark:border-darkLine' />
         </div>
     );
 };

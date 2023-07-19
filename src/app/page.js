@@ -4,7 +4,7 @@ import Reports from './dashbord/reports/page'
 
 export default function Home() {
   return (
-    <main className="bg-[#F7F9FC]">  
+    <main className="">  
     <Reports></Reports>
     </main>
   )

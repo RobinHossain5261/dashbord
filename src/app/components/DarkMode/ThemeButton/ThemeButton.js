@@ -3,8 +3,6 @@ import { useTheme } from 'next-themes';
 import React from 'react';
 import { useState, useEffect } from 'react';
 
-import { SunIcon, MoonIcon } from '@heroicons/react/24/solid'
-
 const ThemeButton = () => {
     const [mounted, setMounted] = useState(false);
     const { resolvedTheme, setTheme } = useTheme();
@@ -20,15 +18,14 @@ const ThemeButton = () => {
 
     return (
         <button
-            aria-label='Toggle Dark Mode'
-            type='button'
-            className='flex items-center justify-center rounded-lg p-2 transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-700'
+            aria-label='Toggle Dark Mode'           
+            className='flex items-center justify-center rounded-lg p-2 transition-colors '
             onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
         >
             {resolvedTheme === 'dark' ? (
-                <SunIcon className='h-5 w-5 text-orange-300' />
+                <span class="material-symbols-outlined w-5 h-5">light_mode</span>
             ) : (
-                <MoonIcon className='h-5 w-5 text-slate-800' />
+                <span class="material-symbols-outlined w-5 h-5">dark_mode</span>
             )}
         </button>
     );

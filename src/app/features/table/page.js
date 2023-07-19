@@ -1,4 +1,5 @@
 "use client"
+import { useTheme } from 'next-themes';
 import React from 'react';
 
 const invoices = [
@@ -9,7 +10,8 @@ const invoices = [
     Amount: '$110,000',
     status: 'Paid',
     productsNo: '#2E293E',
-    color: '#0F365D'
+    color: '#0F365D',
+    color1:'#00E177'
   },
   {
     id: 2,
@@ -18,7 +20,8 @@ const invoices = [
     Amount: '	$210.00',
     status: 'Unpaid',
     productsNo: '#2E293E',
-    color: '#725002'
+    color: '#725002',
+    color1:'#FFA5A5'
   },
   {
     id: 3,
@@ -27,7 +30,8 @@ const invoices = [
     Amount: '$120,000 ',
     status: 'Pending',
     productsNo: '#2E293E',
-    color: '#4538D3'
+    color: '#4538D3',
+    color1:'#F8C140'
   },
   {
     id: 4,
@@ -36,7 +40,8 @@ const invoices = [
     Amount: '$50,000 ',
     status: 'Paid',
     productsNo: '#2E293E',
-    color: '#725002'
+    color: '#725002',
+    color1:'#00E177'
   },
   {
     id: 5,
@@ -45,7 +50,8 @@ const invoices = [
     Amount: '$100,000',
     status: 'Pending',
     productsNo: '#2E293E',
-    color: '#4538D3'
+    color: '#4538D3',
+    color1:'#F8C140'
   },
   {
     id: 6,
@@ -54,7 +60,8 @@ const invoices = [
     Amount: '$130,000',
     status: 'Unpaid',
     productsNo: '#2E293E',
-    color: '#725002'
+    color: '#725002',
+    color:'#FFA5A5'
   },
   {
     id: 7,
@@ -63,7 +70,8 @@ const invoices = [
     Amount: '$60,000',
     status: 'Pending',
     productsNo: '#2E293E',
-    color: '#4538D3'
+    color: '#4538D3',
+    color1:'#F8C140'
   },
   {
     id: 8,
@@ -72,7 +80,8 @@ const invoices = [
     Amount: '$90,000',
     status: 'Paid',
     productsNo: '#2E293E',
-    color: '#0F365D'
+    color: '#0F365D',
+    color1:'#00E177'
   },
   {
     id: 9,
@@ -81,7 +90,8 @@ const invoices = [
     Amount: '$110,000',
     status: 'Unpaid',
     productsNo: '#2E293E',
-    color: '#725002'
+    color: '#725002',
+    color1:'#FFA5A5'
   },
   {
     id: 10,
@@ -90,62 +100,64 @@ const invoices = [
     Amount: '$80,000',
     status: 'Paid',
     productsNo: '#2E293E',
-    color: '#0F365D'
+    color: '#0F365D',
+    color1:'#00E177'
   },
 
 ]
 
 const table = () => {
+  const { resolvedTheme, setTheme } = useTheme();
   return (
-    <div className='px-6 pt-10 pb-6'>
-      <h3 className='text-[32px] font-semibold text-[#2E293E]'>Table</h3>
-      <span className='text-sm text-[#2E293E]'>Lorem ipsum dolor sit ammet consectetur.</span>
+    <div className='px-6 pt-10 pb-6 bg-bgColor dark:bg-darkBg'>
+      <h3 className='text-[32px] font-semibold text-myBlack dark:text-white'>Table</h3>
+      <span className='text-sm text-myBlack dark:text-white'>Lorem ipsum dolor sit ammet consectetur.</span>
 
-      <div className='bg-white py-8 px-7 mt-8 rounded'>
+      <div className='bg-white dark:bg-darkCard py-8 px-7 mt-8 rounded'>
         <div className='flex justify-between'>
-          <h3 className='text-xl'>All Invoices</h3>
-          <span className='border rounded border-[#ECEEFB] text-[#2E293E] text-sm py-3 px-4'>5-10 of 10</span>
+          <h3 className='text-xl text-myBlack dark:text-myWhite'>All Invoices</h3>
+          <span className='border rounded border-myLine dark:border-darkLine text-myBlack dark:text-myWhite text-sm py-3 px-4'>5-10 of 10</span>
         </div>
 
         <div className="overflow-x-auto block mt-10">
           <table className="table overflow-hidden w-[150%] lg:w-full">
 
-            <thead className='bg-[#F5F7FD] text-lg text-[#2E293E]'>
-              <tr>
+            <thead className='bg-[#F5F7FD] dark:bg-darkBg text-lg text-myBlack dark:text-myWhite'> 
+              <tr className='dark:border-darkLine'>
                 <th>
                   <label>
-                    <input type="checkbox" className="checkbox" />
+                    <input type="checkbox" className="checkbox dark:bg-[#1E192A]" />
                   </label>
                 </th>
                 <th className='text-lg'>Invoices ID</th>
                 <th >
                   <div className='flex items-center'>
                     <span className='text-lg'>Customer List</span>
-                    <span class="material-symbols-outlined text-[#2E293E] ml-2">unfold_less</span>
+                    <span class="material-symbols-outlined text-myBlack ml-2 dark:text-myWhite">unfold_less</span>
                   </div>
                 </th>
                 <th>
                   <div className='flex items-center'>
                     <span className='text-lg'>Start Date</span>
-                    <span class="material-symbols-outlined text-[#2E293E] ml-2">unfold_less</span>
+                    <span class="material-symbols-outlined text-myBlack ml-2 dark:text-myWhite">unfold_less</span>
                   </div>
                 </th>
                 <th>
                   <div className='flex items-center'>
                     <span className='text-lg'>Amount</span>
-                    <span class="material-symbols-outlined text-[#2E293E] ml-2">unfold_less</span>
+                    <span class="material-symbols-outlined text-myBlack ml-2 dark:text-myWhite">unfold_less</span>
                   </div>
                 </th>
                 <th>
                   <div className='flex items-center'>
                     <span className='text-lg'>Status List</span>
-                    <span class="material-symbols-outlined text-[#2E293E] ml-2">unfold_less</span>
+                    <span class="material-symbols-outlined text-myBlack ml-2 dark:text-myWhite">unfold_less</span>
                   </div>
                 </th>
                 <th>
                   <div className='flex items-center'>
                     <span className='text-lg'>Delete</span>
-                    <span class="material-symbols-outlined text-[#2E293E] ml-2">unfold_less</span>
+                    <span class="material-symbols-outlined text-myBlack ml-2 dark:text-myWhite">unfold_less</span>
                   </div>
                 </th>
 
@@ -155,24 +167,31 @@ const table = () => {
               {
                 invoices.map(contacts => (<tr
                   key={contacts.id}
+                  className='dark:border-darkLine'
                 >
                   <th>
                     <label>
-                      <input type="checkbox" className="checkbox" />
+                      <input type="checkbox" className="checkbox dark:bg-[#1E192A]" />
                     </label>
                   </th>
                   <td>
                     <div className="flex items-center space-x-3">
-                      <div className="text-base">{contacts.productsNo}</div>
+                      <div className="text-base text-myBlack dark:text-myWhite">{contacts.productsNo}</div>
                     </div>
                   </td>
                   
-                  <td className="text-lg">{contacts.name}</td>
-                  <td className="text-lg ">{contacts.date}</td>
-                  <td className="text-lg ">{contacts.Amount}</td>
-                  <td className="text-lg " style={{color:contacts.color}}>{contacts.status}</td>
-                  <th >
-                    <span class="material-symbols-outlined cursor-pointer mr-1 hover:text-[#4538D3]">
+                  <td className="text-lg text-myBlack dark:text-myWhite">{contacts.name}</td>
+                  <td className="text-lg text-myBlack dark:text-myWhite ">{contacts.date}</td>
+                  <td className="text-lg text-myBlack dark:text-myWhite ">{contacts.Amount}</td>
+                  <td 
+                  className="text-lg" 
+                  style={{ 
+                    color:resolvedTheme==='dark' ? `${contacts.color1}` :`${contacts.color}`
+                }}
+                  >{contacts.status}
+                  </td>
+                  <th className='text-myBlack dark:text-myWhite '>
+                    <span class="material-symbols-outlined cursor-pointer mr-1 hover:text-myBlue">
                       auto_fix
                     </span>
                     <span class="material-symbols-outlined cursor-pointer hover:text-red-500">
@@ -185,7 +204,7 @@ const table = () => {
           </table>
         </div>
       </div>
-      <hr className='mt-6' />
+      <hr className='mt-6 border-myLine dark:border-darkLine' />
     </div>
   );
 };
