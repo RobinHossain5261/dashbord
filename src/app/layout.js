@@ -1,8 +1,6 @@
 "use client"
 import './globals.css'
-import { Inter } from 'next/font/google'
-
-import logo from '../../public/images/Logo.png';
+import { Inter } from 'next/font/google';
 import SideBar from './components/SideBar/SideBar';
 import Footer from './components/Footer/Footer';
 import Provider from './components/DarkMode/Provider/Provider';
@@ -68,37 +66,10 @@ export default function RootLayout({ children }) {
             className={`pt-16 transition-all duration-[400ms] ${showNav && !isMobile ? "pl-56" : ""
               }`}
           >
-            <div className='mt-10'>{children}</div>
+            <div className='lg:mt-10'>{children}</div>
           <Footer/>
           </div>
         </Provider>
-        
-        {/* <Provider>
-          <div className="drawer lg:drawer-open">
-            <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-            <div className="drawer-content overflow-hidden ">
-
-              <Header></Header>
-              {children}
-              <Footer></Footer>
-
-            </div>
-            <div className="drawer-side">
-              <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-              <div className="menu p-4 lg:w-[312px] h-full  bg-white">
-                <div className='ml-6 mt-7 mb-[60px]'>
-                  <Link href='/' className="flex items-center normal-case">
-                    <Image src={logo} alt='logo' className='w-[31px] h-9' />
-                    <span className='text-2xl font-semibold ml-2'>DashPro</span>
-                  </Link>
-                </div>
-                <div className='z-1'>
-                  <SideBar></SideBar>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Provider> */}
 
 
       </body>

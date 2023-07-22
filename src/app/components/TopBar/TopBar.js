@@ -118,27 +118,27 @@ export default function TopBar({ showNav, setShowNav }) {
     ]
 
     const menuItem = <div className='flex items-center'>
-        <div classname="border">
+        <div>
             <SelectBar></SelectBar>
         </div>
         <div className="dropdown ml-4 md:ml-6 lg:ml-10">
             <label tabIndex={0} className="">
-                <span className="material-symbols-outlined cursor-pointer w-5 h-5">grid_view</span>
+                <span className="material-symbols-outlined cursor-pointer w-5 h-5 dark:text-myWhite">grid_view</span>
             </label>
-            <div tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 md:w-52 lg:w-60">
+            <div tabIndex={0} className="dropdown-content z-[1] menu p-2 mt-5 shadow bg-base-100 dark:bg-[#1E192A] rounded-box w-52 md:w-52 lg:w-60">
                 <div className='flex flex-wrap justify-between items-center'>
-                    <h3 className='text-xl font-semibold'>Apps</h3>
-                    <span className='text-lg text-myGrey hover:text-myBlue cursor-pointer'>View All Apps</span>
+                    <h3 className='text-xl font-semibold dark:text-white'>Apps</h3>
+                    <span className='text-lg text-myGrey dark:text-myWhite hover:text-myBlue cursor-pointer'>View All Apps</span>
                 </div>
-                <hr className='my-3' />
-                <div className='grid grid-cols-3 gap-3'>
+                <hr className='my-3 dark:border-darkLine' />
+                <div className='grid grid-cols-3 gap-3 '>
                     {
                         apps.map(app => (<div
                             key={app.id}
                             className='flex flex-col justify-center items-center p-3 cursor-pointer rounded duration-400 hover:bg-[#C1BEE5]'
                         >
                             <Image className="w-8 h-8" src={app.img} alt="app" />
-                            <span className='mt-2 text-xs'>{app.name}</span>
+                            <span className='mt-2 text-xs dark:text-myWhite'>{app.name}</span>
                         </div>))
                     }
                 </div>
@@ -146,25 +146,25 @@ export default function TopBar({ showNav, setShowNav }) {
         </div>
         <div className="dropdown ml-4 md:ml-6 lg:ml-7">
             <label tabIndex={0} className="">
-                <span class="material-symbols-outlined cursor-pointer w-5 h-5">notifications</span>
+                <span class="material-symbols-outlined cursor-pointer dark:text-myWhite w-5 h-5">notifications</span>
             </label>
-            <div tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-44 md:w-52 lg:w-60">
+            <div tabIndex={0} className="dropdown-content z-[1] menu p-2 mt-5 shadow bg-base-100 dark:bg-[#1E192A] rounded-box w-44 md:w-52 lg:w-60">
                 <div className='lg:flex justify-between items-center'>
-                    <h3 className='text-lg font-semibold'>Notifications</h3>
-                    <span className='text-base text-myGrey hover:text-myBlue cursor-pointer '>View All</span>
+                    <h3 className='text-lg font-semibold dark:text-white'>Notifications</h3>
+                    <span className='text-base text-myGrey hover:text-myBlue cursor-pointer dark:text-myWhite'>View All</span>
                 </div>
-                <hr className='my-3' />
+                <hr className='my-3 dark:border-darkLine' />
                 <div className=''>
                     {
                         notifications.map(notification => (<div
                             key={notification.id}
-                            className='flex items-center border-b-2 pb-3 duration-200 hover:bg-base-200'
+                            className='flex items-center border-b-2 dark:border-darkLine pb-3 cursor-pointer'
                         >
                             <Image className='w-10 h-10' src={notification.img} alt="app" />
                             <div className='ml-2'>
-                                <h4 className='font-semibold text-base flex-wrap'>{notification.title}</h4>
-                                <p>{notification.des}</p>
-                                <span>{notification.time}</span>
+                                <h4 className='font-semibold text-base flex-wrap dark:text-white'>{notification.title}</h4 >
+                                <p className="dark:text-myWhite">{notification.des}</p>
+                                <span className="dark:text-myWhite">{notification.time}</span>
                             </div>
 
                         </div>))
@@ -172,25 +172,25 @@ export default function TopBar({ showNav, setShowNav }) {
                 </div>
             </div>
         </div>
-        <div className='ml-4 md:ml-6 lg:ml-7 mb-2'>
+        <div className='ml-4 md:ml-6 lg:ml-7 mb-2 dark:text-white'>
             <ThemeButton></ThemeButton>
         </div>
-        <div className="dropdown dropdown-end ml-4 md:ml-6 lg:ml-7">
+        <div className="dropdown dropdown-end ml-4 md:ml-6 lg:ml-7 dark:text-white">
             <label tabIndex={0} className="relative">
                 <span class="material-symbols-outlined  cursor-pointer w-5 h-5">shopping_bag</span>
-                <span className='absolute text-sm h-[18px] w-[18px]  rounded-full bg-myBlue flex justify-center items-center text-white -right-2 bottom-0'>{carts.length}</span>
+                <span className='absolute text-sm h-[18px] w-[18px]  rounded-full bg-myBlue dark:bg-myGreen flex justify-center items-center text-white -right-2 bottom-0'>{carts.length}</span>
             </label>
-            <div tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 md:w-52 lg:w-64">
+            <div tabIndex={0} className="dropdown-content z-[1] menu p-2 mt-5 shadow bg-base-100 dark:bg-[#1E192A] rounded-box w-52 md:w-52 lg:w-64">
                 <div className='flex justify-between'>
                     <h3 className='text-lg font-semibold'>My Cart</h3>
-                    <span className='text-base text-myGrey hover:text-myBlue cursor-pointer '>{carts.length} Items</span>
+                    <span className='text-myGrey dark:text-myWhite  hover:text-myBlue dark:hover:text-myGreen cursor-pointer '>{carts.length} Items</span>
                 </div>
-                <hr className='my-3' />
+                <hr className='my-3 dark:border-darkLine ' />
                 <div className=''>
                     {
                         carts.map(cart => (<div
                             key={cart.id}
-                            className='flex items-center border-b-2 pb-3 duration-200 hover:bg-base-200'
+                            className='flex items-center border-b-2 dark:border-darkLine pb-3 duration-200 cursor-pointer'
                         >
                             <Image className='w-10 h-10' src={cart.img} alt="app" />
                             <div className='ml-2'>
@@ -213,51 +213,51 @@ export default function TopBar({ showNav, setShowNav }) {
                 </div>
                 <div className='lg:flex items-center hidden'>
                     <div>
-                        <p className='text-base'>Wade Warren</p>
-                        <span className='text-xs'>Account Setting</span>
+                        <p className='text-base dark:text-myWhite'>Wade Warren</p>
+                        <span className='text-xs dark:text-myWhite'>Account Setting</span>
                     </div>
-                    <span class="material-symbols-outlined text-center w-5 h-5">
+                    <span class="material-symbols-outlined text-center w-5 h-5 dark:text-myWhite">
                         expand_more
                     </span>
                 </div>
             </label>
 
-            <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-60">
-                <span className='mb-1 text-base ml-3 font-semibold'>Welcome Wade!</span>
+            <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 mt-5 shadow bg-base-100 dark:bg-[#1E192A] rounded-box w-60">
+                <span className='mb-1 text-base ml-3 font-semibold dark:text-white'>Welcome Wade!</span>
                 <li>
                     <Link href=''>
-                        <span class="material-symbols-outlined mr-1">account_circle</span>
-                        <span className='text-base '>Profile</span>
+                        <span class="material-symbols-outlined mr-1 dark:text-myWhite">account_circle</span>
+                        <span className='text-base dark:text-myWhite '>Profile</span>
                     </Link>
                 </li>
                 <li>
                     <Link href=''>
-                        <span class="material-symbols-outlined mr-1">chat</span>
-                        <span className='text-base '>Message</span>
+                        <span class="material-symbols-outlined mr-1 dark:text-myWhite">chat</span>
+                        <span className='text-base dark:text-myWhite '>Message</span>
                     </Link>
                 </li>
                 <li>
                     <Link href=''>
-                        <span class="material-symbols-outlined mr-1">task</span>
-                        <span className='text-base '>Taskbord</span>
+                        <span class="material-symbols-outlined mr-1 dark:text-myWhite">task</span>
+                        <span className='text-base dark:text-myWhite '>Taskbord</span>
                     </Link>
                 </li>
                 <li>
                     <Link href=''>
-                        <span class="material-symbols-outlined mr-1">support</span>
-                        <span className='text-base '>Support</span>
+                        <span class="material-symbols-outlined mr-1 dark:text-myWhite">support</span>
+                        <span className='text-base dark:text-myWhite '>Support</span>
                     </Link>
                 </li>
                 <li>
                     <Link href=''>
-                        <span class="material-symbols-outlined mr-1">settings</span>
-                        <span className='text-base '>Settings</span>
+                        <span class="material-symbols-outlined mr-1 dark:text-myWhite">settings</span>
+                        <span className='text-base dark:text-myWhite'>Settings</span>
                     </Link>
                 </li>
                 <li>
                     <Link href=''>
-                        <span class="material-symbols-outlined mr-1">logout</span>
-                        <span className='text-base '>Logout</span>
+                        <span class="material-symbols-outlined mr-1 dark:text-myWhite">logout</span>
+                        <span className='text-base dark:text-myWhite '>Logout</span>
                     </Link>
                 </li>
             </ul>
@@ -265,16 +265,14 @@ export default function TopBar({ showNav, setShowNav }) {
     </div>
 
     return (
-        <div
-            className={`bg-white py-6 fixed w-full flex justify-between items-center transition-all duration-[400ms] ${showNav ? "pl-56" : ""}`}
-        >
+        <div className={`bg-white dark:bg-[#1E192A] left-0 py-6 z-[5] fixed w-full flex justify-between items-center transition-all duration-[400ms] ${showNav ? "pl-56" : ""}`}>
             <div className="flex items-center gap-[60px] py-2">
-                <span class=" material-symbols-outlined ml-2  md:ml-10 lg:ml-[60px] cursor-pointer"
+                <span class=" material-symbols-outlined ml-2  md:ml-10 lg:ml-[60px] cursor-pointer dark:text-myWhite"
                     onClick={() => setShowNav(!showNav)}
                 >menu</span>
-                <form className='hidden lg:flex items-center border px-4 py-3 rounded'>
-                    <input type="text" placeholder='Search...' className='outline-none  text-myBlack' />
-                    <span class="material-symbols-outlined cursor-pointer w-4 h-4 text-myBlack"> search </span>
+                <form className='hidden md:flex lg:flex items-center border dark:border-darkLine px-4 py-3 rounded'>
+                    <input type="text" placeholder='Search...' className='outline-none  text-myBlack dark:text-myWhite dark:bg-[#1E192A]' />
+                    <span class="material-symbols-outlined cursor-pointer w-4 h-4 text-myBlack dark:text-myWhite"> search </span>
                 </form>
             </div>
             <div className="mr-6">
