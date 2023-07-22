@@ -47,11 +47,11 @@ const profileThree = () => {
 
     return (
         <div className=' px-6 pt-10 pb-6 bg-bgColor dark:bg-darkBg'>
-            <div className=' block lg:flex lg:gap-6'>
-                <section className='bg-white dark:bg-darkCard py-7 px-5 w-full lg:w-[504px] h-full rounded cardShadow mb-6'>
+            <div className='block lg:flex gap-6'>
+                <section className='grow-0 bg-white dark:bg-darkCard py-7 px-5 h-full rounded cardShadow mb-6'>
                     <div className='relative'>
                         <Image className='w-full' src={profile} alt='profile' />
-                        <div className='flex items-center gap-2 bg-myBlue dark:bg-myGreen absolute bottom-8 right-6 rounded py-3 px-4 cursor-pointer'>
+                        <div className='hidden md:flex lg:flex items-center gap-2 bg-myBlue dark:bg-myGreen absolute bottom-8 right-6 rounded py-3 px-4 cursor-pointer'>
                             <span class="material-symbols-outlined text-white dark:text-myBlack">edit_square</span>
                             <span className='text-sm  text-white dark:text-myBlack'>Edit profile</span>
                         </div>
@@ -80,28 +80,31 @@ const profileThree = () => {
                     </div>
                 </section>
                 <section className=''>
+                    {/* About part  */}
                     <div className='py-10 px-8 rounded bg-white dark:bg-darkCard cardShadow'>
                         <h4 className='text-2xl text-myBlack dark:text-white  mb-8 font-semibold'>About Us</h4>
-                        <p className='text-base mb-7 dark:text-myWhite'>Lorem ipsum dolor sit amet consectetur. Volutpat mattis turpis lorem luctus. Et sed ornare at fermentum vestibulum sit. A sem faucibus cursus pretium vel vitae pellentesque sed vulputate. In turpis leo dictum est id. Sed mi sed neque quam sit.</p>
-                        <p className='text-base mb-7 dark:text-myWhite'>Lorem ipsum dolor sit amet consectetur. Volutpat sed gravida ultrices elit lectus odio nunc natoque. Ut aliquam cursus consectetur urna nunc nunc tellus. </p>
-                        <p className='text-base mb-7 dark:text-myWhite'>Lorem ipsum dolor sit amet consectetur. Euismod vel ut aliquet cursus arcu quisque suspendisse vel tincidunt. </p>
-                        <p className='text-base mb-7 dark:text-myWhite'>Lorem ipsum dolor sit amet consectetur. Euismod vel ut aliquet cursus arcu quisque suspendisse vel tincidunt. Sagittis aliquet dignissim tortor et purus. Risus diam pharetra enim sit ut dis ut cursus eget. Massa bibendum nec ut enim id erat arcu.</p>
+                        <p className='text-base mb-7 dark:text-myWhite text-justify	'>Lorem ipsum dolor sit amet consectetur. Volutpat mattis turpis lorem luctus. Et sed ornare at fermentum vestibulum sit. A sem faucibus cursus pretium vel vitae pellentesque sed vulputate. In turpis leo dictum est id. Sed mi sed neque quam sit.</p>
+                        <p className='text-base mb-7 dark:text-myWhite text-justify	'>Lorem ipsum dolor sit amet consectetur. Volutpat sed gravida ultrices elit lectus odio nunc natoque. Ut aliquam cursus consectetur urna nunc nunc tellus. </p>
+                        <p className='text-base mb-7 dark:text-myWhite text-justify	'>Lorem ipsum dolor sit amet consectetur. Euismod vel ut aliquet cursus arcu quisque suspendisse vel tincidunt. </p>
+                        <p className='text-base mb-7 dark:text-myWhite text-justify	'>Lorem ipsum dolor sit amet consectetur. Euismod vel ut aliquet cursus arcu quisque suspendisse vel tincidunt. Sagittis aliquet dignissim tortor et purus. Risus diam pharetra enim sit ut dis ut cursus eget. Massa bibendum nec ut enim id erat arcu.</p>
                     </div>
-                    <div className='py-10 px-8 my-6 rounded bg-white dark:bg-darkCard cardShadow'>
+                    {/* Skills part  */}
+                    <div className='py-10 px-4 md:px-8 lg:px-8 my-6 rounded bg-white dark:bg-darkCard cardShadow'>
                         <h4 className='text-myBlack text-2xl font-semibold dark:text-white'>Skills</h4>
                         <hr className='border-myLine dark:border-darkLine my-10' />
-                        <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5'>
+                        <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-5'>
                             <span className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-4 border border-myLine rounded'>UI/UX Degsign</span>
                             <span className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-4 border border-myLine rounded'>Web Degsign</span>
-                            <span className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-4 border border-myLine rounded'>Development</span>
-                            <span className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300 text-center py-3 px-4 border border-myLine rounded'>Development</span>
+                            <span className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-1  border border-myLine rounded'>Development</span>
+                            <span className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300 text-center py-3 px-1 border border-myLine rounded'>Development</span>
                             <span className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-4 border border-myLine rounded'>Product Design</span>
                             <span className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-4 border border-myLine rounded'>Branding Design</span>
                         </div>
                     </div>
+                    {/* Experience part  */}
                     <div className='py-7 px-8 rounded bg-white dark:bg-darkCard cardShadow'>
                         <h4 className='text-2xl text-myBlack font-semibold dark:text-white mb-10'>Experience</h4>
-                        <div className='flex items-center justify-between'>
+                        <div className='flex items-center justify-between flex-wrap'>
                             <div className='flex items-center gap-3'>
                                 <Image className='w-10 h-10 rounded-full' src={google} alt="google" />
                                 <div>
@@ -112,10 +115,10 @@ const profileThree = () => {
                             </div>
                             <span className='text-sm text-myBlue dark:text-myGreen'>Jun 2022 - Apr 2023</span>
                         </div>
-                        <p className='text-lg text-myGrey mt-8 dark:text-myLine'>Lorem ipsum dolor sit amet consectetur. Et eu facilisi facilisi quis lobortis tincidunt in neque eget. Sed malesuada orci risus risus.</p>
+                        <p className='text-lg text-myGrey mt-8 dark:text-myLine text-justify'>Lorem ipsum dolor sit amet consectetur. Et eu facilisi facilisi quis lobortis tincidunt in neque eget. Sed malesuada orci risus risus.</p>
                         <hr className='my-6 border-myLine dark:border-darkLine' />
 
-                        <div className='flex items-center justify-between'>
+                        <div className='flex items-center justify-between flex-wrap'>
                             <div className='flex items-center gap-3'>
                                 <Image className='w-10 h-10 rounded-full' src={facebook} alt="google" />
                                 <div>
@@ -126,10 +129,10 @@ const profileThree = () => {
                             </div>
                             <span className='text-sm text-myBlue dark:text-myGreen'>Jun 2022 - Apr 2023</span>
                         </div>
-                        <p className='text-lg text-myGrey mt-8 dark:text-myLine'>Lorem ipsum dolor sit amet consectetur. Et eu facilisi facilisi quis lobortis tincidunt in neque eget. Sed malesuada orci risus risus.</p>
+                        <p className='text-lg text-myGrey mt-8 dark:text-myLine text-justify'>Lorem ipsum dolor sit amet consectetur. Et eu facilisi facilisi quis lobortis tincidunt in neque eget. Sed malesuada orci risus risus.</p>
                         <hr className='my-6 border-myLine dark:border-darkLine' />
 
-                        <div className='flex items-center justify-between'>
+                        <div className='flex items-center justify-between flex-wrap'>
                             <div className='flex items-center gap-3'>
                                 <Image className='w-10 h-10 rounded-full' src={telegram} alt="google" />
                                 <div>
@@ -140,8 +143,7 @@ const profileThree = () => {
                             </div>
                             <span className='text-sm text-myBlue dark:text-myGreen'>Jun 2022 - Apr 2023</span>
                         </div>
-                        <p className='text-lg text-myGrey mt-8 dark:text-myLine'>Lorem ipsum dolor sit amet consectetur. Et eu facilisi facilisi quis lobortis tincidunt in neque eget. Sed malesuada orci risus risus.</p>
-                        <hr className='my-6 border-myLine dark:border-darkLine' />
+                        <p className='text-lg text-myGrey mt-8 dark:text-myLine text-justify'>Lorem ipsum dolor sit amet consectetur. Et eu facilisi facilisi quis lobortis tincidunt in neque eget. Sed malesuada orci risus risus.</p>
                     </div>
                 </section>
             </div>

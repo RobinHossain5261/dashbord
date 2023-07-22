@@ -19,7 +19,7 @@ const pricingSingle = () => {
     return (
         <div className='px-6 pt-10 bg-bgColor dark:bg-darkBg'>
             <div className='lg:flex md:flex gap-6'>
-                <section className='py-8 px-10 bg-white dark:bg-darkCard rounded boxShadow mb-6'>
+                <section className='py-8 px-4 md:px-10 lg:mx-10 h-full bg-white dark:bg-darkCard rounded boxShadow mb-6'>
                     <div className='flex items-center gap-6 mb-7'>
                         <div className=' w-[60px] h-[60px] flex items-center justify-center bg-[#ECEBFB] dark:bg-[#2C3140] rounded'>
                             <span class="material-symbols-outlined text-myBlue dark:text-myGreen">send</span>
@@ -68,28 +68,29 @@ const pricingSingle = () => {
                     </div>
                     <button className='text-white bg-myBlue dark:bg-myGreen text-sm px-4 py-3 w-full rounded mt-5'>Add to Cart</button>
                 </section>
+                {/* StartUp plan Start */}
                 <section className='py-8 px-10 bg-white dark:bg-darkCard rounded boxShadow'>
 
                     <h5 className='text-xl font-semibold text-myBlack dark:text-white mb-5'>Startup plan</h5>
-                    <p className='text-lg text-myBlack dark:text-myWhite'>Lorem ipsum dolor sit amet consectetur. Urna nibh ut morbi quam lorem. In facilisis risus adipiscing adipiscing congue non tincidunt rutrum lectus. Gravida tortor at non id sed tincidunt.</p>
+                    <p className='text-lg text-myBlack dark:text-myWhite text-justify'>Lorem ipsum dolor sit amet consectetur. Urna nibh ut morbi quam lorem. In facilisis risus adipiscing adipiscing congue non tincidunt rutrum lectus. Gravida tortor at non id sed tincidunt.</p>
                     <h5 className='text-xl font-semibold text-myBlack dark:text-white mt-7 mb-5'>What aspects are covered by the plan?</h5>
-                    <p className='text-lg text-myBlack dark:text-myWhite mb-5'>velit viverra sit semper lorem eu cursus vel hendrerit elementum morbi curabitur etiam nibh justo lorem aliquet donec sed sit mi dignissim at ante massa mattis.</p>
+                    <p className='text-lg text-myBlack dark:text-myWhite mb-5 text-justify'>velit viverra sit semper lorem eu cursus vel hendrerit elementum morbi curabitur etiam nibh justo lorem aliquet donec sed sit mi dignissim at ante massa mattis.</p>
 
                     <ol className='mb-7 list-decimal list-inside'>
-                        <li className='text-myGrey dark:text-myWhite text-sm mb-4'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
-                        <li className='text-myGrey dark:text-myWhite text-sm mb-4'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
-                        <li className='text-myGrey dark:text-myWhite text-sm mb-4'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
-                        <li className='text-myGrey dark:text-myWhite text-sm mb-4'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
-                        <li className='text-myGrey dark:text-myWhite text-sm'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
+                        <li className='text-myGrey dark:text-myWhite text-sm mb-4 text-justify'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
+                        <li className='text-myGrey dark:text-myWhite text-sm mb-4 text-justify'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
+                        <li className='text-myGrey dark:text-myWhite text-sm mb-4 text-justify'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
+                        <li className='text-myGrey dark:text-myWhite text-sm mb-4 text-justify'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
+                        <li className='text-myGrey dark:text-myWhite text-sm text-justify'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
                     </ol>
                    <h5 className='text-xl font-semibold text-myBlack dark:text-white mb-5'>Is the price plan I've chosen appropriate for my company?</h5>
-                   <p className='text-lg text-myBlack dark:text-myWhite mb-5'>velit viverra sit semper lorem eu cursus vel hendrerit elementum morbi curabitur etiam nibh justo lorem aliquet donec sed sit mi dignissim at ante massa mattis.</p>
+                   <p className='text-lg text-myBlack dark:text-myWhite mb-5 text-justify'>velit viverra sit semper lorem eu cursus vel hendrerit elementum morbi curabitur etiam nibh justo lorem aliquet donec sed sit mi dignissim at ante massa mattis.</p>
                    <ul className='mb-7 list-disc list-inside'>
-                        <li className='text-myGrey dark:text-myWhite text-sm mb-4'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
-                        <li className='text-myGrey dark:text-myWhite text-sm mb-4'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
-                        <li className='text-myGrey dark:text-myWhite text-sm mb-4'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
-                        <li className='text-myGrey dark:text-myWhite text-sm mb-4'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
-                        <li className='text-myGrey dark:text-myWhite text-sm '>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
+                        <li className='text-myGrey dark:text-myWhite text-sm mb-4 text-justify'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
+                        <li className='text-myGrey dark:text-myWhite text-sm mb-4 text-justify'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
+                        <li className='text-myGrey dark:text-myWhite text-sm mb-4 text-justify'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
+                        <li className='text-myGrey dark:text-myWhite text-sm mb-4 text-justify	'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
+                        <li className='text-myGrey dark:text-myWhite text-sm text-justify '>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
                     </ul>
                 </section>
             </div>

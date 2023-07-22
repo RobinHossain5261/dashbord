@@ -47,7 +47,7 @@ const DoughnutChart = () => {
       };
 
     return (
-        <div className='bg-white dark:bg-darkBg py-8 px-[30px] rounded'>
+        <div className='bg-white dark:bg-darkBg py-8 px-4 rounded'>
             <div className='flex justify-between items-center'>
                 <h1 className='text-xl text-myBlack dark:text-white'>Device-users</h1>
                 <div>
@@ -88,9 +88,9 @@ const DoughnutChart = () => {
                 </div>
             </div>
             <hr className='my-10 dark:border-darkLine border-myLine' />
-            <div className='w-[300px] h-[300px] mx-auto flex items-center justify-center'>
+            <div className='w-[244px] h-[244px] mx-auto'>
 
-                <div className="inner relative dark:bg-darkBg">
+                <div className="inner relative dark:bg-myBlack">
                     <div style={doughnutStyle}>
                         <h4 className="text-2xl text-myBlue dark:text-myPink font-semibold">23.6K</h4>
                         <span className='text-myBlack dark:text-white text-base'>USERS</span>
@@ -99,20 +99,20 @@ const DoughnutChart = () => {
                 </div>
 
             </div>
-            <div className='flex justify-around mt-10'>
+            <div className='block md:flex lg:flex justify-around mt-10'>
                 <div>
                     <h5 className='text-xl text-myBlue dark:text-myGreen text-center'>Mobile</h5>
-                    <b className='text-myBlack text-2xl dark:text-white'>91.434%</b>
-                </div>
+                    <h3 className='text-myBlack font-bold text-2xl dark:text-white text-center'>91.434%</h3>
+                </div >
                 <div className='w-[1px] bg-[#ECEEFB]'></div>
                 <div>
                     <h5 className='text-xl text-myBlue dark:text-myGreen text-center'>Web</h5>
-                    <b className='text-myBlack dark:text-white text-2xl'>93.64%</b>
+                    <h3 className='text-myBlack font-bold dark:text-white text-2xl text-center'>93.64%</h3>
                 </div>
                 <div className='w-[1px] bg-[#ECEEFB]'></div>
                 <div>
                     <h5 className='text-xl text-myBlue dark:text-myGreen text-center'>Other</h5>
-                    <b className='text-myBlack dark:text-white text-2xl'>66.364%</b>
+                    <h3 className='text-myBlack font-bold dark:text-white text-2xl text-center'>66.364%</h3>
                 </div>
             </div>
         </div>
