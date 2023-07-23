@@ -66,7 +66,7 @@ export default function RootLayout({ children }) {
             className={`pt-16 transition-all duration-[400ms] ${showNav && !isMobile ? "pl-56" : ""
               }`}
           >
-            <div className='lg:mt-10'>{children}</div>
+            <div className='lg:mt-10 md:mt-10'>{children}</div>
           <Footer/>
           </div>
         </Provider>
