@@ -4,9 +4,10 @@ import '../pricingOne/pricing.css';
 
 
 const PricingTwo = () => {
+   
+    const [price,setPrice]=useState(true);
 
-    const [price,setPrice]=useState(false);
-
+   
     const cards = [ 
         {
             id: 1,
@@ -46,16 +47,15 @@ const PricingTwo = () => {
         }
     ]
 
-    let monthPrice=price ? 'active':'';
-    let yearPrice=price ? 'active2':'';
+ 
 
     return (
         <div className='px-6 pt-10 pb-8 bg-bgColor dark:bg-darkBg'>
             <h2 className='text-myBlack text-[40px] text-center font-semibold mb-5 dark:text-white'>Our Pricing</h2>
-            <p className='text-center text-lg text-myBlack dark:text-myWhite'>Vestibulum diam risus, convallis vel blandit eu, iaculis in diam. Fusce <br /> elementum metus sem.Nulla posuere, tortor sed .</p>
+            <p className='lg:w-1/3 mx-auto text-center text-lg text-myBlack dark:text-myWhite'>Vestibulum diam risus, convallis vel blandit eu, iaculis in diam. Fusce elementum metus sem.Nulla posuere, tortor sed .</p>
             <div className='flex items-center justify-center mt-7 mb-10 gap-6'>
-                <button onClick={()=>setPrice(true)}  className={`${monthPrice} text-sm text-black dark:text-myWhite py-3 px-4 border border-myLine dark:border-darkLine rounded`}>Billed Monthly</button>
-                <button onClick={()=>setPrice(false)} className={`${yearPrice} text-sm text-black dark:text-myWhite py-3 px-4 border border-myLine dark:border-darkLine rounded`}>Billed Annually</button>
+                <button style={{backgroundColor:price===true ? '#4538D3' : '', color:price===true ? '#FFFFFF' : ''}} onClick={()=>setPrice(true)} className={`text-sm text-black dark:text-myWhite py-3 px-4 border border-myLine dark:border-darkLine rounded`}>Billed Monthly</button>
+                <button style={{backgroundColor:price===false ? '#4538D3' : '', color:price===false ? '#FFFFFF' : ''}} onClick={()=>setPrice(false)} className={`text-sm text-black dark:text-myWhite py-3 px-4 border border-myLine dark:border-darkLine rounded`}>Billed Annually</button>
             </div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10'>

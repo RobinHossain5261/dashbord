@@ -148,7 +148,7 @@ export default function TopBar({ showNav, setShowNav }) {
             <label tabIndex={0} className="">
                 <span class="material-symbols-outlined cursor-pointer dark:text-myWhite w-5 h-5">notifications</span>
             </label>
-            <div tabIndex={0} className="dropdown-content z-[1] menu p-2 mt-5 shadow bg-base-100 dark:bg-[#1E192A] rounded-box w-44 md:w-52 lg:w-60">
+            <div tabIndex={0} className="dropdown-content z-[1] menu p-2 mt-5 shadow bg-base-100 dark:bg-[#1E192A] rounded-box w-48 md:w-52 lg:w-60">
                 <div className='lg:flex justify-between items-center'>
                     <h3 className='text-lg font-semibold dark:text-white'>Notifications</h3>
                     <span className='text-base text-myGrey hover:text-myBlue cursor-pointer dark:text-myWhite'>View All</span>

@@ -6,7 +6,7 @@ const Footer = () => {
             <p className="text-sm lg:text-lg text-myBlack dark:text-white">
                 Copyright © <span className="text-myBlue dark:text-myGreen">DashPro</span> | Designed by <span  className="text-myBlue dark:text-myGreen">Softivus</span>
             </p>
-            <ul className="lg:flex gap-8 text-lg ">
+            <ul className="flex flex-wrap justify-around lg:gap-8 text-lg ">
                 <li><Link className="text-sm lg:text-lg text-myBlack dark:text-white" href="#">Support</Link></li>
                 <li><Link className="text-sm lg:text-lg text-myBlack dark:text-white" href="#">Help Center</Link></li>
                 <li><Link className="text-sm lg:text-lg text-myBlack dark:text-white" href="#">Privacy</Link></li>

@@ -1,13 +1,21 @@
-import React from 'react';
+"use client"
+import React, { useState } from 'react';
 import './pricing.css';
+import { Switch } from '@headlessui/react';
 
 const PricingOne = () => {
+    const [enabled, setEnabled] = useState(false);
+    const [price, setPrice] = useState(false);
+    const toggle = () => {
+        setPrice(!price);
+    }
 
     const cards = [
         {
             id: 1,
             package: 'Starter',
             price: '$333/month',
+            price1: '$1333/year',
             des: 'Lorem ipsum dolor sit amet consectetur. A tellus dolor nec potenti. Ornare sem.',
             event: 'Up to 250k events',
             campaigns: 'Run 25 campaigns',
@@ -19,6 +27,7 @@ const PricingOne = () => {
             id: 2,
             package: 'Professional',
             price: '$433/month',
+            price1: '$1433/year',
             des: 'Lorem ipsum dolor sit amet consectetur. A tellus dolor nec potenti. Ornare sem.',
             event: 'Up to 250k events',
             campaigns: 'Run 25 campaigns',
@@ -29,7 +38,8 @@ const PricingOne = () => {
         {
             id: 3,
             package: 'Premium',
-            price: '$633/month',
+            price: '$633/year',
+            price1: '$1633/month',
             des: 'Lorem ipsum dolor sit amet consectetur. A tellus dolor nec potenti. Ornare sem.',
             event: 'Up to 250k events',
             campaigns: 'Run 25 campaigns',
@@ -46,14 +56,19 @@ const PricingOne = () => {
             <div className='flex items-center justify-center mt-7'>
                 <h4 className='text-lg text-myBlack dark:text-white'>Billed Monthly</h4>
                 <div className="form-control mx-[22px]">
-                    {/* <label className="cursor-pointer label">
-                        <input type="checkbox" className="toggle toggle-primary" checked />
-                    </label> */}
-                    <input
-                        className="mr-2 mt-[0.3rem] h-3.5 w-8 appearance-none rounded-[0.4375rem] bg-neutral-300 before:pointer-events-none before:absolute before:h-3.5 before:w-3.5 before:rounded-full before:bg-transparent before:content-[''] after:absolute after:z-[2] after:-mt-[0.1875rem] after:h-5 after:w-5 after:rounded-full after:border-none after:bg-neutral-100 after:shadow-[0_0px_3px_0_rgb(0_0_0_/_7%),_0_2px_2px_0_rgb(0_0_0_/_4%)] after:transition-[background-color_0.2s,transform_0.2s] after:content-[''] checked:bg-primary checked:after:absolute checked:after:z-[2] checked:after:-mt-[3px] checked:after:ml-[1.0625rem] checked:after:h-5 checked:after:w-5 checked:after:rounded-full checked:after:border-none checked:after:bg-primary checked:after:shadow-[0_3px_1px_-2px_rgba(0,0,0,0.2),_0_2px_2px_0_rgba(0,0,0,0.14),_0_1px_5px_0_rgba(0,0,0,0.12)] checked:after:transition-[background-color_0.2s,transform_0.2s] checked:after:content-[''] hover:cursor-pointer focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[3px_-1px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-5 focus:after:w-5 focus:after:rounded-full focus:after:content-[''] checked:focus:border-primary checked:focus:bg-primary checked:focus:before:ml-[1.0625rem] checked:focus:before:scale-100 checked:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:bg-neutral-600 dark:after:bg-neutral-400 dark:checked:bg-primary dark:checked:after:bg-primary dark:focus:before:shadow-[3px_-1px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca]"
-                        type="checkbox"
-                        role="switch"
-                        id="flexSwitchCheckDefault" />
+                    <Switch
+                        checked={enabled}
+                        onClick={toggle}
+                        onChange={setEnabled}
+                        className={`${enabled ? 'bg-blue-600 dark:bg-myGreen' : 'bg-gray-200'
+                            } relative inline-flex h-8 w-14 items-center rounded-full`}
+                    >
+                        <span className="sr-only">Enable notifications</span>
+                        <span
+                            className={`${enabled ? 'translate-x-6' : 'translate-x-1'
+                                } inline-block h-4 w-4 transform rounded-full bg-white transition`}
+                        />
+                    </Switch>                    
                 </div>
                 <h4 className='text-lg text-myBlack  dark:text-white'>Billed Annually</h4>
             </div>
@@ -65,7 +80,7 @@ const PricingOne = () => {
                         className='bg-white dark:bg-darkCard py-7 px-8 rounded boxShadow text-center border hover:border-myBlue dark:hover:border-[#64C4F7] dark:border-darkLine'
                     >
                         <h5 className='text-myBlue dark:text-myGreen text-xl font-semibold'>{card.package}</h5>
-                        <h4 className='text-myBlack dark:text-white text-2xl font-semibold my-2'>{card.price}</h4>
+                        <h4 className='text-myBlack dark:text-white text-2xl font-semibold my-2'>{price ? card.price1 : card.price}</h4>
                         <p className='text-lg text-myBlack dark:text-myWhite'>{card.des}</p>
 
                         <ul className='mt-8 mb-10 '>

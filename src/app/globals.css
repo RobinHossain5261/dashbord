@@ -29,11 +29,7 @@ body{
         transform: translate(-50%, -50%);     
 }
 
-.active{
-    background-color: blue;
-    color:white;
-}
-.active2{
+button.active{
     background-color: blue;
     color:white;
 }

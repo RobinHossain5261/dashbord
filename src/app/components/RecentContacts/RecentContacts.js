@@ -75,7 +75,7 @@ const RecentContacts = () => {
     ]
 
     return (
-        <div className="overflow-x-auto py-8 px-5  bg-white dark:bg-darkCard rounded whitespace-nowrap">
+        <div className="overflow-x-auto p-2 lg:py-8 lg:px-5  bg-white dark:bg-darkCard rounded whitespace-nowrap">
             <div className="flex justify-between items-center">
                 <h1 className='text-2xl text-myBlack dark:text-white'>Recent Contacts</h1>
                 <div>
@@ -115,7 +115,7 @@ const RecentContacts = () => {
                     </Listbox>
                 </div>
             </div>
-            <hr className='my-8 border-myLine dark:border-darkLine' />
+            <hr className='my-4 lg:my-8 border-myLine dark:border-darkLine' />
             <div className="overflow-x-auto whitespace-nowrap">
                 <table className="table">
 

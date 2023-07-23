@@ -95,7 +95,7 @@ const Reports = () => {
     ]
 
     return (
-        <div className="px-6 pb-6 pt-10 bg-bgColor dark:bg-darkBg">
+        <div className="px-2 lg:px-6 pb-6 pt-10 bg-bgColor dark:bg-darkBg">
             <h3 className="text-[32px] font-semibold text-myBlack dark:text-white">Dashboard</h3>
             <span className='text-sm text-myBlack dark:text-white'>Jul 8, 2023</span>
 
@@ -125,14 +125,14 @@ const Reports = () => {
             </section>
 
             {/* Line Chart */}
-            <section className=" bg-white dark:bg-darkCard rounded p-5 lg:py-[60px] lg:pl-[60px] lg:pr-[58px] boxShadow">
-                <div className='flex justify-between'>
+            <section className=" bg-white dark:bg-darkCard rounded p-2 lg:p-5 lg:py-[60px] lg:pl-[60px] lg:pr-[58px] boxShadow">
+                <div className='flex flex-wrap gap-2 justify-between'>
                     <h3 className='text-xl text-myBlack dark:text-white'>Monthly page views</h3>
                     <div>
                         <Listbox value={selectedPerson} onChange={setSelectedPerson}>
                             <Listbox.Button
 
-                                className="lg:flex hidden gap-2 items-center  relative w-full cursor-default rounded-lg text-[#252525] dark:text-white  py-2 px-3 text-left border dark:border-darkLine focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
+                                className="flex gap-2 items-center  relative w-full cursor-default rounded-lg text-[#252525] dark:text-white  py-2 px-3 text-left border dark:border-darkLine focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
                                 {selectedPerson.name}
                                 <span class="material-symbols-outlined">
                                     expand_more
@@ -165,8 +165,8 @@ const Reports = () => {
                         </Listbox>
                     </div>
                 </div>
-                <hr className="my-10 dark:border-darkLine" />
-                <div className="h-[300px] md:lg-[350px] lg:h-[400px] w-full">
+                <hr className="my-5 lg:my-10 dark:border-darkLine" />
+                <div className="h-[300px] md:h-[350px] lg:h-[400px] w-full">
                     <LineChart></LineChart>
                 </div>
             </section>
@@ -175,7 +175,7 @@ const Reports = () => {
             {/* Small charts */}
             <section className="my-6 rounded  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div className="bg-white dark:bg-darkCard rounded boxShadow dark:darkShadow">
-                    <div className="p-7">
+                    <div className="p-2 lg:p-7">
                         <h5 className="text-base text-myBlack dark:text-white mb-4">Page views</h5>
                         <div className="flex justify-between">
                             <h3 className="text-2xl text-myBlack dark:text-white font-semibold">52.8K</h3>
@@ -191,7 +191,7 @@ const Reports = () => {
 
 
                 <div className="bg-white dark:bg-darkCard dark:text-white rounded boxShadow">
-                    <div className="p-7">
+                    <div className="p-2 lg:p-7">
                         <h5 className="text-base text-myBlack mb-4">Users</h5>
                         <div className="flex justify-between">
                             <h3 className="text-2xl text-myBlack dark:text-white font-semibold">25.6K</h3>
@@ -206,7 +206,7 @@ const Reports = () => {
                 </div>
 
                 <div className="bg-white dark:bg-darkCard dark:text-white rounded boxShadow">
-                    <div className="p-7">
+                    <div className="p-2 lg:p-7">
                         <h5 className="text-base dark:text-white text-myBlack mb-4">New sign ups</h5>
                         <div className="flex justify-between">
                             <h3 className="text-2xl text-myBlack dark:text-white font-semibold">4.5K</h3>

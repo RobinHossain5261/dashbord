@@ -47,14 +47,14 @@ const DoughnutChart = () => {
       };
 
     return (
-        <div className='bg-white dark:bg-darkBg py-8 px-4 rounded'>
-            <div className='flex justify-between items-center'>
+        <div className='bg-white dark:bg-darkBg p-2 lg:py-8 lg:px-4 rounded z-[4]'>
+            <div className='flex flex-wrap gap-2 justify-between items-center'>
                 <h1 className='text-xl text-myBlack dark:text-white'>Device-users</h1>
                 <div>
                     <Listbox value={selectedPerson} onChange={setSelectedPerson}>
                         <Listbox.Button
 
-                            className="lg:flex hidden gap-2 items-center  relative w-full cursor-default rounded-lg text-[#252525] dark:text-white py-2 px-3 text-left border dark:border-darkLine border-myLine focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
+                            className="flex gap-2 items-center  relative w-full cursor-default rounded-lg text-[#252525] dark:text-white py-2 px-3 text-left border dark:border-darkLine border-myLine focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
                             {selectedPerson.name}
                             <span class="material-symbols-outlined">
                                 expand_more
@@ -87,7 +87,7 @@ const DoughnutChart = () => {
                     </Listbox>
                 </div>
             </div>
-            <hr className='my-10 dark:border-darkLine border-myLine' />
+            <hr className='my-5 lg:my-10 dark:border-darkLine border-myLine' />
             <div className='w-[244px] h-[244px] mx-auto'>
 
                 <div className="inner relative dark:bg-myBlack">
@@ -99,7 +99,7 @@ const DoughnutChart = () => {
                 </div>
 
             </div>
-            <div className='block md:flex lg:flex justify-around mt-10'>
+            <div className='flex flex-wrap justify-around mt-10'>
                 <div>
                     <h5 className='text-xl text-myBlue dark:text-myGreen text-center'>Mobile</h5>
                     <h3 className='text-myBlack font-bold text-2xl dark:text-white text-center'>91.434%</h3>

@@ -15,6 +15,7 @@
     "@ramonak/react-progress-bar": "^5.0.3",
     "@tanstack/react-table": "^8.9.3",
     "@types/chart.js": "^2.9.37",
+    "@uidotdev/usehooks": "^2.0.1",
     "autoprefixer": "10.4.14",
     "chart.js": "^4.3.0",
     "chartjs-plugin-doughnut-innertext": "^3.1.0",

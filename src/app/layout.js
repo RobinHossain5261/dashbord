@@ -60,7 +60,7 @@ export default function RootLayout({ children }) {
             leaveFrom="translate-x-0"
             leaveTo="-translate-x-full"
           >
-            <SideBar showNav={showNav} />
+            <SideBar showNav={showNav} setShowNav={setShowNav}/>
           </Transition>
           <div
             className={`pt-16 transition-all duration-[400ms] ${showNav && !isMobile ? "pl-56" : ""

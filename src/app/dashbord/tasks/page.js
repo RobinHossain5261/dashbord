@@ -224,7 +224,7 @@ const tasks = () => {
 
     return (
 
-        <div className="px-6 pt-10 pb-6 bg-bgColor dark:bg-darkBg">
+        <div className="px-2 lg:px-6 pt-10 pb-6 bg-bgColor dark:bg-darkBg">
             <h1 className="text-2xl font-semibold text-myBlack dark:text-white">Dashboard</h1>
             <span className='text-myBlack text-sm dark:text-white'>Jul 9, 2023</span>
 
@@ -233,7 +233,7 @@ const tasks = () => {
                 {
                     tasks.map(task => (<div
                         key={task.id}
-                        className="bg-white dark:bg-darkCard py-4 px-6 rounded task-card"
+                        className="bg-white dark:bg-darkCard p-2 lg:py-4 lg:px-6 rounded task-card"
                     >
                         <div className="flex justify-between">
                             <div className='bg-white dark:bg-[#1E192A] h-[60px] w-[60px] icon-shadow rounded flex items-center justify-center'>
@@ -241,7 +241,7 @@ const tasks = () => {
                             </div>
                             <span className='w-[18px] h-[18px] dark:text-white'>{task.more}</span>
                         </div>
-                        <h4 className="text-2xl font-semibold text-myBlack dark:text-white mt-6 mb-3">{task.name}</h4>
+                        <h4 className="text-2xl font-semibold text-myBlack dark:text-white mt-3 lg:mt-6 mb-3">{task.name}</h4>
                         {/* <span>{task.progress}</span> */}
                         <Progress bgcolor={resolvedTheme === 'dark' ? `${task.color1}` : `${task.color}`} completed={task.completed} />
 
@@ -250,16 +250,16 @@ const tasks = () => {
                 }
             </div>
 
-            {/* Team progress */}
+            {/* Team progress and task report */}
             <div className="my-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <div className="py-8 px-7 rounded bg-white dark:bg-darkCard">
-                    <div className="flex justify-between mb-7 items-center">
+                <div className="p-2 lg:py-8 lg:px-7 rounded bg-white dark:bg-darkCard">
+                    <div className="flex flex-wrap gap-2 justify-between mb-7 items-center">
                         <h1 className="text-xl text-myBlack dark:text-myWhite">Team Progress</h1>
                         <div>
                             <Listbox value={selectedPerson} onChange={setSelectedPerson}>
                                 <Listbox.Button
 
-                                    className="lg:flex hidden gap-2 items-center  relative w-full cursor-default rounded-lg text-[#252525] dark:text-myWhite py-2 px-3 text-left border dark:border-darkLine focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
+                                    className="flex gap-2 items-center  relative w-full cursor-default rounded-lg text-[#252525] dark:text-myWhite py-2 px-3 text-left border dark:border-darkLine focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
                                     {selectedPerson.name}
                                     <span class="material-symbols-outlined">
                                         expand_more
@@ -294,16 +294,15 @@ const tasks = () => {
                     </div>
 
                     <div>
-
                         {
                             teamProgress.map(progress => (<div
                                 key={progress.id}
                             >
                                 <hr className='my-5 dark:border-darkLine' />
                                 <div className='flex items-center'>
-                                    <Image src={progress.img} alt="buyer" className='mr-3 w-15 h-15' />
+                                    <Image src={progress.img} alt="buyer" className='mr-3 w-[60px] h-[60px]' />
 
-                                    <div className='flex-grow'>
+                                    <div className='w-full'>
                                         <h4 className='text-2xl font-semibold text-myBlack dark:text-white mb-3'>{progress.name}</h4>
                                         {/* <span>{progress.progress}</span> */}
                                         <Progress bgcolor={resolvedTheme === 'dark' ? `${progress.color1}` : `${progress.color}`} completed={progress.completed} />
@@ -321,22 +320,21 @@ const tasks = () => {
                 </div>
 
                 {/* Task Reports */}
-                <div className="py-8 px-7 rounded bg-white dark:bg-darkCard">
-                    <div className="flex justify-between items-center">
+                <div className="p-2 lg:py-8 lg:px-7 rounded bg-white dark:bg-darkCard">
+                    <div className="flex flex-wrap gap-3 justify-between items-center">
                         <h4 className="text-xl text-myBlack dark:text-myWhite">Tasks Reports</h4>
-
                         <div>
                             <Listbox value={selectedPerson} onChange={setSelectedPerson}>
                                 <Listbox.Button
 
-                                    className="lg:flex hidden gap-2 items-center  relative w-full cursor-default rounded-lg text-[#252525] dark:text-myWhite py-2 px-3 text-left border dark:border-darkLine focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
+                                    className="flex gap-2 items-center  relative w-full cursor-default rounded-lg text-[#252525] dark:text-myWhite py-2 px-3 text-left border dark:border-darkLine focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
                                     {selectedPerson.name}
                                     <span class="material-symbols-outlined">
                                         expand_more
                                     </span>
                                 </Listbox.Button>
                                 <Listbox.Options
-                                    className="absolute mt-1 max-h-60 max-w-60 z-10 text-center overflow-auto rounded-md bg-white py-2 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                                    className="absolute mt-1 max-h-60 max-w-60 z-10 text-center overflow-auto rounded-md bg-white dark:bg-darkBg py-2 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
 
                                     {people.map((person) => (
                                         <Listbox.Option
@@ -345,7 +343,7 @@ const tasks = () => {
                                             disabled={person.unavailable}
                                             as={Fragment}
                                             className={({ active }) =>
-                                                `relative cursor-default select-none py-2 px-5 ${active ? 'bg-myBlue text-white' : 'text-gray-900'
+                                                `relative cursor-default select-none py-2 px-5 ${active ? 'bg-myBlue dark:bg-myGreen text-white' : 'text-gray-900 dark:text-white'
                                                 }`
                                             }
                                         >
@@ -363,13 +361,13 @@ const tasks = () => {
                         </div>
                     </div>
 
-                    <hr className='my-7 dark:border-darkLine' />
+                    <hr className='my-5 lg:my-7 dark:border-darkLine' />
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 my-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
                         {
                             cards.map(card => (<div
                                 key={card.id}
-                                className="group bg-white dark:bg-[#1E192A] py-4 px-6 rounded task-card">
+                                className="group bg-white dark:bg-[#1E192A] p-2 lg:py-4 lg:px-6 rounded task-card">
                                 <div className="flex justify-between">
                                     <h3 className="text-base text-myBlack dark:text-myWhite">{card.name}</h3>
                                     <div className='group-hover:shadow-xl w-10 h-10 bg-[#EDECFB] dark:bg-[#164C3C] flex items-center justify-center rounded-md'>
@@ -390,7 +388,7 @@ const tasks = () => {
                     </div>
                 </div>
             </div>
-            <hr className="my-6 dark:border-darkLine border-myLine" />
+            <hr className="my-5 lg:my-6 dark:border-darkLine border-myLine" />
 
             {/* Task report card */}
             <div>
@@ -402,7 +400,7 @@ const tasks = () => {
                     {
                         reportCards.map(card => (<div
                             key={card.id}
-                            className="bg-white dark:bg-darkCard py-4 md:py-6 lg:py-8 px-5 md:px-8 lg:px-10 rounded  hover:-skew-y-3 duration-300"
+                            className="bg-white dark:bg-darkCard p-2 lg:py-8 lg:px-10 rounded  hover:-skew-y-3 duration-300"
                         >
                             <Image className='w-[120px] h-[120px] mx-auto mb-8' src={card.img} alt="buyer" />
                             <h4 className='text-myBlack dark:text-white text-2xl font-semibold text-center mb-7'>{card.title}</h4>

@@ -211,13 +211,13 @@ const products = () => {
     ]
 
     return (
-        <div className='px-6 pb-6 pt-10 bg-bgColor dark:bg-darkBg'>
+        <div className='px-2 lg:px-6 pb-6 pt-10 bg-bgColor dark:bg-darkBg'>
             <h1 className="text-2xl font-semibold text-myBlack dark:text-white">Dashbord</h1>
             <span className='text-sm text-myBlack dark:text-white'>Jul 9, 2023</span>
 
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8'>
 
-                <div className='bg-white dark:bg-darkCard rounded  px-10 pt-10 pb-6'>
+                <div className='bg-white dark:bg-darkCard rounded p-2 lg:px-10 lg:pt-10 lg:pb-6'>
                     <h4 className='text-lg text-myBlack dark:text-[#ECEEFB]'>Total Sales</h4>
                     <div className='flex justify-between'>
                         <div>
@@ -232,12 +232,12 @@ const products = () => {
                     <TotalSeles></TotalSeles>
                 </div>
                 {/* Recent order */}
-                <div className="bg-white dark:bg-darkCard  rounded p-10 ">
+                <div className="bg-white dark:bg-darkCard  rounded p-2 lg:p-10 ">
                     <div className="flex justify-between items-center">
-                        <h3 className="text-xl  ml-5 text-myBlack dark:text-myWhite ">Recent Orders</h3>
-                        <h4 className='text-sm text-myBlack dark:text-myWhite border border-[#ECEEFB] dark:border-darkLine rounded py-3 px-4 mr-5 cursor-pointer'>See all</h4>
+                        <h3 className="text-xl text-myBlack dark:text-myWhite ">Recent Orders</h3>
+                        <h4 className='text-sm text-myBlack dark:text-myWhite border border-[#ECEEFB] dark:border-darkLine rounded py-3 px-4 cursor-pointer'>See all</h4>
                     </div>
-                    <hr className='my-10 border-myLine dark:border-darkLine' />
+                    <hr className='my-5 lg:my-10 border-myLine dark:border-darkLine' />
 
                     <div className="overflow-x-auto whitespace-nowrap">
                         <table className="table">
@@ -274,12 +274,12 @@ const products = () => {
             </div>
 
             {/* all products details */}
-            <div className='p-8 bg-white dark:bg-darkCard my-6 rounded'>
+            <div className='p-2 lg:p-8 bg-white dark:bg-darkCard my-6 rounded'>
                 <div className='flex justify-between items-center'>
                     <h3 className='text-xl text-myBlack dark:text-myWhite'>Products</h3>
                     <span className='border border-[#ECEEFB] dark:border-darkLine rounded py-3 px-4  text-sm text-myBlack dark:text-myLine'>Browse Products</span>
                 </div>
-                <hr className='my-7 border-myLine dark:border-darkLine' />
+                <hr className='my-5 lg:my-7 border-myLine dark:border-darkLine' />
 
                 <div className="overflow-x-auto">
                     <table className="table whitespace-nowrap">
@@ -371,8 +371,8 @@ const products = () => {
             </div>
 
             {/* Order Status */}
-            <div className='p-8 bg-white dark:bg-darkCard mt-6 rounded'>
-                <div className='flex justify-between items-center'>
+            <div className='p-2 lg:p-8 bg-white dark:bg-darkCard mt-6 rounded'>
+                <div className='flex flex-wrap gap-2 justify-between items-center'>
                     <h1 className='text-xl text-myBlack dark:text-myWhite'>Order Status</h1>
                     <div>
                         <Listbox value={selectedPerson} onChange={setSelectedPerson}>
@@ -412,7 +412,7 @@ const products = () => {
                     </div>
 
                 </div>
-                <hr className='my-7 border-myLine dark:border-darkLine' />
+                <hr className='my-5 lg:my-7 border-myLine dark:border-darkLine' />
 
                 <div className="overflow-x-auto whitespace-nowrap">
                     <table className="table">

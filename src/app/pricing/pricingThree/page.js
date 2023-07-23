@@ -1,21 +1,18 @@
 "use client"
 import React from 'react';
 import '../pricingOne/pricing.css';
-import { useEffect } from 'react';
 import { useState } from 'react';
 
 const PricingThree = () => {
-    const [year, setYear] = useState("")
 
-    const fn = () => {
-        setYear("year")
-    }
+    const [price,setPrice]=useState(true);
+
     const cards = [
         {
             id: 1,
             package: 'Starter',
             price: '$333/month',
-            yearlyPrice: '$1333555/month',
+            yearlyPrice: '$1333/year',
             des: 'Lorem ipsum dolor sit amet consectetur. A tellus dolor nec potenti. Ornare sem.',
             event: 'Up to 250k events',
             campaigns: 'Run 25 campaigns',
@@ -28,7 +25,7 @@ const PricingThree = () => {
             id: 2,
             package: 'Professional',
             price: '$433/month',
-            yearlyPrice: '$1333555/month',
+            yearlyPrice: '$1433/year',
 
             des: 'Lorem ipsum dolor sit amet consectetur. A tellus dolor nec potenti. Ornare sem.',
             event: 'Up to 250k events',
@@ -43,7 +40,7 @@ const PricingThree = () => {
             id: 3,
             package: 'Premium',
             price: '$633/month',
-            yearlyPrice: '$1333555/month',
+            yearlyPrice: '$1633/year',
 
             des: 'Lorem ipsum dolor sit amet consectetur. A tellus dolor nec potenti. Ornare sem.',
             event: 'Up to 250k events',
@@ -60,8 +57,8 @@ const PricingThree = () => {
             <p className='text-center text-lg text-myBlack dark:text-myWhite'>Vestibulum diam risus, convallis vel blandit eu, iaculis in diam. Fusce <br /> elementum metus sem.Nulla posuere, tortor sed .</p>
 
             <div className='flex items-center justify-center mt-7 mb-10 gap-6'>
-                <button className='text-sm text-black dark:text-myWhite py-3 px-4 border border-myLine dark:border-darkLine rounded'>Billed Monthly</button>
-                <button onClick={fn} className='text-sm text-black dark:text-myWhite py-3 px-4 border border-myLine dark:border-darkLine rounded '>Billed Annually</button>
+                <button style={{backgroundColor:price===true ? '#4538D3' : '', color:price===true ? '#FFFFFF' : ''}} onClick={()=>setPrice(true)} className='text-sm text-black dark:text-myWhite py-3 px-4 border border-myLine dark:border-darkLine rounded'>Billed Monthly</button>
+                <button style={{backgroundColor:price===false ? '#4538D3' : '', color:price===false ? '#FFFFFF' : ''}} onClick={()=>setPrice(false)} className='text-sm text-black dark:text-myWhite py-3 px-4 border border-myLine dark:border-darkLine rounded '>Billed Annually</button>
             </div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10'>
@@ -76,7 +73,7 @@ const PricingThree = () => {
                             </div>
                             <div>
                                 <h5 className='text-myBlue dark:text-myGreen text-xl font-semibold'>{card.package}</h5>
-                                <h4 className='text-myBlack dark:text-white text-2xl font-semibold mt-2'>{year == "year" ? card.yearlyPrice : card.price}</h4>
+                                <h4 className='text-myBlack dark:text-white text-2xl font-semibold mt-2'>{price == true ? card.price : card.yearlyPrice}</h4>
                             </div>
                         </div>
                         <p className='text-lg text-myBlack dark:text-myWhite mt-7'>{card.des}</p>
