@@ -354,15 +354,15 @@ const crypto = () => {
     ]
 
     return (
-        <div className='px-6 pt-10 pb-6 bg-bgColor dark:bg-darkBg'>
+        <div className='px-2 lg:px-6 pt-10 pb-6 bg-bgColor dark:bg-darkBg'>
             <h3 className='text-[32px] font-semibold text-myBlack dark:text-white'>Crypto</h3>
             <span className='text-sm text-myBlack dark:text-white'>Lorem ipsum dolor sit ammet consectetur.</span>
 
             {/* crypto card */}
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-6'>
                 {
                     cards.map(card => (<div
-                        className='p-5 bg-white rounded mt-8 dark:bg-darkCard'
+                        className='p-3 lg:p-5 bg-white rounded mt-8 dark:bg-darkCard'
                         key={card.id}
                     >
                         <div className='flex justify-between'>
@@ -378,7 +378,7 @@ const crypto = () => {
                             </div>
                         </div>
 
-                        <div className='flex justify-between mt-8 mb-2'>
+                        <div className='flex justify-between mt-4 lg:mt-8 mb-2'>
                             <h5 className='text-xl font-semibold text-myBlue dark:text-myGreen'>{card.amount}</h5>
                             <span className='text-lg' 
                             style={{ color:resolvedTheme==='dark' ? `${card.color1}`: `${card.color}`}}>{card.parcent}
@@ -395,13 +395,13 @@ const crypto = () => {
             </div>
 
             {/* crypto table */}
-            <div className='bg-white dark:bg-darkCard py-8 px-7 mt-8 rounded'>
-                <div className='flex justify-between'>
+            <div className='bg-white dark:bg-darkCard p-2 lg:py-8 lg:px-7 mt-8 rounded'>
+                <div className='flex justify-between items-center'>
                     <h3 className='text-xl text-myBlack dark:text-myWhite'>Crypto</h3>
                     <span className="border rounded border-myLine dark:border-darkLine text-myBlack dark:text-myWhite text-sm py-3 px-4">5-10 of 50</span>
                 </div>
-                <div className="overflow-x-auto block mt-10 ">
-                    <table className="table overflow-hidden w-[150%] lg:w-full">
+                <div className="overflow-x-auto block mt-5 lg:mt-10 ">
+                    <table className="table overflow-hidden w-full">
 
                         <thead className='bg-[#F5F7FD] dark:bg-darkBg text-lg text-myBlack'>
                             <tr className='dark:border-darkLine'>
@@ -473,14 +473,13 @@ const crypto = () => {
             </div>
 
             {/* Cryto News */}
-
             <div>  
-                <h3 className='text-[32px] text-myBlack dark:text-white mt-6 mb-10'>Crypto news</h3>
+                <h3 className='text-[32px] text-myBlack dark:text-white my-4 lg:mt-6 lg:mb-10'>Crypto news</h3>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                     {
                         news.map(company => (<div
                             key={company.id}
-                            className='py-4 px-5 bg-white rounded dark:bg-darkCard'
+                            className='p-2 lg:py-4 lg:px-5 bg-white rounded dark:bg-darkCard'
                         >
                             <Image className='rounded' src={company.img} alt="company" />
                             <div className='flex justify-between my-5'>
@@ -488,12 +487,12 @@ const crypto = () => {
                                     <span className="material-symbols-outlined w-6 h-6 text-myGrey dark:text-[#D1D1D1]">calendar_month</span>
                                     <span className='text-myGrey dark:text-[#D1D1D1] text-base ml-[10px]'>{company.date}</span>
                                 </div>
-                                <div className='flex'>
+                                <div className='flex whitespace-nowrap'>
                                     <span className="material-symbols-outlined w-6 h-6 text-myGrey dark:text-[#D1D1D1]">alarm</span>
                                     <span className='text-myGrey dark:text-[#D1D1D1] text-base ml-[10px]'>{company.time}</span>
                                 </div>
                             </div>
-                            <h4 className='text-2xl font-semibold text-myBlack dark:text-white mb-8'>{company.title}</h4>
+                            <h4 className='text-2xl font-semibold text-myBlack dark:text-white mb-4 lg:mb-8'>{company.title}</h4>
                             <Link href='#' className='text-myBlue dark:text-myGreen flex items-center gap-2 cursor-pointer'>
                                 <span>View Company</span>
                                 <span class="material-symbols-outlined">arrow_forward</span>
@@ -504,12 +503,12 @@ const crypto = () => {
             </div>
 
             {/* Trending  */}
-            <div className='bg-white dark:bg-darkCard py-8 px-7 mt-6 rounded'>
-                <div className='flex justify-between'>
+            <div className='bg-white dark:bg-darkCard p-2 lg:py-8 lg:px-7 mt-6 rounded'>
+                <div className='flex justify-between items-center'>
                     <h3 className='text-xl text-myBlack dark:text-myWhite'>Trending</h3>
                     <span className="border rounded border-myLine dark:border-darkLine text-myBlack dark:text-myWhite text-sm py-3 px-4">5-10 of 50</span>
                 </div>
-                <div className="overflow-x-auto block mt-10 ">
+                <div className="overflow-x-auto block mt-5 lg:mt-10 ">
                     <table className="table overflow-hidden w-full">
 
                         <thead className='bg-[#F5F7FD] dark:bg-darkBg text-lg text-myBlack '>

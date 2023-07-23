@@ -120,7 +120,7 @@ const allCompanies = [
 const companies = () => {
     const [selectedPerson, setSelectedPerson] = useState(people[0])
     return (
-        <div className='px-6 pt-10 pb-6 bg-bgColor dark:bg-darkBg'>
+        <div className='px-2 lg:px-6 pt-10 pb-6 bg-bgColor dark:bg-darkBg'>
             <h3 className='text-[32px] font-semibold text-myBlack dark:text-white'>Companies</h3>
             <span className='text-sm text-myBlack dark:text-white'>Lorem ipsum dolor sit ammet consectetur.</span>
 
@@ -129,14 +129,14 @@ const companies = () => {
                 <span className='text-myBlack dark:text-myWhite border dark:border-darkLine py-3 px-4  text-sm rounded ml-6 border-myBlack'>Card view</span>
             </div>
 
-            <div className='bg-white dark:bg-darkCard py-8 px-7 mt-8 rounded'>
-                <div className='flex justify-between items-center'>
+            <div className='bg-white dark:bg-darkCard p-2 lg:py-8 lg:px-7 mt-8 rounded'>
+                <div className='flex flex-wrap gap-2 justify-between items-center'>
                     <h3 className='text-xl text-myBlack dark:text-myWhite'>Contacts List</h3>
                     <div>
                         <Listbox value={selectedPerson} onChange={setSelectedPerson}>
                             <Listbox.Button
 
-                                className="lg:flex hidden gap-2 items-center  relative w-full cursor-default rounded-lg text-[#252525] dark:text-myWhite  py-2 px-3 text-left border border-myLine dark:border-darkLine focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
+                                className="flex gap-2 items-center  relative w-full cursor-default rounded-lg text-[#252525] dark:text-myWhite  py-2 px-3 text-left border border-myLine dark:border-darkLine focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
                                 {selectedPerson.name}
                                 <span class="material-symbols-outlined">
                                     expand_more
@@ -170,7 +170,7 @@ const companies = () => {
                     </div>
                 </div>
 
-                <div className="overflow-x-auto block mt-10">
+                <div className="overflow-x-auto block mt-5 lg:mt-10">
                     <table className="table overflow-hidden whitespace-nowrap">
                     
                         <thead className='bg-[#F5F7FD] dark:bg-darkBg text-lg text-myBlack dark:text-myWhite'>

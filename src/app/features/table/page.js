@@ -109,18 +109,18 @@ const invoices = [
 const table = () => {
   const { resolvedTheme, setTheme } = useTheme();
   return (
-    <div className='px-6 pt-10 pb-6 bg-bgColor dark:bg-darkBg'>
+    <div className='px-2 lg:px-6 pt-10 pb-6 bg-bgColor dark:bg-darkBg'>
       <h3 className='text-[32px] font-semibold text-myBlack dark:text-white'>Table</h3>
       <span className='text-sm text-myBlack dark:text-white'>Lorem ipsum dolor sit ammet consectetur.</span>
 
-      <div className='bg-white dark:bg-darkCard py-8 px-7 mt-8 rounded'>
-        <div className='flex justify-between'>
+      <div className='bg-white dark:bg-darkCard p-2 lg:py-8 lg:px-7 mt-8 rounded'>
+        <div className='flex justify-between items-center'>
           <h3 className='text-xl text-myBlack dark:text-myWhite'>All Invoices</h3>
           <span className='border rounded border-myLine dark:border-darkLine text-myBlack dark:text-myWhite text-sm py-3 px-4'>5-10 of 10</span>
         </div>
 
-        <div className="overflow-x-auto block mt-10">
-          <table className="table overflow-hidden w-[150%] lg:w-full">
+        <div className="overflow-x-auto block mt-5 lg:mt-10">
+          <table className="table overflow-hidden w-full">
 
             <thead className='bg-[#F5F7FD] dark:bg-darkBg text-lg text-myBlack dark:text-myWhite'> 
               <tr className='dark:border-darkLine'>

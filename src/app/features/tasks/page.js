@@ -78,7 +78,7 @@ const tasks = () => {
         },
     ]
     return (
-        <div className='px-6 pt-10 pb-6 bg-bgColor dark:bg-darkBg'>
+        <div className='px-2 lg:px-6 pt-10 pb-6 bg-bgColor dark:bg-darkBg'>
             <h3 className='text-[32px] font-semibold text-myBlack dark:text-white'>Tasks</h3>
             <span className='text-sm text-myBlack dark:text-white'>Lorem ipsum dolor sit ammet consectetur.</span>
 
@@ -86,11 +86,11 @@ const tasks = () => {
                     {
                         reportCards.map(card => (<div
                             key={card.id}
-                            className="bg-white dark:bg-darkCard py-4 md:py-6 lg:py-8 px-5 md:px-8 lg:px-10 rounded   hover:-skew-y-3 duration-300"
+                            className="bg-white dark:bg-darkCard p-2 md:py-6 lg:py-8 md:px-8 lg:px-10 rounded   hover:-skew-y-3 duration-300"
                         >
-                            <Image className='w-[120px] h-[120px] mx-auto mb-8' src={card.img} alt="buyer" />
-                            <h4 className='text-myBlack dark:text-white text-2xl font-semibold text-center mb-7'>{card.title}</h4>
-                            <div className='flex justify-around mb-8'>
+                            <Image className='w-[120px] h-[120px] mx-auto mb-3 lg:mb-8' src={card.img} alt="buyer" />
+                            <h4 className='text-myBlack dark:text-white text-2xl font-semibold text-center mb-3 lg:mb-7'>{card.title}</h4>
+                            <div className='flex justify-around mb-3 lg:mb-8'>
                                 <p className='text-myBlue  dark:text-myGreen dark:bg-[#2C3140] rounded  px-2 bg-[#F6F6FB] '>{card.category}</p>
                                 <div className='border dark:border-darkLine'></div>
                                 <div className='flex'>

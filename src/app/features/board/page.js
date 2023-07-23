@@ -61,7 +61,7 @@ const board = () => {
     ]
 
     return (
-        <div className='px-6 pt-10 pb-6 bg-bgColor dark:bg-darkBg'>
+        <div className='p-2 lg:px-6 pt-10 pb-6 bg-bgColor dark:bg-darkBg'>
             <h3 className='text-[32px] font-semibold text-myBlack dark:text-white'>Board </h3>
             <span className='text-sm text-myBlack dark:text-white'>Lorem ipsum dolor sit ammet consectetur.</span>
 
@@ -69,11 +69,11 @@ const board = () => {
                 {
                     bords.map(bord => (<div
                         key={bord.id}
-                        className="bg-white dark:bg-darkCard py-10 px-8 rounded hover:-skew-y-3 duration-300"
+                        className="bg-white dark:bg-darkCard p-3 lg:py-10 lg:px-8 rounded hover:-skew-y-3 duration-300"
                     >
                         <span className='text-sm text-white dark:text-myGreen bg-myBlue dark:bg-[#2C3140] py-1 px-2 rounded'>{bord.work}</span>
-                        <h4 className='text-2xl text-myBlack mt-6 mb-4 font-semibold dark:text-white'>{bord.title}</h4>
-                        <p className='text-lg text-myBlack mb-7 dark:text-myWhite'>{bord.des}</p>
+                        <h4 className='text-2xl text-myBlack my-3 lg:mt-6 lg:mb-4 font-semibold dark:text-white'>{bord.title}</h4>
+                        <p className='text-lg text-myBlack mb-3 lg:mb-7 dark:text-myWhite'>{bord.des}</p>
                         <div className='flex items-center justify-between'>
                             <div className='flex  gap-4'>
                                 <span className='text-myGrey w-6 h-4 dark:text-myLine'>{bord.file}</span>
@@ -92,7 +92,7 @@ const board = () => {
                     </div>))
                 }
             </div>
-            <hr className='mt-6 border-myLine dark:border-r-darkLine' />
+            <hr className='mt-6 border-myLine dark:border-darkLine' />
 
         </div>
     );
