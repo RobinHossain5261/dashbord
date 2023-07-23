@@ -17,9 +17,9 @@ const pricingSingle = () => {
     
 
     return (
-        <div className='px-6 pt-10 bg-bgColor dark:bg-darkBg'>
+        <div className='px-2 lg:px-6 pt-10 md:mt-10 bg-bgColor dark:bg-darkBg'>
             <div className='lg:flex md:flex gap-6'>
-                <section className='py-8 px-4 md:px-10 lg:mx-10 h-full bg-white dark:bg-darkCard rounded boxShadow mb-6'>
+                <section className='p-3 lg:px-10 lg:py-8 h-full bg-white dark:bg-darkCard rounded boxShadow mb-6'>
                     <div className='flex items-center gap-6 mb-7'>
                         <div className=' w-[60px] h-[60px] flex items-center justify-center bg-[#ECEBFB] dark:bg-[#2C3140] rounded'>
                             <span class="material-symbols-outlined text-myBlue dark:text-myGreen">send</span>
@@ -29,7 +29,7 @@ const pricingSingle = () => {
                             <h3 className='text-2xl text-myBlack dark:text-white font-semibold'>$123/month</h3>
                         </div>
                     </div>
-                    <p className='text-lg text-myBlack dark:text-myWhite mb-10'>Integer tincidunt nulla mollis eros commodo, ac varius neque ornare. Cras non nisi vel sapien </p>
+                    <p className='text-lg text-myBlack dark:text-myWhite mb-5 lg:mb-10'>Integer tincidunt nulla mollis eros commodo, ac varius neque ornare. Cras non nisi vel sapien </p>
                     <div>
                         <Listbox value={selectedPerson} onChange={setSelectedPerson}>
                             <Listbox.Button
@@ -69,7 +69,7 @@ const pricingSingle = () => {
                     <button className='text-white bg-myBlue dark:bg-myGreen text-sm px-4 py-3 w-full rounded mt-5'>Add to Cart</button>
                 </section>
                 {/* StartUp plan Start */}
-                <section className='py-8 px-10 bg-white dark:bg-darkCard rounded boxShadow'>
+                <section className='p-3 lg:py-8 lg:px-10 bg-white dark:bg-darkCard rounded boxShadow'>
 
                     <h5 className='text-xl font-semibold text-myBlack dark:text-white mb-5'>Startup plan</h5>
                     <p className='text-lg text-myBlack dark:text-myWhite text-justify'>Lorem ipsum dolor sit amet consectetur. Urna nibh ut morbi quam lorem. In facilisis risus adipiscing adipiscing congue non tincidunt rutrum lectus. Gravida tortor at non id sed tincidunt.</p>

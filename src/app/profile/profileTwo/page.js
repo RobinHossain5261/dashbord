@@ -58,19 +58,19 @@ const profileTwo = () => {
                             <span className='text-sm  text-white'>Bluth CEO</span>
                         </div>
                     </div>
-                    <div className='flex items-center gap-2 bg-myBlue dark:bg-myGreen rounded py-3 px-4 cursor-pointer'>
+                    <div className='flex items-center gap-1 lg:gap-2 bg-myBlue dark:bg-myGreen rounded p-2 lg:py-3 lg:px-4 cursor-pointer'>
                         <span class="material-symbols-outlined text-white dark:text-myBlack">edit_square</span>
                         <span className='text-sm  text-white dark:text-myBlack'>Edit profile</span>
                     </div>
                 </div>
             </section>
 
-            <section className='px-6 pt-10 pb-6 block lg:flex gap-6'>
+            <section className='p-2 lg:px-6 pt-10 pb-6 block lg:flex gap-6'>
                 {/* Profile details  */}
                 <div className=''>
-                    <div className='bg-white dark:bg-darkCard py-7 px-5 w-full rounded cardShadow mb-6'>
-                        <h3 className='text-[#1E192A] dark:text-white text-[32px] mt-[30px] font-semibold '>Profile details</h3>
-                        <hr className='my-10 border-myLine dark:border-darkLine' />
+                    <div className='bg-white dark:bg-darkCard p-2 lg:py-7 lg:px-5 w-full rounded cardShadow mb-6'>
+                        <h3 className='text-[#1E192A] dark:text-white text-[32px] mt-3 lg:mt-[30px] font-semibold '>Profile details</h3>
+                        <hr className='my-4 lg:my-10 border-myLine dark:border-darkLine' />
                         <div className="overflow-x-auto whitespace-nowrap">
                             <table className="table">
                                 <tbody>
@@ -93,9 +93,9 @@ const profileTwo = () => {
                     </div>
 
                     {/* Skills part  */}
-                    <div className='py-10 px-4 md:px-8 lg:px-8 my-6 rounded w-full bg-white dark:bg-darkCard cardShadow'>
+                    <div className='p-3 lg:py-10 md:px-8 lg:px-8 my-6 rounded w-full bg-white dark:bg-darkCard cardShadow'>
                         <h4 className='text-myBlack text-2xl font-semibold dark:text-white'>Skills</h4>
-                        <hr className='border-myLine dark:border-darkLine my-10' />
+                        <hr className='border-myLine dark:border-darkLine my-5 lg:my-10' />
                         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-5 '>
 
                             <span className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-2 md:px-4 lg:px-4 border border-myLine rounded'>UI/UX Degsign</span>
@@ -113,8 +113,8 @@ const profileTwo = () => {
                     </div>
                 </div>
                 {/* About us part  */}
-                <div className='py-10 px-8 rounded h-full bg-white dark:bg-darkCard cardShadow'>
-                    <h4 className='text-2xl font-semibold text-myBlack dark:text-white mb-8'>About Us</h4>
+                <div className='p-3 lg:py-10 lg:px-8 rounded h-full bg-white dark:bg-darkCard cardShadow'>
+                    <h4 className='text-2xl font-semibold text-myBlack dark:text-white mb-4 lg:mb-8'>About Us</h4>
                     <p className='text-base text-[#252525] dark:text-myWhite mb-7 text-justify'>Lorem ipsum dolor sit amet consectetur. Volutpat mattis turpis lorem luctus. Et sed ornare at fermentum vestibulum sit. A sem faucibus cursus pretium vel vitae pellentesque sed vulputate. In turpis leo dictum est id. Sed mi sed neque quam sit.</p>
                     <p className='text-base text-[#252525] dark:text-myWhite mb-7 text-justify'>Lorem ipsum dolor sit amet consectetur. Volutpat sed gravida ultrices elit lectus odio nunc natoque. Ut aliquam cursus consectetur urna nunc nunc tellus. </p>
                     <p className='text-base text-[#252525] dark:text-myWhite mb-7 text-justify'>Lorem ipsum dolor sit amet consectetur. Euismod vel ut aliquet cursus arcu quisque suspendisse vel tincidunt. </p>
@@ -132,10 +132,10 @@ const profileTwo = () => {
 
 
             {/* Experience */}
-            <section className='px-6 pb-6'>
-                <h4 className='text-2xl text-myBlack dark:text-white font-semibold mb-10'>Experience</h4>
+            <section className='p-2 lg:px-6 lg:pb-6'>
+                <h4 className='text-2xl text-myBlack dark:text-white font-semibold mb-5 lg:mb-10'>Experience</h4>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 '>
-                    <div className='p-5 rounded bg-white dark:bg-darkCard cardShadow'>
+                    <div className='p-3 lg:p-5 rounded bg-white dark:bg-darkCard cardShadow'>
                         <div className='flex items-center justify-between flex-wrap'>
                             <div className='flex items-center gap-3'>
                                 <Image className='w-10 h-10 rounded-full' src={google} alt="google" />
@@ -146,9 +146,9 @@ const profileTwo = () => {
                             </div>
                             <span className='text-sm text-myBlue dark:text-myGreen'>Jun 2022 - Apr 2023</span>
                         </div>
-                        <p className='text-lg text-myGrey mt-8 dark:text-myLine text-justify'>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                        <p className='text-lg text-myGrey mt-4 lg:mt-8 dark:text-myLine text-justify'>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
                     </div>
-                    <div className='p-5 rounded bg-white dark:bg-darkCard cardShadow'>
+                    <div className='p-3 lg:p-5 rounded bg-white dark:bg-darkCard cardShadow'>
                         <div className='flex items-center justify-between flex-wrap'>
                             <div className='flex items-center gap-3'>
                                 <Image className='w-10 h-10 rounded-full' src={facebook} alt="facebook" />
@@ -159,9 +159,9 @@ const profileTwo = () => {
                             </div>
                             <span className='text-sm text-myBlue dark:text-myGreen'>Jun 2022 - Apr 2023</span>
                         </div>
-                        <p className='text-lg text-myGrey mt-8 dark:text-myLine text-justify'>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                        <p className='text-lg text-myGrey mt-4 lg:mt-8 dark:text-myLine text-justify'>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
                     </div>
-                    <div className='p-5 rounded bg-white dark:bg-darkCard cardShadow'>
+                    <div className='p-3 lg:p-5 rounded bg-white dark:bg-darkCard cardShadow'>
                         <div className='flex items-center justify-between flex-wrap'>
                             <div className='flex items-center gap-3'>
                                 <Image className='w-10 h-10 rounded-full' src={telegram} alt="telegram" />
@@ -172,7 +172,7 @@ const profileTwo = () => {
                             </div>
                             <span className='text-sm text-myBlue dark:text-myGreen'>Jun 2022 - Apr 2023</span>
                         </div>
-                        <p className='text-lg text-myGrey mt-8 dark:text-myLine text-justify'>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                        <p className='text-lg text-myGrey mt-4 lg:mt-8 dark:text-myLine text-justify'>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
                     </div>
 
                 </div>
