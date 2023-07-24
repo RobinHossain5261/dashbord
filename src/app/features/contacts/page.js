@@ -154,7 +154,7 @@ const contacts = () => {
 
             <div className='mt-8'>
                 <Link href='/features/contacts' className='text-white dark:text-[#1E192A] py-3 px-4 bg-myBlue dark:bg-[#00E177] text-sm rounded'>Table view</Link>
-                <Link href='/cardView/contacts' className='text-myBlack dark:text-myWhite border dark:border-darkLine py-3 px-4  text-sm rounded ml-6 border-myLine'>Card view</Link>
+                <Link href='/features/contacts/cardView' className='text-myBlack dark:text-myWhite border dark:border-darkLine py-3 px-4  text-sm rounded ml-6 border-myLine'>Card view</Link>
             </div>
 
             <div className='bg-white dark:bg-darkCard p-2 lg:py-8 lg:px-7 mt-8 rounded'>

@@ -17,6 +17,7 @@ import twitch from '@/../public/images/twitch.png';
 import webflow from '@/../public/images/webflow.png';
 import twitter from '@/../public/images/twitter.png';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const people = [
     { id: 1, name: '14 Aug - 25 Aug', unavailable: false },
@@ -125,8 +126,8 @@ const companies = () => {
             <span className='text-sm text-myBlack dark:text-white'>Lorem ipsum dolor sit ammet consectetur.</span>
 
             <div className='mt-8'>
-                <span className='text-white dark:text-myBlack py-3 px-4 bg-myBlue dark:bg-myGreen text-sm rounded'>Table view</span>
-                <span className='text-myBlack dark:text-myWhite border dark:border-darkLine py-3 px-4  text-sm rounded ml-6 border-myBlack'>Card view</span>
+                <Link href='/features/companies' className='text-white dark:text-myBlack py-3 px-4 bg-myBlue dark:bg-myGreen text-sm rounded'>Table view</Link>
+                <Link href='/features/companies/cardView' className='text-myBlack dark:text-myWhite border border-myLine dark:border-darkLine py-3 px-4  text-sm rounded ml-6'>Card view</Link>
             </div>
 
             <div className='bg-white dark:bg-darkCard p-2 lg:py-8 lg:px-7 mt-8 rounded'>

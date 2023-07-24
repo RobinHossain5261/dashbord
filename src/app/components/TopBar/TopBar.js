@@ -266,11 +266,11 @@ export default function TopBar({ showNav, setShowNav }) {
 
     return (
         <div className={`bg-white dark:bg-[#1E192A] left-0 py-6 z-[5] fixed w-full flex justify-between items-center transition-all duration-[400ms] ${showNav ? "pl-56" : ""}`}>
-            <div className="flex items-center gap-[60px] py-2">
-                <span class=" material-symbols-outlined ml-2  md:ml-10 lg:ml-[60px] cursor-pointer dark:text-myWhite"
+            <div className="flex items-center md:gap-5 lg:gap-[60px] py-2">
+                <span class=" material-symbols-outlined ml-2  md:ml-6 lg:ml-[60px] cursor-pointer dark:text-myWhite"
                     onClick={() => setShowNav(!showNav)}
                 >menu</span>
-                <form className='hidden md:flex lg:flex items-center border dark:border-darkLine px-4 py-3 rounded'>
+                <form className='hidden md:hidden lg:flex items-center border dark:border-darkLine px-4 py-3 rounded'>
                     <input type="text" placeholder='Search...' className='outline-none  text-myBlack dark:text-myWhite dark:bg-[#1E192A]' />
                     <span class="material-symbols-outlined cursor-pointer w-4 h-4 text-myBlack dark:text-myWhite"> search </span>
                 </form>
