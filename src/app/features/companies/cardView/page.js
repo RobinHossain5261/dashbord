@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import React from 'react';
-import facebook from '@/../public/images/fb.png';
-import google from '@/../public/images/google.png';
-import linkedin from '@/../public/images/linkedin.png';
-import reddit from '@/../public/images/reddit.png';
-import twitter from '@/../public/images/twitter.png';
-import youtube from '@/../public/images/youtube.png';
+import facebook from '@/../public/images/fb2.png';
+import google from '@/../public/images/google2.png';
+import linkedin from '@/../public/images/linkedin2.png';
+import reddit from '@/../public/images/reddit2.png';
+import twitter from '@/../public/images/twitter2.png';
+import youtube from '@/../public/images/youtube2.png';
 import Image from 'next/image';
 
 const companies = () => {

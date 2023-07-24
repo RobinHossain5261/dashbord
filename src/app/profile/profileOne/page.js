@@ -49,6 +49,7 @@ const profileOne = () => {
             <div className='-mb-32'>
                 <Image className='h-[400px] w-full object-cover' src={bgProfile} alt='bgProfile' />
             </div>
+            
             <div className='px-2 lg:px-6 pt-10 block lg:flex gap-6 relative'>
 
                 {/* About part  */}

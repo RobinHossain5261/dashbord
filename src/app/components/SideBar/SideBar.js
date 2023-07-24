@@ -131,9 +131,8 @@ const SideBar = forwardRef(({ showNav,setShowNav }, ref) => {
           {activeMenu === 'dropdown5' && (
             <ul className="dropdown-menu">
               <li onClick={()=>innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href=''>All Pages</Link></li>
-              <li onClick={()=>innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href=''>Reports</Link></li>
-              <li onClick={()=>innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href=''>Products</Link></li>
-              <li onClick={()=>innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href=''>Tasks</Link></li>
+              <li onClick={()=>innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/integrations'>Integrations</Link></li>
+              <li onClick={()=>innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/integrations/integrationsSingle'>Integrations single</Link></li>
             </ul>
           )}
         </li>
