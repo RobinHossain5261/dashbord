@@ -2,68 +2,25 @@
 import React from 'react';
 import '../pricingOne/pricing.css';
 import { useState } from 'react';
+import { pricingCards } from '../../../../public/data/pricingData';
 
 const PricingThree = () => {
 
-    const [price,setPrice]=useState(true);
+    const [price, setPrice] = useState(true);
 
-    const cards = [
-        {
-            id: 1,
-            package: 'Starter',
-            price: '$333/month',
-            yearlyPrice: '$1333/year',
-            des: 'Lorem ipsum dolor sit amet consectetur. A tellus dolor nec potenti. Ornare sem.',
-            event: 'Up to 250k events',
-            campaigns: 'Run 25 campaigns',
-            users: 'Invite up to 10 users',
-            database: 'Shared Database',
-            security: 'Basic Security',
-            icon: <span class="material-symbols-outlined text-myBlue dark:text-myGreen">send</span>
-        },
-        {
-            id: 2,
-            package: 'Professional',
-            price: '$433/month',
-            yearlyPrice: '$1433/year',
-
-            des: 'Lorem ipsum dolor sit amet consectetur. A tellus dolor nec potenti. Ornare sem.',
-            event: 'Up to 250k events',
-
-            campaigns: 'Run 25 campaigns',
-            users: 'Invite up to 10 users',
-            database: 'Shared Database',
-            security: 'Basic Security',
-            icon: <span class="material-symbols-outlined text-myBlue dark:text-myGreen">flight</span>
-        },
-        {
-            id: 3,
-            package: 'Premium',
-            price: '$633/month',
-            yearlyPrice: '$1633/year',
-
-            des: 'Lorem ipsum dolor sit amet consectetur. A tellus dolor nec potenti. Ornare sem.',
-            event: 'Up to 250k events',
-            campaigns: 'Run 25 campaigns',
-            users: 'Invite up to 10 users',
-            database: 'Shared Database',
-            security: 'Basic Security',
-            icon: <span class="material-symbols-outlined text-myBlue dark:text-myGreen">rocket_launch</span>
-        }
-    ]
     return (
         <div className='px-2 lg:px-6 pt-10 pb-8 bg-bgColor dark:bg-darkBg'>
             <h2 className='text-myBlack dark:text-white text-[40px] text-center font-semibold mb-5'>Our Pricing</h2>
             <p className='text-center text-lg text-myBlack dark:text-myWhite'>Vestibulum diam risus, convallis vel blandit eu, iaculis in diam. Fusce elementum metus sem.Nulla posuere, tortor sed .</p>
 
             <div className='flex items-center justify-center mt-7 mb-10 gap-6'>
-                <button style={{backgroundColor:price===true ? '#4538D3' : '', color:price===true ? '#FFFFFF' : ''}} onClick={()=>setPrice(true)} className='text-sm text-black dark:text-myWhite py-3 px-4 border border-myLine dark:border-darkLine rounded'>Billed Monthly</button>
-                <button style={{backgroundColor:price===false ? '#4538D3' : '', color:price===false ? '#FFFFFF' : ''}} onClick={()=>setPrice(false)} className='text-sm text-black dark:text-myWhite py-3 px-4 border border-myLine dark:border-darkLine rounded '>Billed Annually</button>
+                <button style={{ backgroundColor: price === true ? '#4538D3' : '', color: price === true ? '#FFFFFF' : '' }} onClick={() => setPrice(true)} className='text-sm text-black dark:text-myWhite py-3 px-4 border border-myLine dark:border-darkLine rounded'>Billed Monthly</button>
+                <button style={{ backgroundColor: price === false ? '#4538D3' : '', color: price === false ? '#FFFFFF' : '' }} onClick={() => setPrice(false)} className='text-sm text-black dark:text-myWhite py-3 px-4 border border-myLine dark:border-darkLine rounded '>Billed Annually</button>
             </div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                 {
-                    cards.map(card => (<div
+                    pricingCards.map(card => (<div
                         key={card.id}
                         className='bg-white dark:bg-darkCard p-3 lg:py-7 lg:px-8 rounded boxShadow  border dark:border-darkLine hover:border-myBlue dark:hover:border-myGreen'
                     >

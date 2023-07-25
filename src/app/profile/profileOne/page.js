@@ -5,51 +5,16 @@ import facebook from '@/../public/images/fb.png';
 import google from '@/../public/images/google.png';
 import telegram from '@/../public/images/telegram.png';
 import Image from 'next/image';
+import { informations } from '../../../../public/data/profileData';
 
 const profileOne = () => {
-    const informations = [
-        {
-            id: 1,
-            name: 'Phone Number',
-            info: '(405) 555-0128',
-            icon: <span class="material-symbols-outlined">call</span>,
-            more: <span class="material-symbols-outlined">more_vert</span>
-        },
-        {
-            id: 2,
-            name: 'Location',
-            info: 'New York',
-            icon: <span class="material-symbols-outlined">location_on</span>,
-            more: <span class="material-symbols-outlined">more_vert</span>
-        },
-        {
-            id: 3,
-            name: 'support Email',
-            info: 'info@example.com',
-            icon: <span class="material-symbols-outlined">outgoing_mail</span>,
-            more: <span class="material-symbols-outlined">more_vert</span>
-        },
-        {
-            id: 4,
-            name: 'Website',
-            info: 'google.com',
-            icon: <span class="material-symbols-outlined">language</span>,
-            more: <span class="material-symbols-outlined">more_vert</span>
-        },
-        {
-            id: 5,
-            name: 'Contact Since',
-            info: '14 Aug - 25 Aug',
-            icon: <span class="material-symbols-outlined">calendar_month</span>,
-            more: <span class="material-symbols-outlined">more_vert</span>
-        },
-    ]
+
     return (
         <div className='bg-bgColor dark:bg-darkBg'>
             <div className='-mb-32'>
                 <Image className='h-[400px] w-full object-cover' src={bgProfile} alt='bgProfile' />
             </div>
-            
+
             <div className='px-2 lg:px-6 pt-10 block lg:flex gap-6 relative'>
 
                 {/* About part  */}
@@ -176,7 +141,7 @@ const profileOne = () => {
 
                 </div>
             </div>
-            <hr className='pb-8 mx-6 border-myLine dark:border-darkLine'/>
+            <hr className='pb-8 mx-6 border-myLine dark:border-darkLine' />
         </div>
     );
 };

@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import './pricing.css';
 import { Switch } from '@headlessui/react';
+import { cards } from '../../../../public/data/pricingData';
 
 const PricingOne = () => {
     const [enabled, setEnabled] = useState(false);
@@ -10,44 +11,7 @@ const PricingOne = () => {
         setPrice(!price);
     }
 
-    const cards = [
-        {
-            id: 1,
-            package: 'Starter',
-            price: '$333/month',
-            price1: '$1333/year',
-            des: 'Lorem ipsum dolor sit amet consectetur. A tellus dolor nec potenti. Ornare sem.',
-            event: 'Up to 250k events',
-            campaigns: 'Run 25 campaigns',
-            users: 'Invite up to 10 users',
-            database: 'Shared Database',
-            security: 'Basic Security'
-        },
-        {
-            id: 2,
-            package: 'Professional',
-            price: '$433/month',
-            price1: '$1433/year',
-            des: 'Lorem ipsum dolor sit amet consectetur. A tellus dolor nec potenti. Ornare sem.',
-            event: 'Up to 250k events',
-            campaigns: 'Run 25 campaigns',
-            users: 'Invite up to 10 users',
-            database: 'Shared Database',
-            security: 'Basic Security'
-        },
-        {
-            id: 3,
-            package: 'Premium',
-            price: '$633/year',
-            price1: '$1633/month',
-            des: 'Lorem ipsum dolor sit amet consectetur. A tellus dolor nec potenti. Ornare sem.',
-            event: 'Up to 250k events',
-            campaigns: 'Run 25 campaigns',
-            users: 'Invite up to 10 users',
-            database: 'Shared Database',
-            security: 'Basic Security'
-        }
-    ]
+
 
     return (
         <div className='p-2 lg:px-6 pt-8 pb-[30px] bg-bgColor dark:bg-darkBg'>
@@ -68,7 +32,7 @@ const PricingOne = () => {
                             className={`${enabled ? 'translate-x-6' : 'translate-x-1'
                                 } inline-block h-4 w-4 transform rounded-full bg-white transition`}
                         />
-                    </Switch>                    
+                    </Switch>
                 </div>
                 <h4 className='text-sm lg:text-lg md:text-lg text-myBlack  dark:text-white'>Billed Annually</h4>
             </div>
