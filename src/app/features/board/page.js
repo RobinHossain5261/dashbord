@@ -1,65 +1,13 @@
 import Image from 'next/image';
 import React from 'react';
-
 import img1 from '@/../public/images/img1.png';
 import img2 from '@/../public/images/img2.png';
 import img3 from '@/../public/images/img3.png';
 import img4 from '@/../public/images/img4.png';
+import { boards } from '../../../../public/data/featuresData';
+
 
 const board = () => {
-
-    const bords = [
-        {
-            id: 1,
-            work: 'Degine',
-            title: 'Designing and constructing landing pages',
-            des: 'Lorem ipsum dolor sit amet consectetur. Id vitae hendrerit elementum commodo.',
-            file: <span class="material-symbols-outlined">attach_file</span>,
-            note: <span class="material-symbols-outlined">speaker_notes</span>
-        },
-
-        {
-            id: 2,
-            work: 'Marketing',
-            title: 'Meeting to do market research.......',
-            des: 'Lorem ipsum dolor sit amet consectetur. Id vitae hendrerit elementum commodo.',
-            file: <span class="material-symbols-outlined">attach_file</span>,
-            note: <span class="material-symbols-outlined">speaker_notes</span>
-        },
-        {
-            id: 3,
-            work: 'Development',
-            title: 'Designing and creating landing pages',
-            des: 'Lorem ipsum dolor sit amet consectetur. Id vitae hendrerit elementum commodo.',
-            file: <span class="material-symbols-outlined">attach_file</span>,
-            note: <span class="material-symbols-outlined">speaker_notes</span>
-        },
-        {
-            id: 4,
-            work: 'Marketing',
-            title: 'Mobile App Interactions Subjected to Validation',
-            des: 'Lorem ipsum dolor sit amet consectetur. Id vitae hendrerit elementum commodo.',
-            file: <span class="material-symbols-outlined">attach_file</span>,
-            note: <span class="material-symbols-outlined">speaker_notes</span>
-        },
-        {
-            id: 5,
-            work: 'Marketing',
-            title: 'Designing and creating landing pages....',
-            des: 'Lorem ipsum dolor sit amet consectetur. Id vitae hendrerit elementum commodo.',
-            file: <span class="material-symbols-outlined">attach_file</span>,
-            note: <span class="material-symbols-outlined">speaker_notes</span>
-        },
-        {
-            id: 6,
-            work: 'Degine',
-            title: 'Mobile app UI/UX design & development',
-            des: 'Lorem ipsum dolor sit amet consectetur. Id vitae hendrerit elementum commodo.',
-            file: <span class="material-symbols-outlined">attach_file</span>,
-            note: <span class="material-symbols-outlined">speaker_notes</span>
-        },
-    ]
-
     return (
         <div className='p-2 lg:px-6 pt-10 pb-6 bg-bgColor dark:bg-darkBg'>
             <h3 className='text-[32px] font-semibold text-myBlack dark:text-white'>Board </h3>
@@ -67,7 +15,7 @@ const board = () => {
 
             <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {
-                    bords.map(bord => (<div
+                    boards.map(bord => (<div
                         key={bord.id}
                         className="bg-white dark:bg-darkCard p-3 lg:py-10 lg:px-8 rounded hover:-skew-y-3 duration-300"
                     >

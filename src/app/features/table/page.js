@@ -1,110 +1,8 @@
 "use client"
 import { useTheme } from 'next-themes';
 import React from 'react';
+import { invoices } from '../../../../public/data/featuresData';
 
-const invoices = [
-  {
-    id: 1,
-    name: 'Ronald Richards',
-    date: 'Oct 1, 2023',
-    Amount: '$110,000',
-    status: 'Paid',
-    productsNo: '#2E293E',
-    color: '#0F365D',
-    color1: '#00E177'
-  },
-  {
-    id: 2,
-    name: 'Arlene McCoy',
-    date: '	5 Feb 2023',
-    Amount: '	$210.00',
-    status: 'Unpaid',
-    productsNo: '#2E293E',
-    color: '#725002',
-    color1: '#FFA5A5'
-  },
-  {
-    id: 3,
-    name: 'Bessie Cooper',
-    date: 'Sep 23, 2023',
-    Amount: '$120,000 ',
-    status: 'Pending',
-    productsNo: '#2E293E',
-    color: '#4538D3',
-    color1: '#F8C140'
-  },
-  {
-    id: 4,
-    name: 'Jane Cooper',
-    date: 'Sep 30, 2023',
-    Amount: '$50,000 ',
-    status: 'Paid',
-    productsNo: '#2E293E',
-    color: '#725002',
-    color1: '#00E177'
-  },
-  {
-    id: 5,
-    name: 'Kathryn Murphy',
-    date: 'Oct 1, 2023',
-    Amount: '$100,000',
-    status: 'Pending',
-    productsNo: '#2E293E',
-    color: '#4538D3',
-    color1: '#F8C140'
-  },
-  {
-    id: 6,
-    name: 'Wade Warren',
-    date: 'Oct 1, 2023',
-    Amount: '$130,000',
-    status: 'Unpaid',
-    productsNo: '#2E293E',
-    color: '#725002',
-    color: '#FFA5A5'
-  },
-  {
-    id: 7,
-    name: 'Eleanor Pena',
-    date: 'Oct 10, 2023',
-    Amount: '$60,000',
-    status: 'Pending',
-    productsNo: '#2E293E',
-    color: '#4538D3',
-    color1: '#F8C140'
-  },
-  {
-    id: 8,
-    name: 'Ralph Edwards',
-    date: 'Oct 9, 2023',
-    Amount: '$90,000',
-    status: 'Paid',
-    productsNo: '#2E293E',
-    color: '#0F365D',
-    color1: '#00E177'
-  },
-  {
-    id: 9,
-    name: 'Ronald Richards',
-    date: 'Oct 1, 2023',
-    Amount: '$110,000',
-    status: 'Unpaid',
-    productsNo: '#2E293E',
-    color: '#725002',
-    color1: '#FFA5A5'
-  },
-  {
-    id: 10,
-    name: 'Bessie Cooper',
-    date: 'Oct 2, 2023',
-    Amount: '$80,000',
-    status: 'Paid',
-    productsNo: '#2E293E',
-    color: '#0F365D',
-    color1: '#00E177'
-  },
-
-]
 
 const table = () => {
   const { resolvedTheme, setTheme } = useTheme();
@@ -167,7 +65,7 @@ const table = () => {
               {
                 invoices.map(contacts => (<tr
                   key={contacts.id}
-                  className='dark:border-darkLine'
+                  className='dark:border-darkLine border-myLine'
                 >
                   <th>
                     <label>

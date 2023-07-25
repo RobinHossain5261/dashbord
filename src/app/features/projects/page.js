@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import './projects.css';
 import { useTheme } from 'next-themes';
 import Progress from '@/components/Progress/Progress';
+import { tasks } from '../../../../public/data/featuresData';
 
 const projects = () => {
     const { resolvedTheme, setTheme } = useTheme();
@@ -16,128 +17,6 @@ const projects = () => {
         return null
     }
 
-    const tasks = [
-        {
-            id: 1,
-            name: 'Design',
-            des: 'Lorem ipsum dolor sit amet consectetur. Arcu consectetur pellentesque vel.',
-            complete: '8 Task Done',
-            icon: <span class="material-symbols-outlined">
-                edit_square
-            </span>,
-            more: <span class="material-symbols-outlined">
-                more_vert
-            </span>,
-            date: '12/05/2023',
-            done: '80%',
-            progress: 'Progress',
-            color: "#4538D3 ",
-            color1: "#00E177",
-            completed: 80
-            // progressBar: <ProgressBar
-            //     completed={80}
-            //     className="wrapper"
-            //     barContainerClassName="container"
-            //     completedClassName="barCompleted"
-            //     labelClassName="label"
-            // />
-        },
-        {
-            id: 2,
-            name: 'Development',
-            des: 'Lorem ipsum dolor sit amet consectetur. Arcu consectetur pellentesque vel.',
-            complete: '7 Task Done',
-            icon: <span class="material-symbols-outlined">
-                frame_source
-            </span>,
-            more: <span class="material-symbols-outlined">
-                more_vert
-            </span>,
-            date: '12/05/2023',
-            done: '70%',
-            progress: 'Progress',
-            color: "#4538D3 ",
-            color1: "#00E177",
-            completed: 70
-
-        },
-        {
-            id: 3,
-            name: 'Markating',
-            des: 'Lorem ipsum dolor sit amet consectetur. Arcu consectetur pellentesque vel.',
-            complete: '9 Task Done',
-            icon: <span class="material-symbols-outlined">
-                campaign
-            </span>,
-            more: <span class="material-symbols-outlined">
-                more_vert
-            </span>,
-            date: '12/05/2023',
-            done: '90%',
-            progress: 'Progress',
-            color: "#4538D3 ",
-            color1: "#00E177",
-            completed: 90
-
-        },
-        {
-            id: 4,
-            name: 'Social Media',
-            des: 'Lorem ipsum dolor sit amet consectetur. Arcu consectetur pellentesque vel.',
-            complete: '8 Task Done',
-            icon: <span class="material-symbols-outlined">
-                share
-            </span>,
-            more: <span class="material-symbols-outlined">
-                more_vert
-            </span>,
-            date: '12/05/2023',
-            done: '80%',
-            progress: 'Progress',
-            color: "#4538D3 ",
-            color1: "#00E177",
-            completed: 80
-
-        },
-        {
-            id: 5,
-            name: 'CopyWriting',
-            des: 'Lorem ipsum dolor sit amet consectetur. Arcu consectetur pellentesque vel.',
-            complete: '9 Task Done',
-            icon: <span class="material-symbols-outlined">
-                event_note
-            </span>,
-            more: <span class="material-symbols-outlined">
-                more_vert
-            </span>,
-            date: '12/05/2023',
-            done: '90%',
-            progress: 'Progress',
-            color: "#4538D3 ",
-            color1: "#00E177",
-            completed: 90
-
-        },
-        {
-            id: 6,
-            name: 'Customer Service',
-            des: 'Lorem ipsum dolor sit amet consectetur. Arcu consectetur pellentesque vel.',
-            complete: '7 Task Done',
-            icon: <span class="material-symbols-outlined">
-                group
-            </span>,
-            more: <span class="material-symbols-outlined">
-                more_vert
-            </span>,
-            date: '12/05/2023',
-            done: '70%',
-            progress: 'Progress',
-            color: "#4538D3 ",
-            color1: "#00E177",
-            completed: 70
-
-        },
-    ]
     return (
         <div className='p-2 lg:px-6 pt-10 pb-6 bg-bgColor dark:bg-darkBg'>
             <h1 className="text-2xl font-semibold text-myBlack dark:text-white">Projects</h1>
