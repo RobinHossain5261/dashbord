@@ -4,7 +4,7 @@ import React from 'react';
 
 const Provider = ({children}) => {
     return (
-        <ThemeProvider attribute="class">
+        <ThemeProvider attribute="class" defaultTheme='light' enableSystem='false'>
             {children}
         </ThemeProvider>
     );

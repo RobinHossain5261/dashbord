@@ -7,32 +7,32 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
-    
-      screens: {
-        'sm': '640px',
-        
-        'md': '768px',
-  
-        'lg': '1220px',
 
-        'xl': '1536px',
-    
+    screens: {
+      'sm': '640px',
+
+      'md': '768px',
+
+      'lg': '1220px',
+
+      'xl': '1536px',
+
     },
     extend: {
       colors: {
         'bgColor': '#F7F9FC',
-        'myBlack':'#2E293E',
-        'myBlue':'#4538D3',
-        'myPink':'#FFA5A5',
-        'white':'#FFFFFF',
-        'myWhite':'#F5EFFC',
-        'darkBg':'#261E35',
-        'darkCard':'#2E293E',
-        'myGreen':'#00E177',
-        'myLine':'#ECEEFB',
-        'darkLine':'#5E586B',
-        'myYellow':'#725002',
-        'myGrey':'#584E69'
+        'myBlack': '#2E293E',
+        'myBlue': '#4538D3',
+        'myPink': '#FFA5A5',
+        'white': '#FFFFFF',
+        'myWhite': '#F5EFFC',
+        'darkBg': '#261E35',
+        'darkCard': '#2E293E',
+        'myGreen': '#00E177',
+        'myLine': '#ECEEFB',
+        'darkLine': '#5E586B',
+        'myYellow': '#725002',
+        'myGrey': '#584E69'
 
 
       },

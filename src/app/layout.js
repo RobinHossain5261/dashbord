@@ -1,12 +1,13 @@
 "use client"
 import './globals.css'
 import { Inter } from 'next/font/google';
-import SideBar from './components/SideBar/SideBar';
-import Footer from './components/Footer/Footer';
-import Provider from './components/DarkMode/Provider/Provider';
 import { Fragment, useEffect, useState } from 'react'
 import { Transition } from '@headlessui/react'
-import TopBar from './components/TopBar/TopBar'
+import 'material-symbols';
+import Provider from '@/components/DarkMode/Provider/Provider';
+import TopBar from '@/components/TopBar/TopBar';
+import SideBar from '@/components/SideBar/SideBar';
+import Footer from '@/components/Footer/Footer';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -43,8 +44,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-      <title>DashBord</title>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <title>DashBord</title>
       </head>
 
       <body suppressHydrationWarning={true} className={inter.className}>
@@ -60,14 +60,14 @@ export default function RootLayout({ children }) {
             leaveFrom="translate-x-0"
             leaveTo="-translate-x-full"
           >
-            <SideBar showNav={showNav} setShowNav={setShowNav}/>
+            <SideBar showNav={showNav} setShowNav={setShowNav} />
           </Transition>
           <div
-            className={`pt-16 transition-all duration-[400ms] ${showNav && !isMobile ? "pl-56" : ""
+            className={`pt-16 transition-all duration-[400ms] ${showNav && !isMobile ? "pl-[280px]" : ""
               }`}
           >
             <div className='lg:mt-10 md:mt-10'>{children}</div>
-          <Footer/>
+            <Footer />
           </div>
         </Provider>
 

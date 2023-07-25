@@ -200,8 +200,8 @@ const contacts = () => {
 
                 <div className="overflow-x-auto block mt-5 lg:mt-10">
                     <table className="table overflow-hidden whitespace-nowrap w-full">
-                    
-                    <thead className='bg-[#F5F7FD] dark:bg-darkBg text-lg text-myBlack dark:text-white'>
+
+                        <thead className='bg-[#F5F7FD] dark:bg-darkBg text-lg text-myBlack dark:text-white'>
                             <tr className=' dark:border-darkLine border-myLine'>
                                 <th>
                                     <label>
@@ -212,31 +212,31 @@ const contacts = () => {
                                 <th >
                                     <div className='flex items-center'>
                                         <span>Company List</span>
-                                        <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_less</span>
+                                        <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
                                         <span>Phone Number</span>
-                                        <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_less</span>
+                                        <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
                                         <span>Email Adress</span>
-                                        <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_less</span>
+                                        <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
                                         <span>Last Intereactions</span>
-                                        <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_less</span>
+                                        <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
                                         <span>Delete</span>
-                                        <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_less</span>
+                                        <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
                                     </div>
                                 </th>
 

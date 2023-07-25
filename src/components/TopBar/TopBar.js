@@ -1,19 +1,5 @@
-import { Fragment } from "react";
-import {
-    Bars3CenterLeftIcon,
-    PencilIcon,
-    ChevronDownIcon,
-    CreditCardIcon,
-    Cog8ToothIcon,
-} from "@heroicons/react/24/solid";
-import { BellIcon, CheckIcon } from "@heroicons/react/24/outline";
-import { Menu, Transition, Popover } from "@headlessui/react";
 import Link from "next/link";
 import Image from "next/image";
-import profile from "@/../public/images/navProfile.png";
-
-
-
 import user from '@/../public/images/photo.png';
 import github from '@/../public/images/github.png';
 import bitbucket from '@/../public/images/bitbucket.png';
@@ -28,8 +14,10 @@ import phone1 from '@/../public/images/phone1.png';
 import phone2 from '@/../public/images/phone2.png';
 import phone3 from '@/../public/images/phone3.png';
 import phone4 from '@/../public/images/phone4.png';
-import SelectBar from "@/app/components/SelectBar/SelectBar";
-import ThemeButton from '../DarkMode/ThemeButton/ThemeButton';
+import SelectBar from "../SelectBar/SelectBar";
+import ThemeButton from "../DarkMode/ThemeButton/ThemeButton";
+
+
 
 export default function TopBar({ showNav, setShowNav }) {
 
@@ -204,7 +192,7 @@ export default function TopBar({ showNav, setShowNav }) {
             </div>
         </div>
 
-        <div className="dropdown dropdown-end ml-7 md:ml-10 lg:ml-10">
+        <div className="dropdown dropdown-end ml-7 lg:ml-10">
             <label tabIndex={0} className="flex items-center cursor-pointer">
                 <div>
                     <div className="w-10 rounded-full mr-3">
@@ -265,7 +253,7 @@ export default function TopBar({ showNav, setShowNav }) {
     </div>
 
     return (
-        <div className={`bg-white dark:bg-[#1E192A] left-0 py-6 z-[5] fixed w-full flex justify-between items-center transition-all duration-[400ms] ${showNav ? "pl-56" : ""}`}>
+        <div className={`bg-white dark:bg-[#1E192A] left-0 py-6 z-[5] fixed w-full flex justify-between items-center transition-all duration-[400ms] ${showNav ? "pl-[280px]" : ""}`}>
             <div className="flex items-center md:gap-5 lg:gap-[60px] py-2">
                 <span class=" material-symbols-outlined ml-2  md:ml-6 lg:ml-[60px] cursor-pointer dark:text-myWhite"
                     onClick={() => setShowNav(!showNav)}

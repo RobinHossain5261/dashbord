@@ -29,91 +29,91 @@ const allCompanies = [
     {
         id: 1,
         company: 'Google',
-        industry:'Search engine',
+        industry: 'Search engine',
         phone: '(+33)7 35 55 84 97',
         website: 'info@example.com',
-        date:'Oct 1, 2023',
+        date: 'Oct 1, 2023',
         img: google
     },
     {
         id: 2,
         company: 'Facebook',
-        industry:'Social Media',
+        industry: 'Social Media',
         phone: '(+33)7 35 55 84 97',
         website: 'info@example.com',
-        date:'Sep 1, 2023',
+        date: 'Sep 1, 2023',
         img: fb
     },
     {
         id: 3,
         company: 'You Tube',
-        industry:'Entertaintment',
+        industry: 'Entertaintment',
         phone: '(+33)7 35 55 84 97',
         website: 'info@example.com',
-        date:'Sep 1, 2023',
+        date: 'Sep 1, 2023',
         img: youtube
     },
     {
         id: 4,
         company: 'Linkdln',
-        industry:'Social Media',
+        industry: 'Social Media',
         phone: '(+33)7 35 55 84 97',
         website: 'info@example.com',
-        date:'Sep 12, 2023',
+        date: 'Sep 12, 2023',
         img: linkedin
     },
     {
         id: 5,
         company: 'Telegram',
-        industry:'Social Media',
+        industry: 'Social Media',
         phone: '(+33)7 35 55 84 97',
         website: 'info@example.com',
-        date:'Sep 30, 2023',
+        date: 'Sep 30, 2023',
         img: telegram
     },
     {
         id: 6,
         company: 'Twitter',
-        industry:'Social Media',
+        industry: 'Social Media',
         phone: '(+33)7 35 55 84 97',
         website: 'info@example.com',
-        date:'Sep 30, 2023',
+        date: 'Sep 30, 2023',
         img: twitter
     },
     {
         id: 7,
         company: 'Dribble',
-        industry:'Development',
+        industry: 'Development',
         phone: '(+33)7 35 55 84 97',
         website: 'info@example.com',
-        date:'Sep 30, 2023',
+        date: 'Sep 30, 2023',
         img: dribbble
     },
     {
         id: 8,
         company: 'Twitch',
-        industry:'Social Media',
+        industry: 'Social Media',
         phone: '(+33)7 35 55 84 97',
         website: 'info@example.com',
-        date:'Sep 30, 2023',
+        date: 'Sep 30, 2023',
         img: twitch
     },
     {
         id: 9,
         company: 'Webflow',
-        industry:'Web Development',
+        industry: 'Web Development',
         phone: '(+33)7 35 55 84 97',
         website: 'info@example.com',
-        date:'Sep 30, 2023',
+        date: 'Sep 30, 2023',
         img: webflow
     },
     {
         id: 10,
         company: 'Pinterest',
-        industry:'Social Media',
+        industry: 'Social Media',
         phone: '(+33)7 35 55 84 97',
         website: 'info@example.com',
-        date:'Sep 30, 2023',
+        date: 'Sep 30, 2023',
         img: pinterest
     },
 ]
@@ -173,44 +173,44 @@ const companies = () => {
 
                 <div className="overflow-x-auto block mt-5 lg:mt-10">
                     <table className="table overflow-hidden whitespace-nowrap">
-                    
+
                         <thead className='bg-[#F5F7FD] dark:bg-darkBg text-lg text-myBlack dark:text-myWhite'>
                             <tr className='border-myLine dark:border-darkLine'>
                                 <th >
                                     <div className='flex items-center'>
                                         <span>Company List</span>
-                                        <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_less</span>
+                                        <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
                                         <span>Indrustry</span>
-                                        <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_less</span>
+                                        <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                     </div>
-                                </th>                               
+                                </th>
                                 <th>
                                     <div className='flex items-center'>
                                         <span>Website</span>
-                                        <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_less</span>
+                                        <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
                                         <span>Phone Number</span>
-                                        <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_less</span>
+                                        <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
                                         <span>Start Date</span>
-                                        <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_less</span>
+                                        <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                     </div>
                                 </th>
-                                
+
                                 <th>
                                     <div className='flex items-center'>
                                         <span>Delete</span>
-                                        <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_less</span>
+                                        <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                     </div>
                                 </th>
 
@@ -222,7 +222,7 @@ const companies = () => {
                                     key={company.id}
                                     className='dark:border-darkLine border-myLine'
                                 >
-                                    <td> 
+                                    <td>
                                         <div className="flex items-center space-x-3">
                                             <div className="avatar">
                                                 <div className="mask mask-squircle w-8 h-8">

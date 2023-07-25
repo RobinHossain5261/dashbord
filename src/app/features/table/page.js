@@ -11,7 +11,7 @@ const invoices = [
     status: 'Paid',
     productsNo: '#2E293E',
     color: '#0F365D',
-    color1:'#00E177'
+    color1: '#00E177'
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const invoices = [
     status: 'Unpaid',
     productsNo: '#2E293E',
     color: '#725002',
-    color1:'#FFA5A5'
+    color1: '#FFA5A5'
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ const invoices = [
     status: 'Pending',
     productsNo: '#2E293E',
     color: '#4538D3',
-    color1:'#F8C140'
+    color1: '#F8C140'
   },
   {
     id: 4,
@@ -41,7 +41,7 @@ const invoices = [
     status: 'Paid',
     productsNo: '#2E293E',
     color: '#725002',
-    color1:'#00E177'
+    color1: '#00E177'
   },
   {
     id: 5,
@@ -51,7 +51,7 @@ const invoices = [
     status: 'Pending',
     productsNo: '#2E293E',
     color: '#4538D3',
-    color1:'#F8C140'
+    color1: '#F8C140'
   },
   {
     id: 6,
@@ -61,7 +61,7 @@ const invoices = [
     status: 'Unpaid',
     productsNo: '#2E293E',
     color: '#725002',
-    color:'#FFA5A5'
+    color: '#FFA5A5'
   },
   {
     id: 7,
@@ -71,7 +71,7 @@ const invoices = [
     status: 'Pending',
     productsNo: '#2E293E',
     color: '#4538D3',
-    color1:'#F8C140'
+    color1: '#F8C140'
   },
   {
     id: 8,
@@ -81,7 +81,7 @@ const invoices = [
     status: 'Paid',
     productsNo: '#2E293E',
     color: '#0F365D',
-    color1:'#00E177'
+    color1: '#00E177'
   },
   {
     id: 9,
@@ -91,7 +91,7 @@ const invoices = [
     status: 'Unpaid',
     productsNo: '#2E293E',
     color: '#725002',
-    color1:'#FFA5A5'
+    color1: '#FFA5A5'
   },
   {
     id: 10,
@@ -101,7 +101,7 @@ const invoices = [
     status: 'Paid',
     productsNo: '#2E293E',
     color: '#0F365D',
-    color1:'#00E177'
+    color1: '#00E177'
   },
 
 ]
@@ -122,7 +122,7 @@ const table = () => {
         <div className="overflow-x-auto block mt-5 lg:mt-10">
           <table className="table overflow-hidden w-full">
 
-            <thead className='bg-[#F5F7FD] dark:bg-darkBg text-lg text-myBlack dark:text-myWhite'> 
+            <thead className='bg-[#F5F7FD] dark:bg-darkBg text-lg text-myBlack dark:text-myWhite'>
               <tr className='dark:border-darkLine'>
                 <th>
                   <label>
@@ -133,31 +133,31 @@ const table = () => {
                 <th >
                   <div className='flex items-center'>
                     <span className='text-lg'>Customer List</span>
-                    <span class="material-symbols-outlined text-myBlack ml-2 dark:text-myWhite">unfold_less</span>
+                    <span class="material-symbols-outlined text-myBlack ml-2 dark:text-myWhite">unfold_more</span>
                   </div>
                 </th>
                 <th>
                   <div className='flex items-center'>
                     <span className='text-lg'>Start Date</span>
-                    <span class="material-symbols-outlined text-myBlack ml-2 dark:text-myWhite">unfold_less</span>
+                    <span class="material-symbols-outlined text-myBlack ml-2 dark:text-myWhite">unfold_more</span>
                   </div>
                 </th>
                 <th>
                   <div className='flex items-center'>
                     <span className='text-lg'>Amount</span>
-                    <span class="material-symbols-outlined text-myBlack ml-2 dark:text-myWhite">unfold_less</span>
+                    <span class="material-symbols-outlined text-myBlack ml-2 dark:text-myWhite">unfold_more</span>
                   </div>
                 </th>
                 <th>
                   <div className='flex items-center'>
                     <span className='text-lg'>Status List</span>
-                    <span class="material-symbols-outlined text-myBlack ml-2 dark:text-myWhite">unfold_less</span>
+                    <span class="material-symbols-outlined text-myBlack ml-2 dark:text-myWhite">unfold_more</span>
                   </div>
                 </th>
                 <th>
                   <div className='flex items-center'>
                     <span className='text-lg'>Delete</span>
-                    <span class="material-symbols-outlined text-myBlack ml-2 dark:text-myWhite">unfold_less</span>
+                    <span class="material-symbols-outlined text-myBlack ml-2 dark:text-myWhite">unfold_more</span>
                   </div>
                 </th>
 
@@ -179,15 +179,15 @@ const table = () => {
                       <div className="text-base text-myBlack dark:text-myWhite">{contacts.productsNo}</div>
                     </div>
                   </td>
-                  
+
                   <td className="text-lg text-myBlack dark:text-myWhite">{contacts.name}</td>
                   <td className="text-lg text-myBlack dark:text-myWhite ">{contacts.date}</td>
                   <td className="text-lg text-myBlack dark:text-myWhite ">{contacts.Amount}</td>
-                  <td 
-                  className="text-lg" 
-                  style={{ 
-                    color:resolvedTheme==='dark' ? `${contacts.color1}` :`${contacts.color}`
-                }}
+                  <td
+                    className="text-lg"
+                    style={{
+                      color: resolvedTheme === 'dark' ? `${contacts.color1}` : `${contacts.color}`
+                    }}
                   >{contacts.status}
                   </td>
                   <th className='text-myBlack dark:text-myWhite '>

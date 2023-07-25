@@ -1,11 +1,9 @@
-import Chart from 'chart.js/auto';
 import React from 'react';
 import './doughnutChart.css';
-
 import { Listbox } from "@headlessui/react";
 import { useState, Fragment } from "react";
 import { Doughnut } from 'react-chartjs-2';
-import "chartjs-plugin-doughnut-innertext";
+
 const people = [
     { id: 1, name: 'This Month', unavailable: false },
     { id: 2, name: 'This Week', unavailable: false },
@@ -24,27 +22,27 @@ const DoughnutChart = () => {
         lineHeight: "19px",
         textAlign: "center",
         zIndex: "999",
-      };
+    };
 
-      const data5 = {
+    const data5 = {
         labels: ["Red", "Blue", "Yellow"],
         datasets: [
-          {
-            label: "# of Votes",
-            data: [30, 20, 40],
-            backgroundColor: ["#64C4F7", "#F8C140", "#FFA5A5"],
-            borderWidth: 0,
-          },
+            {
+                label: "# of Votes",
+                data: [30, 20, 40],
+                backgroundColor: ["#64C4F7", "#F8C140", "#FFA5A5"],
+                borderWidth: 0,
+            },
         ],
-      };
+    };
 
-      const option5 = {
+    const option5 = {
         plugins: {
-          legend: {
-            display: false,
-          },
+            legend: {
+                display: false,
+            },
         },
-      };
+    };
 
     return (
         <div className='bg-white dark:bg-darkBg p-2 lg:py-8 lg:px-4 rounded z-[4]'>
@@ -54,7 +52,7 @@ const DoughnutChart = () => {
                     <Listbox value={selectedPerson} onChange={setSelectedPerson}>
                         <Listbox.Button
 
-                            className="flex gap-2 items-center  relative w-full cursor-default rounded-lg text-[#252525] dark:text-white py-2 px-3 text-left border dark:border-darkLine border-myLine focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
+                            className="flex gap-2 items-center  relative w-full cursor-pointer rounded-lg text-[#252525] dark:text-white py-2 px-3 text-left border dark:border-darkLine border-myLine focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
                             {selectedPerson.name}
                             <span class="material-symbols-outlined">
                                 expand_more
@@ -95,7 +93,7 @@ const DoughnutChart = () => {
                         <h4 className="text-2xl text-myBlue dark:text-myPink font-semibold">23.6K</h4>
                         <span className='text-myBlack dark:text-white text-base'>USERS</span>
                     </div >
-                    <Doughnut data={data5}  options={option5}/>
+                    <Doughnut data={data5} options={option5} />
                 </div>
 
             </div>

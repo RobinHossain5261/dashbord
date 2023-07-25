@@ -4,8 +4,8 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 
 const ThemeButton = () => {
-    const [mounted, setMounted] = useState(false);
     const { resolvedTheme, setTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
 
 
     useEffect(() => {

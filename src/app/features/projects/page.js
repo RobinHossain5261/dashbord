@@ -1,12 +1,21 @@
 "use client"
-import React from 'react';
-import ProgressBar from "@ramonak/react-progress-bar";
+import React, { useEffect, useState } from 'react';
 import './projects.css';
-import Progress from '@/app/components/Progress/Progress';
 import { useTheme } from 'next-themes';
+import Progress from '@/components/Progress/Progress';
 
 const projects = () => {
     const { resolvedTheme, setTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true)
+    }, []);
+
+    if (!mounted) {
+        return null
+    }
+
     const tasks = [
         {
             id: 1,
@@ -153,7 +162,6 @@ const projects = () => {
                             <span className="text-xl text-myBlack dark:text-white">{task.progress}</span>
                             <span className="text-xl text-myBlack dark:text-myWhite">{task.done}</span>
                         </div>
-                        {/* <span>{task.progressBar}</span> */}
                         <Progress bgcolor={resolvedTheme === 'dark' ? `${task.color1}` : `${task.color}`} completed={task.completed} />
                         <div className='mt-2 flex justify-between'>
                             <p className="text-myGrey dark:text-myWhite text-lg">{task.complete}</p>

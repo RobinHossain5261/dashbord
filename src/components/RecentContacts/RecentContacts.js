@@ -1,12 +1,8 @@
 import { Listbox } from "@headlessui/react";
-import { useState, Fragment } from "react";
+import { useState, Fragment, useEffect } from "react";
 import Image from 'next/image';
-import buyer1 from '../../../../public/images/photo.png';
-import buyer2 from '../../../../public/images/photo1.png';
-import buyer3 from '../../../../public/images/photo2.png';
-import buyer4 from '../../../../public/images/photo3.png';
-import buyer5 from '@/../public/images/photo4.png';
 import { useTheme } from "next-themes";
+import { reportContacts } from "../../../public/data/dashbordData";
 
 
 
@@ -19,70 +15,81 @@ const people = [
 const RecentContacts = () => {
     const [selectedPerson, setSelectedPerson] = useState(people[0]);
     const { resolvedTheme, setTheme } = useTheme();
-    const buyers = [
-        {
-            id: 1,
-            name: 'Floyd Miles',
-            status: 'Successful',
-            email: 'info@example.com',
-            time: '1 Year ago',
-            image: buyer1,
-            color: '#4538D3',
-            color1:'#00E177'
-        },
-        {
-            id: 2,
-            name: 'Devon Lane',
-            status: 'Pending',
-            email: 'info@example.com',
-            time: '6 month ago',
-            image: buyer2,
-            color: '#725002',
-            color1:'#F8C140'
-        },
-        {
-            id: 3,
-            name: 'Jacob Jones',
-            status: 'Override',
-            email: 'info@example.com',
-            time: '1 month ago',
-            image: buyer3,
-            color: '#A82500',
-            color1:'#FFA5A5'
-        },
-        {
-            id: 4,
-            name: 'Cody Fisher',
-            status: 'Successful',
-            email: 'info@example.com',
-            time: '3 Year ago',
-            image: buyer4,
-            color: '#4538D3',
-            color1:'#00E177'
-            
-        },
-        {
-            id: 5,
-            name: 'Jane Copper',
-            status: 'Successful',
-            email: 'info@example.com',
-            time: '1 Year ago',
-            image: buyer5,
-            color: '#4538D3',
-            color1:'#00E177'
-        },
+    const [mounted, setMounted] = useState(false);
 
-    ]
+    useEffect(() => {
+        setMounted(true)
+    }, []);
+
+    if (!mounted) {
+        return null
+    }
+
+
+    // const buyers = [
+    //     {
+    //         id: 1,
+    //         name: 'Floyd Miles',
+    //         status: 'Successful',
+    //         email: 'info@example.com',
+    //         time: '1 Year ago',
+    //         image: buyer1,
+    //         color: '#4538D3',
+    //         color1: '#00E177'
+    //     },
+    //     {
+    //         id: 2,
+    //         name: 'Devon Lane',
+    //         status: 'Pending',
+    //         email: 'info@example.com',
+    //         time: '6 month ago',
+    //         image: buyer2,
+    //         color: '#725002',
+    //         color1: '#F8C140'
+    //     },
+    //     {
+    //         id: 3,
+    //         name: 'Jacob Jones',
+    //         status: 'Override',
+    //         email: 'info@example.com',
+    //         time: '1 month ago',
+    //         image: buyer3,
+    //         color: '#A82500',
+    //         color1: '#FFA5A5'
+    //     },
+    //     {
+    //         id: 4,
+    //         name: 'Cody Fisher',
+    //         status: 'Successful',
+    //         email: 'info@example.com',
+    //         time: '3 Year ago',
+    //         image: buyer4,
+    //         color: '#4538D3',
+    //         color1: '#00E177'
+
+    //     },
+    //     {
+    //         id: 5,
+    //         name: 'Jane Copper',
+    //         status: 'Successful',
+    //         email: 'info@example.com',
+    //         time: '1 Year ago',
+    //         image: buyer5,
+    //         color: '#4538D3',
+    //         color1: '#00E177'
+    //     },
+
+    // ]
 
     return (
         <div className="overflow-x-auto p-2 lg:py-8 lg:px-5  bg-white dark:bg-darkCard rounded whitespace-nowrap">
             <div className="flex justify-between items-center">
-                <h1 className='text-2xl text-myBlack dark:text-white'>Recent Contacts</h1>
+                <h1 className='text-xl text-myBlack dark:text-white'>Recent Contacts</h1>
                 <div>
                     <Listbox value={selectedPerson} onChange={setSelectedPerson}>
                         <Listbox.Button
 
-                            className="lg:flex hidden gap-2 items-center  relative w-full cursor-default rounded-lg text-[#252525] dark:text-white border-myLine dark:border-darkLine py-2 px-3 text-left border focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
+                            className="lg:flex hidden gap-2 items-center  relative w-full cursor-pointer rounded-lg text-[#252525] dark:text-white border-myLine dark:border-darkLine py-2 px-3 text-left border focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
                             {selectedPerson.name}
                             <span class="material-symbols-outlined">
                                 expand_more
@@ -120,7 +127,7 @@ const RecentContacts = () => {
                 <table className="table">
 
                     <thead className='bg-[#F5F7FD] dark:bg-darkBg'>
-                        <tr className="dark:border-darkLine">
+                        <tr className="dark:border-darkLine border-myLine">
                             <th className='text-lg text-myBlack dark:text-white'>Full Name</th>
                             <th className='text-lg text-myBlack dark:text-white'>Status</th>
                             <th className='text-lg text-myBlack dark:text-white'>Email</th>
@@ -130,15 +137,15 @@ const RecentContacts = () => {
 
                     <tbody >
                         {
-                            buyers.map(buyer => (<tr
-                            key={buyer.id}
-                            className="dark:border-darkLine border-myLine"
+                            reportContacts.map(buyer => (<tr
+                                key={buyer.id}
+                                className="dark:border-darkLine border-myLine"
                             >
                                 <td>
                                     <div className="flex items-center space-x-3">
                                         <div className="avatar">
-                                            <div className="mask mask-squircle w-12 h-12">
-                                                <Image src={buyer.image} alt="buyer" />
+                                            <div className="mask mask-squircle">
+                                                <Image className="w-10 h-10 rounded-full" src={buyer.image} alt="buyer" />
                                             </div>
                                         </div>
                                         <div>
@@ -146,18 +153,15 @@ const RecentContacts = () => {
                                         </div>
                                     </div>
                                 </td>
-                                <td className='text-base' style={{ 
-                                    color:resolvedTheme==='dark' ? `${buyer.color1}` :`${buyer.color}`
+                                <td className='text-base' style={{
+                                    color: resolvedTheme === 'dark' ? `${buyer.color1}` : `${buyer.color}`
                                 }}><li>{buyer.status}</li></td>
                                 <td className='text-myBlue dark:text-[#64C4F7] text-base'>{buyer.email}</td>
                                 <td className='text-myBlack dark:text-myWhite text-base'>{buyer.time}</td>
 
                             </tr>))
                         }
-
-
                     </tbody>
-
                 </table>
             </div>
         </div>
