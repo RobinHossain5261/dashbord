@@ -11,11 +11,11 @@ const profileOne = () => {
 
     return (
         <div className='bg-bgColor dark:bg-darkBg'>
-            <div className='-mb-32'>
-                <Image className='h-[400px] w-full object-cover' src={bgProfile} alt='bgProfile' />
+            <div className='-mb-28'>
+                <Image className='h-[300px] w-full object-cover' src={bgProfile} alt='bgProfile' />
             </div>
 
-            <div className='px-2 lg:px-6 pt-10 block lg:flex gap-6 relative'>
+            <div className='px-2 lg:px-6 block lg:flex gap-6 relative'>
 
                 {/* About part  */}
                 <div className='p-2 md:p-6 lg:py-10 lg:px-8 rounded h-full bg-white dark:bg-darkCard cardShadow'>

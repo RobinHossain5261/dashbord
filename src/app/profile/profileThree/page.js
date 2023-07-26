@@ -1,4 +1,5 @@
-import React from 'react';
+"use client"
+import React, { useState } from 'react';
 import profile from '@/../public/images/profileThree.png';
 import facebook from '@/../public/images/fb.png';
 import google from '@/../public/images/google.png';
@@ -7,7 +8,6 @@ import Image from 'next/image';
 import { informations } from '../../../../public/data/profileData';
 
 const profileThree = () => {
-
 
     return (
         <div className='px-2 lg:px-6 pt-10 pb-6 bg-bgColor dark:bg-darkBg'>
@@ -56,11 +56,11 @@ const profileThree = () => {
                     <div className='p-3 lg:py-10 md:px-8 lg:px-8 my-6 rounded bg-white dark:bg-darkCard cardShadow'>
                         <h4 className='text-myBlack text-2xl font-semibold dark:text-white'>Skills</h4>
                         <hr className='border-myLine dark:border-darkLine my-5 lg:my-10' />
-                        <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 md:gap-5 lg:gap-5'>
+                        <div className='flex flex-wrap gap-3 md:gap-5 lg:gap-5'>
                             <span className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-4 border border-myLine rounded'>UI/UX Degsign</span>
                             <span className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-4 border border-myLine rounded'>Web Degsign</span>
-                            <span className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-1  border border-myLine rounded'>Development</span>
-                            <span className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300 text-center py-3 px-1 border border-myLine rounded'>Development</span>
+                            <span className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-4  border border-myLine rounded'>Development</span>
+                            <span className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300 text-center py-3 px-4 border border-myLine rounded'>Development</span>
                             <span className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-4 border border-myLine rounded'>Product Design</span>
                             <span className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-4 border border-myLine rounded'>Branding Design</span>
                         </div>

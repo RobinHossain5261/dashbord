@@ -25,12 +25,12 @@ const PricingOne = () => {
                         onClick={toggle}
                         onChange={setEnabled}
                         className={`${enabled ? 'bg-blue-600 dark:bg-myGreen' : 'bg-gray-200'
-                            } relative inline-flex h-6 lg:h-8 w-10 lg:w-14 items-center rounded-full`}
+                            } relative inline-flex h-7 w-8 lg:w-14 items-center rounded-full`}
                     >
                         <span className="sr-only">Enable notifications</span>
                         <span
                             className={`${enabled ? 'translate-x-6' : 'translate-x-1'
-                                } inline-block h-4 w-4 transform rounded-full bg-white transition`}
+                                } inline-block h-5 w-5 transform rounded-full bg-white transition`}
                         />
                     </Switch>
                 </div>

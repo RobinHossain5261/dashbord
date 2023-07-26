@@ -24,7 +24,7 @@ export default function SelectBar() {
         </span>
       </Listbox.Button>
       <Listbox.Options
-        className="absolute mt-1 max-h-60 w-1/3 overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+        className="absolute mt-1 max-h-60 w-1/3 overflow-auto rounded-md bg-white dark:bg-darkCard py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
 
         {people.map((person) => (
           <Listbox.Option
@@ -33,7 +33,7 @@ export default function SelectBar() {
             disabled={person.unavailable}
             as={Fragment}
             className={({ active }) =>
-              `relative cursor-default select-none py-2 pl-10 pr-4 ${active ? 'bg-myBlue text-white' : 'text-gray-900'
+              `relative cursor-default select-none py-2 pl-10 pr-4 ${active ? 'bg-myBlue dark:bg-myGreen text-white' : 'text-gray-900 dark:text-white'
               }`
             }
           >

@@ -45,7 +45,7 @@ const DoughnutChart = () => {
     };
 
     return (
-        <div className='bg-white dark:bg-darkBg p-2 lg:py-8 lg:px-4 rounded z-[4]'>
+        <div className='bg-white dark:bg-darkCard p-2 lg:py-8 lg:px-4 rounded z-[4]'>
             <div className='flex flex-wrap gap-2 justify-between items-center'>
                 <h1 className='text-xl text-myBlack dark:text-white'>Device-users</h1>
                 <div>

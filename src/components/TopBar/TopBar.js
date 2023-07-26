@@ -212,38 +212,38 @@ export default function TopBar({ showNav, setShowNav }) {
 
             <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 mt-5 shadow bg-base-100 dark:bg-[#1E192A] rounded-box w-60">
                 <span className='mb-1 text-base ml-3 font-semibold dark:text-white'>Welcome Wade!</span>
-                <li>
-                    <Link href=''>
+                <li >
+                    <Link className="hover:bg-myBlue dark:hover:bg-myGreen hover:text-white" href=''>
                         <span class="material-symbols-outlined mr-1 dark:text-myWhite">account_circle</span>
                         <span className='text-base dark:text-myWhite '>Profile</span>
                     </Link>
                 </li>
                 <li>
-                    <Link href=''>
+                    <Link href='' className="hover:bg-myBlue dark:hover:bg-myGreen hover:text-white">
                         <span class="material-symbols-outlined mr-1 dark:text-myWhite">chat</span>
                         <span className='text-base dark:text-myWhite '>Message</span>
                     </Link>
                 </li>
                 <li>
-                    <Link href=''>
+                    <Link href='' className="hover:bg-myBlue dark:hover:bg-myGreen hover:text-white">
                         <span class="material-symbols-outlined mr-1 dark:text-myWhite">task</span>
                         <span className='text-base dark:text-myWhite '>Taskbord</span>
                     </Link>
                 </li>
                 <li>
-                    <Link href=''>
+                    <Link href='' className="hover:bg-myBlue dark:hover:bg-myGreen hover:text-white">
                         <span class="material-symbols-outlined mr-1 dark:text-myWhite">support</span>
                         <span className='text-base dark:text-myWhite '>Support</span>
                     </Link>
                 </li>
                 <li>
-                    <Link href=''>
+                    <Link href='' className="hover:bg-myBlue dark:hover:bg-myGreen hover:text-white">
                         <span class="material-symbols-outlined mr-1 dark:text-myWhite">settings</span>
                         <span className='text-base dark:text-myWhite'>Settings</span>
                     </Link>
                 </li>
                 <li>
-                    <Link href=''>
+                    <Link href='' className="hover:bg-myBlue dark:hover:bg-myGreen hover:text-white">
                         <span class="material-symbols-outlined mr-1 dark:text-myWhite">logout</span>
                         <span className='text-base dark:text-myWhite '>Logout</span>
                     </Link>

@@ -12,7 +12,7 @@ const profileTwo = () => {
     return (
         <div className='bg-bgColor dark:bg-darkBg'>
             <section className='relative bg-bgColor dark:bg-darkBg'>
-                <Image className='bg-myBlack h-[400px] w-full object-cover' src={bgProfile} alt="bgProfile" />
+                <Image className='bg-myBlack h-[300px] w-full object-cover' src={bgProfile} alt="bgProfile" />
                 <div className='flex flex-wrap gap-4 items-center justify-between w-4/5 absolute centerDiv'>
                     <div className='flex items-center gap-2 md:gap-6 lg:gap-6'>
                         <Image className='w-[120px] h-[120px] rounded-full' src={profile} alt="profile" />

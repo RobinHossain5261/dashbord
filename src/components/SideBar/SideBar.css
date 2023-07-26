@@ -1,0 +1,9 @@
+.ani-menu {
+    /* background-color: red; */
+
+    transition: all 0.7s ease-in-out;
+}
+
+.menuBar:hover {
+    width: 100%;
+}

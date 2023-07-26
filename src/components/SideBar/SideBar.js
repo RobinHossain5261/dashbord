@@ -5,6 +5,7 @@ import logo from '@/../public/images/Logo.png';
 import darkLogo from '@/../public/images/darkLogo.png';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
+import './SideBar.css';
 
 const SideBar = forwardRef(({ showNav, setShowNav }, ref) => {
 
@@ -42,7 +43,7 @@ const SideBar = forwardRef(({ showNav, setShowNav }, ref) => {
           </div>
 
           {activeMenu === 'dropdown1' && (
-            <ul className="">
+            <ul className="ani-menu">
               <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='#'>All Pages</Link></li>
               <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/dashbord/reports'>Reports</Link></li>
               <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/dashbord/products'>Products</Link></li>

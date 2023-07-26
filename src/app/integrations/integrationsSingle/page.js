@@ -8,15 +8,15 @@ import Link from 'next/link';
 
 const integrationsSingle = () => {
     return (
-        <div className='bg-bgColor dark:bg-darkBg'>
+        <div className='bg-bgColor dark:bg-darkBg min-h-screen'>
 
-            <div className='flex items-center justify-center bg-[#1E192A] -mb-32'>
-                <Image src={banner1} alt="banner" />
-                <Image src={banner2} alt="banner" />
-                <Image src={banner3} alt="banner" />
+            <div className='h-[300px] flex items-center justify-center bg-[#1E192A] -mb-28'>
+                <Image className='h-[300px] object-cover' src={banner1} alt="banner" />
+                <Image className='h-[300px] object-cover' src={banner2} alt="banner" />
+                <Image className='h-[300px] object-cover' src={banner3} alt="banner" />
             </div>
 
-            <div className='px-2 lg:px-6 pt-8 pb-6  lg:flex gap-6 relative'>
+            <div className='px-2 lg:px-6 pb-6  lg:flex gap-6 relative'>
 
                 <div className='lg:w-[600px] px-2 py-4 lg:py-7 lg:px-8 bg-white dark:bg-darkCard text-center h-full cardShadow rounded mb-6'>
                     <Image className='w-[200px] mx-auto' src={youtubeIcon} alt="icon" />
@@ -41,7 +41,6 @@ const integrationsSingle = () => {
                     <p className='text-base text-justify text-myGrey dark:text-myLine'>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
                 </div>
             </div>
-            <hr className='pb-6 dark:border-darkLine mx-6'/>
         </div>
     );
 };

@@ -38,13 +38,13 @@ const Reports = () => {
                     reportCards.map(card => (<div
                         key={card.id}
                         className="group bg-white dark:bg-darkCard py-4 px-6 rounded boxShadow dark:darkShadow">
-                        <div className="flex justify-between">
+                        <div className="flex justify-between flex-wrap">
                             <h3 className="text-base text-myBlack dark:text-white">{card.name}</h3>
                             <span className="group-hover:shadow-xl p-2 bg-[#F1F1FA] dark:bg-[#21574B] text-myBlue dark:text-myGreen flex justify-center items-center rounded boxShadow">{card.icon}</span>
                         </div>
-                        <div className=" flex items-center">
+                        <div className="flex flex-wrap items-center gap-4">
                             <h3 className="text-[32px] text-myBlack dark:text-white font-semibold">{card.view}</h3>
-                            <div className='group px-2 rounded ml-4  flex items-center justify-center'
+                            <div className='group px-2 rounded  flex items-center justify-center'
                                 style={{
                                     backgroundColor: resolvedTheme === 'dark' ? `${card.bgColor2}` : `${card.bgColor1}`,
                                     color: resolvedTheme === 'dark' ? `${card.color2}` : `${card.color1}`

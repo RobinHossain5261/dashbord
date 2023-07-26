@@ -15,6 +15,7 @@ const crypto = () => {
             <span className='text-sm text-myBlack dark:text-white'>Lorem ipsum dolor sit ammet consectetur.</span>
 
             {/* crypto card */}
+
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-6'>
                 {
                     cryptoCards.map(card => (<div
@@ -51,6 +52,7 @@ const crypto = () => {
             </div>
 
             {/* crypto table */}
+
             <div className='bg-white dark:bg-darkCard p-2 lg:py-8 lg:px-7 mt-8 rounded'>
                 <div className='flex justify-between items-center'>
                     <h3 className='text-xl text-myBlack dark:text-myWhite'>Crypto</h3>
@@ -112,15 +114,20 @@ const crypto = () => {
                                             </div>
                                         </div>
                                     </td>
+
                                     <td className="text-lg text-myBlack dark:text-myWhite ">{crypto.amount}</td>
-                                    <div className='flex items-center'
-                                        style={{ color: resolvedTheme === 'dark' ? `${crypto.color1}` : `${crypto.color}` }}>
-                                        <td className="text-lg ">{crypto.parcent}</td>
-                                        <span className="ml-3 w-4 h-4">{crypto.trending}</span>
-                                    </div>
+                                    <td>
+                                        <div className='flex items-center'
+                                            style={{ color: resolvedTheme === 'dark' ? `${crypto.color1}` : `${crypto.color}` }}>
+                                            <span className="text-lg ">{crypto.parcent}</span>
+                                            <span className="ml-3 w-4 h-4">{crypto.trending}</span>
+                                        </div>
+                                    </td>
+
                                     <td className="text-lg  text-myBlack dark:text-myWhite">{crypto.cap}</td>
                                     <td className="text-lg "
-                                        style={{ color: resolvedTheme === 'dark' ? `${crypto.color1}` : `${crypto.color}` }}>{crypto.volume}</td>
+                                        style={{ color: resolvedTheme === 'dark' ? `${crypto.color1}` : `${crypto.color}` }}>{crypto.volume}
+                                    </td>
                                 </tr>))
                             }
                         </tbody>
@@ -129,6 +136,7 @@ const crypto = () => {
             </div>
 
             {/* Cryto News */}
+
             <div>
                 <h3 className='text-[32px] text-myBlack dark:text-white my-4 lg:mt-6 lg:mb-10'>Crypto news</h3>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
@@ -159,6 +167,7 @@ const crypto = () => {
             </div>
 
             {/* Trending  */}
+
             <div className='bg-white dark:bg-darkCard p-2 lg:py-8 lg:px-7 mt-6 rounded'>
                 <div className='flex justify-between items-center'>
                     <h3 className='text-xl text-myBlack dark:text-myWhite'>Trending</h3>
@@ -221,10 +230,11 @@ const crypto = () => {
                                         </div>
                                     </td>
                                     <td className="text-lg text-myBlack dark:text-myWhite">{crypto.amount}</td>
-                                    <div className='flex items-center text-myBlue dark:text-myGreen'>
-                                        <td className="text-lg ">{crypto.parcent}</td>
+
+                                    <td className='flex items-center text-myBlue dark:text-myGreen'>
+                                        <span className="text-lg ">{crypto.parcent}</span>
                                         <span className="ml-3 w-4 h-4">{crypto.trending}</span>
-                                    </div>
+                                    </td>
                                     <td className="text-lg text-myBlack dark:text-myWhite">{crypto.cap}</td>
                                     <td className="text-lg text-myBlue dark:text-myGreen">{crypto.volume}</td>
                                 </tr>))
@@ -233,6 +243,7 @@ const crypto = () => {
                     </table>
                 </div>
             </div>
+
             <hr className='mt-6 border-myLine dark:border-darkLine' />
         </div>
     );

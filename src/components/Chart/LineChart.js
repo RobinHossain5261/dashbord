@@ -32,6 +32,20 @@ const LineChart = () => {
             }]
         };
 
+        var yLabels = {
+            10: 'Test',
+            2: 'Java',
+            14: 'Javascript',
+            6: 'bootcamp',
+            18: 'Oracle',
+            10: 'mid-level',
+            12: 'senior-dev',
+            4: 'full-stack-dev',
+            16: 'famous-speaker',
+            8: 'SQL',
+            20: 'harambe'
+        }
+
         new Chart(ctx, {
             type: 'line',
             data: chartData,
@@ -53,13 +67,14 @@ const LineChart = () => {
                 scales: {
                     y: {
                         beginAtZero: true,
+
                         ticks: {
-                            color:resolvedTheme==='dark'? '#D1D1D1':'#584E69'     
+                            color: resolvedTheme === 'dark' ? '#D1D1D1' : '#584E69'
                         }
                     },
                     x: {
                         ticks: {
-                            color: resolvedTheme==='dark'? '#D1D1D1':'#584E69' 
+                            color: resolvedTheme === 'dark' ? '#D1D1D1' : '#584E69'
                         }
                     }
                 }

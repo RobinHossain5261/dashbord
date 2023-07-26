@@ -4,6 +4,7 @@ import './projects.css';
 import { useTheme } from 'next-themes';
 import Progress from '@/components/Progress/Progress';
 import { tasks } from '../../../../public/data/featuresData';
+import Link from 'next/link';
 
 const projects = () => {
     const { resolvedTheme, setTheme } = useTheme();
@@ -32,7 +33,14 @@ const projects = () => {
                             <div className='bg-white dark:bg-[#1E192A] h-[60px] w-[60px] icon-shadow rounded flex items-center justify-center'>
                                 <span className="text-myBlue dark:text-myGreen p-3 ">{task.icon}</span>
                             </div>
-                            <span className='w-[18px] h-[18px] dark:text-white'>{task.more}</span>
+                            <div className='dropdown dropdown-end'>
+                                <span tabIndex={0} className='w-[18px] h-[18px] dark:text-white cursor-pointer'>{task.more}</span>
+                                <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 dark:bg-darkCard rounded-box ">
+                                    <li ><Link className='text-myBlack dark:text-myWhite rounded hover:text-white hover:bg-myBlue dark:hover:bg-myGreen' href='#'>Delete</Link></li>
+                                    <li><Link className='text-myBlack dark:text-myWhite rounded hover:text-white hover:bg-myBlue dark:hover:bg-myGreen' href='#'>Edit</Link></li>
+                                    <li><Link className='text-myBlack dark:text-myWhite rounded hover:text-white hover:bg-myBlue dark:hover:bg-myGreen' href='#'>Suspend</Link></li>
+                                </ul>
+                            </div>
                         </div>
                         <h4 className="text-2xl font-semibold text-myBlack dark:text-white my-3 lg:mt-6 lg:mb-4">{task.name}</h4>
                         <p className='text-base text-myBlack dark:text-myWhite'>{task.des}</p>
