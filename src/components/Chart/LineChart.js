@@ -21,7 +21,7 @@ const LineChart = () => {
             labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
             datasets: [{
                 label: 'My Dataset',
-                data: [11000, 25000, 20000, 27000, 22000, 25600, 30000, 28000, 35000, 33000, 37000, 43000],
+                data: [100, 200, 180, 270, 220, 256, 300, 280, 350, 330, 370, 430],
                 fill: true,
                 backgroundColor: resolvedTheme === 'dark' ? gradient1 : gradient,
                 borderColor: resolvedTheme === 'dark' ? '#64C4F7' : '#4538D3',
@@ -32,19 +32,6 @@ const LineChart = () => {
             }]
         };
 
-        var yLabels = {
-            10: 'Test',
-            2: 'Java',
-            14: 'Javascript',
-            6: 'bootcamp',
-            18: 'Oracle',
-            10: 'mid-level',
-            12: 'senior-dev',
-            4: 'full-stack-dev',
-            16: 'famous-speaker',
-            8: 'SQL',
-            20: 'harambe'
-        }
 
         new Chart(ctx, {
             type: 'line',
@@ -69,7 +56,10 @@ const LineChart = () => {
                         beginAtZero: true,
 
                         ticks: {
-                            color: resolvedTheme === 'dark' ? '#D1D1D1' : '#584E69'
+                            color: resolvedTheme === 'dark' ? '#D1D1D1' : '#584E69',
+                            callback: function (value, index, values) {
+                                return value + 'k'
+                            },
                         }
                     },
                     x: {

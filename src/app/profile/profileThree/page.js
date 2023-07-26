@@ -13,13 +13,53 @@ const profileThree = () => {
         <div className='px-2 lg:px-6 pt-10 pb-6 bg-bgColor dark:bg-darkBg'>
             <div className='block lg:flex gap-6'>
                 <section className='bg-white dark:bg-darkCard p-2 lg:py-7 lg:px-5 h-full rounded cardShadow mb-6'>
+
+                    {/* modal start */}
+                    <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle ">
+                        <form method="dialog" className="modal-box dark:bg-darkCard">
+                            <h3 className="font-bold text-2xl text-myBlue dark:text-myGreen">Edit Profile</h3>
+                            <hr className='border-myLine dark:border-darkLine my-3' />
+                            <div className="form-control w-full">
+                                <label className="label">
+                                    <span className="text-lg text-semibold text-myBlack dark:text-myWhite ">Phone Number</span>
+                                </label>
+                                <input type="text" placeholder="Type your number" className="input input-bordered w-full" />
+                            </div>
+                            <div className="form-control w-full">
+                                <label className="label">
+                                    <span className="text-lg text-semibold text-myBlack dark:text-myWhite ">Location</span>
+                                </label>
+                                <input type="text" placeholder="Type your location" className="input input-bordered w-full" />
+                            </div>
+                            <div className="form-control w-full">
+                                <label className="label">
+                                    <span className="text-lg text-semibold text-myBlack dark:text-myWhite ">Email</span>
+                                </label>
+                                <input type="text" placeholder="Type your email" className="input input-bordered w-full" />
+                            </div>
+                            <div className="form-control w-full">
+                                <label className="label">
+                                    <span className="text-lg text-semibold text-myBlack dark:text-myWhite ">Website</span>
+                                </label>
+                                <input type="text" placeholder="Type your website link" className="input input-bordered w-full" />
+                            </div>
+                            <div className="modal-action">
+                                <button className="text-white rounded py-3 px-4 bg-myBlue dark:bg-myGreen">Close</button>
+                            </div>
+                        </form>
+                    </dialog>
+                    {/* modal end */}
+
                     <div className='relative'>
                         <Image className='w-full' src={profile} alt='profile' />
-                        <div className='hidden md:flex lg:flex items-center gap-2 bg-myBlue dark:bg-myGreen absolute bottom-8 right-6 rounded py-3 px-4 cursor-pointer'>
+                        <button className="hidden md:flex lg:flex items-center gap-2 bg-myBlue dark:bg-myGreen absolute bottom-8 right-6 rounded py-2 px-4" onClick={() => window.my_modal_5.showModal()}>
                             <span class="material-symbols-outlined text-white dark:text-myBlack">edit_square</span>
                             <span className='text-sm  text-white dark:text-myBlack'>Edit profile</span>
-                        </div>
+                        </button>
                     </div>
+
+
+
                     <h3 className='text-[#1E192A] dark:text-white text-2xl md:text-3xl lg:text-[32px] mt-[30px] font-semibold '>Profile details</h3>
                     <span className='text-sm text-myGrey dark:text-myWhite mt-2 '>Bluth CEO</span>
 

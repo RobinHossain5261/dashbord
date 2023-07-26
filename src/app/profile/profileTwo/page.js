@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import profile from '@/../public/images/profileTwo.png';
 import bgProfile from '@/../public/images/bgProfile2.png';
@@ -12,6 +13,42 @@ const profileTwo = () => {
     return (
         <div className='bg-bgColor dark:bg-darkBg'>
             <section className='relative bg-bgColor dark:bg-darkBg'>
+                {/* Modal open  */}
+                <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle ">
+                    <form method="dialog" className="modal-box dark:bg-darkCard">
+                        <h3 className="font-bold text-2xl text-myBlue dark:text-myGreen">Edit Profile</h3>
+                        <hr className='border-myLine dark:border-darkLine my-3' />
+                        <div className="form-control w-full">
+                            <label className="label">
+                                <span className="text-lg text-semibold text-myBlack dark:text-myWhite ">Phone Number</span>
+                            </label>
+                            <input type="text" placeholder="Type your number" className="input input-bordered w-full" />
+                        </div>
+                        <div className="form-control w-full">
+                            <label className="label">
+                                <span className="text-lg text-semibold text-myBlack dark:text-myWhite ">Location</span>
+                            </label>
+                            <input type="text" placeholder="Type your location" className="input input-bordered w-full" />
+                        </div>
+                        <div className="form-control w-full">
+                            <label className="label">
+                                <span className="text-lg text-semibold text-myBlack dark:text-myWhite ">Email</span>
+                            </label>
+                            <input type="text" placeholder="Type your email" className="input input-bordered w-full" />
+                        </div>
+                        <div className="form-control w-full">
+                            <label className="label">
+                                <span className="text-lg text-semibold text-myBlack dark:text-myWhite ">Website</span>
+                            </label>
+                            <input type="text" placeholder="Type your website link" className="input input-bordered w-full" />
+                        </div>
+                        <div className="modal-action">
+                            <button className="text-white rounded py-3 px-4 bg-myBlue dark:bg-myGreen">Close</button>
+                        </div>
+                    </form>
+                </dialog>
+                {/* Modal end   */}
+
                 <Image className='bg-myBlack h-[300px] w-full object-cover' src={bgProfile} alt="bgProfile" />
                 <div className='flex flex-wrap gap-4 items-center justify-between w-4/5 absolute centerDiv'>
                     <div className='flex items-center gap-2 md:gap-6 lg:gap-6'>
@@ -21,10 +58,10 @@ const profileTwo = () => {
                             <span className='text-sm  text-white'>Bluth CEO</span>
                         </div>
                     </div>
-                    <div className='flex items-center gap-1 lg:gap-2 bg-myBlue dark:bg-myGreen rounded p-2 lg:py-3 lg:px-4 cursor-pointer'>
+                    <button className="hidden md:flex lg:flex items-center gap-2 bg-myBlue dark:bg-myGreen absolute bottom-8 right-6 rounded py-2 px-4" onClick={() => window.my_modal_5.showModal()}>
                         <span class="material-symbols-outlined text-white dark:text-myBlack">edit_square</span>
                         <span className='text-sm  text-white dark:text-myBlack'>Edit profile</span>
-                    </div>
+                    </button>
                 </div>
             </section>
 

@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import profile from '@/../public/images/profileTwo.png';
 import bgProfile from '@/../public/images/bgProfile2.png';
@@ -14,11 +15,46 @@ const profileOne = () => {
             <div className='-mb-28'>
                 <Image className='h-[300px] w-full object-cover' src={bgProfile} alt='bgProfile' />
             </div>
-
             <div className='px-2 lg:px-6 block lg:flex gap-6 relative'>
 
                 {/* About part  */}
                 <div className='p-2 md:p-6 lg:py-10 lg:px-8 rounded h-full bg-white dark:bg-darkCard cardShadow'>
+
+                    {/* Modal open  */}
+                    <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle ">
+                        <form method="dialog" className="modal-box dark:bg-darkCard">
+                            <h3 className="font-bold text-2xl text-myBlue dark:text-myGreen">Edit Profile</h3>
+                            <hr className='border-myLine dark:border-darkLine my-3' />
+                            <div className="form-control w-full">
+                                <label className="label">
+                                    <span className="text-lg text-semibold text-myBlack dark:text-myWhite ">Phone Number</span>
+                                </label>
+                                <input type="text" placeholder="Type your number" className="input input-bordered w-full" />
+                            </div>
+                            <div className="form-control w-full">
+                                <label className="label">
+                                    <span className="text-lg text-semibold text-myBlack dark:text-myWhite ">Location</span>
+                                </label>
+                                <input type="text" placeholder="Type your location" className="input input-bordered w-full" />
+                            </div>
+                            <div className="form-control w-full">
+                                <label className="label">
+                                    <span className="text-lg text-semibold text-myBlack dark:text-myWhite ">Email</span>
+                                </label>
+                                <input type="text" placeholder="Type your email" className="input input-bordered w-full" />
+                            </div>
+                            <div className="form-control w-full">
+                                <label className="label">
+                                    <span className="text-lg text-semibold text-myBlack dark:text-myWhite ">Website</span>
+                                </label>
+                                <input type="text" placeholder="Type your website link" className="input input-bordered w-full" />
+                            </div>
+                            <div className="modal-action">
+                                <button className="text-white rounded py-3 px-4 bg-myBlue dark:bg-myGreen">Close</button>
+                            </div>
+                        </form>
+                    </dialog>
+                    {/* Modal end   */}
 
                     <div className='flex flex-wrap gap-4 items-center justify-between'>
                         <div className='flex flex-wrap items-center gap-5'>
@@ -28,7 +64,8 @@ const profileOne = () => {
                                 <span className='text-sm text-myGrey dark:text-white'>Bluth CEO</span>
                             </div>
                         </div>
-                        <div className='flex items-center gap-1 lg:gap-2 bg-myBlue dark:bg-myGreen rounded p-2 lg:py-3 lg:px-4 cursor-pointer'>
+
+                        <div className='flex items-center gap-1 lg:gap-2 bg-myBlue dark:bg-myGreen rounded p-2 lg:py-3 lg:px-4 cursor-pointer' onClick={() => window.my_modal_5.showModal()}>
                             <span class="material-symbols-outlined text-white dark:text-myBlack">edit_square</span>
                             <span className='text-sm  text-white dark:text-myBlack'>Edit profile</span>
                         </div>
