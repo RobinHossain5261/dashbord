@@ -83,6 +83,7 @@ const profileThree = () => {
                         </table>
                     </div>
                 </section>
+
                 <section className=''>
                     {/* About part  */}
                     <div className='p-3 lg:py-10 lg:px-8 rounded bg-white dark:bg-darkCard cardShadow'>

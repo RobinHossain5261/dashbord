@@ -133,6 +133,52 @@ const SideBar = forwardRef(({ showNav, setShowNav }, ref) => {
             </ul>
           )}
         </li>
+
+        <hr className='my-10 border-myLine dark:border-darkLine' />
+
+        <li className='mb-5 cursor-pointer'>
+          <div className='text-base text-myBlack dark:text-myWhite flex items-center justify-between hover:text-myBlue dark:hover:text-myGreen' onClick={() => toggleMenu('dropdown6')}>
+            <div className='flex items-center'>
+              <span class="material-symbols-outlined w-[15px] h-[15px] mr-3 mb-2">
+                settings
+              </span>
+              <span>Settings</span>
+            </div>
+            <span class="material-symbols-outlined w-5 h-5">expand_more</span>
+          </div>
+          {activeMenu === 'dropdown6' && (
+            <ul className="dropdown-menu">
+              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href=''>All Pages</Link></li>
+              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href=''>Settings v1</Link></li>
+              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href=''>Settings v2</Link></li>
+              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href=''>Settings v3</Link></li>
+            </ul>
+          )}
+        </li>
+        <li className='mb-5 cursor-pointer'>
+          <div className='text-base text-myBlack dark:text-myWhite flex items-center justify-between hover:text-myBlue dark:hover:text-myGreen' onClick={() => toggleMenu('dropdown7')}>
+            <div className='flex items-center'>
+              <span class="material-symbols-outlined w-[15px] h-[15px] mr-3 mb-2">
+                build
+              </span>
+              <span>Utility pages</span>
+            </div>
+            <span class="material-symbols-outlined w-5 h-5">expand_more</span>
+          </div>
+          {activeMenu === 'dropdown7' && (
+            <ul className="dropdown-menu">
+              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href=''>All Pages</Link></li>
+              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href=''>Sign up</Link></li>
+              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href=''>Log in</Link></li>
+              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href=''>Email Confirmation</Link></li>
+              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href=''>Notification center</Link></li>
+              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href=''>Notes</Link></li>
+              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href=''>Reset password</Link></li>
+              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href=''>Password protected</Link></li>
+              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href=''>404 Not found</Link></li>
+            </ul>
+          )}
+        </li>
       </ul>
     </nav>
 
