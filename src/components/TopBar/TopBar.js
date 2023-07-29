@@ -111,14 +111,14 @@ export default function TopBar({ showNav, setShowNav }) {
         </div>
         <div className="dropdown ml-4 md:ml-6 lg:ml-10">
             <label tabIndex={0} className="">
-                <span className="material-symbols-outlined cursor-pointer w-5 h-5 dark:text-myWhite">grid_view</span>
+                <span className="material-symbols-outlined cursor-pointer w-5 h-5 text-myBlack dark:text-myWhite">grid_view</span>
             </label>
-            <div tabIndex={0} className="dropdown-content z-[1] menu p-2 mt-5 shadow bg-base-100 dark:bg-[#1E192A] rounded-box w-52 md:w-52 lg:w-60">
+            <div tabIndex={0} className="dropdown-content z-[1] menu p-2 mt-5 shadow bg-white dark:bg-[#1E192A] rounded-box w-52 md:w-52 lg:w-60">
                 <div className='flex flex-wrap justify-between items-center'>
-                    <h3 className='text-xl font-semibold dark:text-white'>Apps</h3>
-                    <span className='text-lg text-myGrey dark:text-myWhite hover:text-myBlue cursor-pointer'>View All Apps</span>
+                    <h3 className='text-xl font-semibold text-myBlack dark:text-white'>Apps</h3>
+                    <span className='text-lg text-myGrey dark:text-myWhite hover:text-myBlue dark:hover:text-myGreen cursor-pointer'>View All Apps</span>
                 </div>
-                <hr className='my-3 dark:border-darkLine' />
+                <hr className='my-3 dark:border-darkLine border-myLine' />
                 <div className='grid grid-cols-3 gap-3 '>
                     {
                         apps.map(app => (<div
@@ -134,14 +134,14 @@ export default function TopBar({ showNav, setShowNav }) {
         </div>
         <div className="dropdown ml-4 md:ml-6 lg:ml-7">
             <label tabIndex={0} className="">
-                <span class="material-symbols-outlined cursor-pointer dark:text-myWhite w-5 h-5">notifications</span>
+                <span class="material-symbols-outlined cursor-pointer text-myBlack dark:text-myWhite w-5 h-5">notifications</span>
             </label>
-            <div tabIndex={0} className="dropdown-content z-[1] menu p-2 mt-5 shadow bg-base-100 dark:bg-[#1E192A] rounded-box w-48 md:w-52 lg:w-60">
+            <div tabIndex={0} className="dropdown-content z-[1] menu p-2 mt-5 shadow bg-white dark:bg-[#1E192A] rounded-box w-48 md:w-52 lg:w-60">
                 <div className='lg:flex justify-between items-center'>
-                    <h3 className='text-lg font-semibold dark:text-white'>Notifications</h3>
-                    <span className='text-base text-myGrey hover:text-myBlue cursor-pointer dark:text-myWhite'>View All</span>
+                    <h3 className='text-lg font-semibold text-myBlack dark:text-white'>Notifications</h3>
+                    <span className='text-base text-myGrey hover:text-myBlue dark:hover:text-myGreen cursor-pointer dark:text-myWhite'>View All</span>
                 </div>
-                <hr className='my-3 dark:border-darkLine' />
+                <hr className='my-3 dark:border-darkLine border-myLine' />
                 <div className=''>
                     {
                         notifications.map(notification => (<div
@@ -150,9 +150,9 @@ export default function TopBar({ showNav, setShowNav }) {
                         >
                             <Image className='w-10 h-10' src={notification.img} alt="app" />
                             <div className='ml-2'>
-                                <h4 className='font-semibold text-base flex-wrap dark:text-white'>{notification.title}</h4 >
-                                <p className="dark:text-myWhite">{notification.des}</p>
-                                <span className="dark:text-myWhite">{notification.time}</span>
+                                <h4 className='font-semibold text-base flex-wrap text-myBlack dark:text-white'>{notification.title}</h4 >
+                                <p className="dark:text-myWhite text-myBlack">{notification.des}</p>
+                                <span className="dark:text-myWhite text-myBlack">{notification.time}</span>
                             </div>
 
                         </div>))
@@ -163,22 +163,22 @@ export default function TopBar({ showNav, setShowNav }) {
         <div className='ml-4 md:ml-6 lg:ml-7 mb-2 dark:text-white'>
             <ThemeButton></ThemeButton>
         </div>
-        <div className="dropdown dropdown-end ml-4 md:ml-6 lg:ml-7 dark:text-white">
+        <div className="dropdown dropdown-end ml-4 md:ml-6 lg:ml-7">
             <label tabIndex={0} className="relative">
-                <span class="material-symbols-outlined  cursor-pointer w-5 h-5">shopping_bag</span>
+                <span class="material-symbols-outlined  cursor-pointer w-5 h-5 text-myBlack dark:text-myWhite">shopping_bag</span>
                 <span className='absolute text-sm h-[18px] w-[18px]  rounded-full bg-myBlue dark:bg-myGreen flex justify-center items-center text-white -right-2 bottom-0'>{carts.length}</span>
             </label>
-            <div tabIndex={0} className="dropdown-content z-[1] menu p-2 mt-5 shadow bg-base-100 dark:bg-[#1E192A] rounded-box w-52 md:w-52 lg:w-64">
+            <div tabIndex={0} className="dropdown-content z-[1] menu p-2 mt-5 shadow bg-white dark:bg-[#1E192A] rounded-box w-52 md:w-52 lg:w-64">
                 <div className='flex justify-between'>
-                    <h3 className='text-lg font-semibold'>My Cart</h3>
+                    <h3 className='text-lg font-semibold text-myBlack dark:text-myWhite'>My Cart</h3>
                     <span className='text-myGrey dark:text-myWhite  hover:text-myBlue dark:hover:text-myGreen cursor-pointer '>{carts.length} Items</span>
                 </div>
-                <hr className='my-3 dark:border-darkLine ' />
+                <hr className='my-3 dark:border-darkLine border-myLine' />
                 <div className=''>
                     {
                         carts.map(cart => (<div
                             key={cart.id}
-                            className='flex items-center border-b-2 dark:border-darkLine pb-3 duration-200 cursor-pointer'
+                            className='flex items-center border-b-2 border-myLine dark:border-darkLine pb-3 duration-200 cursor-pointer'
                         >
                             <Image className='w-10 h-10' src={cart.img} alt="app" />
                             <div className='ml-2'>
@@ -201,8 +201,8 @@ export default function TopBar({ showNav, setShowNav }) {
                 </div>
                 <div className='lg:flex items-center hidden'>
                     <div>
-                        <p className='text-base dark:text-myWhite'>Wade Warren</p>
-                        <span className='text-xs dark:text-myWhite'>Account Setting</span>
+                        <p className='text-base text-myBlack dark:text-myWhite'>Wade Warren</p>
+                        <span className='text-xs text-myBlack dark:text-myWhite'>Account Setting</span>
                     </div>
                     <span class="material-symbols-outlined text-center w-5 h-5 dark:text-myWhite">
                         expand_more
@@ -210,8 +210,8 @@ export default function TopBar({ showNav, setShowNav }) {
                 </div>
             </label>
 
-            <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 mt-5 shadow bg-base-100 dark:bg-[#1E192A] rounded-box w-60">
-                <span className='mb-1 text-base ml-3 font-semibold dark:text-white'>Welcome Wade!</span>
+            <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 mt-5 shadow bg-white dark:bg-[#1E192A] rounded-box w-60">
+                <span className='mb-1 text-base ml-3 font-semibold text-myBlack dark:text-white'>Welcome Wade!</span>
                 <li >
                     <Link className="hover:bg-myBlue dark:hover:bg-myGreen hover:text-white" href=''>
                         <span class="material-symbols-outlined mr-1 dark:text-myWhite">account_circle</span>

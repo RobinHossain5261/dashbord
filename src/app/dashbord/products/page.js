@@ -9,10 +9,6 @@ import { allProducts, orderProducts, productLists } from '../../../../public/dat
 import { useEffect } from 'react';
 import Link from 'next/link';
 
-export const metadata = {
-    title: 'DashBord-Products',
-    description: 'products order and statas',
-}
 
 const people = [
     { id: 1, name: '14 Aug - 25 Aug', unavailable: false },

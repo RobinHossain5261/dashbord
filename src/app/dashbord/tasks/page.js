@@ -14,10 +14,6 @@ const people = [
     { id: 3, name: 'This Year', unavailable: false },
 ]
 
-export const metadata = {
-    title: 'DashBord-tasks',
-    description: 'dahbord tasks',
-}
 const tasks = () => {
 
     const [selectedPerson, setSelectedPerson] = useState(people[0]);

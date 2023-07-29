@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Footer = () => {
     return (
-        <footer className="lg:flex justify-between px-2 lg:px-6 pb-6 text-center bg-[#F7F9FC] dark:bg-darkBg">
+        <footer className="lg:flex  justify-between px-2 lg:px-6 pb-6 text-center bg-[#F7F9FC] dark:bg-darkBg">
             <p className="text-sm md:text-lg lg:text-lg text-myBlack dark:text-white">
                 Copyright © <Link href='#' className="text-myBlue dark:text-myGreen">DashPro</Link> | Designed by <Link href='#' className="text-myBlue dark:text-myGreen">Softivus</Link>
             </p>

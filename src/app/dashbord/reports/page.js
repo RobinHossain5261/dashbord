@@ -12,11 +12,6 @@ import SignUps from '@/components/Chart/SignUps';
 import { reportCards } from '../../../../public/data/dashbordData';
 
 
-export const metadata = {
-    title: 'DashBord-Reports',
-    description: 'dahbord reports',
-}
-
 const people = [
     { id: 1, name: 'This Month', unavailable: false },
     { id: 2, name: 'This Week', unavailable: false },

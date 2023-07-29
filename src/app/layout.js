@@ -11,10 +11,6 @@ import Footer from '@/components/Footer/Footer';
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata = {
-  title: 'DashBord',
-  description: 'Responsive Dashbord',
-}
 
 export default function RootLayout({ children }) {
 

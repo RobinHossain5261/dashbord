@@ -96,7 +96,7 @@ const profileOne = () => {
                                     {
                                         informations.map(info => (<tr
                                             key={info.id}
-                                            className='dark:border-darkLine'
+                                            className='dark:border-darkLine border-myLine'
                                         >
                                             <td className='flex gap-2'>
                                                 <div className='text-myGrey dark:text-myLine text-sm'>{info.icon}</div>
