@@ -253,7 +253,7 @@ export default function TopBar({ showNav, setShowNav }) {
     </div>
 
     return (
-        <div className={`bg-white dark:bg-[#1E192A] left-0 py-6 z-[5] fixed w-full flex justify-between items-center transition-all duration-[400ms] ${showNav ? "pl-[280px]" : ""}`}>
+        <div className={`bg-white dark:bg-[#1E192A] left-0 py-6 z-[5] fixed w-full flex justify-between items-center transition-all duration-[400ms] ${showNav ? "lg:pl-[280px] md:pl-[280px] pl-[100%]" : ""}`}>
             <div className="flex items-center md:gap-5 lg:gap-[60px] py-2">
                 <span class=" material-symbols-outlined ml-2  md:ml-6 lg:ml-[60px] cursor-pointer dark:text-myWhite"
                     onClick={() => setShowNav(!showNav)}

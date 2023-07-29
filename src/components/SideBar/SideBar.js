@@ -21,16 +21,24 @@ const SideBar = forwardRef(({ showNav, setShowNav }, ref) => {
 
   return (
 
-    <nav ref={ref} className="fixed z-[6] w-[280px] h-full bg-white dark:bg-[#1E192A] shadow-sm ">
+    <nav ref={ref} className="fixed z-[6] w-full md:w-[280px] lg:w-[280px] h-full bg-white dark:bg-[#1E192A] shadow-sm ">
 
-      <Link href='/' className="flex items-center gap-2 ml-6 mt-10 mb-[60px] cursor-pointer">
-        <Image
-          className="w-[31px] h-[36px]"
-          src={resolvedTheme === 'dark' ? darkLogo : logo}
-          alt="company logo"
-        />
-        <h1 className="text-black dark:text-myGreen text-2xl font font-bold">Dashbord</h1>
-      </Link>
+      <div className='flex items-center justify-between'>
+        <Link href='/' className="flex items-center gap-2 ml-6 mt-10 mb-[60px] cursor-pointer">
+          <Image
+            className="w-[31px] h-[36px]"
+            src={resolvedTheme === 'dark' ? darkLogo : logo}
+            alt="company logo"
+          />
+          <h1 className="text-black dark:text-myGreen text-2xl font font-bold">Dashbord</h1>
+        </Link>
+
+        <div className='lg:hidden md:hidden'>
+          <span class=" material-symbols-outlined cursor-pointer  mb-4 mr-4"
+            onClick={() => setShowNav(!showNav)}
+          >close</span>
+        </div>
+      </div>
 
       <ul className='mx-6'>
         <li className="mb-5 cursor-pointer">

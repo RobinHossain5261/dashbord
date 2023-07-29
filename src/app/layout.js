@@ -14,15 +14,15 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function RootLayout({ children }) {
 
-  const [showNav, setShowNav] = useState(true);
+  const [showNav, setShowNav] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   function handleResize() {
     if (innerWidth <= 640) {
-      setShowNav(false);
+      setShowNav(true);
       setIsMobile(true);
     } else {
-      setShowNav(true);
+      setShowNav(false);
       setIsMobile(false);
     }
   }
@@ -30,8 +30,11 @@ export default function RootLayout({ children }) {
   useEffect(() => {
     if (typeof window != undefined) {
       addEventListener("resize", handleResize);
-    }
 
+    }
+    if (innerWidth > 640) {
+      setShowNav(true)
+    }
     return () => {
       removeEventListener("resize", handleResize);
     };
@@ -59,7 +62,7 @@ export default function RootLayout({ children }) {
             <SideBar showNav={showNav} setShowNav={setShowNav} />
           </Transition>
           <div
-            className={`pt-16 transition-all duration-[400ms] ${showNav && !isMobile ? "pl-[280px]" : ""
+            className={`pt-16  transition-all duration-[400ms] ${showNav && !isMobile ? "lg:pl-[280px] md:pl-[280px] pl-[100%]" : ""
               }`}
           >
             <div className='lg:mt-10 md:mt-10'>{children}</div>

@@ -25,7 +25,7 @@ const DoughnutChart = () => {
     };
 
     const data5 = {
-        labels: ["Red", "Blue", "Yellow"],
+        labels: ["Blue", "Yellow", "Red"],
         datasets: [
             {
                 label: "# of Votes",

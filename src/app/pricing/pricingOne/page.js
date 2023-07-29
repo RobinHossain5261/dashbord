@@ -6,7 +6,9 @@ import { cards } from '../../../../public/data/pricingData';
 
 const PricingOne = () => {
     const [enabled, setEnabled] = useState(false);
+
     const [price, setPrice] = useState(false);
+
     const toggle = () => {
         setPrice(!price);
     }

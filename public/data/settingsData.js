@@ -136,3 +136,54 @@ export const invoiceDetails = [
         date: '02 jun 2023',
     },
 ]
+
+export const APIs = [
+    {
+        id: 1,
+        site: 'dribble.com',
+        invoice: 'opidej798@.com',
+        password: '**********'
+    },
+    {
+        id: 2,
+        site: 'facebook.com',
+        invoice: 'opidej798@.com',
+        password: '**********'
+    },
+    {
+        id: 3,
+        site: 'youtube.com',
+        invoice: 'opidej798@.com',
+        password: '**********'
+    },
+    {
+        id: 4,
+        site: 'gitHub.com',
+        invoice: 'opidej798@.com',
+        password: '**********'
+    },
+    {
+        id: 5,
+        site: 'webflow.com',
+        invoice: 'opidej798@.com',
+        password: '**********'
+    },
+    {
+        id: 6,
+        site: 'reddit.com',
+        invoice: 'opidej798@.com',
+        password: '**********'
+    },
+    {
+        id: 7,
+        site: 'linkedIn.com',
+        invoice: 'opidej798@.com',
+        password: '**********'
+    },
+    {
+        id: 8,
+        site: 'google.com',
+        invoice: 'opidej798@.com',
+        password: '**********'
+    },
+]
