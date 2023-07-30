@@ -123,7 +123,7 @@ export default function TopBar({ showNav, setShowNav }) {
                     {
                         apps.map(app => (<div
                             key={app.id}
-                            className='flex flex-col justify-center items-center p-3 cursor-pointer rounded duration-400 hover:bg-[#C1BEE5]'
+                            className='flex flex-col justify-center items-center p-3 cursor-pointer rounded duration-400 hover:bg-myGrey'
                         >
                             <Image className="w-8 h-8" src={app.img} alt="app" />
                             <span className='mt-2 text-xs dark:text-myWhite'>{app.name}</span>
@@ -182,8 +182,8 @@ export default function TopBar({ showNav, setShowNav }) {
                         >
                             <Image className='w-10 h-10' src={cart.img} alt="app" />
                             <div className='ml-2'>
-                                <h4 className=' font-semibold text-base'>{cart.name}</h4>
-                                <p>{cart.price}</p>
+                                <h4 className=' font-semibold text-base text-myBlack dark:text-white'>{cart.name}</h4>
+                                <p className="text-myGrey dark:text-myWhite">{cart.price}</p>
                             </div>
 
                         </div>))

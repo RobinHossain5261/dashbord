@@ -41,7 +41,7 @@ const SideBar = forwardRef(({ showNav, setShowNav }, ref) => {
       </div>
 
       <ul className='mx-6'>
-        <li className="mb-5 cursor-pointer">
+        <li className="mb-5 cursor-pointer transition ease-in-out duration-1000">
           <div className='text-base text-myBlack dark:text-myWhite flex items-center justify-between hover:text-myBlue dark:hover:text-myGreen' onClick={() => toggleMenu('dropdown1')}>
             <div className='flex items-center'>
               <span class="material-symbols-outlined w-[15px] h-[15px] mr-3 mb-3">home</span>
