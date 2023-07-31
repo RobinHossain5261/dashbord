@@ -1,23 +1,31 @@
 import Link from 'next/link';
-import { forwardRef } from 'react';
+import { forwardRef, useEffect, useRef } from 'react';
 import { useState } from 'react';
 import logo from '@/../public/images/Logo.png';
 import darkLogo from '@/../public/images/darkLogo.png';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
+import AnimateHeight from 'react-animate-height';
 import './SideBar.css';
+
+
 
 const SideBar = forwardRef(({ showNav, setShowNav }, ref) => {
 
+  const [height, setHeight] = useState(0);
+
   const { resolvedTheme, setTheme } = useTheme();
   const [activeMenu, setActiveMenu] = useState('');
+
   const toggleMenu = (menuName) => {
     if (activeMenu === menuName) {
       setActiveMenu('');
-    } else {
+    }
+    else {
       setActiveMenu(menuName);
     }
   };
+
 
   return (
 
@@ -41,6 +49,7 @@ const SideBar = forwardRef(({ showNav, setShowNav }, ref) => {
       </div>
 
       <ul className='mx-6'>
+
         <li className="mb-5 cursor-pointer transition ease-in-out duration-1000">
           <div className='text-base text-myBlack dark:text-myWhite flex items-center justify-between hover:text-myBlue dark:hover:text-myGreen' onClick={() => toggleMenu('dropdown1')}>
             <div className='flex items-center'>
@@ -51,7 +60,7 @@ const SideBar = forwardRef(({ showNav, setShowNav }, ref) => {
           </div>
 
           {activeMenu === 'dropdown1' && (
-            <ul className="ani-menu">
+            <ul>
               <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='#'>All Pages</Link></li>
               <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/dashbord/reports'>Reports</Link></li>
               <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/dashbord/products'>Products</Link></li>

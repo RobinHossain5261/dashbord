@@ -25,9 +25,9 @@ const people = [
 const Belling = () => {
     const [selectedPerson, setSelectedPerson] = useState(people[0]);
     return (
-        <div>
-            <div className='bg-white dark:bg-darkCard p-3 lg:px-7 lg:pb-8 rounded'>
-                <hr className='pb-4 lg:pb-8 border-myLine dark:border-darkLine' />
+        <div className='w-full'>
+            <div className='bg-white dark:bg-darkCard p-3 lg:px-7 lg:py-8 rounded'>
+
                 <div className='flex gap-3 items-center'>
                     <span class="material-symbols-outlined text-myBlue dark:text-myGreen">add_card</span>
                     <h4 className='text-myBlack dark:text-white text-xl md:text-2xl lg:text-2xl font-semibold'>Payment methods</h4>

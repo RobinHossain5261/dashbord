@@ -11,8 +11,8 @@ const Notifications = () => {
     const [enabled4, setEnabled4] = useState(true);
 
     return (
-        <div className='p-3 lg:px-7 lg:pb-8 bg-white dark:bg-darkCard rounded'>
-            <div className='flex items-center gap-2 py-8'>
+        <div className='p-3 lg:px-8 lg:py-6 bg-white dark:bg-darkCard rounded'>
+            <div className='flex items-center gap-2 mb-8'>
                 <span class="material-symbols-outlined text-myBlack dark:text-myWhite w-7 h-7">notifications_active</span>
                 <h4 className='text-xl lg:text-2xl text-myBlack dark:text-myWhite font-semibold '>Notifications settings </h4>
             </div>

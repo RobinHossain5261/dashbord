@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const Team = () => {
     return (
-        <div className='bg-white dark:bg-darkCard p-3 lg:px-7 lg:pb-8 rounded'>
+        <div className='bg-white dark:bg-darkCard p-3 lg:px-7 lg:py-8 rounded w-full'>
             <h4 className='text-2xl text-myBlack font-semibold mb-4 lg:mb-8'>Team settings</h4>
             <div className="overflow-x-auto">
                 <table className="table overflow-hidden whitespace-nowrap w-full">

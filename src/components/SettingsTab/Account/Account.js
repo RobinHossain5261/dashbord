@@ -1,9 +1,22 @@
 import React from 'react';
+import profile from '@/../public/images/profile1.png';
+import Image from 'next/image';
 
 const Account = () => {
     return (
-        <div className='bg-white dark:bg-darkCard p-3 lg:px-7 lg:pb-8 w-full rounded'>
-            <hr className='pb-4 lg:pb-8 border-myLine dark:border-darkLine' />
+        <div className='bg-white dark:bg-darkCard p-3 lg:px-7 lg:py-8 w-full rounded'>
+            <div className='flex flex-wrap gap-3 justify-between items-center'>
+                <div className='flex items-center gap-5'>
+                    <Image className='w-20 h-20 rounded-full' src={profile} alt="profile" />
+                    <div>
+                        <h5 className='text-myBlack dark:text-white text-xl font-semibold'>Angel Alvarado</h5>
+                        <span className='text-myGrey dark:text-myLine text-sm'>Edit profile Photo</span>
+                    </div>
+
+                </div>
+                <button className='px-4 py-3 border border-myLine dark:border-darkLine rounded hover:bg-myBlue dark:hover:bg-myGreen text-myBlack dark:text-myWhite hover:text-white'>Upload new</button>
+            </div>
+            <hr className='my-4 lg:my-8 border-myLine dark:border-darkLine ' />
             <h5 className='text-xl text-myBlack dark:text-white font-semibold'>Basic information</h5>
             <p className='text-base text-myGrey dark:text-myWhite mt-5 mb-8 text-justify'>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
 

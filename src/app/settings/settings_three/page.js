@@ -62,7 +62,7 @@ const SettingsThree = () => {
 
                 <section className='w-full'>
                     <Tab.Group>
-                        <Tab.List className='flex flex-wrap gap-6 bg-white dark:bg-darkCard lg:pt-8 p-3 lg:px-7 pb-8 rounded'>
+                        <Tab.List className='flex flex-wrap gap-6 bg-white dark:bg-darkCard lg:pt-8 p-3 lg:px-7 rounded'>
                             <Tab
                                 className='w-[180px]  text-sm text-black dark:text-myWhite py-3 px-4 border border-myLine dark:border-darkLine rounded cursor-pointer outline-none'
                                 as={Fragment}>

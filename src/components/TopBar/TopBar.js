@@ -123,7 +123,7 @@ export default function TopBar({ showNav, setShowNav }) {
                     {
                         apps.map(app => (<div
                             key={app.id}
-                            className='flex flex-col justify-center items-center p-3 cursor-pointer rounded duration-400 hover:bg-myGrey'
+                            className='flex flex-col justify-center items-center p-3 cursor-pointer rounded duration-400 hover:bg-myGrey hover:text-myWhite'
                         >
                             <Image className="w-8 h-8" src={app.img} alt="app" />
                             <span className='mt-2 text-xs dark:text-myWhite'>{app.name}</span>
