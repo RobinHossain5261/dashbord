@@ -1,9 +1,5 @@
 "use client"
-import Image from 'next/image';
-import React, { useRef } from 'react';
-import settings from '@/../public/images/settings.png';
-import settings1 from '@/../public/images/settings1.png';
-import profile from '@/../public/images/profileThree.png';
+import React from 'react';
 import { Tab } from '@headlessui/react';
 import { Fragment } from 'react';
 import Account from '@/components/SettingsTab/Account/Account';
@@ -12,35 +8,17 @@ import Belling from '@/components/SettingsTab/Belling/Belling';
 import Notifications from '@/components/SettingsTab/Notification/Notifications';
 import API from '@/components/SettingsTab/API/API';
 
-const settingsOne = () => {
-    const inputFile = useRef(null);
-
-    const onButtonClick = () => {
-        inputFile.current.click();
-    }
-
+const settingsTwo = () => {
     return (
-        <div className='pt-2 bg-bgColor dark:bg-darkBg'>
+        <div className='px-2 lg:px-6 pt-11 pb-6 bg-bgColor dark:bg-darkBg'>
+            <h3 className='text-[32px] font-semibold text-myBlack dark:text-white'>General settings</h3>
+            <span className='text-sm text-myBlack dark:text-white '>Lorem ipsum dolor sit ammet consectetur.</span>
 
-            <div className='h-[300px] bg-[#1E192A] flex justify-center relative -mb-28'>
-                <Image className='absolute top-2 left-[66px] object-cover hidden md:flex lg:flex' src={settings} alt='settings' />
-                <h1 className='text-3xl lg:text-5xl text-white font-semibold absolute top-[60px]'>Account Settings</h1>
-                <Image className='absolute top-2 right-10 object-cover hidden md:flex lg:flex' src={settings1} alt='settings' />
-            </div>
-
-            <div className='px-2 lg:px-6 pb-6'>
+            <div className='mt-8'>
                 <Tab.Group >
-                    <div className='lg:flex gap-6 w-full relative'>
+                    <div className='lg:flex gap-6 w-full'>
 
-                        <div className='bg-white  dark:bg-darkCard h-full rounded cardShadow p-3 lg:py-7 lg:px-8 mb-6'>
-                            <div className='relative mb-8'>
-                                <Image className='lg:h-[300px] w-full object-cover' src={profile} alt='profile' />
-                                <input type='file' id="file" ref={inputFile} style={{ display: 'none' }} />
-                                <button onClick={onButtonClick} className="hidden md:flex lg:flex items-center gap-2 bg-myBlue dark:bg-myGreen absolute bottom-5 right-5 rounded py-3 px-4">
-                                    <span class="material-symbols-outlined text-white dark:text-myBlack">edit_square</span>
-                                    <span className='text-sm  text-white dark:text-myBlack'>Edit profile photo</span>
-                                </button>
-                            </div>
+                        <div className='w-full lg:w-[504px] bg-white  dark:bg-darkCard h-full rounded cardShadow p-3 lg:py-7 lg:px-8 mb-6'>
                             <Tab.List>
                                 <Tab className=' hover:text-myBlue dark:hover:text-myGreen outline-none' as={Fragment}>
                                     {({ selected }) => (
@@ -132,16 +110,22 @@ const settingsOne = () => {
                             <Tab.Panel >
                                 <Team />
                             </Tab.Panel>
-                            <Tab.Panel><Belling /></Tab.Panel>
-                            <Tab.Panel><Notifications /></Tab.Panel>
-                            <Tab.Panel><API /></Tab.Panel>
+                            <Tab.Panel>
+                                <Belling />
+                            </Tab.Panel>
+                            <Tab.Panel>
+                                <Notifications />
+                            </Tab.Panel>
+                            <Tab.Panel>
+                                <API />
+                            </Tab.Panel>
                         </Tab.Panels>
                     </div>
                 </Tab.Group>
             </div>
-            <hr className='mt-6 pb-8 border-myLine dark:border-darkLine' />
+            <hr className='mt-6 border-myLine dark:border-darkLine' />
         </div>
     );
 };
 
-export default settingsOne;
+export default settingsTwo;
