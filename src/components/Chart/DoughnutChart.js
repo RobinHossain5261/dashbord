@@ -97,7 +97,7 @@ const DoughnutChart = () => {
                 </div>
 
             </div>
-            <div className='flex flex-wrap justify-around mt-10'>
+            <div className='flex gap-3 flex-wrap justify-around mt-10'>
                 <div>
                     <h5 className='text-xl text-myBlue dark:text-myGreen text-center'>Mobile</h5>
                     <h3 className='text-myBlack font-bold text-2xl dark:text-white text-center'>91.434%</h3>

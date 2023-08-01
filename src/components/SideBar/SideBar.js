@@ -42,7 +42,7 @@ const SideBar = forwardRef(({ showNav, setShowNav }, ref) => {
         </Link>
 
         <div className='lg:hidden md:hidden'>
-          <span class=" material-symbols-outlined cursor-pointer  mb-4 mr-4"
+          <span class=" material-symbols-outlined cursor-pointer text-myBlack dark:text-myWhite  mb-4 mr-4"
             onClick={() => setShowNav(!showNav)}
           >close</span>
         </div>

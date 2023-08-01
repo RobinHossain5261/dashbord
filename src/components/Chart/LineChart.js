@@ -2,10 +2,14 @@
 import { useEffect, useRef } from 'react';
 import Chart from 'chart.js/auto';
 import { useTheme } from 'next-themes';
+import { useState } from 'react';
 
 const LineChart = () => {
     const chartRef = useRef(null);
     const { resolvedTheme, setTheme } = useTheme();
+
+    const [mounted, setMounted] = useState(false);
+
 
     useEffect(() => {
         const ctx = chartRef.current.getContext('2d');
@@ -26,7 +30,7 @@ const LineChart = () => {
                 backgroundColor: resolvedTheme === 'dark' ? gradient1 : gradient,
                 borderColor: resolvedTheme === 'dark' ? '#64C4F7' : '#4538D3',
                 borderWidth: 2,
-                pointRadius: 10,
+                pointRadius: 7,
                 pointBackgroundColor: 'white',
 
             }]

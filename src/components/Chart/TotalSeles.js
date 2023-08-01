@@ -18,17 +18,17 @@ const TotalSeles = () => {
         gradient1.addColorStop(1, 'rgba(100, 196, 247, 0.3)');
 
         const chartData = {
-            labels: ['Sep1','Sep5','Sep10','Sep15','Sep20','Sep25','Sep30'],
+            labels: ['Sep1', 'Sep5', 'Sep10', 'Sep15', 'Sep20', 'Sep25', 'Sep30'],
             datasets: [{
                 label: 'My Dataset',
-                data: [11000, 25000, 20000, 27000, 22000, 25600, 30000],
+                data: [110, 250, 200, 270, 220, 256, 300],
                 fill: true,
                 backgroundColor: resolvedTheme === 'dark' ? gradient1 : gradient,
                 borderColor: resolvedTheme === 'dark' ? '#64C4F7' : '#4538D3',
                 borderWidth: 2,
                 pointRadius: 7,
                 pointBackgroundColor: 'white',
-                
+
             }]
         };
 
@@ -36,7 +36,7 @@ const TotalSeles = () => {
             type: 'line',
             data: chartData,
             options: {
-                
+
                 responsive: true,
                 plugins: {
                     legend: {
@@ -53,12 +53,15 @@ const TotalSeles = () => {
                     y: {
                         beginAtZero: true,
                         ticks: {
-                            color:resolvedTheme==='dark'? '#D1D1D1':'#584E69'     
+                            color: resolvedTheme === 'dark' ? '#D1D1D1' : '#584E69',
+                            callback: function (value, index, values) {
+                                return value + 'k'
+                            },
                         }
                     },
                     x: {
                         ticks: {
-                            color: resolvedTheme==='dark'? '#D1D1D1':'#584E69' 
+                            color: resolvedTheme === 'dark' ? '#D1D1D1' : '#584E69'
                         }
                     }
                 }

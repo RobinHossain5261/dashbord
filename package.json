@@ -29,6 +29,7 @@
     "react-animate-height": "^3.2.2",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "18.2.0",
+    "react-icons": "^4.10.1",
     "react-line-progress": "^1.0.3",
     "react-super-responsive-table": "^5.2.1",
     "react-tabs": "^6.0.2",
