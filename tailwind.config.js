@@ -32,7 +32,8 @@ module.exports = {
         'myLine': '#ECEEFB',
         'darkLine': '#5E586B',
         'myYellow': '#725002',
-        'myGrey': '#584E69'
+        'myGrey': '#584E69',
+        'authColor': '#4F45B6'
 
 
       },
