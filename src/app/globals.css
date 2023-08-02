@@ -10,13 +10,14 @@ body {
     overflow-x: hidden;
 }
 
-/* [data-theme='dark'] html,body{
-    margin:0;
-    padding:0;
+[data-theme='dark'] html,
+body {
+    margin: 0;
+    padding: 0;
     background-color: #261E35;
     overflow-x: hidden;
-    
-} */
+
+}
 
 .cardShadow {
     box-shadow: 0px 1.00023353099823px 2.00046706199646px 0px rgba(0, 0, 0, 0.20);
