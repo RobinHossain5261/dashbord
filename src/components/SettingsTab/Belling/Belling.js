@@ -29,7 +29,7 @@ const Belling = () => {
             <div className='bg-white dark:bg-darkCard p-3 lg:px-7 lg:py-8 rounded'>
 
                 <div className='flex gap-3 items-center'>
-                    <span class="material-symbols-outlined text-myBlue dark:text-myGreen">add_card</span>
+                    <span className="material-symbols-outlined text-myBlue dark:text-myGreen">add_card</span>
                     <h4 className='text-myBlack dark:text-white text-xl md:text-2xl lg:text-2xl font-semibold'>Payment methods</h4>
                 </div>
 
@@ -104,7 +104,7 @@ const Belling = () => {
                 <form>
                     <div className='flex flex-wrap justify-between  rounded bg-[#F7F8FD] dark:bg-[#1E192A] mb-5'>
                         <div className='flex max-w-sm gap-2 py-2 px-[18px]'>
-                            <span class="material-symbols-outlined text-myGrey dark:text-myLine w-5 h-5">add_card</span>
+                            <span className="material-symbols-outlined text-myGrey dark:text-myLine w-5 h-5">add_card</span>
                             <input type="text" placeholder='Card number' className="w-full outline-none bg-[#F7F8FD] dark:bg-[#1E192A] text-sm placeholder-myGrey dark:placeholder-myLine" />
                         </div>
                         <input type="text" placeholder="MM / YY CVC" className="lg:text-end max-w-sm outline-none bg-[#F7F8FD] dark:bg-[#1E192A] text-sm py-2 px-[18px] placeholder-myGrey dark:placeholder-myLine" />
@@ -123,7 +123,7 @@ const Belling = () => {
 
                                     className="flex justify-between bg-[#F7F8FD] dark:bg-[#1E192A] gap-2 items-center  relative w-full cursor-pointer rounded-lg text-myGrey dark:text-myLine  py-2 px-3 text-left focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
                                     {selectedPerson.name}
-                                    <span class="material-symbols-outlined text-myGrey dark:text-myLine">
+                                    <span className="material-symbols-outlined text-myGrey dark:text-myLine">
                                         expand_more
                                     </span>
                                 </Listbox.Button>
@@ -180,19 +180,19 @@ const Belling = () => {
                                 <th >
                                     <div className='flex items-center'>
                                         <span>Amount</span>
-                                        <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
+                                        <span className="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
                                         <span>Date</span>
-                                        <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
+                                        <span className="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
                                         <span>PDF</span>
-                                        <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
+                                        <span className="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
                                     </div>
                                 </th>
 
@@ -221,7 +221,7 @@ const Belling = () => {
 
                                     <td className="text-lg text-myBlack dark:text-myWhite">{invoice.date}</td>
                                     <th className='text-myBlack dark:text-myWhite'>
-                                        <span class="material-symbols-outlined cursor-pointer mr-1 hover:text-myBlue dark:hover:text-myGreen">
+                                        <span className="material-symbols-outlined cursor-pointer mr-1 hover:text-myBlue dark:hover:text-myGreen">
                                             download
                                         </span>
 

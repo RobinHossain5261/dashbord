@@ -37,7 +37,7 @@ export const yesterdayNotifications = [
     },
     {
         id: 2,
-        name: 'Betsy Hart',
+        name: 'Betsye Harot',
         des: 'Lorem ipsum dolor sit amet consectetur. Facilisis.',
         date: 'Dec 02, 2023',
         time: 'a day ago    18h',
@@ -88,4 +88,43 @@ export const latestNotifications = [
         img: pic7
     }
 
+]
+
+
+export const noteInformations = [
+    {
+        id: 1,
+        name: 'Phone Number',
+        info: '(405) 555-0128',
+        icon: <span className="material-symbols-outlined">call</span>,
+        more: <span className="material-symbols-outlined">more_vert</span>
+    },
+    {
+        id: 2,
+        name: 'Location',
+        info: 'New York',
+        icon: <span className="material-symbols-outlined">location_on</span>,
+        more: <span className="material-symbols-outlined">more_vert</span>
+    },
+    {
+        id: 3,
+        name: 'support Email',
+        info: 'info@example.com',
+        icon: <span className="material-symbols-outlined">outgoing_mail</span>,
+        more: <span className="material-symbols-outlined">more_vert</span>
+    },
+    {
+        id: 4,
+        name: 'Website',
+        info: 'google.com',
+        icon: <span className="material-symbols-outlined">language</span>,
+        more: <span className="material-symbols-outlined">more_vert</span>
+    },
+    {
+        id: 5,
+        name: 'Title',
+        info: 'Senior Designer',
+        icon: <span className="material-symbols-outlined">group</span>,
+        more: <span className="material-symbols-outlined">more_vert</span>
+    },
 ]

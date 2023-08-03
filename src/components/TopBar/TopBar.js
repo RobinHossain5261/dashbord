@@ -134,7 +134,7 @@ export default function TopBar({ showNav, setShowNav }) {
         </div>
         <div className="dropdown ml-4 md:ml-6 lg:ml-7">
             <label tabIndex={0} className="">
-                <span class="material-symbols-outlined cursor-pointer text-myBlack dark:text-myWhite w-5 h-5">notifications</span>
+                <span className="material-symbols-outlined cursor-pointer text-myBlack dark:text-myWhite w-5 h-5">notifications</span>
             </label>
             <div tabIndex={0} className="dropdown-content z-[1] menu p-2 mt-5 shadow bg-white dark:bg-[#1E192A] rounded-box w-48 md:w-52 lg:w-60">
                 <div className='lg:flex justify-between items-center'>
@@ -165,7 +165,7 @@ export default function TopBar({ showNav, setShowNav }) {
         </div>
         <div className="dropdown dropdown-end ml-4 md:ml-6 lg:ml-7">
             <label tabIndex={0} className="relative">
-                <span class="material-symbols-outlined  cursor-pointer w-5 h-5 text-myBlack dark:text-myWhite">shopping_bag</span>
+                <span className="material-symbols-outlined  cursor-pointer w-5 h-5 text-myBlack dark:text-myWhite">shopping_bag</span>
                 <span className='absolute text-sm h-[18px] w-[18px]  rounded-full bg-myBlue dark:bg-myGreen flex justify-center items-center text-white -right-2 bottom-0'>{carts.length}</span>
             </label>
             <div tabIndex={0} className="dropdown-content z-[1] menu p-2 mt-5 shadow bg-white dark:bg-[#1E192A] rounded-box w-52 md:w-52 lg:w-64">
@@ -204,7 +204,7 @@ export default function TopBar({ showNav, setShowNav }) {
                         <p className='text-base text-myBlack dark:text-myWhite'>Wade Warren</p>
                         <span className='text-xs text-myBlack dark:text-myWhite'>Account Setting</span>
                     </div>
-                    <span class="material-symbols-outlined text-center w-5 h-5 dark:text-myWhite">
+                    <span className="material-symbols-outlined text-center w-5 h-5 dark:text-myWhite">
                         expand_more
                     </span>
                 </div>
@@ -213,38 +213,38 @@ export default function TopBar({ showNav, setShowNav }) {
             <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 mt-5 shadow bg-white dark:bg-[#1E192A] rounded-box w-60">
                 <span className='mb-1 text-base ml-3 font-semibold text-myBlack dark:text-white'>Welcome Wade!</span>
                 <li >
-                    <Link className="hover:bg-myBlue dark:hover:bg-myGreen hover:text-white" href=''>
-                        <span class="material-symbols-outlined mr-1 dark:text-myWhite">account_circle</span>
+                    <Link className="hover:bg-myBlue dark:hover:bg-myGreen hover:text-white" href='/profile/profileOne'>
+                        <span className="material-symbols-outlined mr-1 dark:text-myWhite">account_circle</span>
                         <span className='text-base dark:text-myWhite '>Profile</span>
                     </Link>
                 </li>
                 <li>
                     <Link href='' className="hover:bg-myBlue dark:hover:bg-myGreen hover:text-white">
-                        <span class="material-symbols-outlined mr-1 dark:text-myWhite">chat</span>
+                        <span className="material-symbols-outlined mr-1 dark:text-myWhite">chat</span>
                         <span className='text-base dark:text-myWhite '>Message</span>
                     </Link>
                 </li>
                 <li>
-                    <Link href='' className="hover:bg-myBlue dark:hover:bg-myGreen hover:text-white">
-                        <span class="material-symbols-outlined mr-1 dark:text-myWhite">task</span>
+                    <Link href='/features/tasks' className="hover:bg-myBlue dark:hover:bg-myGreen hover:text-white">
+                        <span className="material-symbols-outlined mr-1 dark:text-myWhite">task</span>
                         <span className='text-base dark:text-myWhite '>Taskbord</span>
                     </Link>
                 </li>
                 <li>
                     <Link href='' className="hover:bg-myBlue dark:hover:bg-myGreen hover:text-white">
-                        <span class="material-symbols-outlined mr-1 dark:text-myWhite">support</span>
+                        <span className="material-symbols-outlined mr-1 dark:text-myWhite">support</span>
                         <span className='text-base dark:text-myWhite '>Support</span>
                     </Link>
                 </li>
                 <li>
-                    <Link href='' className="hover:bg-myBlue dark:hover:bg-myGreen hover:text-white">
-                        <span class="material-symbols-outlined mr-1 dark:text-myWhite">settings</span>
+                    <Link href='/settings/settings_one' className="hover:bg-myBlue dark:hover:bg-myGreen hover:text-white">
+                        <span className="material-symbols-outlined mr-1 dark:text-myWhite">settings</span>
                         <span className='text-base dark:text-myWhite'>Settings</span>
                     </Link>
                 </li>
                 <li>
                     <Link href='' className="hover:bg-myBlue dark:hover:bg-myGreen hover:text-white">
-                        <span class="material-symbols-outlined mr-1 dark:text-myWhite">logout</span>
+                        <span className="material-symbols-outlined mr-1 dark:text-myWhite">logout</span>
                         <span className='text-base dark:text-myWhite '>Logout</span>
                     </Link>
                 </li>
@@ -255,12 +255,12 @@ export default function TopBar({ showNav, setShowNav }) {
     return (
         <div className={`bg-white dark:bg-[#1E192A] left-0 py-6 z-[5] fixed w-full flex justify-between items-center transition-all duration-[400ms] ${showNav ? "lg:pl-[280px] md:pl-[280px] pl-[100%]" : ""}`}>
             <div className="flex items-center md:gap-5 lg:gap-[60px] py-2">
-                <span class=" material-symbols-outlined ml-2  md:ml-6 lg:ml-[60px] cursor-pointer dark:text-myWhite"
+                <span className=" material-symbols-outlined ml-2  md:ml-6 lg:ml-[60px] cursor-pointer dark:text-myWhite"
                     onClick={() => setShowNav(!showNav)}
                 >menu</span>
                 <form className='hidden md:hidden lg:flex items-center border dark:border-darkLine px-4 py-3 rounded'>
                     <input type="text" placeholder='Search...' className='outline-none  text-myBlack dark:text-myWhite dark:bg-[#1E192A]' />
-                    <span class="material-symbols-outlined cursor-pointer w-4 h-4 text-myBlack dark:text-myWhite"> search </span>
+                    <span className="material-symbols-outlined cursor-pointer w-4 h-4 text-myBlack dark:text-myWhite"> search </span>
                 </form>
             </div>
             <div className="mr-6">

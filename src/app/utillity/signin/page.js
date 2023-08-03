@@ -103,8 +103,8 @@ const SignIn = () => {
                                             onClick={handleShow}
                                             className='text-myGrey  absolute right-[3%] top-2 cursor-pointer'>
                                             {
-                                                show ? <span class="material-symbols-outlined">visibility_off</span> :
-                                                    <span class="material-symbols-outlined">visibility</span>
+                                                show ? <span className="material-symbols-outlined">visibility_off</span> :
+                                                    <span className="material-symbols-outlined">visibility</span>
                                             }
                                         </label>
                                     </div>

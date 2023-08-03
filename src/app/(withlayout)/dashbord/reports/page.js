@@ -74,7 +74,7 @@ const Reports = () => {
 
                                 className="flex gap-2 items-center  relative w-full rounded-lg text-[#252525] dark:text-white  py-2 px-3 text-left border dark:border-darkLine focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm cursor-pointer">
                                 {selectedPerson.name}
-                                <span class="material-symbols-outlined">
+                                <span className="material-symbols-outlined">
                                     expand_more
                                 </span>
                             </Listbox.Button>
@@ -121,7 +121,7 @@ const Reports = () => {
                             <h3 className="text-2xl text-myBlack dark:text-white font-semibold">52.8K</h3>
                             <div className=' px-2 rounded  flex items-center justify-center dark:bg-myGreen dark:text-myBlack bg-myBlue text-white '>
                                 <h5 className="text-sm">38.5%</h5>
-                                <span class="material-symbols-outlined">trending_up</span>
+                                <span className="material-symbols-outlined">trending_up</span>
                             </div>
                         </div>
                         <hr className="mt-4 border-line dark:border-darkLine" />
@@ -137,7 +137,7 @@ const Reports = () => {
                             <h3 className="text-2xl text-myBlack dark:text-white font-semibold">25.6K</h3>
                             <div className=' px-2 rounded ml-4  flex items-center justify-center dark:bg-myGreen dark:text-[#1E192A] bg-myBlue text-white'>
                                 <h5 className="text-sm" >38.5%</h5>
-                                <span class="material-symbols-outlined">trending_up</span>
+                                <span className="material-symbols-outlined">trending_up</span>
                             </div>
                         </div>
                         <hr className="mt-4 border-line  dark:border-darkLine" />
@@ -152,7 +152,7 @@ const Reports = () => {
                             <h3 className="text-2xl text-myBlack dark:text-white font-semibold">4.5K</h3>
                             <div className=' px-2 rounded ml-4  flex items-center justify-center  bg-myPink text-[#1E192A]'>
                                 <h5 className="text-sm" >4.1%</h5>
-                                <span class="material-symbols-outlined">trending_up</span>
+                                <span className="material-symbols-outlined">trending_up</span>
                             </div>
                         </div>
                         <hr className="mt-4 dark:border-darkLine border-myLine" />

@@ -7,9 +7,9 @@ import { Fragment } from 'react';
 
 const Notification = () => {
     return (
-        <div className='bg-bgColor dark:bg-darkBg px-6 pt-10 pb-6'>
+        <div className='bg-bgColor dark:bg-darkBg px-3 py-5 sm:px-6 sm:pt-10 sm:pb-6'>
             <div className='flex items-center justify-center'>
-                <div className='px-8 py-7 bg-white dark:bg-darkCard rounded'>
+                <div className='p-2 sm:px-8 sm:py-7 bg-white dark:bg-darkCard rounded'>
                     <Tab.Group>
                         <Tab.List className='flex flex-wrap gap-2 justify-between items-center'>
                             <h3 className='text-2xl sm:text-[32px] text-myBlack dark:text-myWhite font-semibold'>Notification center</h3>

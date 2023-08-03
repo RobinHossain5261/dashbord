@@ -59,7 +59,7 @@ const contacts = () => {
 
                                             className="flex gap-2 items-center  relative w-full cursor-default rounded-lg text-[#252525] dark:text-[#ECEEFB] dark:border-darkLine py-2 px-3 text-left border focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
                                             {selectedPerson.name}
-                                            <span class="material-symbols-outlined">
+                                            <span className="material-symbols-outlined">
                                                 expand_more
                                             </span>
                                         </Listbox.Button>
@@ -105,31 +105,31 @@ const contacts = () => {
                                             <th >
                                                 <div className='flex items-center'>
                                                     <span>Company List</span>
-                                                    <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
+                                                    <span className="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
                                                 </div>
                                             </th>
                                             <th>
                                                 <div className='flex items-center'>
                                                     <span>Phone Number</span>
-                                                    <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
+                                                    <span className="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
                                                 </div>
                                             </th>
                                             <th>
                                                 <div className='flex items-center'>
                                                     <span>Email Adress</span>
-                                                    <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
+                                                    <span className="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
                                                 </div>
                                             </th>
                                             <th>
                                                 <div className='flex items-center'>
                                                     <span>Last Intereactions</span>
-                                                    <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
+                                                    <span className="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
                                                 </div>
                                             </th>
                                             <th>
                                                 <div className='flex items-center'>
                                                     <span>Delete</span>
-                                                    <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
+                                                    <span className="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
                                                 </div>
                                             </th>
 
@@ -167,10 +167,10 @@ const contacts = () => {
                                                 <td className="text-lg  text-myBlack dark:text-myWhite">{contacts.email}</td>
                                                 <td className="text-lg text-myBlack dark:text-myWhite">{contacts.interaction}</td>
                                                 <th className='text-myBlack dark:text-myWhite'>
-                                                    <span class="material-symbols-outlined cursor-pointer mr-1 hover:text-myBlue dark:hover:text-myGreen">
+                                                    <span className="material-symbols-outlined cursor-pointer mr-1 hover:text-myBlue dark:hover:text-myGreen">
                                                         auto_fix
                                                     </span>
-                                                    <span class="material-symbols-outlined cursor-pointer hover:text-red-500">
+                                                    <span className="material-symbols-outlined cursor-pointer hover:text-red-500">
                                                         delete
                                                     </span>
                                                 </th>
@@ -227,11 +227,11 @@ const contacts = () => {
                                     <div className='flex items-center justify-between'>
                                         <div className='flex items-center gap-2 text-[#1E192A] hover:text-myBlue dark:hover:text-myGreen dark:text-myLine'>
                                             <span className='text-sm '>View details</span>
-                                            <span class="material-symbols-outlined  w-5 h-5">arrow_forward</span>
+                                            <span className="material-symbols-outlined  w-5 h-5">arrow_forward</span>
                                         </div>
                                         <div className='text-myBlack dark:text-myWhite'>
-                                            <span class="material-symbols-outlined cursor-pointer mr-1 hover:text-myBlue dark:hover:text-myGreen">auto_fix</span>
-                                            <span class="material-symbols-outlined cursor-pointer hover:text-red-500">delete</span>
+                                            <span className="material-symbols-outlined cursor-pointer mr-1 hover:text-myBlue dark:hover:text-myGreen">auto_fix</span>
+                                            <span className="material-symbols-outlined cursor-pointer hover:text-red-500">delete</span>
                                         </div>
                                     </div>
                                 </div>))

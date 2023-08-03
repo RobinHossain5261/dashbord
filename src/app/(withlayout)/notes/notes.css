@@ -1,0 +1,35 @@
+.ql-container.ql-snow {
+    border: none;
+}
+
+.ql-toolbar.ql-snow {
+    border: none;
+    border-bottom: 1px solid #584E69;
+    padding-bottom: 13px;
+}
+
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 150%;
+    left: 27px;
+    top: 0px;
+    background-color: #ECEEFB;
+    box-sizing: border-box;
+}
+
+[data-theme='dark'].timeline::before {
+    background-color: red;
+}
+
+
+
+.iconCenter {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    margin-bottom: 0;
+}

@@ -28,7 +28,7 @@ const settingsTwo = () => {
                                             }
                                         >
                                             <div className='flex items-center gap-2'>
-                                                <span class="material-symbols-outlined">edit</span>
+                                                <span className="material-symbols-outlined">edit</span>
                                                 <span className=' text-base'>Account</span>
                                             </div>
                                         </button>
@@ -44,7 +44,7 @@ const settingsTwo = () => {
                                             }
                                         >
                                             <div className='flex items-center gap-2'>
-                                                <span class="material-symbols-outlined">group</span>
+                                                <span className="material-symbols-outlined">group</span>
                                                 <span className=' text-base'>Team</span>
                                             </div>
                                         </button>
@@ -60,7 +60,7 @@ const settingsTwo = () => {
                                             }
                                         >
                                             <div className='flex items-center gap-2'>
-                                                <span class="material-symbols-outlined">add_card</span>
+                                                <span className="material-symbols-outlined">add_card</span>
                                                 <span className=' text-base'>Billing</span>
                                             </div>
                                         </button>
@@ -77,7 +77,7 @@ const settingsTwo = () => {
                                             }
                                         >
                                             <div className='flex items-center gap-2'>
-                                                <span class="material-symbols-outlined">notifications</span>
+                                                <span className="material-symbols-outlined">notifications</span>
                                                 <span className=' text-base'>Notification</span>
                                             </div>
                                         </button>
@@ -93,7 +93,7 @@ const settingsTwo = () => {
                                             }
                                         >
                                             <div className='flex items-center gap-2'>
-                                                <span class="material-symbols-outlined">settings</span>
+                                                <span className="material-symbols-outlined">settings</span>
                                                 <span className=' text-base'>API</span>
                                             </div>
                                         </button>

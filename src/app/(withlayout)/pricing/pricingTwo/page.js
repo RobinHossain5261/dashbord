@@ -60,15 +60,15 @@ const PricingTwo = () => {
                                 <p className='text-lg text-justify text-myBlack dark:text-myWhite'>{card.des}</p>
 
                                 <ul className='mt-4 mb-5 lg:mt-8 lg:mb-10'>
-                                    <li className='text-lg text-myBlack dark:text-myWhite my-3 md:my-5 lg:my-6'><span class="material-symbols-outlined w-6 h-6 align-middle mr-2 group-hover:text-[#4538D3] dark:group-hover:text-[#00E177]">
+                                    <li className='text-lg text-myBlack dark:text-myWhite my-3 md:my-5 lg:my-6'><span className="material-symbols-outlined w-6 h-6 align-middle mr-2 group-hover:text-[#4538D3] dark:group-hover:text-[#00E177]">
                                         done_all</span>{card.event}</li>
-                                    <li className='text-lg text-myBlack dark:text-myWhite my-3 md:my-5 lg:my-6 '><span class="material-symbols-outlined w-6 h-6 align-middle mr-2 group-hover:text-[#4538D3] dark:group-hover:text-[#00E177]">
+                                    <li className='text-lg text-myBlack dark:text-myWhite my-3 md:my-5 lg:my-6 '><span className="material-symbols-outlined w-6 h-6 align-middle mr-2 group-hover:text-[#4538D3] dark:group-hover:text-[#00E177]">
                                         done_all</span>{card.campaigns}</li>
-                                    <li className='text-lg text-myBlack dark:text-myWhite my-3 md:my-5 lg:my-6'><span class="material-symbols-outlined w-6 h-6 align-middle mr-2 group-hover:text-[#4538D3] dark:group-hover:text-[#00E177]">
+                                    <li className='text-lg text-myBlack dark:text-myWhite my-3 md:my-5 lg:my-6'><span className="material-symbols-outlined w-6 h-6 align-middle mr-2 group-hover:text-[#4538D3] dark:group-hover:text-[#00E177]">
                                         done_all</span>{card.users}</li>
-                                    <li className='text-lg text-myBlack dark:text-myWhite my-3 md:my-5 lg:my-6'><span class="material-symbols-outlined w-6 h-6 align-middle mr-2 group-hover:text-[#4538D3] dark:group-hover:text-[#00E177]">
+                                    <li className='text-lg text-myBlack dark:text-myWhite my-3 md:my-5 lg:my-6'><span className="material-symbols-outlined w-6 h-6 align-middle mr-2 group-hover:text-[#4538D3] dark:group-hover:text-[#00E177]">
                                         done_all</span>{card.database}</li>
-                                    <li className='text-lg text-myBlack dark:text-myWhite my-3 md:my-5 lg:my-6'><span class="material-symbols-outlined w-6 h-6 align-middle mr-2 group-hover:text-[#4538D3] dark:group-hover:text-[#00E177]">
+                                    <li className='text-lg text-myBlack dark:text-myWhite my-3 md:my-5 lg:my-6'><span className="material-symbols-outlined w-6 h-6 align-middle mr-2 group-hover:text-[#4538D3] dark:group-hover:text-[#00E177]">
                                         done_all</span>{card.security}</li>
                                 </ul>
                                 <button className="text-sm ease-in-out duration-300	 py-3 px-4 border border-myBlue dark:border-myGreen font-semibold text-myBlue dark:text-myGreen leading-6	 rounded w-full hover:text-white dark:hover:text-white hover:bg-myBlue dark:hover:bg-myGreen">Selecet Plan</button>
@@ -90,15 +90,15 @@ const PricingTwo = () => {
                                 <p className='text-lg text-justify text-myBlack dark:text-myWhite'>{card.des}</p>
 
                                 <ul className='mt-4 mb-5 lg:mt-8 lg:mb-10'>
-                                    <li className='text-lg text-myBlack dark:text-myWhite my-3 md:my-5 lg:my-6'><span class="material-symbols-outlined w-6 h-6 align-middle mr-2 group-hover:text-[#4538D3] dark:group-hover:text-[#00E177]">
+                                    <li className='text-lg text-myBlack dark:text-myWhite my-3 md:my-5 lg:my-6'><span className="material-symbols-outlined w-6 h-6 align-middle mr-2 group-hover:text-[#4538D3] dark:group-hover:text-[#00E177]">
                                         done_all</span>{card.event}</li>
-                                    <li className='text-lg text-myBlack dark:text-myWhite my-3 md:my-5 lg:my-6 '><span class="material-symbols-outlined w-6 h-6 align-middle mr-2 group-hover:text-[#4538D3] dark:group-hover:text-[#00E177]">
+                                    <li className='text-lg text-myBlack dark:text-myWhite my-3 md:my-5 lg:my-6 '><span className="material-symbols-outlined w-6 h-6 align-middle mr-2 group-hover:text-[#4538D3] dark:group-hover:text-[#00E177]">
                                         done_all</span>{card.campaigns}</li>
-                                    <li className='text-lg text-myBlack dark:text-myWhite my-3 md:my-5 lg:my-6'><span class="material-symbols-outlined w-6 h-6 align-middle mr-2 group-hover:text-[#4538D3] dark:group-hover:text-[#00E177]">
+                                    <li className='text-lg text-myBlack dark:text-myWhite my-3 md:my-5 lg:my-6'><span className="material-symbols-outlined w-6 h-6 align-middle mr-2 group-hover:text-[#4538D3] dark:group-hover:text-[#00E177]">
                                         done_all</span>{card.users}</li>
-                                    <li className='text-lg text-myBlack dark:text-myWhite my-3 md:my-5 lg:my-6'><span class="material-symbols-outlined w-6 h-6 align-middle mr-2 group-hover:text-[#4538D3] dark:group-hover:text-[#00E177]">
+                                    <li className='text-lg text-myBlack dark:text-myWhite my-3 md:my-5 lg:my-6'><span className="material-symbols-outlined w-6 h-6 align-middle mr-2 group-hover:text-[#4538D3] dark:group-hover:text-[#00E177]">
                                         done_all</span>{card.database}</li>
-                                    <li className='text-lg text-myBlack dark:text-myWhite my-3 md:my-5 lg:my-6'><span class="material-symbols-outlined w-6 h-6 align-middle mr-2 group-hover:text-[#4538D3] dark:group-hover:text-[#00E177]">
+                                    <li className='text-lg text-myBlack dark:text-myWhite my-3 md:my-5 lg:my-6'><span className="material-symbols-outlined w-6 h-6 align-middle mr-2 group-hover:text-[#4538D3] dark:group-hover:text-[#00E177]">
                                         done_all</span>{card.security}</li>
                                 </ul>
                                 <button className="text-sm ease-in-out duration-300	 py-3 px-4 border border-myBlue dark:border-myGreen font-semibold text-myBlue dark:text-myGreen leading-6	 rounded w-full hover:text-white dark:hover:text-white hover:bg-myBlue dark:hover:bg-myGreen">Selecet Plan</button>

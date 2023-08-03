@@ -12,7 +12,10 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <head>
+        <title>Dashpro</title>
+      </head>
+      <body className={inter.className} suppressHydrationWarning={true}>
         <Provider>
           <div>{children}</div>
         </Provider>

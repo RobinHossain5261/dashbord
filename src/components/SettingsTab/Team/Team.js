@@ -20,19 +20,19 @@ const Team = () => {
                             <th >
                                 <div className='flex items-center'>
                                     <span>Role</span>
-                                    <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
+                                    <span className="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
                                 </div>
                             </th>
                             <th>
                                 <div className='flex items-center'>
                                     <span>Date Added</span>
-                                    <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
+                                    <span className="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
                                 </div>
                             </th>
                             <th>
                                 <div className='flex items-center'>
                                     <span>Delete</span>
-                                    <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
+                                    <span className="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
                                 </div>
                             </th>
 
@@ -69,10 +69,10 @@ const Team = () => {
 
                                 <td className="text-lg text-myBlack dark:text-myWhite">{team.date}</td>
                                 <th className='text-myBlack dark:text-myWhite'>
-                                    <span class="material-symbols-outlined cursor-pointer mr-1 hover:text-myBlue dark:hover:text-myGreen">
+                                    <span className="material-symbols-outlined cursor-pointer mr-1 hover:text-myBlue dark:hover:text-myGreen">
                                         auto_fix
                                     </span>
-                                    <span class="material-symbols-outlined cursor-pointer hover:text-red-500">
+                                    <span className="material-symbols-outlined cursor-pointer hover:text-red-500">
                                         delete
                                     </span>
                                 </th>

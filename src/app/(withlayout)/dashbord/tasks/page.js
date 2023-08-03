@@ -74,7 +74,7 @@ const tasks = () => {
 
                                     className="flex gap-2 items-center  relative w-full cursor-pointer rounded-lg text-[#252525] dark:text-myWhite py-2 px-3 text-left border dark:border-darkLine focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
                                     {selectedPerson.name}
-                                    <span class="material-symbols-outlined">
+                                    <span className="material-symbols-outlined">
                                         expand_more
                                     </span>
                                 </Listbox.Button>
@@ -141,7 +141,7 @@ const tasks = () => {
 
                                     className="flex gap-2 items-center  relative w-full cursor-pointer rounded-lg text-[#252525] dark:text-myWhite py-2 px-3 text-left border dark:border-darkLine focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
                                     {selectedPerson.name}
-                                    <span class="material-symbols-outlined">
+                                    <span className="material-symbols-outlined">
                                         expand_more
                                     </span>
                                 </Listbox.Button>

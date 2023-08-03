@@ -50,7 +50,7 @@ export const pricingCards = [
         users: 'Invite up to 10 users',
         database: 'Shared Database',
         security: 'Basic Security',
-        icon: <span class="material-symbols-outlined text-myBlue dark:text-myGreen">send</span>
+        icon: <span className="material-symbols-outlined text-myBlue dark:text-myGreen">send</span>
     },
     {
         id: 2,
@@ -65,7 +65,7 @@ export const pricingCards = [
         users: 'Invite up to 10 users',
         database: 'Shared Database',
         security: 'Basic Security',
-        icon: <span class="material-symbols-outlined text-myBlue dark:text-myGreen">flight</span>
+        icon: <span className="material-symbols-outlined text-myBlue dark:text-myGreen">flight</span>
     },
     {
         id: 3,
@@ -79,6 +79,6 @@ export const pricingCards = [
         users: 'Invite up to 10 users',
         database: 'Shared Database',
         security: 'Basic Security',
-        icon: <span class="material-symbols-outlined text-myBlue dark:text-myGreen">rocket_launch</span>
+        icon: <span className="material-symbols-outlined text-myBlue dark:text-myGreen">rocket_launch</span>
     }
 ]

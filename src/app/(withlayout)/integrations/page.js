@@ -36,7 +36,7 @@ const intregrations = () => {
                                 }
                             >
                                 <span >Search engine</span>
-                                <span class="material-symbols-outlined">search</span>
+                                <span className="material-symbols-outlined">search</span>
                             </button>
                         )}
                     </Tab>
@@ -51,7 +51,7 @@ const intregrations = () => {
                                 }
                             >
                                 <span>Social media</span>
-                                <span class="material-symbols-outlined">share_reviews</span>
+                                <span className="material-symbols-outlined">share_reviews</span>
                             </button>
                         )}
                     </Tab>
@@ -65,7 +65,7 @@ const intregrations = () => {
                                 }
                             >
                                 <span>Streaming</span>
-                                <span class="material-symbols-outlined">live_tv</span>
+                                <span className="material-symbols-outlined">live_tv</span>
                             </button>
                         )}
                     </Tab>

@@ -59,7 +59,7 @@ const profileTwo = () => {
                         </div>
                     </div>
                     <button className="hidden md:flex lg:flex items-center gap-2 bg-myBlue dark:bg-myGreen absolute bottom-8 right-6 rounded py-2 px-4" onClick={() => window.my_modal_5.showModal()}>
-                        <span class="material-symbols-outlined text-white dark:text-myBlack">edit_square</span>
+                        <span className="material-symbols-outlined text-white dark:text-myBlack">edit_square</span>
                         <span className='text-sm  text-white dark:text-myBlack'>Edit profile</span>
                     </button>
                 </div>

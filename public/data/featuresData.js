@@ -376,10 +376,10 @@ export const tasks = [
         name: 'Design',
         des: 'Lorem ipsum dolor sit amet consectetur. Arcu consectetur pellentesque vel.',
         complete: '8 Task Done',
-        icon: <span class="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined">
             edit_square
         </span>,
-        more: <span class="material-symbols-outlined">
+        more: <span className="material-symbols-outlined">
             more_vert
         </span>,
         date: '12/05/2023',
@@ -394,10 +394,10 @@ export const tasks = [
         name: 'Development',
         des: 'Lorem ipsum dolor sit amet consectetur. Arcu consectetur pellentesque vel.',
         complete: '7 Task Done',
-        icon: <span class="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined">
             frame_source
         </span>,
-        more: <span class="material-symbols-outlined">
+        more: <span className="material-symbols-outlined">
             more_vert
         </span>,
         date: '12/05/2023',
@@ -413,10 +413,10 @@ export const tasks = [
         name: 'Markating',
         des: 'Lorem ipsum dolor sit amet consectetur. Arcu consectetur pellentesque vel.',
         complete: '9 Task Done',
-        icon: <span class="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined">
             campaign
         </span>,
-        more: <span class="material-symbols-outlined">
+        more: <span className="material-symbols-outlined">
             more_vert
         </span>,
         date: '12/05/2023',
@@ -432,10 +432,10 @@ export const tasks = [
         name: 'Social Media',
         des: 'Lorem ipsum dolor sit amet consectetur. Arcu consectetur pellentesque vel.',
         complete: '8 Task Done',
-        icon: <span class="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined">
             share
         </span>,
-        more: <span class="material-symbols-outlined">
+        more: <span className="material-symbols-outlined">
             more_vert
         </span>,
         date: '12/05/2023',
@@ -451,10 +451,10 @@ export const tasks = [
         name: 'CopyWriting',
         des: 'Lorem ipsum dolor sit amet consectetur. Arcu consectetur pellentesque vel.',
         complete: '9 Task Done',
-        icon: <span class="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined">
             event_note
         </span>,
-        more: <span class="material-symbols-outlined">
+        more: <span className="material-symbols-outlined">
             more_vert
         </span>,
         date: '12/05/2023',
@@ -470,10 +470,10 @@ export const tasks = [
         name: 'Customer Service',
         des: 'Lorem ipsum dolor sit amet consectetur. Arcu consectetur pellentesque vel.',
         complete: '7 Task Done',
-        icon: <span class="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined">
             group
         </span>,
-        more: <span class="material-symbols-outlined">
+        more: <span className="material-symbols-outlined">
             more_vert
         </span>,
         date: '12/05/2023',
@@ -494,7 +494,7 @@ export const reportCards = [
         date: 'Sep 24 2023',
         category: "Design",
         des: 'Lorem ipsum dolor sit amet consectetur. Vitae volutpat ut vestibulum ac amet.',
-        icon: <span class="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined">
             calendar_month
         </span>,
         img: photo7
@@ -505,7 +505,7 @@ export const reportCards = [
         date: 'Sep 24 2023',
         category: "Development",
         des: 'Lorem ipsum dolor sit amet consectetur. Vitae volutpat ut vestibulum ac amet.',
-        icon: <span class="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined">
             calendar_month
         </span>,
         img: photo8
@@ -516,7 +516,7 @@ export const reportCards = [
         date: 'Sep 24 2023',
         category: "Design",
         des: 'Lorem ipsum dolor sit amet consectetur. Vitae volutpat ut vestibulum ac amet.',
-        icon: <span class="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined">
             calendar_month
         </span>,
         img: photo9
@@ -527,7 +527,7 @@ export const reportCards = [
         date: 'Sep 24 2023',
         category: "Development",
         des: 'Lorem ipsum dolor sit amet consectetur. Vitae volutpat ut vestibulum ac amet.',
-        icon: <span class="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined">
             calendar_month
         </span>,
         img: photo10
@@ -538,7 +538,7 @@ export const reportCards = [
         date: 'Sep 24 2023',
         category: "Design",
         des: 'Lorem ipsum dolor sit amet consectetur. Vitae volutpat ut vestibulum ac amet.',
-        icon: <span class="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined">
             calendar_month
         </span>,
         img: photo11
@@ -549,7 +549,7 @@ export const reportCards = [
         date: 'Sep 24 2023',
         category: "Degine",
         des: 'Lorem ipsum dolor sit amet consectetur. Vitae volutpat ut vestibulum ac amet.',
-        icon: <span class="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined">
             calendar_month
         </span>,
         img: photo12
@@ -563,8 +563,8 @@ export const boards = [
         work: 'Degine',
         title: 'Designing and constructing landing pages',
         des: 'Lorem ipsum dolor sit amet consectetur. Id vitae hendrerit elementum commodo.',
-        file: <span class="material-symbols-outlined">attach_file</span>,
-        note: <span class="material-symbols-outlined">speaker_notes</span>
+        file: <span className="material-symbols-outlined">attach_file</span>,
+        note: <span className="material-symbols-outlined">speaker_notes</span>
     },
 
     {
@@ -572,40 +572,40 @@ export const boards = [
         work: 'Marketing',
         title: 'Meeting to do market research.......',
         des: 'Lorem ipsum dolor sit amet consectetur. Id vitae hendrerit elementum commodo.',
-        file: <span class="material-symbols-outlined">attach_file</span>,
-        note: <span class="material-symbols-outlined">speaker_notes</span>
+        file: <span className="material-symbols-outlined">attach_file</span>,
+        note: <span className="material-symbols-outlined">speaker_notes</span>
     },
     {
         id: 3,
         work: 'Development',
         title: 'Designing and creating landing pages',
         des: 'Lorem ipsum dolor sit amet consectetur. Id vitae hendrerit elementum commodo.',
-        file: <span class="material-symbols-outlined">attach_file</span>,
-        note: <span class="material-symbols-outlined">speaker_notes</span>
+        file: <span className="material-symbols-outlined">attach_file</span>,
+        note: <span className="material-symbols-outlined">speaker_notes</span>
     },
     {
         id: 4,
         work: 'Marketing',
         title: 'Mobile App Interactions Subjected to Validation',
         des: 'Lorem ipsum dolor sit amet consectetur. Id vitae hendrerit elementum commodo.',
-        file: <span class="material-symbols-outlined">attach_file</span>,
-        note: <span class="material-symbols-outlined">speaker_notes</span>
+        file: <span className="material-symbols-outlined">attach_file</span>,
+        note: <span className="material-symbols-outlined">speaker_notes</span>
     },
     {
         id: 5,
         work: 'Marketing',
         title: 'Designing and creating landing pages....',
         des: 'Lorem ipsum dolor sit amet consectetur. Id vitae hendrerit elementum commodo.',
-        file: <span class="material-symbols-outlined">attach_file</span>,
-        note: <span class="material-symbols-outlined">speaker_notes</span>
+        file: <span className="material-symbols-outlined">attach_file</span>,
+        note: <span className="material-symbols-outlined">speaker_notes</span>
     },
     {
         id: 6,
         work: 'Degine',
         title: 'Mobile app UI/UX design & development',
         des: 'Lorem ipsum dolor sit amet consectetur. Id vitae hendrerit elementum commodo.',
-        file: <span class="material-symbols-outlined">attach_file</span>,
-        note: <span class="material-symbols-outlined">speaker_notes</span>
+        file: <span className="material-symbols-outlined">attach_file</span>,
+        note: <span className="material-symbols-outlined">speaker_notes</span>
     },
 ]
 
@@ -759,7 +759,7 @@ export const cryptos = [
         name: 'Tether',
         amount: '$75.00',
         parcent: '42.8%',
-        trending: <span class="material-symbols-outlined">
+        trending: <span className="material-symbols-outlined">
             trending_up
         </span>,
         color: '#4538D3',
@@ -773,7 +773,7 @@ export const cryptos = [
         name: 'XMR',
         amount: '$45.00',
         parcent: '3.56%',
-        trending: <span class="material-symbols-outlined">
+        trending: <span className="material-symbols-outlined">
             trending_down
         </span>,
         color: '#A82500',
@@ -787,7 +787,7 @@ export const cryptos = [
         name: 'TRON',
         amount: '$55.00',
         parcent: '16.53%',
-        trending: <span class="material-symbols-outlined">
+        trending: <span className="material-symbols-outlined">
             trending_up
         </span>,
         color: '#4538D3',
@@ -801,7 +801,7 @@ export const cryptos = [
         name: 'Dash',
         amount: '$15.00',
         parcent: '1.56%',
-        trending: <span class="material-symbols-outlined">
+        trending: <span className="material-symbols-outlined">
             trending_down
         </span>,
         color: '#A82500',
@@ -815,7 +815,7 @@ export const cryptos = [
         name: 'Dogecoin',
         amount: '$200.00',
         parcent: '14.8%',
-        trending: <span class="material-symbols-outlined">
+        trending: <span className="material-symbols-outlined">
             trending_up
         </span>,
         color: '#4538D3',
@@ -829,7 +829,7 @@ export const cryptos = [
         name: 'Bitcoin',
         amount: '$900.00',
         parcent: '4.56%',
-        trending: <span class="material-symbols-outlined">
+        trending: <span className="material-symbols-outlined">
             trending_down
         </span>,
         color: '#A82500',
@@ -843,7 +843,7 @@ export const cryptos = [
         name: 'Ethereum',
         amount: '$10.00',
         parcent: '24.8%',
-        trending: <span class="material-symbols-outlined">
+        trending: <span className="material-symbols-outlined">
             trending_up
         </span>,
         color: '#4538D3',
@@ -857,7 +857,7 @@ export const cryptos = [
         name: 'Ripple',
         amount: '$100.00',
         parcent: '14.8%',
-        trending: <span class="material-symbols-outlined">
+        trending: <span className="material-symbols-outlined">
             trending_up
         </span>,
         color: '#4538D3',
@@ -871,7 +871,7 @@ export const cryptos = [
         name: 'Binance',
         amount: '$5.00',
         parcent: '8.56%',
-        trending: <span class="material-symbols-outlined">
+        trending: <span className="material-symbols-outlined">
             trending_down
         </span>,
         color: '#A82500',
@@ -885,7 +885,7 @@ export const cryptos = [
         name: 'Ellaism',
         amount: '$25.00',
         parcent: '1.9%',
-        trending: <span class="material-symbols-outlined">
+        trending: <span className="material-symbols-outlined">
             trending_down
         </span>,
         color: '#A82500',
@@ -899,7 +899,7 @@ export const cryptos = [
         name: 'DigiByte',
         amount: '$10.00',
         parcent: '22.8%',
-        trending: <span class="material-symbols-outlined">
+        trending: <span className="material-symbols-outlined">
             trending_up
         </span>,
         color: '#4538D3',
@@ -913,7 +913,7 @@ export const cryptos = [
         name: 'PotCoin',
         amount: '$5.00',
         parcent: '3.56%',
-        trending: <span class="material-symbols-outlined">
+        trending: <span className="material-symbols-outlined">
             trending_down
         </span>,
         color: '#A82500',
@@ -927,7 +927,7 @@ export const cryptos = [
         name: 'ADX',
         amount: '$5.00',
         parcent: '12.8%',
-        trending: <span class="material-symbols-outlined">
+        trending: <span className="material-symbols-outlined">
             trending_up
         </span>,
         color: '#4538D3',
@@ -966,7 +966,7 @@ export const tredings = [
         name: 'Tether',
         amount: '$75.00',
         parcent: '42.8%',
-        trending: <span class="material-symbols-outlined">
+        trending: <span className="material-symbols-outlined">
             trending_up
         </span>,
         color: '#4538D3',
@@ -979,7 +979,7 @@ export const tredings = [
         name: 'Dogecoin',
         amount: '$200.00',
         parcent: '14.8%',
-        trending: <span class="material-symbols-outlined">
+        trending: <span className="material-symbols-outlined">
             trending_up
         </span>,
         color: '#4538D3',
@@ -992,7 +992,7 @@ export const tredings = [
         name: 'Bitcoin',
         amount: '$900.00',
         parcent: '4.56%',
-        trending: <span class="material-symbols-outlined">
+        trending: <span className="material-symbols-outlined">
             trending_up
         </span>,
         color: '#4538D3',
@@ -1005,7 +1005,7 @@ export const tredings = [
         name: 'Ethereum',
         amount: '$10.00',
         parcent: '24.8%',
-        trending: <span class="material-symbols-outlined">
+        trending: <span className="material-symbols-outlined">
             trending_up
         </span>,
         color: '#4538D3',
@@ -1018,7 +1018,7 @@ export const tredings = [
         name: 'Ripple',
         amount: '$100.00',
         parcent: '14.8%',
-        trending: <span class="material-symbols-outlined">
+        trending: <span className="material-symbols-outlined">
             trending_up
         </span>,
         color: '#4538D3',
@@ -1031,7 +1031,7 @@ export const tredings = [
         name: 'Binance',
         amount: '$5.00',
         parcent: '8.56%',
-        trending: <span class="material-symbols-outlined">
+        trending: <span className="material-symbols-outlined">
             trending_up
         </span>,
         color: '#4538D3',

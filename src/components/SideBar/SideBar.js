@@ -38,11 +38,11 @@ const SideBar = forwardRef(({ showNav, setShowNav }, ref) => {
             src={resolvedTheme === 'dark' ? darkLogo : logo}
             alt="company logo"
           />
-          <h1 className="text-black dark:text-myGreen text-2xl font font-bold">Dashbord</h1>
+          <h1 className="text-black dark:text-myGreen text-2xl font font-bold">Dashpro</h1>
         </Link>
 
         <div className='lg:hidden md:hidden'>
-          <span class=" material-symbols-outlined cursor-pointer text-myBlack dark:text-myWhite  mb-4 mr-4"
+          <span className=" material-symbols-outlined cursor-pointer text-myBlack dark:text-myWhite  mb-4 mr-4"
             onClick={() => setShowNav(!showNav)}
           >close</span>
         </div>
@@ -53,10 +53,10 @@ const SideBar = forwardRef(({ showNav, setShowNav }, ref) => {
         <li className="mb-5 cursor-pointer transition ease-in-out duration-1000">
           <div className='text-base text-myBlack dark:text-myWhite flex items-center justify-between hover:text-myBlue dark:hover:text-myGreen' onClick={() => toggleMenu('dropdown1')}>
             <div className='flex items-center'>
-              <span class="material-symbols-outlined w-[15px] h-[15px] mr-3 mb-3">home</span>
+              <span className="material-symbols-outlined w-[15px] h-[15px] mr-3 mb-3">home</span>
               <span className="text-base">Dashbord</span>
             </div>
-            <span class="material-symbols-outlined w-5 h-5">expand_more</span>
+            <span className="material-symbols-outlined w-5 h-5">expand_more</span>
           </div>
 
           {activeMenu === 'dropdown1' && (
@@ -72,12 +72,12 @@ const SideBar = forwardRef(({ showNav, setShowNav }, ref) => {
         <li className='mb-5 cursor-pointer'>
           <div className='text-base text-myBlack dark:text-myWhite flex items-center justify-between hover:text-myBlue dark:hover:text-myGreen' onClick={() => toggleMenu('dropdown2')}>
             <div className='flex items-center'>
-              <span class="material-symbols-outlined w-[15px] h-[15px] mr-3 mb-3">
+              <span className="material-symbols-outlined w-[15px] h-[15px] mr-3 mb-3">
                 star
               </span>
               <span>Features</span>
             </div>
-            <span class="material-symbols-outlined w-5 h-5">expand_more</span>
+            <span className="material-symbols-outlined w-5 h-5">expand_more</span>
           </div>
           {activeMenu === 'dropdown2' && (
             <ul className="dropdown-menu">
@@ -96,12 +96,12 @@ const SideBar = forwardRef(({ showNav, setShowNav }, ref) => {
         <li className='mb-5 cursor-pointer'>
           <div className='text-base text-myBlack dark:text-myWhite flex items-center justify-between hover:text-myBlue dark:hover:text-myGreen' onClick={() => toggleMenu('dropdown3')}>
             <div className='flex items-center'>
-              <span class="material-symbols-outlined w-[15px] h-[15px] mr-3 mb-3">
+              <span className="material-symbols-outlined w-[15px] h-[15px] mr-3 mb-3">
                 group
               </span>
               <span>User Profile</span>
             </div>
-            <span class="material-symbols-outlined w-5 h-5">expand_more</span>
+            <span className="material-symbols-outlined w-5 h-5">expand_more</span>
           </div>
           {activeMenu === 'dropdown3' && (
             <ul className="dropdown-menu">
@@ -115,12 +115,12 @@ const SideBar = forwardRef(({ showNav, setShowNav }, ref) => {
         <li className='mb-5 cursor-pointer'>
           <div className='text-base text-myBlack dark:text-myWhite flex items-center justify-between hover:text-myBlue dark:hover:text-myGreen' onClick={() => toggleMenu('dropdown4')}>
             <div className='flex items-center'>
-              <span class="material-symbols-outlined w-[15px] h-[15px] mr-3 mb-3">
+              <span className="material-symbols-outlined w-[15px] h-[15px] mr-3 mb-3">
                 request_quote
               </span>
               <span>Pricing</span>
             </div>
-            <span class="material-symbols-outlined w-5 h-5">expand_more</span>
+            <span className="material-symbols-outlined w-5 h-5">expand_more</span>
           </div>
           {activeMenu === 'dropdown4' && (
             <ul className="dropdown-menu">
@@ -135,12 +135,12 @@ const SideBar = forwardRef(({ showNav, setShowNav }, ref) => {
         <li className='mb-5 cursor-pointer'>
           <div className='text-base text-myBlack dark:text-myWhite flex items-center justify-between hover:text-myBlue dark:hover:text-myGreen' onClick={() => toggleMenu('dropdown5')}>
             <div className='flex items-center'>
-              <span class="material-symbols-outlined w-[15px] h-[15px] mr-3 mb-3">
+              <span className="material-symbols-outlined w-[15px] h-[15px] mr-3 mb-3">
                 power
               </span>
               <span>Integrations</span>
             </div>
-            <span class="material-symbols-outlined w-5 h-5">expand_more</span>
+            <span className="material-symbols-outlined w-5 h-5">expand_more</span>
           </div>
           {activeMenu === 'dropdown5' && (
             <ul className="dropdown-menu">
@@ -156,12 +156,12 @@ const SideBar = forwardRef(({ showNav, setShowNav }, ref) => {
         <li className='mb-5 cursor-pointer'>
           <div className='text-base text-myBlack dark:text-myWhite flex items-center justify-between hover:text-myBlue dark:hover:text-myGreen' onClick={() => toggleMenu('dropdown6')}>
             <div className='flex items-center'>
-              <span class="material-symbols-outlined w-[15px] h-[15px] mr-3 mb-2">
+              <span className="material-symbols-outlined w-[15px] h-[15px] mr-3 mb-2">
                 settings
               </span>
               <span>Settings</span>
             </div>
-            <span class="material-symbols-outlined w-5 h-5">expand_more</span>
+            <span className="material-symbols-outlined w-5 h-5">expand_more</span>
           </div>
           {activeMenu === 'dropdown6' && (
             <ul className="dropdown-menu">
@@ -175,12 +175,12 @@ const SideBar = forwardRef(({ showNav, setShowNav }, ref) => {
         <li className='mb-5 cursor-pointer'>
           <div className='text-base text-myBlack dark:text-myWhite flex items-center justify-between hover:text-myBlue dark:hover:text-myGreen' onClick={() => toggleMenu('dropdown7')}>
             <div className='flex items-center'>
-              <span class="material-symbols-outlined w-[15px] h-[15px] mr-3 mb-2">
+              <span className="material-symbols-outlined w-[15px] h-[15px] mr-3 mb-2">
                 build
               </span>
               <span>Utility pages</span>
             </div>
-            <span class="material-symbols-outlined w-5 h-5">expand_more</span>
+            <span className="material-symbols-outlined w-5 h-5">expand_more</span>
           </div>
           {activeMenu === 'dropdown7' && (
             <ul className="dropdown-menu">
@@ -189,7 +189,7 @@ const SideBar = forwardRef(({ showNav, setShowNav }, ref) => {
               <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/utillity/signin'>Sign in</Link></li>
               <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/utillity/verifyemail'>Email Confirmation</Link></li>
               <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/notification'>Notification center</Link></li>
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href=''>Notes</Link></li>
+              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/notes'>Notes</Link></li>
               <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/utillity/resetpassword'>Reset password</Link></li>
               <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/utillity/protected'>Password protected</Link></li>
               <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/utillity/errorpage'>404 Not found</Link></li>

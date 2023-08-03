@@ -37,7 +37,7 @@ const settingsOne = () => {
                                 <Image className='lg:h-[300px] w-full object-cover' src={profile} alt='profile' />
                                 <input type='file' id="file" ref={inputFile} style={{ display: 'none' }} />
                                 <button onClick={onButtonClick} className="hidden md:flex lg:flex items-center gap-2 bg-myBlue dark:bg-myGreen absolute bottom-5 right-5 rounded py-3 px-4">
-                                    <span class="material-symbols-outlined text-white dark:text-myBlack">edit_square</span>
+                                    <span className="material-symbols-outlined text-white dark:text-myBlack">edit_square</span>
                                     <span className='text-sm  text-white dark:text-myBlack'>Edit profile photo</span>
                                 </button>
                             </div>
@@ -50,7 +50,7 @@ const settingsOne = () => {
                                             }
                                         >
                                             <div className='flex items-center gap-2'>
-                                                <span class="material-symbols-outlined">edit</span>
+                                                <span className="material-symbols-outlined">edit</span>
                                                 <span className=' text-base'>Account</span>
                                             </div>
                                         </button>
@@ -66,7 +66,7 @@ const settingsOne = () => {
                                             }
                                         >
                                             <div className='flex items-center gap-2'>
-                                                <span class="material-symbols-outlined">group</span>
+                                                <span className="material-symbols-outlined">group</span>
                                                 <span className=' text-base'>Team</span>
                                             </div>
                                         </button>
@@ -82,7 +82,7 @@ const settingsOne = () => {
                                             }
                                         >
                                             <div className='flex items-center gap-2'>
-                                                <span class="material-symbols-outlined">add_card</span>
+                                                <span className="material-symbols-outlined">add_card</span>
                                                 <span className=' text-base'>Billing</span>
                                             </div>
                                         </button>
@@ -99,7 +99,7 @@ const settingsOne = () => {
                                             }
                                         >
                                             <div className='flex items-center gap-2'>
-                                                <span class="material-symbols-outlined">notifications</span>
+                                                <span className="material-symbols-outlined">notifications</span>
                                                 <span className=' text-base'>Notification</span>
                                             </div>
                                         </button>
@@ -115,7 +115,7 @@ const settingsOne = () => {
                                             }
                                         >
                                             <div className='flex items-center gap-2'>
-                                                <span class="material-symbols-outlined">settings</span>
+                                                <span className="material-symbols-outlined">settings</span>
                                                 <span className=' text-base'>API</span>
                                             </div>
                                         </button>

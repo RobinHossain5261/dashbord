@@ -66,7 +66,7 @@ const profileOne = () => {
                         </div>
 
                         <div className='flex items-center gap-1 lg:gap-2 bg-myBlue dark:bg-myGreen rounded p-2 lg:py-3 lg:px-4 cursor-pointer' onClick={() => window.my_modal_5.showModal()}>
-                            <span class="material-symbols-outlined text-white dark:text-myBlack">edit_square</span>
+                            <span className="material-symbols-outlined text-white dark:text-myBlack">edit_square</span>
                             <span className='text-sm  text-white dark:text-myBlack'>Edit profile</span>
                         </div>
                     </div>

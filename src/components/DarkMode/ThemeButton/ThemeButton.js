@@ -18,14 +18,14 @@ const ThemeButton = () => {
 
     return (
         <button
-            aria-label='Toggle Dark Mode'           
+            aria-label='Toggle Dark Mode'
             className='flex items-center justify-center rounded-lg transition-colors '
             onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
         >
             {resolvedTheme === 'dark' ? (
-                <span class="material-symbols-outlined w-5 h-5">light_mode</span>
+                <span className="material-symbols-outlined w-5 h-5">light_mode</span>
             ) : (
-                <span class="material-symbols-outlined w-5 h-5">dark_mode</span>
+                <span className="material-symbols-outlined w-5 h-5">dark_mode</span>
             )}
         </button>
     );

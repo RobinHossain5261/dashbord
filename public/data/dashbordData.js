@@ -34,11 +34,11 @@ export const reportCards = [
         id: 1,
         name: 'Page view',
         view: '23.6k',
-        icon: <span class="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined">
             visibility
         </span>,
         increment: '12.8%',
-        trending: <span class="material-symbols-outlined">
+        trending: <span className="material-symbols-outlined">
             trending_up
         </span>,
         bgColor1: '#4538D3',
@@ -50,11 +50,11 @@ export const reportCards = [
         id: 2,
         name: 'Users',
         view: '25.6k',
-        icon: <span class="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined">
             group
         </span>,
         increment: '12.8%',
-        trending: <span class="material-symbols-outlined">
+        trending: <span className="material-symbols-outlined">
             trending_up
         </span>,
         bgColor1: '#4538D3',
@@ -66,11 +66,11 @@ export const reportCards = [
         id: 3,
         name: 'New sign ups',
         view: '4.5k',
-        icon: <span class="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined">
             add
         </span>,
         increment: '12.8%',
-        trending: <span class="material-symbols-outlined">
+        trending: <span className="material-symbols-outlined">
             trending_down
         </span>,
         bgColor1: '#FFA5A5',
@@ -82,11 +82,11 @@ export const reportCards = [
         id: 4,
         name: 'Subscriptions',
         view: '5.5k',
-        icon: <span class="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined">
             currency_exchange
         </span>,
         increment: '11.3%',
-        trending: <span class="material-symbols-outlined">
+        trending: <span className="material-symbols-outlined">
             trending_up
         </span>,
         bgColor1: '#4538D3',
@@ -335,10 +335,10 @@ export const tasksCard = [
         id: 1,
         name: 'Design Tasks',
         complete: '8 of 10 completed',
-        icon: <span class="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined">
             edit_square
         </span>,
-        more: <span class="material-symbols-outlined">
+        more: <span className="material-symbols-outlined">
             more_vert
         </span>,
         color: "#4538D3 ",
@@ -349,10 +349,10 @@ export const tasksCard = [
         id: 2,
         name: 'Development Tasks',
         complete: '7 of 10 completed',
-        icon: <span class="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined">
             frame_source
         </span>,
-        more: <span class="material-symbols-outlined">
+        more: <span className="material-symbols-outlined">
             more_vert
         </span>,
         color: "#4538D3 ",
@@ -363,10 +363,10 @@ export const tasksCard = [
         id: 3,
         name: 'Marketing Tasks',
         complete: '9 of 10 completed',
-        icon: <span class="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined">
             campaign
         </span>,
-        more: <span class="material-symbols-outlined">
+        more: <span className="material-symbols-outlined">
             more_vert
         </span>,
         color: "#4538D3 ",
@@ -423,11 +423,11 @@ export const cards = [
         id: 1,
         name: 'Incomplete tasks',
         view: '4.6k',
-        icon: <span class="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined">
             add
         </span>,
         increment: '12.8%',
-        trending: <span class="material-symbols-outlined">
+        trending: <span className="material-symbols-outlined">
             trending_down
         </span>,
         bgColor: '#FFA5A5',
@@ -437,11 +437,11 @@ export const cards = [
         id: 2,
         name: 'Users',
         view: '25.6k',
-        icon: <span class="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined">
             group
         </span>,
         increment: '12.8%',
-        trending: <span class="material-symbols-outlined">
+        trending: <span className="material-symbols-outlined">
             trending_up
         </span>,
         bgColor: '#00E177',
@@ -451,11 +451,11 @@ export const cards = [
         id: 3,
         name: 'Completed',
         view: '25.6k',
-        icon: <span class="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined">
             done_all
         </span>,
         increment: '12.8%',
-        trending: <span class="material-symbols-outlined">
+        trending: <span className="material-symbols-outlined">
             trending_up
         </span>,
         bgColor: '#00E177',
@@ -465,11 +465,11 @@ export const cards = [
         id: 4,
         name: 'Overdue tasks',
         view: '5.5k',
-        icon: <span class="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined">
             notifications_active
         </span>,
         increment: '11.3%',
-        trending: <span class="material-symbols-outlined">
+        trending: <span className="material-symbols-outlined">
             trending_up
         </span>,
         bgColor: '#00E177',
@@ -484,7 +484,7 @@ export const taskReportCards = [
         date: 'Sep 24 2023',
         category: "Design",
         des: 'Lorem ipsum dolor sit amet consectetur. Vitae volutpat ut vestibulum ac amet.',
-        icon: <span class="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined">
             calendar_month
         </span>,
         img: photo8
@@ -495,7 +495,7 @@ export const taskReportCards = [
         date: 'Sep 24 2023',
         category: "Development",
         des: 'Lorem ipsum dolor sit amet consectetur. Vitae volutpat ut vestibulum ac amet.',
-        icon: <span class="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined">
             calendar_month
         </span>,
         img: photo12
@@ -506,7 +506,7 @@ export const taskReportCards = [
         date: 'Sep 24 2023',
         category: "Design",
         des: 'Lorem ipsum dolor sit amet consectetur. Vitae volutpat ut vestibulum ac amet.',
-        icon: <span class="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined">
             calendar_month
         </span>,
         img: photo7

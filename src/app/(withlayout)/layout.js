@@ -7,9 +7,7 @@ import Footer from '@/components/Footer/Footer';
 
 
 
-
 export default function RootLayout({ children }) {
-
   const [showNav, setShowNav] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -39,7 +37,6 @@ export default function RootLayout({ children }) {
   return (
 
     <>
-
       <TopBar showNav={showNav} setShowNav={setShowNav} />
       <Transition
         as={Fragment}

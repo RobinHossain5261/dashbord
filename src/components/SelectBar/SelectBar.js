@@ -19,7 +19,7 @@ export default function SelectBar() {
 
         className="lg:flex hidden gap-2 items-center  relative w-full cursor-default rounded-lg text-[#252525] dark:text-myWhite bg-white dark:bg-[#1E192A] py-2 px-3 text-left border dark:border-darkLine focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
         {selectedPerson.name}
-        <span class="material-symbols-outlined dark:text-myGreen">
+        <span className="material-symbols-outlined dark:text-myGreen">
           expand_more
         </span>
       </Listbox.Button>

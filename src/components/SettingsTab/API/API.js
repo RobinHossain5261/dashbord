@@ -17,26 +17,26 @@ const API = () => {
                             <th >
                                 <div className='flex items-center'>
                                     <span>Site</span>
-                                    <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
+                                    <span className="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                 </div>
                             </th>
                             <th>
                                 <div className='flex items-center'>
                                     <span>Invoice ID</span>
-                                    <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
+                                    <span className="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                 </div>
                             </th>
                             <th>
                                 <div className='flex items-center'>
                                     <span>Password</span>
-                                    <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
+                                    <span className="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                 </div>
                             </th>
 
                             <th>
                                 <div className='flex items-center'>
                                     <span>Action</span>
-                                    <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
+                                    <span className="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                 </div>
                             </th>
 
@@ -52,10 +52,10 @@ const API = () => {
                                 <td className="text-lg text-myBlack dark:text-myWhite ">{API.invoice}</td>
                                 <td className="text-lg text-myBlack dark:text-myWhite">{API.password}</td>
                                 <th className='text-myBlack dark:text-myWhite'>
-                                    <span class="material-symbols-outlined cursor-pointer mr-1 hover:text-myBlue dark:hover:text-myGreen">
+                                    <span className="material-symbols-outlined cursor-pointer mr-1 hover:text-myBlue dark:hover:text-myGreen">
                                         visibility_off
                                     </span>
-                                    <span class="material-symbols-outlined cursor-pointer mr-1 hover:text-red-400">
+                                    <span className="material-symbols-outlined cursor-pointer mr-1 hover:text-red-400">
                                         more_vert
                                     </span>
 

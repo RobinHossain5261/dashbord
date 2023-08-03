@@ -14,7 +14,7 @@ const people = [
 
 const pricingSingle = () => {
     const [selectedPerson, setSelectedPerson] = useState(people[0]);
-    
+
 
     return (
         <div className='px-2 lg:px-6 pt-10 md:mt-10 bg-bgColor dark:bg-darkBg'>
@@ -22,7 +22,7 @@ const pricingSingle = () => {
                 <section className='p-3 lg:px-10 lg:py-8 h-full bg-white dark:bg-darkCard rounded boxShadow mb-6'>
                     <div className='flex items-center gap-6 mb-7'>
                         <div className=' w-[60px] h-[60px] flex items-center justify-center bg-[#ECEBFB] dark:bg-[#2C3140] rounded'>
-                            <span class="material-symbols-outlined text-myBlue dark:text-myGreen">send</span>
+                            <span className="material-symbols-outlined text-myBlue dark:text-myGreen">send</span>
                         </div>
                         <div>
                             <h4 className='text-2xl text-myBlue dark:text-myGreen font-semibold'>Starter</h4>
@@ -36,7 +36,7 @@ const pricingSingle = () => {
 
                                 className="flex justify-between gap-2 items-center  relative w-full cursor-default rounded-lg text-[#252525] dark:text-myWhite py-2 px-3 text-left border dark:border-darkLine focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
                                 {selectedPerson.name}
-                                <span class="material-symbols-outlined">
+                                <span className="material-symbols-outlined">
                                     expand_more
                                 </span>
                             </Listbox.Button>
@@ -83,9 +83,9 @@ const pricingSingle = () => {
                         <li className='text-myGrey dark:text-myWhite text-sm mb-4 text-justify'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
                         <li className='text-myGrey dark:text-myWhite text-sm text-justify'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
                     </ol>
-                   <h5 className='text-xl font-semibold text-myBlack dark:text-white mb-5'>Is the price plan I've chosen appropriate for my company?</h5>
-                   <p className='text-lg text-myBlack dark:text-myWhite mb-5 text-justify'>velit viverra sit semper lorem eu cursus vel hendrerit elementum morbi curabitur etiam nibh justo lorem aliquet donec sed sit mi dignissim at ante massa mattis.</p>
-                   <ul className='mb-7 list-disc list-inside'>
+                    <h5 className='text-xl font-semibold text-myBlack dark:text-white mb-5'>Is the price plan I've chosen appropriate for my company?</h5>
+                    <p className='text-lg text-myBlack dark:text-myWhite mb-5 text-justify'>velit viverra sit semper lorem eu cursus vel hendrerit elementum morbi curabitur etiam nibh justo lorem aliquet donec sed sit mi dignissim at ante massa mattis.</p>
+                    <ul className='mb-7 list-disc list-inside'>
                         <li className='text-myGrey dark:text-myWhite text-sm mb-4 text-justify'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
                         <li className='text-myGrey dark:text-myWhite text-sm mb-4 text-justify'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>
                         <li className='text-myGrey dark:text-myWhite text-sm mb-4 text-justify'>Lorem ipsum dolor sit amet consectetur. Vitae non dictum quam volutpat.</li>

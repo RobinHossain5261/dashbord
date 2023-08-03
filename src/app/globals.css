@@ -10,8 +10,7 @@ body {
     overflow-x: hidden;
 }
 
-[data-theme='dark'] html,
-body {
+[data-theme='dark'] body {
     margin: 0;
     padding: 0;
     background-color: #261E35;

@@ -66,31 +66,31 @@ const crypto = () => {
                                 <th >
                                     <div className='flex items-center'>
                                         <span className='text-lg text-myBlack dark:text-myWhite'># Name</span>
-                                        <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
+                                        <span className="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
                                         <span className='text-lg text-myBlack dark:text-myWhite'>Amount</span>
-                                        <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
+                                        <span className="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
                                         <span className='text-lg text-myBlack dark:text-myWhite'>24H(%)</span>
-                                        <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
+                                        <span className="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
                                         <span className='text-lg text-myBlack dark:text-myWhite'>Market Cap</span>
-                                        <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
+                                        <span className="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
                                         <span className='text-lg text-myBlack dark:text-myWhite'>Volume(24h)</span>
-                                        <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
+                                        <span className="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                     </div>
                                 </th>
 
@@ -159,7 +159,7 @@ const crypto = () => {
                             <h4 className='text-2xl font-semibold text-myBlack dark:text-white mb-4 lg:mb-8'>{company.title}</h4>
                             <Link href='#' className='text-myBlue dark:text-myGreen flex items-center gap-2 cursor-pointer'>
                                 <span>View Company</span>
-                                <span class="material-symbols-outlined">arrow_forward</span>
+                                <span className="material-symbols-outlined">arrow_forward</span>
                             </Link>
                         </div>))
                     }
@@ -181,31 +181,31 @@ const crypto = () => {
                                 <th >
                                     <div className='flex items-center'>
                                         <span className='text-lg text-myBlack dark:text-myWhite'># Name</span>
-                                        <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
+                                        <span className="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
                                         <span className='text-lg text-myBlack dark:text-myWhite'>Amount</span>
-                                        <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
+                                        <span className="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
                                         <span className='text-lg text-myBlack dark:text-myWhite'>24H(%)</span>
-                                        <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
+                                        <span className="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
                                         <span className='text-lg text-myBlack dark:text-myWhite'>Market Cap</span>
-                                        <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
+                                        <span className="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
                                         <span className='text-lg text-myBlack dark:text-myWhite'>Volume(24h)</span>
-                                        <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
+                                        <span className="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                     </div>
                                 </th>
 

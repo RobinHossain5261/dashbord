@@ -34,7 +34,7 @@ const SettingsThree = () => {
                         <input type='file' id="file" ref={inputFile} style={{ display: 'none' }} />
                         <button onClick={onButtonClick} className='absolute bottom-3 left-[46%]'>
                             <div className='w-[30px] h-[30px] rounded-full bg-myBlue dark:bg-myGreen flex items-center justify-center'>
-                                <span class="material-symbols-outlined w-6 h-6 text-white">add_photo_alternate</span>
+                                <span className="material-symbols-outlined w-6 h-6 text-white">add_photo_alternate</span>
                             </div>
                         </button>
                     </div>
@@ -74,7 +74,7 @@ const SettingsThree = () => {
                                     >
                                         <div className=' flex items-center justify-center gap-4'>
                                             <span className=' text-base'>Account</span>
-                                            <span class="material-symbols-outlined">edit</span>
+                                            <span className="material-symbols-outlined">edit</span>
                                         </div>
                                     </button>
                                 )}
@@ -90,7 +90,7 @@ const SettingsThree = () => {
                                     >
                                         <div className=' flex items-center justify-center gap-4'>
                                             <span className=' text-base'>Team</span>
-                                            <span class="material-symbols-outlined">group</span>
+                                            <span className="material-symbols-outlined">group</span>
                                         </div>
                                     </button>
                                 )}
@@ -106,7 +106,7 @@ const SettingsThree = () => {
                                     >
                                         <div className=' flex items-center justify-center gap-4'>
                                             <span className=' text-base'>Belling</span>
-                                            <span class="material-symbols-outlined">add_card</span>
+                                            <span className="material-symbols-outlined">add_card</span>
                                         </div>
                                     </button>
                                 )}
@@ -122,7 +122,7 @@ const SettingsThree = () => {
                                     >
                                         <div className=' flex items-center justify-center gap-4'>
                                             <span className=' text-base'>Notifications</span>
-                                            <span class="material-symbols-outlined">notifications</span>
+                                            <span className="material-symbols-outlined">notifications</span>
                                         </div>
                                     </button>
                                 )}
@@ -138,7 +138,7 @@ const SettingsThree = () => {
                                     >
                                         <div className=' flex items-center justify-center gap-4'>
                                             <span className=' text-base'>API</span>
-                                            <span class="material-symbols-outlined">settings</span>
+                                            <span className="material-symbols-outlined">settings</span>
                                         </div>
                                     </button>
                                 )}

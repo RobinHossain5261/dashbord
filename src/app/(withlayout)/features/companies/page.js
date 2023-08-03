@@ -62,7 +62,7 @@ const companies = () => {
 
                                             className="flex gap-2 items-center  relative w-full cursor-default rounded-lg text-[#252525] dark:text-myWhite  py-2 px-3 text-left border border-myLine dark:border-darkLine focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
                                             {selectedPerson.name}
-                                            <span class="material-symbols-outlined">
+                                            <span className="material-symbols-outlined">
                                                 expand_more
                                             </span>
                                         </Listbox.Button>
@@ -102,38 +102,38 @@ const companies = () => {
                                             <th >
                                                 <div className='flex items-center'>
                                                     <span>Company List</span>
-                                                    <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
+                                                    <span className="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                                 </div>
                                             </th>
                                             <th>
                                                 <div className='flex items-center'>
                                                     <span>Indrustry</span>
-                                                    <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
+                                                    <span className="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                                 </div>
                                             </th>
                                             <th>
                                                 <div className='flex items-center'>
                                                     <span>Website</span>
-                                                    <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
+                                                    <span className="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                                 </div>
                                             </th>
                                             <th>
                                                 <div className='flex items-center'>
                                                     <span>Phone Number</span>
-                                                    <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
+                                                    <span className="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                                 </div>
                                             </th>
                                             <th>
                                                 <div className='flex items-center'>
                                                     <span>Start Date</span>
-                                                    <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
+                                                    <span className="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                                 </div>
                                             </th>
 
                                             <th>
                                                 <div className='flex items-center'>
                                                     <span>Delete</span>
-                                                    <span class="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
+                                                    <span className="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                                 </div>
                                             </th>
 
@@ -162,10 +162,10 @@ const companies = () => {
                                                 <td className="text-lg text-myBlack dark:text-myWhite">{company.phone}</td>
                                                 <td className="text-lg text-myBlack dark:text-myWhite">{company.date}</td>
                                                 <th className='text-myBlack dark:text-myWhite'>
-                                                    <span class="material-symbols-outlined cursor-pointer mr-1 hover:text-myBlue">
+                                                    <span className="material-symbols-outlined cursor-pointer mr-1 hover:text-myBlue">
                                                         auto_fix
                                                     </span>
-                                                    <span class="material-symbols-outlined cursor-pointer hover:text-red-500">
+                                                    <span className="material-symbols-outlined cursor-pointer hover:text-red-500">
                                                         delete
                                                     </span>
                                                 </th>
@@ -214,7 +214,7 @@ const companies = () => {
                                                     <td className='text-myBlack dark:text-[#D1D1D1] text-base'>:</td>
                                                     <td className='text-myBlue dark:text-myGreen cursor-pointer text-base flex items-center gap-2'>
                                                         <span> {buyer.website}</span>
-                                                        <span class="material-symbols-outlined  w-5 h-5">arrow_forward</span>
+                                                        <span className="material-symbols-outlined  w-5 h-5">arrow_forward</span>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -224,11 +224,11 @@ const companies = () => {
                                     <div className='flex items-center justify-between'>
                                         <div className='flex items-center gap-2 text-[#1E192A] hover:text-myBlue dark:hover:text-myGreen dark:text-myLine'>
                                             <span className='text-sm '>View details</span>
-                                            <span class="material-symbols-outlined  w-5 h-5">arrow_forward</span>
+                                            <span className="material-symbols-outlined  w-5 h-5">arrow_forward</span>
                                         </div>
                                         <div className='text-myBlack dark:text-myWhite'>
-                                            <span class="material-symbols-outlined cursor-pointer mr-1 hover:text-myBlue dark:hover:text-myGreen">auto_fix</span>
-                                            <span class="material-symbols-outlined cursor-pointer hover:text-red-500">delete</span>
+                                            <span className="material-symbols-outlined cursor-pointer mr-1 hover:text-myBlue dark:hover:text-myGreen">auto_fix</span>
+                                            <span className="material-symbols-outlined cursor-pointer hover:text-red-500">delete</span>
                                         </div>
                                     </div>
                                 </div>))

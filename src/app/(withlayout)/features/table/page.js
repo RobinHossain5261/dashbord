@@ -31,31 +31,31 @@ const table = () => {
                 <th >
                   <div className='flex items-center'>
                     <span className='text-lg'>Customer List</span>
-                    <span class="material-symbols-outlined text-myBlack ml-2 dark:text-myWhite">unfold_more</span>
+                    <span className="material-symbols-outlined text-myBlack ml-2 dark:text-myWhite">unfold_more</span>
                   </div>
                 </th>
                 <th>
                   <div className='flex items-center'>
                     <span className='text-lg'>Start Date</span>
-                    <span class="material-symbols-outlined text-myBlack ml-2 dark:text-myWhite">unfold_more</span>
+                    <span className="material-symbols-outlined text-myBlack ml-2 dark:text-myWhite">unfold_more</span>
                   </div>
                 </th>
                 <th>
                   <div className='flex items-center'>
                     <span className='text-lg'>Amount</span>
-                    <span class="material-symbols-outlined text-myBlack ml-2 dark:text-myWhite">unfold_more</span>
+                    <span className="material-symbols-outlined text-myBlack ml-2 dark:text-myWhite">unfold_more</span>
                   </div>
                 </th>
                 <th>
                   <div className='flex items-center'>
                     <span className='text-lg'>Status List</span>
-                    <span class="material-symbols-outlined text-myBlack ml-2 dark:text-myWhite">unfold_more</span>
+                    <span className="material-symbols-outlined text-myBlack ml-2 dark:text-myWhite">unfold_more</span>
                   </div>
                 </th>
                 <th>
                   <div className='flex items-center'>
                     <span className='text-lg'>Delete</span>
-                    <span class="material-symbols-outlined text-myBlack ml-2 dark:text-myWhite">unfold_more</span>
+                    <span className="material-symbols-outlined text-myBlack ml-2 dark:text-myWhite">unfold_more</span>
                   </div>
                 </th>
 
@@ -89,10 +89,10 @@ const table = () => {
                   >{contacts.status}
                   </td>
                   <th className='text-myBlack dark:text-myWhite '>
-                    <span class="material-symbols-outlined cursor-pointer mr-1 hover:text-myBlue">
+                    <span className="material-symbols-outlined cursor-pointer mr-1 hover:text-myBlue">
                       auto_fix
                     </span>
-                    <span class="material-symbols-outlined cursor-pointer hover:text-red-500">
+                    <span className="material-symbols-outlined cursor-pointer hover:text-red-500">
                       delete
                     </span>
                   </th>

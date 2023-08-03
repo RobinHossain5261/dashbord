@@ -44,7 +44,7 @@ const products = () => {
                         </div>
                         <div className=' px-2 rounded  flex items-center justify-center bg-myBlue dark:bg-[#00E177] text-white dark:text-[#1E192A]'>
                             <h5 className="text-sm">12.8 %</h5>
-                            <span class="material-symbols-outlined">trending_up</span>
+                            <span className="material-symbols-outlined">trending_up</span>
                         </div>
                     </div>
                     <hr className='my-5 lg:my-10 border-myLine dark:border-darkLine' />
@@ -114,37 +114,37 @@ const products = () => {
                                 <th>
                                     <div className='flex items-center gap-2'>
                                         <span className='font-normal'>Status</span>
-                                        <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
+                                        <span className="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center gap-2'>
                                         <span className='font-normal'>Category</span>
-                                        <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
+                                        <span className="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
                                         <span className='font-normal'>Start Date</span>
-                                        <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
+                                        <span className="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
                                         <span className='font-normal'>Sales price</span>
-                                        <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
+                                        <span className="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
                                         <span className='font-normal'>Stock</span>
-                                        <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
+                                        <span className="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
                                         <span className='font-normal'>Delete</span>
-                                        <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
+                                        <span className="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
                                     </div>
                                 </th>
                             </tr>
@@ -174,10 +174,10 @@ const products = () => {
                                     <td className='text-base text-myBlack dark:text-myWhite'>{product.salesPrice}</td>
                                     <td className='text-base text-myBlack dark:text-myWhite'>{product.stock}</td>
                                     <th className='cursor-pointer text-myBlack dark:text-myWhite'>
-                                        <span class="material-symbols-outlined w-[18px] h-[18px] hover:text-myBlue dark:hover:text-myGreen">
+                                        <span className="material-symbols-outlined w-[18px] h-[18px] hover:text-myBlue dark:hover:text-myGreen">
                                             auto_fix
                                         </span>
-                                        <span class="material-symbols-outlined w-5 h-5 hover:text-red-500 ml-2">
+                                        <span className="material-symbols-outlined w-5 h-5 hover:text-red-500 ml-2">
                                             delete
                                         </span>
                                     </th>
@@ -199,7 +199,7 @@ const products = () => {
 
                                 className="flex  gap-2 items-center  relative w-full cursor-pointer rounded-lg text-[#252525] dark:text-myWhite dark:border-darkLine py-2 px-3 text-left border focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
                                 {selectedPerson.name}
-                                <span class="material-symbols-outlined">
+                                <span className="material-symbols-outlined">
                                     expand_more
                                 </span>
                             </Listbox.Button>
@@ -242,37 +242,37 @@ const products = () => {
                                 <th>
                                     <div className='flex items-center'>
                                         <span className='font-normal'>Product </span>
-                                        <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
+                                        <span className="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
                                         <span className='font-normal'>Category</span>
-                                        <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
+                                        <span className="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
                                         <span className='font-normal'>Date</span>
-                                        <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
+                                        <span className="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
                                         <span className='font-normal'>Price</span>
-                                        <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
+                                        <span className="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
                                         <span className='font-normal'>Status</span>
-                                        <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
+                                        <span className="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='flex items-center'>
                                         <span className='font-normal'>Action</span>
-                                        <span class="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
+                                        <span className="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
                                     </div>
                                 </th>
                             </tr>
@@ -305,7 +305,7 @@ const products = () => {
                                     <th className='w-[18px] h-[18px] cursor-pointer text-myBlack dark:text-myWhite'>
 
                                         <span className='w-[18px] h-[18px] dark:text-white cursor-pointer'>
-                                            <span class="material-symbols-outlined">more_vert</span>
+                                            <span className="material-symbols-outlined">more_vert</span>
                                         </span>
                                     </th>
                                 </tr>))
