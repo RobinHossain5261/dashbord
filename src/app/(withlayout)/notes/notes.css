@@ -4,10 +4,21 @@
 
 .ql-toolbar.ql-snow {
     border: none;
-    border-bottom: 1px solid #584E69;
+    border-bottom: 1px solid #ECEEFB;
     padding-bottom: 13px;
 }
 
+html.dark .ql-toolbar.ql-snow {
+    border-bottom: 1px solid #5E586B;
+}
+
+html.dark .ql-toolbar.ql-snow .ql-formats svg {
+    filter: invert(100%) contrast(119%);
+}
+
+html.dark .ql-toolbar.ql-snow .ql-formats .ql-picker-label {
+    color: #fff;
+}
 
 .timeline::before {
     content: '';
@@ -19,12 +30,6 @@
     background-color: #ECEEFB;
     box-sizing: border-box;
 }
-
-[data-theme='dark'].timeline::before {
-    background-color: red;
-}
-
-
 
 .iconCenter {
     position: absolute;

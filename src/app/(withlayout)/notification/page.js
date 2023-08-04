@@ -89,7 +89,7 @@ const Notification = () => {
                                                     </div>
                                                     <div className='flex flex-wrap justify-between items-center'>
                                                         <div className='flex items-center gap-1'>
-                                                            <span className='text-myWhite dark:text-myLine'>{notification.time}</span>
+                                                            <span className='text-myBlack dark:text-myLine'>{notification.time}</span>
                                                             <div className='w-[6px] h-[6px] bg-[#FFA5A5] rounded-full'></div>
                                                         </div>
                                                         <span className='text-xs text-myBlue dark:text-myGreen'>{notification.date}</span>

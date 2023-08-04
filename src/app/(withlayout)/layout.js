@@ -4,6 +4,7 @@ import { Transition } from '@headlessui/react'
 import TopBar from '@/components/TopBar/TopBar';
 import SideBar from '@/components/SideBar/SideBar';
 import Footer from '@/components/Footer/Footer';
+import SideMenu from '@/components/SideMenu/SideMenu';
 
 
 
@@ -48,7 +49,8 @@ export default function RootLayout({ children }) {
         leaveFrom="translate-x-0"
         leaveTo="-translate-x-full"
       >
-        <SideBar showNav={showNav} setShowNav={setShowNav} />
+        {/* <SideBar showNav={showNav} setShowNav={setShowNav} /> */}
+        <SideMenu showNav={showNav} setShowNav={setShowNav} />
       </Transition>
       <div
         className={`pt-16  transition-all duration-[400ms] ${showNav && !isMobile ? "lg:pl-[280px] md:pl-[280px] pl-[100%]" : ""

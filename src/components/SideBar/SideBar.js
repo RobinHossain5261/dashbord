@@ -13,6 +13,7 @@ import './SideBar.css';
 const SideBar = forwardRef(({ showNav, setShowNav }, ref) => {
 
   const [height, setHeight] = useState(0);
+  const [height1, setHeight1] = useState(0);
 
   const { resolvedTheme, setTheme } = useTheme();
   const [activeMenu, setActiveMenu] = useState('');
@@ -25,6 +26,8 @@ const SideBar = forwardRef(({ showNav, setShowNav }, ref) => {
       setActiveMenu(menuName);
     }
   };
+
+
 
 
   return (
@@ -49,9 +52,49 @@ const SideBar = forwardRef(({ showNav, setShowNav }, ref) => {
       </div>
 
       <ul className='mx-6'>
+        <div className='mb-5'>
+          <div
+            className='text-base text-myBlack dark:text-myWhite flex items-center justify-between hover:text-myBlue dark:hover:text-myGreen'
+            aria-expanded={height !== 0}
+            aria-controls="example-panel"
+            onClick={() => {
+              setHeight(height === 0 ? 'auto' : 0)
+              toggleMenu('dropdown')
+            }}
+          >
+            <div className='flex items-center'>
+              <span className="material-symbols-outlined w-[15px] h-[15px] mr-3 mb-3">home</span>
+              <span className="text-base">Cheking</span>
+            </div>
+            <span className="material-symbols-outlined w-5 h-5">expand_more</span>
+          </div>
+          <AnimateHeight
+            id="example-panel"
+            duration={500}
+            height={height} // see props documentation below
+          >
+            {activeMenu === 'dropdown' && (
+              <ul>
+                <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='#'>All Pages</Link></li>
+                <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/dashbord/reports'>Reports</Link></li>
+                <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/dashbord/products'>Products</Link></li>
+                <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/dashbord/tasks'>Tasks</Link></li>
+              </ul>
+            )}
+          </AnimateHeight>
+        </div>
 
-        <li className="mb-5 cursor-pointer transition ease-in-out duration-1000">
-          <div className='text-base text-myBlack dark:text-myWhite flex items-center justify-between hover:text-myBlue dark:hover:text-myGreen' onClick={() => toggleMenu('dropdown1')}>
+
+
+        {/* my menu list */}
+        <li className="mb-5 cursor-pointer">
+          <div className='text-base text-myBlack dark:text-myWhite flex items-center justify-between hover:text-myBlue dark:hover:text-myGreen'
+            aria-expanded={height1 !== 0}
+            aria-controls="example-panel"
+            onClick={() => {
+              setHeight1(height1 === 0 ? 'auto' : 0)
+              toggleMenu('dropdown1')
+            }}>
             <div className='flex items-center'>
               <span className="material-symbols-outlined w-[15px] h-[15px] mr-3 mb-3">home</span>
               <span className="text-base">Dashbord</span>
@@ -59,14 +102,20 @@ const SideBar = forwardRef(({ showNav, setShowNav }, ref) => {
             <span className="material-symbols-outlined w-5 h-5">expand_more</span>
           </div>
 
-          {activeMenu === 'dropdown1' && (
-            <ul>
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='#'>All Pages</Link></li>
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/dashbord/reports'>Reports</Link></li>
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/dashbord/products'>Products</Link></li>
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/dashbord/tasks'>Tasks</Link></li>
-            </ul>
-          )}
+          <AnimateHeight
+            id="example-panel"
+            duration={500}
+            height={height1} // see props documentation below
+          >
+            {activeMenu === 'dropdown1' && (
+              <ul>
+                <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='#'>All Pages</Link></li>
+                <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/dashbord/reports'>Reports</Link></li>
+                <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/dashbord/products'>Products</Link></li>
+                <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/dashbord/tasks'>Tasks</Link></li>
+              </ul>
+            )}
+          </AnimateHeight>
         </li>
 
         <li className='mb-5 cursor-pointer'>
