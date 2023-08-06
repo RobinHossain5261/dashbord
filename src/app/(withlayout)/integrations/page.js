@@ -7,12 +7,12 @@ import { Tab } from '@headlessui/react';
 
 const intregrations = () => {
     return (
-        <div className='px-2 lg:px-6 pt-8 pb-6 bg-bgColor dark:bg-darkBg min-h-screen'>
+        <div className='px-3 lg:px-6 pt-8 pb-6 bg-bgColor dark:bg-darkBg min-h-screen'>
             <h3 className='text-[32px] text-myBlack font-semibold dark:text-white'>Integrations</h3>
             <span className='text-sm text-myBlack dark:text-white'>Lorem ipsum dolor sit amet consectetur.</span>
 
             <Tab.Group>
-                <Tab.List className='flex flex-wrap gap-6 px-2 py-3 rounded my-10'>
+                <Tab.List className='flex flex-wrap gap-6 px-2 py-3 rounded my-5 lg:my-10'>
                     <Tab
                         className='text-sm text-black dark:text-myWhite py-3 px-4 border border-myLine dark:border-darkLine rounded cursor-pointer outline-none'
                         as={Fragment}>

@@ -9,11 +9,11 @@ import { boards } from '../../../../../public/data/featuresData';
 
 const board = () => {
     return (
-        <div className='p-2 lg:px-6 pt-10 pb-6 bg-bgColor dark:bg-darkBg'>
+        <div className='px-3 lg:px-6 pt-10 pb-6 bg-bgColor dark:bg-darkBg'>
             <h3 className='text-[32px] font-semibold text-myBlack dark:text-white'>Board </h3>
             <span className='text-sm text-myBlack dark:text-white'>Lorem ipsum dolor sit ammet consectetur.</span>
 
-            <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {
                     boards.map(bord => (<div
                         key={bord.id}
@@ -23,11 +23,11 @@ const board = () => {
                         <h4 className='text-2xl text-myBlack my-3 lg:mt-6 lg:mb-4 font-semibold dark:text-white'>{bord.title}</h4>
                         <p className='text-lg text-myBlack mb-3 lg:mb-7 dark:text-myWhite'>{bord.des}</p>
                         <div className='flex items-center justify-between'>
-                            <div className='flex  gap-4'>
-                                <span className='text-myGrey w-6 h-4 dark:text-myLine'>{bord.file}</span>
-                                <div className='text-myGrey flex gap-1'>
-                                    <span className='w-6 h-4 dark:text-myLine'> {bord.note}</span>
-                                    <span className='text-base dark:text-myLine'>4</span>
+                            <div className='flex gap-4'>
+                                <span className='text-myGrey dark:text-myLine'>{bord.file}</span>
+                                <div className='text-myGrey flex items-center gap-1'>
+                                    <span className='text-myGrey dark:text-myLine'> {bord.note}</span>
+                                    <span className='text-base text-myGrey dark:text-myLine'>4</span>
                                 </div>
                             </div>
                             <div className='flex'>

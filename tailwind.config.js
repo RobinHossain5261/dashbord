@@ -18,6 +18,7 @@ module.exports = {
       'xl': '1536px',
 
     },
+
     extend: {
       colors: {
         'bgColor': '#F7F9FC',
@@ -34,8 +35,6 @@ module.exports = {
         'myYellow': '#725002',
         'myGrey': '#584E69',
         'authColor': '#4F45B6'
-
-
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

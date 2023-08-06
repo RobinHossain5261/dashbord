@@ -5,6 +5,7 @@ import { Tab } from '@headlessui/react';
 import { Listbox } from '@headlessui/react';
 import { allCompanies, companiesData } from '../../../../../public/data/featuresData';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const people = [
     { id: 1, name: '14 Aug - 25 Aug', unavailable: false },
@@ -17,7 +18,7 @@ const people = [
 const companies = () => {
     const [selectedPerson, setSelectedPerson] = useState(people[0]);
     return (
-        <div className='px-2 lg:px-6 pt-10 pb-6 bg-bgColor dark:bg-darkBg'>
+        <div className='px-3 lg:px-6 pt-10 pb-6 bg-bgColor dark:bg-darkBg'>
             <h3 className='text-[32px] font-semibold text-myBlack dark:text-white'>Companies</h3>
             <span className='text-sm text-myBlack dark:text-white'>Lorem ipsum dolor sit ammet consectetur.</span>
 
@@ -59,8 +60,7 @@ const companies = () => {
                                 <div>
                                     <Listbox value={selectedPerson} onChange={setSelectedPerson}>
                                         <Listbox.Button
-
-                                            className="flex gap-2 items-center  relative w-full cursor-default rounded-lg text-[#252525] dark:text-myWhite  py-2 px-3 text-left border border-myLine dark:border-darkLine focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
+                                            className="flex gap-2 items-center  relative w-full rounded-lg text-[#252525] dark:text-myWhite  py-2 px-3 text-left border border-myLine dark:border-darkLine focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm cursor-pointer">
                                             {selectedPerson.name}
                                             <span className="material-symbols-outlined">
                                                 expand_more
@@ -100,43 +100,42 @@ const companies = () => {
                                     <thead className='bg-[#F5F7FD] dark:bg-darkBg text-lg text-myBlack dark:text-myWhite'>
                                         <tr className='border-myLine dark:border-darkLine'>
                                             <th >
-                                                <div className='flex items-center'>
+                                                <div className='flex items-center font-normal'>
                                                     <span>Company List</span>
                                                     <span className="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                                 </div>
                                             </th>
                                             <th>
-                                                <div className='flex items-center'>
+                                                <div className='flex items-center font-normal'>
                                                     <span>Indrustry</span>
                                                     <span className="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                                 </div>
                                             </th>
                                             <th>
-                                                <div className='flex items-center'>
+                                                <div className='flex items-center font-normal'>
                                                     <span>Website</span>
                                                     <span className="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                                 </div>
                                             </th>
                                             <th>
-                                                <div className='flex items-center'>
+                                                <div className='flex items-center font-normal'>
                                                     <span>Phone Number</span>
                                                     <span className="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                                 </div>
                                             </th>
                                             <th>
-                                                <div className='flex items-center'>
+                                                <div className='flex items-center font-normal'>
                                                     <span>Start Date</span>
                                                     <span className="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                                 </div>
                                             </th>
 
                                             <th>
-                                                <div className='flex items-center'>
+                                                <div className='flex items-center font-normal'>
                                                     <span>Delete</span>
                                                     <span className="material-symbols-outlined text-myBlack dark:text-myWhite ml-2">unfold_more</span>
                                                 </div>
                                             </th>
-
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -185,7 +184,7 @@ const companies = () => {
                                 >
                                     <Image className='w-20 h-20 cardShadow border-8 border-white dark:border-darkBg rounded-full mx-auto' src={buyer.img} alt='buyer' />
                                     <h4 className='text-2xl text-center text-myBlack dark:text-white font-semibold mt-6 mb-3'>{buyer.name}</h4>
-                                    <hr className='border dark:border-darkLine mt-7 mb-10' />
+                                    <hr className='border-myLine dark:border-darkLine my-4 sm:mt-7 sm:mb-10' />
 
                                     <div className='overflow-x-auto'>
                                         <table className="table whitespace-nowrap">
@@ -212,15 +211,17 @@ const companies = () => {
                                                         <span className='text-myGrey dark:text-[#D1D1D1] text-sm font-normal'>Website</span>
                                                     </th>
                                                     <td className='text-myBlack dark:text-[#D1D1D1] text-base'>:</td>
-                                                    <td className='text-myBlue dark:text-myGreen cursor-pointer text-base flex items-center gap-2'>
-                                                        <span> {buyer.website}</span>
-                                                        <span className="material-symbols-outlined  w-5 h-5">arrow_forward</span>
+                                                    <td className='text-myBlue dark:text-myGreen cursor-pointer text-base'>
+                                                        <Link href="#" className='flex items-center gap-2'>
+                                                            <span> {buyer.website}</span>
+                                                            <span className="material-symbols-outlined  w-5 h-5">arrow_forward</span>
+                                                        </Link>
                                                     </td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                     </div>
-                                    <hr className='border dark:border-darkLine my-10' />
+                                    <hr className='border-myLine dark:border-darkLine my-5 sm:my-10' />
                                     <div className='flex items-center justify-between'>
                                         <div className='flex items-center gap-2 text-[#1E192A] hover:text-myBlue dark:hover:text-myGreen dark:text-myLine'>
                                             <span className='text-sm '>View details</span>

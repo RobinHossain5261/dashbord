@@ -5,9 +5,9 @@ import { invoices } from '../../../../../public/data/featuresData';
 
 
 const table = () => {
-  const { resolvedTheme, setTheme } = useTheme();
+  const { resolvedTheme } = useTheme();
   return (
-    <div className='px-2 lg:px-6 pt-10 pb-6 bg-bgColor dark:bg-darkBg'>
+    <div className='px-3 lg:px-6 pt-10 pb-6 bg-bgColor dark:bg-darkBg'>
       <h3 className='text-[32px] font-semibold text-myBlack dark:text-white'>Table</h3>
       <span className='text-sm text-myBlack dark:text-white'>Lorem ipsum dolor sit ammet consectetur.</span>
 
@@ -17,7 +17,7 @@ const table = () => {
           <span className='border rounded border-myLine dark:border-darkLine text-myBlack dark:text-myWhite text-sm py-3 px-4'>5-10 of 10</span>
         </div>
 
-        <div className="overflow-x-auto block mt-5 lg:mt-10">
+        <div className="overflow-x-auto block mt-5 sm:mt-10">
           <table className="table overflow-hidden w-full">
 
             <thead className='bg-[#F5F7FD] dark:bg-darkBg text-lg text-myBlack dark:text-myWhite'>
@@ -27,33 +27,33 @@ const table = () => {
                     <input type="checkbox" className="checkbox dark:bg-[#1E192A]" />
                   </label>
                 </th>
-                <th className='text-lg'>Invoices ID</th>
+                <th className='text-lg font-normal'>Invoices ID</th>
                 <th >
-                  <div className='flex items-center'>
+                  <div className='flex items-center font-normal'>
                     <span className='text-lg'>Customer List</span>
                     <span className="material-symbols-outlined text-myBlack ml-2 dark:text-myWhite">unfold_more</span>
                   </div>
                 </th>
                 <th>
-                  <div className='flex items-center'>
+                  <div className='flex items-center font-normal'>
                     <span className='text-lg'>Start Date</span>
                     <span className="material-symbols-outlined text-myBlack ml-2 dark:text-myWhite">unfold_more</span>
                   </div>
                 </th>
                 <th>
-                  <div className='flex items-center'>
+                  <div className='flex items-center font-normal'>
                     <span className='text-lg'>Amount</span>
                     <span className="material-symbols-outlined text-myBlack ml-2 dark:text-myWhite">unfold_more</span>
                   </div>
                 </th>
                 <th>
-                  <div className='flex items-center'>
+                  <div className='flex items-center font-normal'>
                     <span className='text-lg'>Status List</span>
                     <span className="material-symbols-outlined text-myBlack ml-2 dark:text-myWhite">unfold_more</span>
                   </div>
                 </th>
                 <th>
-                  <div className='flex items-center'>
+                  <div className='flex items-center font-normal'>
                     <span className='text-lg'>Delete</span>
                     <span className="material-symbols-outlined text-myBlack ml-2 dark:text-myWhite">unfold_more</span>
                   </div>
@@ -78,11 +78,11 @@ const table = () => {
                     </div>
                   </td>
 
-                  <td className="text-lg text-myBlack dark:text-myWhite">{contacts.name}</td>
+                  <td className="text-base text-myBlack dark:text-myWhite">{contacts.name}</td>
                   <td className="text-lg text-myBlack dark:text-myWhite ">{contacts.date}</td>
-                  <td className="text-lg text-myBlack dark:text-myWhite ">{contacts.Amount}</td>
+                  <td className="text-base text-myBlack dark:text-myWhite ">{contacts.Amount}</td>
                   <td
-                    className="text-lg"
+                    className="text-base"
                     style={{
                       color: resolvedTheme === 'dark' ? `${contacts.color1}` : `${contacts.color}`
                     }}

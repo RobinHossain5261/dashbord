@@ -34,7 +34,7 @@ const Notes = () => {
 
 
     return (
-        <div className='px-2 pt-11 pb-6 lg:px-6 bg-bgColor dark:bg-darkBg'>
+        <div className='px-3 pt-11 pb-6 lg:px-6 bg-bgColor dark:bg-darkBg'>
             <div className='block lg:flex gap-6'>
                 <section className='bg-white dark:bg-darkCard p-2 lg:py-7 lg:px-5 h-full rounded cardShadow mb-6'>
 
@@ -82,8 +82,6 @@ const Notes = () => {
                         </button>
                     </div>
 
-
-
                     <h3 className='text-[#1E192A] dark:text-white text-2xl md:text-3xl lg:text-[32px] mt-[30px] font-semibold '>Jenny Pilson</h3>
                     <span className='text-base text-myGrey dark:text-myWhite mt-2 '>UI/UX Designer</span>
 
@@ -99,7 +97,9 @@ const Notes = () => {
                                             <div className='text-myGrey dark:text-myLine text-sm'>{info.icon}</div>
                                             <div className='text-myGrey dark:text-myLine text-sm'>{info.name}</div>
                                         </td>
-                                        <td className='text-myBlack dark:text-white text-base'>{info.more}</td>
+                                        <td className='text-myBlack dark:text-white text-base'>
+                                            <span className='text-base text-myBlack dark:text-white'>:</span>
+                                        </td>
                                         <td className='text-myBlack dark:text-white text-base'>{info.info}</td>
                                     </tr>))
                                 }
@@ -109,7 +109,7 @@ const Notes = () => {
                 </section>
                 <section className='w-full'>
                     {/* Rech Text  */}
-                    <div className='bg-white dark:bg-darkCard text-myBlack dark:text-white py-7 px-8 '>
+                    <div className='bg-white dark:bg-darkCard text-myBlack dark:text-white rounded p-2 lg:py-7 lg:px-8 '>
                         <div className='h-[300px] lg:h-[200px]'>
                             <div ref={quillRef} />
                         </div>

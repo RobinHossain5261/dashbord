@@ -335,7 +335,7 @@ export const tasksCard = [
         id: 1,
         name: 'Design Tasks',
         complete: '8 of 10 completed',
-        icon: <span className="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined text-[36px]">
             edit_square
         </span>,
         more: <span className="material-symbols-outlined">
@@ -349,7 +349,7 @@ export const tasksCard = [
         id: 2,
         name: 'Development Tasks',
         complete: '7 of 10 completed',
-        icon: <span className="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined text-[36px]">
             frame_source
         </span>,
         more: <span className="material-symbols-outlined">
@@ -363,7 +363,7 @@ export const tasksCard = [
         id: 3,
         name: 'Marketing Tasks',
         complete: '9 of 10 completed',
-        icon: <span className="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined text-[36px]">
             campaign
         </span>,
         more: <span className="material-symbols-outlined">

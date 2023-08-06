@@ -2,7 +2,6 @@
 import { Fragment, useEffect, useState } from 'react'
 import { Transition } from '@headlessui/react'
 import TopBar from '@/components/TopBar/TopBar';
-import SideBar from '@/components/SideBar/SideBar';
 import Footer from '@/components/Footer/Footer';
 import SideMenu from '@/components/SideMenu/SideMenu';
 
@@ -14,7 +13,7 @@ export default function RootLayout({ children }) {
 
   function handleResize() {
     if (innerWidth <= 640) {
-      setShowNav(true);
+      setShowNav(!showNav);
       setIsMobile(true);
     } else {
       setShowNav(false);

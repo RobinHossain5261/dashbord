@@ -13,9 +13,8 @@ const people = [
 
 const contacts = () => {
     const [selectedPerson, setSelectedPerson] = useState(people[0]);
-    const [bgColor, setBgColor] = useState(true);
     return (
-        <div className='px-2 lg:px-6 pt-10 pb-6 bg-bgColor dark:bg-darkBg'>
+        <div className='px-3 lg:px-6 pt-10 pb-6 bg-bgColor dark:bg-darkBg'>
             <h3 className='text-[32px] font-semibold text-myBlack dark:text-white'>Contacts</h3>
             <span className='text-sm text-myBlack dark:text-white '>Lorem ipsum dolor sit ammet consectetur.</span>
 
@@ -57,7 +56,7 @@ const contacts = () => {
                                     <Listbox value={selectedPerson} onChange={setSelectedPerson}>
                                         <Listbox.Button
 
-                                            className="flex gap-2 items-center  relative w-full cursor-default rounded-lg text-[#252525] dark:text-[#ECEEFB] dark:border-darkLine py-2 px-3 text-left border focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
+                                            className="flex gap-2 items-center  relative w-full rounded-lg text-[#252525] dark:text-[#ECEEFB] dark:border-darkLine py-2 px-3 text-left border focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm cursor-pointer">
                                             {selectedPerson.name}
                                             <span className="material-symbols-outlined">
                                                 expand_more
@@ -101,33 +100,33 @@ const contacts = () => {
                                                     <input type="checkbox" className="checkbox dark:bg-[#1E192A]" />
                                                 </label>
                                             </th>
-                                            <th>Contacts</th>
+                                            <th className='font-normal'>Contacts</th>
                                             <th >
-                                                <div className='flex items-center'>
+                                                <div className='flex items-center font-normal'>
                                                     <span>Company List</span>
                                                     <span className="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
                                                 </div>
                                             </th>
                                             <th>
-                                                <div className='flex items-center'>
+                                                <div className='flex items-center font-normal'>
                                                     <span>Phone Number</span>
                                                     <span className="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
                                                 </div>
                                             </th>
                                             <th>
-                                                <div className='flex items-center'>
+                                                <div className='flex items-center font-normal'>
                                                     <span>Email Adress</span>
                                                     <span className="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
                                                 </div>
                                             </th>
                                             <th>
-                                                <div className='flex items-center'>
+                                                <div className='flex items-center font-normal'>
                                                     <span>Last Intereactions</span>
                                                     <span className="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
                                                 </div>
                                             </th>
                                             <th>
-                                                <div className='flex items-center'>
+                                                <div className='flex items-center font-normal'>
                                                     <span>Delete</span>
                                                     <span className="material-symbols-outlined text-myBlack dark:text-white ml-2">unfold_more</span>
                                                 </div>
@@ -186,12 +185,12 @@ const contacts = () => {
                             {
                                 byuers.map(buyer => (<div
                                     key={buyer.id}
-                                    className='bg-white dark:bg-darkCard p-2 lg:px-8 lg:py-7 rounded'
+                                    className='bg-white dark:bg-darkCard p-2 lg:px-8 lg:py-7 rounded w-full'
                                 >
                                     <Image className='w-[120px] h-[120px] rounded-full mx-auto' src={buyer.img} alt='buyer' />
                                     <h4 className='text-2xl text-center text-myBlack dark:text-white font-semibold mt-6 mb-3'>{buyer.name}</h4>
                                     <h6 className='text-base text-center text-myBlack dark:text-[#D1D1D1]'>{buyer.post}</h6>
-                                    <hr className='border dark:border-darkLine mt-7 mb-10' />
+                                    <hr className='border-myLine dark:border-darkLine my-4  sm:mt-7 sm:mb-10' />
 
                                     <div className='overflow-x-auto'>
                                         <table className="table whitespace-nowrap">
@@ -223,7 +222,7 @@ const contacts = () => {
                                             </tbody>
                                         </table>
                                     </div>
-                                    <hr className='border dark:border-darkLine my-10' />
+                                    <hr className='border-myLine dark:border-darkLine my-5 sm:my-10' />
                                     <div className='flex items-center justify-between'>
                                         <div className='flex items-center gap-2 text-[#1E192A] hover:text-myBlue dark:hover:text-myGreen dark:text-myLine'>
                                             <span className='text-sm '>View details</span>

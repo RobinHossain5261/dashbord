@@ -116,7 +116,7 @@ export default function TopBar({ showNav, setShowNav }) {
             <div tabIndex={0} className="dropdown-content z-[1] menu p-2 mt-5 shadow bg-white dark:bg-[#1E192A] rounded-box w-52 md:w-52 lg:w-60">
                 <div className='flex flex-wrap justify-between items-center'>
                     <h3 className='text-xl font-semibold text-myBlack dark:text-white'>Apps</h3>
-                    <span className='text-lg text-myGrey dark:text-myWhite hover:text-myBlue dark:hover:text-myGreen cursor-pointer'>View All Apps</span>
+                    <span className='text-lg text-myGrey dark:text-myLine hover:text-myBlue dark:hover:text-myGreen cursor-pointer'>View All Apps</span>
                 </div>
                 <hr className='my-3 dark:border-darkLine border-myLine' />
                 <div className='grid grid-cols-3 gap-3 '>
@@ -160,7 +160,7 @@ export default function TopBar({ showNav, setShowNav }) {
                 </div>
             </div>
         </div>
-        <div className='ml-4 md:ml-6 lg:ml-7 mb-2 dark:text-white'>
+        <div className='ml-4 md:ml-6 lg:ml-7 mb-2 text-myBlack dark:text-white'>
             <ThemeButton></ThemeButton>
         </div>
         <div className="dropdown dropdown-end ml-4 md:ml-6 lg:ml-7">

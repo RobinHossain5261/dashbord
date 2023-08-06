@@ -1,13 +1,13 @@
 "use client"
 import React, { Fragment } from 'react';
-import '../pricingOne/pricing.css';
+import '../pricing_one/pricing.css';
 import { pricingCards } from '../../../../../public/data/pricingData';
 import { Tab } from '@headlessui/react';
 
 const PricingThree = () => {
 
     return (
-        <div className='px-2 lg:px-6 pt-10 pb-8 bg-bgColor dark:bg-darkBg'>
+        <div className='px-3 lg:px-6 pt-10 pb-8 bg-bgColor dark:bg-darkBg'>
             <h2 className='text-myBlack dark:text-white text-[40px] text-center font-semibold mb-5'>Our Pricing</h2>
             <p className='text-center text-lg text-myBlack dark:text-myWhite'>Vestibulum diam risus, convallis vel blandit eu, iaculis in diam. Fusce elementum metus sem.Nulla posuere, tortor sed .</p>
 

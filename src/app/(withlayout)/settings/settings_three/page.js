@@ -13,8 +13,6 @@ import API from '@/components/SettingsTab/API/API';
 
 
 const SettingsThree = () => {
-
-
     const inputFile = useRef(null);
 
     const onButtonClick = () => {
@@ -22,7 +20,7 @@ const SettingsThree = () => {
     }
 
     return (
-        <div className='px-2 pt-11 pb-6 lg:px-6 bg-bgColor dark:bg-darkBg'>
+        <div className='px-3 pt-11 sm:pb-6 lg:px-6 bg-bgColor dark:bg-darkBg'>
             <h3 className='font-semibold text-myBlack text-[32px] dark:text-white'>General settings</h3>
             <span className='text-sm text-myBlack dark:text-white'   >Lorem ipsum dolor sit amet consectetur.</span>
 
@@ -45,13 +43,15 @@ const SettingsThree = () => {
                                 {
                                     informations.map(info => (<tr
                                         key={info.id}
-                                        className='dark:border-darkLine'
+                                        className='border-myLine dark:border-darkLine'
                                     >
                                         <td className='flex gap-2'>
                                             <div className='text-myGrey dark:text-myLine text-sm'>{info.icon}</div>
                                             <div className='text-myGrey dark:text-myLine text-sm'>{info.name}</div>
                                         </td>
-                                        <td className='text-myBlack dark:text-white text-base'>{info.more}</td>
+                                        <td className='text-myBlack dark:text-white text-base'>
+                                            <span className='text-base text-myBlack dark:text-white'>:</span>
+                                        </td>
                                         <td className='text-myBlack dark:text-white text-base'>{info.info}</td>
                                     </tr>))
                                 }

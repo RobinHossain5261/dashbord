@@ -16,9 +16,9 @@ const PricingOne = () => {
 
 
     return (
-        <div className='p-2 lg:px-6 pt-8 pb-[30px] bg-bgColor dark:bg-darkBg'>
+        <div className='px-3 lg:px-6 pt-8 lg:pb-[30px] bg-bgColor dark:bg-darkBg'>
             <h2 className='text-myBlack text-[40px] text-center font-semibold mb-5 dark:text-white'>Our Pricing</h2>
-            <p className='text-center text-lg text-myBlack dark:text-myWhite'>Vestibulum diam risus, convallis vel blandit eu, iaculis in diam. Fusce <br /> elementum metus sem.Nulla posuere, tortor sed .</p>
+            <p className='text-center text-lg text-myBlack dark:text-myWhite'>Vestibulum diam risus, convallis vel blandit eu, iaculis in diam.<br /> Fusce elementum metus sem.Nulla posuere, tortor sed .</p>
             <div className='flex items-center justify-center whitespace-nowrap mt-7'>
                 <h4 className='text-sm md:text-lg lg:text-lg text-myBlack dark:text-white'>Billed Monthly</h4>
                 <div className="form-control mx-3 lg:mx-[22px]">
@@ -32,7 +32,7 @@ const PricingOne = () => {
                         <span className="sr-only">Enable notifications</span>
                         <span
                             className={`${enabled ? 'translate-x-7' : 'translate-x-1'
-                                } inline-block h-5 w-5 transform rounded-full bg-white transition`}
+                                } inline-block h-5 w-5 transform rounded-full bg-white transition ease-in-out duration-300`}
                         />
                     </Switch>
                 </div>

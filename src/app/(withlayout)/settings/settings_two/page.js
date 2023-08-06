@@ -10,14 +10,13 @@ import API from '@/components/SettingsTab/API/API';
 
 const settingsTwo = () => {
     return (
-        <div className='px-2 lg:px-6 pt-11 pb-6 bg-bgColor dark:bg-darkBg'>
+        <div className='px-3 lg:px-6 pt-11 sm:pb-6 bg-bgColor dark:bg-darkBg'>
             <h3 className='text-[32px] font-semibold text-myBlack dark:text-white'>General settings</h3>
             <span className='text-sm text-myBlack dark:text-white '>Lorem ipsum dolor sit ammet consectetur.</span>
 
             <div className='mt-8'>
                 <Tab.Group >
                     <div className='lg:flex gap-6 w-full'>
-
                         <div className='w-full lg:w-[504px] bg-white  dark:bg-darkCard h-full rounded cardShadow p-3 lg:py-7 lg:px-8 mb-6'>
                             <Tab.List>
                                 <Tab className=' hover:text-myBlue dark:hover:text-myGreen outline-none' as={Fragment}>

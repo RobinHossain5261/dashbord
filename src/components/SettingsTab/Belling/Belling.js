@@ -26,6 +26,7 @@ const Belling = () => {
     const [selectedPerson, setSelectedPerson] = useState(people[0]);
     return (
         <div className='w-full'>
+            {/* Payment method  */}
             <div className='bg-white dark:bg-darkCard p-3 lg:px-7 lg:py-8 rounded'>
 
                 <div className='flex gap-3 items-center'>
@@ -34,70 +35,70 @@ const Belling = () => {
                 </div>
 
                 <div className='my-3 lg:mt-8 lg:mb-6 flex flex-wrap gap-3 lg:gap-5'>
-                    <div className="form-control w-[185px] justify-around border border-myBlue dark:border-myGreen rounded-[10px] px-3">
+                    <div className="form-control w-[185px] justify-around border border-myBlue dark:border-myGreen rounded-[10px] px-3 ">
                         <label className="label cursor-pointer">
-                            <input type="radio" name="radio-10" className="radio checked:bg-myBlue dark:checked:bg-myGreen border-myBlue dark:border-myGreen" checked />
+                            <input type="radio" name="radio-10" className="radio checked:bg-white border-myBlue dark:border-myGreen checked:border-[7px]  checked:border-myBlue" checked />
                             <Image src={visa} alt='visa' />
                         </label>
                     </div>
                     <div className="form-control w-[185px] justify-around border border-myBlue dark:border-myGreen rounded-[10px] px-3">
                         <label className="label cursor-pointer">
-                            <input type="radio" name="radio-10" className="radio checked:bg-myBlue dark:checked:bg-myGreen border-myBlue dark:border-myGreen" checked />
+                            <input type="radio" name="radio-10" className="radio checked:bg-white border-myBlue dark:border-myGreen checked:border-[7px]  checked:border-myBlue" checked />
                             <Image src={bitpay} alt='visa' />
                         </label>
                     </div>
                     <div className="form-control w-[185px] justify-around border border-myBlue dark:border-myGreen rounded-[10px] px-3">
                         <label className="label cursor-pointer">
-                            <input type="radio" name="radio-10" className="radio checked:bg-myBlue dark:checked:bg-myGreen border-myBlue dark:border-myGreen" checked />
+                            <input type="radio" name="radio-10" className="radio checked:bg-white border-myBlue dark:border-myGreen checked:border-[7px]  checked:border-myBlue" checked />
                             <Image src={stripe} alt='visa' />
                         </label>
                     </div>
                     <div className="form-control w-[185px] justify-around border border-myBlue dark:border-myGreen rounded-[10px] px-3">
                         <label className="label cursor-pointer">
-                            <input type="radio" name="radio-10" className="radio checked:bg-myBlue dark:checked:bg-myGreen border-myBlue dark:border-myGreen" checked />
+                            <input type="radio" name="radio-10" className="radio checked:bg-white border-myBlue dark:border-myGreen checked:border-[7px]  checked:border-myBlue" checked />
                             <Image className='rounded-[10px]' src={skrill} alt='visa' />
                         </label>
                     </div>
                     <div className="form-control w-[185px] justify-around border border-myBlue dark:border-myGreen rounded-[10px] px-3">
                         <label className="label cursor-pointer">
-                            <input type="radio" name="radio-10" className="radio checked:bg-myBlue dark:checked:bg-myGreen border-myBlue dark:border-myGreen" checked />
+                            <input type="radio" name="radio-10" className="radio checked:bg-white border-myBlue dark:border-myGreen checked:border-[7px]  checked:border-myBlue" checked />
                             <Image src={paypal} alt='visa' />
                         </label>
                     </div>
                     <div className="form-control w-[185px] justify-around border border-myBlue dark:border-myGreen rounded-[10px] px-3">
                         <label className="label cursor-pointer">
-                            <input type="radio" name="radio-10" className="radio checked:bg-myBlue dark:checked:bg-myGreen border-myBlue dark:border-myGreen" checked />
+                            <input type="radio" name="radio-10" className="radio checked:bg-white border-myBlue dark:border-myGreen checked:border-[7px]  checked:border-myBlue" checked />
                             <Image src={neteller} alt='visa' />
                         </label>
                     </div>
                     <div className="form-control w-[185px] justify-around border border-myBlue dark:border-myGreen rounded-[10px] px-3">
                         <label className="label cursor-pointer">
-                            <input type="radio" name="radio-10" className="radio checked:bg-myBlue dark:checked:bg-myGreen border-myBlue dark:border-myGreen" checked />
+                            <input type="radio" name="radio-10" className="radio checked:bg-white border-myBlue dark:border-myGreen checked:border-[7px]  checked:border-myBlue" checked />
                             <Image src={neteller} alt='visa' />
                         </label>
                     </div>
                     <div className="form-control w-[185px] justify-around border border-myBlue dark:border-myGreen rounded-[10px] px-3">
                         <label className="label cursor-pointer">
-                            <input type="radio" name="radio-10" className="radio checked:bg-myBlue dark:checked:bg-myGreen border-myBlue dark:border-myGreen" checked />
+                            <input type="radio" name="radio-10" className="radio checked:bg-white border-myBlue dark:border-myGreen checked:border-[7px]  checked:border-myBlue" checked />
                             <Image src={mybank} alt='visa' />
                         </label>
                     </div>
                     <div className="form-control w-[185px] justify-around border border-myBlue dark:border-myGreen rounded-[10px] px-3">
                         <label className="label cursor-pointer">
-                            <input type="radio" name="radio-10" className="radio checked:bg-myBlue dark:checked:bg-myGreen border-myBlue dark:border-myGreen" checked />
+                            <input type="radio" name="radio-10" className="radio checked:bg-white border-myBlue dark:border-myGreen checked:border-[7px]  checked:border-myBlue" checked />
                             <Image className='rounded-[10px]' src={mastercard} alt='visa' />
                         </label>
                     </div>
                     <div className="form-control w-[185px] justify-around border border-myBlue dark:border-myGreen rounded-[10px] px-3">
                         <label className="label cursor-pointer">
-                            <input type="radio" name="radio-10" className="radio checked:bg-myBlue  dark:checked:bg-myGreen border-myBlue dark:border-myGreen" checked />
+                            <input type="radio" name="radio-10" className="radio checked:bg-white border-myBlue dark:border-myGreen checked:border-[7px]  checked:border-myBlue" checked />
                             <Image className='rounded-[10px]' src={amex} alt='visa' />
                         </label>
                     </div>
                 </div>
             </div>
 
-
+            {/* Payment Details  */}
             <div className='lg:w-3/4 mx-auto bg-white dark:bg-darkCard rounded p-3 lg:px-8 lg:py-7 mt-6 cardShadow'>
                 <h4 className='text-xl md:text-2xl lg:text-2xl text-myBlack dark:text-white font-semibold text-center mb-6'>Enter your payment details</h4>
 
@@ -105,18 +106,18 @@ const Belling = () => {
                     <div className='flex flex-wrap justify-between  rounded bg-[#F7F8FD] dark:bg-[#1E192A] mb-5'>
                         <div className='flex max-w-sm gap-2 py-2 px-[18px]'>
                             <span className="material-symbols-outlined text-myGrey dark:text-myLine w-5 h-5">add_card</span>
-                            <input type="text" placeholder='Card number' className="w-full outline-none bg-[#F7F8FD] dark:bg-[#1E192A] text-sm placeholder-myGrey dark:placeholder-myLine" />
+                            <input type="text" placeholder='Card number' className="w-full text-myBlack dark:text-myWhite outline-none bg-[#F7F8FD] dark:bg-[#1E192A] text-sm placeholder-myGrey dark:placeholder-myLine" />
                         </div>
-                        <input type="text" placeholder="MM / YY CVC" className="lg:text-end max-w-sm outline-none bg-[#F7F8FD] dark:bg-[#1E192A] text-sm py-2 px-[18px] placeholder-myGrey dark:placeholder-myLine" />
+                        <input type="text" placeholder="MM / YY CVC" className="lg:text-end max-w-sm outline-none bg-[#F7F8FD] dark:bg-[#1E192A] text-myBlack dark:text-myWhite text-sm py-2 px-[18px] placeholder-myGrey dark:placeholder-myLine" />
                     </div>
-                    <input type="text" placeholder='Street address' className="w-full outline-none bg-[#F7F8FD] dark:bg-[#1E192A] text-sm py-2 px-[18px] rounded mb-5 placeholder-myGrey dark:placeholder-myLine" />
+                    <input type="text" placeholder='Street address' className="w-full outline-none bg-[#F7F8FD] dark:bg-[#1E192A] text-sm py-2 px-[18px] rounded mb-5 placeholder-myGrey dark:placeholder-myLine text-myBlack dark:text-myWhite" />
 
                     <div className='lg:flex gap-6 mb-5'>
-                        <input type="text" placeholder='Apt, unit, suite, etc. (optional)' className="w-full lg:w-1/2 outline-none bg-[#F7F8FD] dark:bg-[#1E192A] text-sm py-2 px-[18px] rounded placeholder-myGrey dark:placeholder-myLine lg:mb-0 mb-6" />
-                        <input type="text" placeholder='(+33)7 35 55 21 02' className="w-full lg:w-1/2 outline-none bg-[#F7F8FD] dark:bg-[#1E192A] text-sm py-2 px-[18px] rounded placeholder-myGrey dark:placeholder-myLine" />
+                        <input type="text" placeholder='Apt, unit, suite, etc. (optional)' className="w-full lg:w-1/2 outline-none bg-[#F7F8FD] dark:bg-[#1E192A] text-sm py-2 px-[18px] rounded placeholder-myGrey dark:placeholder-myLine lg:mb-0 mb-6 text-myBlack dark:text-myWhite" />
+                        <input type="text" placeholder='(+33)7 35 55 21 02' className="w-full lg:w-1/2 outline-none bg-[#F7F8FD] dark:bg-[#1E192A] text-sm py-2 px-[18px] rounded placeholder-myGrey dark:placeholder-myLine text-myBlack dark:text-myWhite" />
                     </div>
                     <div className='lg:flex gap-6'>
-                        <input type="text" placeholder='City' className="w-full lg:w-1/2 outline-none bg-[#F7F8FD] dark:bg-[#1E192A] text-sm py-2 px-[18px] rounded placeholder-myGrey dark:placeholder-myLine mb-6 lg:mb-0" />
+                        <input type="text" placeholder='City' className="w-full lg:w-1/2 outline-none bg-[#F7F8FD] dark:bg-[#1E192A] text-sm py-2 px-[18px] rounded placeholder-myGrey dark:placeholder-myLine mb-6 lg:mb-0 text-myBlack dark:text-myWhite" />
                         <div className='flex gap-6 w-full lg:w-1/2'>
                             <Listbox value={selectedPerson} onChange={setSelectedPerson}>
                                 <Listbox.Button
@@ -152,7 +153,7 @@ const Belling = () => {
                                     ))}
                                 </Listbox.Options>
                             </Listbox>
-                            <input type="text" placeholder='Zip code' className="w-full outline-none bg-[#F7F8FD] dark:bg-[#1E192A] text-sm py-2 px-[18px] rounded placeholder-myGrey dark:placeholder-myLine" />
+                            <input type="text" placeholder='Zip code' className="w-full outline-none bg-[#F7F8FD] dark:bg-[#1E192A] text-sm py-2 px-[18px] rounded placeholder-myGrey dark:placeholder-myLine text-myBlack dark:text-myWhite" />
                         </div>
                     </div>
                     <div className='flex justify-center mt-5 lg:mt-10'>

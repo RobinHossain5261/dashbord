@@ -10,13 +10,22 @@ body {
     overflow-x: hidden;
 }
 
-[data-theme='dark'] html,
-body {
+
+.dark body {
     margin: 0;
     padding: 0;
     background-color: #261E35;
     overflow-x: hidden;
 
+}
+
+.activeDropdown {
+    background-color: #EDECFB;
+}
+
+
+.dark .activeDropdown {
+    background-color: #164C3C;
 }
 
 .cardShadow {

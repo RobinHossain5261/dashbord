@@ -3,7 +3,7 @@
 import React from 'react';
 import { useState, Fragment } from 'react'
 import { Listbox } from '@headlessui/react';
-import '../pricingOne/pricing.css';
+import '../pricing_one/pricing.css';
 
 const people = [
     { id: 1, name: 'Selecet Plan Duration', unavailable: false },
@@ -17,7 +17,7 @@ const pricingSingle = () => {
 
 
     return (
-        <div className='px-2 lg:px-6 pt-10 md:mt-10 bg-bgColor dark:bg-darkBg'>
+        <div className='px-3 lg:px-6 pt-10 md:mt-10 bg-bgColor dark:bg-darkBg'>
             <div className='lg:flex md:flex gap-6'>
                 <section className='p-3 lg:px-10 lg:py-8 h-full bg-white dark:bg-darkCard rounded boxShadow mb-6'>
                     <div className='flex items-center gap-6 mb-7'>
@@ -94,7 +94,7 @@ const pricingSingle = () => {
                     </ul>
                 </section>
             </div>
-            <hr className='mt-14 pb-8 border-myLine dark:border-darkLine' />
+            <hr className='mt-5 sm:mt-14 sm:pb-8 border-myLine dark:border-darkLine' />
         </div>
     );
 };

@@ -35,7 +35,7 @@ const Reports = () => {
     }
 
     return (
-        <div className="px-2 lg:px-6 pt-10 bg-bgColor dark:bg-darkBg">
+        <div className="px-3 lg:px-6 pt-10 bg-bgColor dark:bg-darkBg">
             <h3 className="text-[32px] font-semibold text-myBlack dark:text-white">Dashboard</h3>
             <span className='text-sm text-myBlack dark:text-white'>Jul 8, 2023</span>
 

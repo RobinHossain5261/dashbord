@@ -10,7 +10,7 @@ import { informations } from '../../../../../public/data/profileData';
 const profileThree = () => {
 
     return (
-        <div className='px-2 lg:px-6 pt-10 pb-6 bg-bgColor dark:bg-darkBg'>
+        <div className='px-3 lg:px-6 pt-10 pb-6 bg-bgColor dark:bg-darkBg'>
             <div className='block lg:flex gap-6'>
                 <section className='bg-white dark:bg-darkCard p-2 lg:py-7 lg:px-5 h-full rounded cardShadow mb-6'>
 
@@ -75,7 +75,9 @@ const profileThree = () => {
                                             <div className='text-myGrey dark:text-myLine text-sm'>{info.icon}</div>
                                             <div className='text-myGrey dark:text-myLine text-sm'>{info.name}</div>
                                         </td>
-                                        <td className='text-myBlack dark:text-white text-base'>{info.more}</td>
+                                        <td className='text-myBlack dark:text-white text-base'>
+                                            <span className='text-base text-myBlack dark:text-white'>:</span>
+                                        </td>
                                         <td className='text-myBlack dark:text-white text-base'>{info.info}</td>
                                     </tr>))
                                 }

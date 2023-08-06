@@ -363,7 +363,7 @@ export const companiesData = [
         img: youtube2,
         name: 'YouTube',
         post: 'Customer Service Manager',
-        number: '(480) 555-0103',
+        website: 'Visit website',
         email: 'info@example.com',
         location: 'New York'
     },
@@ -376,7 +376,7 @@ export const tasks = [
         name: 'Design',
         des: 'Lorem ipsum dolor sit amet consectetur. Arcu consectetur pellentesque vel.',
         complete: '8 Task Done',
-        icon: <span className="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined text-[36px]">
             edit_square
         </span>,
         more: <span className="material-symbols-outlined">
@@ -394,7 +394,7 @@ export const tasks = [
         name: 'Development',
         des: 'Lorem ipsum dolor sit amet consectetur. Arcu consectetur pellentesque vel.',
         complete: '7 Task Done',
-        icon: <span className="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined text-[36px]">
             frame_source
         </span>,
         more: <span className="material-symbols-outlined">
@@ -413,7 +413,7 @@ export const tasks = [
         name: 'Markating',
         des: 'Lorem ipsum dolor sit amet consectetur. Arcu consectetur pellentesque vel.',
         complete: '9 Task Done',
-        icon: <span className="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined text-[36px]">
             campaign
         </span>,
         more: <span className="material-symbols-outlined">
@@ -432,7 +432,7 @@ export const tasks = [
         name: 'Social Media',
         des: 'Lorem ipsum dolor sit amet consectetur. Arcu consectetur pellentesque vel.',
         complete: '8 Task Done',
-        icon: <span className="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined text-[36px]">
             share
         </span>,
         more: <span className="material-symbols-outlined">
@@ -451,7 +451,7 @@ export const tasks = [
         name: 'CopyWriting',
         des: 'Lorem ipsum dolor sit amet consectetur. Arcu consectetur pellentesque vel.',
         complete: '9 Task Done',
-        icon: <span className="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined text-[36px]">
             event_note
         </span>,
         more: <span className="material-symbols-outlined">
@@ -470,7 +470,7 @@ export const tasks = [
         name: 'Customer Service',
         des: 'Lorem ipsum dolor sit amet consectetur. Arcu consectetur pellentesque vel.',
         complete: '7 Task Done',
-        icon: <span className="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined text-[36px]">
             group
         </span>,
         more: <span className="material-symbols-outlined">
@@ -490,11 +490,11 @@ export const tasks = [
 export const reportCards = [
     {
         id: 1,
-        title: 'The process of designing landing pages',
+        title: 'the process of designing and developing landing pages',
         date: 'Sep 24 2023',
         category: "Design",
         des: 'Lorem ipsum dolor sit amet consectetur. Vitae volutpat ut vestibulum ac amet.',
-        icon: <span className="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined text-xl">
             calendar_month
         </span>,
         img: photo7
@@ -505,18 +505,18 @@ export const reportCards = [
         date: 'Sep 24 2023',
         category: "Development",
         des: 'Lorem ipsum dolor sit amet consectetur. Vitae volutpat ut vestibulum ac amet.',
-        icon: <span className="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined text-xl">
             calendar_month
         </span>,
         img: photo8
     },
     {
         id: 3,
-        title: 'Writing content for use in website layout',
+        title: 'Writing content for use in website layout and design',
         date: 'Sep 24 2023',
         category: "Design",
         des: 'Lorem ipsum dolor sit amet consectetur. Vitae volutpat ut vestibulum ac amet.',
-        icon: <span className="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined text-xl">
             calendar_month
         </span>,
         img: photo9
@@ -527,18 +527,18 @@ export const reportCards = [
         date: 'Sep 24 2023',
         category: "Development",
         des: 'Lorem ipsum dolor sit amet consectetur. Vitae volutpat ut vestibulum ac amet.',
-        icon: <span className="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined text-xl">
             calendar_month
         </span>,
         img: photo10
     },
     {
         id: 5,
-        title: 'Writing content for use in website layout',
+        title: 'LandDesign Genie: Landing Page Development Expert',
         date: 'Sep 24 2023',
         category: "Design",
         des: 'Lorem ipsum dolor sit amet consectetur. Vitae volutpat ut vestibulum ac amet.',
-        icon: <span className="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined text-xl">
             calendar_month
         </span>,
         img: photo11
@@ -549,7 +549,7 @@ export const reportCards = [
         date: 'Sep 24 2023',
         category: "Degine",
         des: 'Lorem ipsum dolor sit amet consectetur. Vitae volutpat ut vestibulum ac amet.',
-        icon: <span className="material-symbols-outlined">
+        icon: <span className="material-symbols-outlined text-xl">
             calendar_month
         </span>,
         img: photo12
@@ -560,11 +560,11 @@ export const reportCards = [
 export const boards = [
     {
         id: 1,
-        work: 'Degine',
+        work: 'Design',
         title: 'Designing and constructing landing pages',
         des: 'Lorem ipsum dolor sit amet consectetur. Id vitae hendrerit elementum commodo.',
-        file: <span className="material-symbols-outlined">attach_file</span>,
-        note: <span className="material-symbols-outlined">speaker_notes</span>
+        file: <span className="material-symbols-outlined text-2xl">attach_file</span>,
+        note: <span className="material-symbols-outlined text-2xl">speaker_notes</span>
     },
 
     {
@@ -572,40 +572,40 @@ export const boards = [
         work: 'Marketing',
         title: 'Meeting to do market research.......',
         des: 'Lorem ipsum dolor sit amet consectetur. Id vitae hendrerit elementum commodo.',
-        file: <span className="material-symbols-outlined">attach_file</span>,
-        note: <span className="material-symbols-outlined">speaker_notes</span>
+        file: <span className="material-symbols-outlined text-2xl">attach_file</span>,
+        note: <span className="material-symbols-outlined text-2xl">speaker_notes</span>
     },
     {
         id: 3,
         work: 'Development',
         title: 'Designing and creating landing pages',
         des: 'Lorem ipsum dolor sit amet consectetur. Id vitae hendrerit elementum commodo.',
-        file: <span className="material-symbols-outlined">attach_file</span>,
-        note: <span className="material-symbols-outlined">speaker_notes</span>
+        file: <span className="material-symbols-outlined text-2xl">attach_file</span>,
+        note: <span className="material-symbols-outlined text-2xl">speaker_notes</span>
     },
     {
         id: 4,
         work: 'Marketing',
         title: 'Mobile App Interactions Subjected to Validation',
         des: 'Lorem ipsum dolor sit amet consectetur. Id vitae hendrerit elementum commodo.',
-        file: <span className="material-symbols-outlined">attach_file</span>,
-        note: <span className="material-symbols-outlined">speaker_notes</span>
+        file: <span className="material-symbols-outlined text-2xl">attach_file</span>,
+        note: <span className="material-symbols-outlined text-2xl">speaker_notes</span>
     },
     {
         id: 5,
         work: 'Marketing',
         title: 'Designing and creating landing pages....',
         des: 'Lorem ipsum dolor sit amet consectetur. Id vitae hendrerit elementum commodo.',
-        file: <span className="material-symbols-outlined">attach_file</span>,
-        note: <span className="material-symbols-outlined">speaker_notes</span>
+        file: <span className="material-symbols-outlined text-2xl">attach_file</span>,
+        note: <span className="material-symbols-outlined text-2xl">speaker_notes</span>
     },
     {
         id: 6,
-        work: 'Degine',
+        work: 'Design',
         title: 'Mobile app UI/UX design & development',
         des: 'Lorem ipsum dolor sit amet consectetur. Id vitae hendrerit elementum commodo.',
-        file: <span className="material-symbols-outlined">attach_file</span>,
-        note: <span className="material-symbols-outlined">speaker_notes</span>
+        file: <span className="material-symbols-outlined text-2xl">attach_file</span>,
+        note: <span className="material-symbols-outlined text-2xl">speaker_notes</span>
     },
 ]
 

@@ -30,7 +30,7 @@ const tasks = () => {
 
     return (
 
-        <div className="px-2 lg:px-6 pt-10 pb-6 bg-bgColor dark:bg-darkBg">
+        <div className="px-3 lg:px-6 pt-10 pb-6 bg-bgColor dark:bg-darkBg">
             <h1 className="text-[32px] font-semibold text-myBlack dark:text-white">Dashboard</h1>
             <span className='text-myBlack text-sm dark:text-white'>Jul 9, 2023</span>
 
@@ -42,12 +42,12 @@ const tasks = () => {
                         className="bg-white dark:bg-darkCard p-2 lg:py-4 lg:px-6 rounded task-card"
                     >
                         <div className="flex justify-between">
-                            <div className='bg-white dark:bg-[#1E192A] h-[60px] w-[60px] icon-shadow rounded flex items-center justify-center'>
-                                <span className="text-myBlue dark:text-myGreen p-3 ">{task.icon}</span>
+                            <div className='bg-white dark:bg-[#1E192A] h-[60px] p-3 w-[60px] icon-shadow rounded flex items-center justify-center'>
+                                <span className="text-myBlue dark:text-myGreen ">{task.icon}</span>
                             </div>
                             <div className='dropdown dropdown-end'>
                                 <span tabIndex={0} className='w-[18px] h-[18px] dark:text-white cursor-pointer'>{task.more}</span>
-                                <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 dark:bg-darkCard rounded-box ">
+                                <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-white dark:bg-darkCard rounded-box ">
                                     <li ><Link className='text-myBlack dark:text-myWhite rounded hover:text-white hover:bg-myBlue dark:hover:bg-myGreen' href='#'>Delete</Link></li>
                                     <li><Link className='text-myBlack dark:text-myWhite rounded hover:text-white hover:bg-myBlue dark:hover:bg-myGreen' href='#'>Edit</Link></li>
                                     <li><Link className='text-myBlack dark:text-myWhite rounded hover:text-white hover:bg-myBlue dark:hover:bg-myGreen' href='#'>Suspend</Link></li>
@@ -225,7 +225,7 @@ const tasks = () => {
                                     <p className='ml-1 text-sm'>{card.date}</p>
                                 </div>
                             </div>
-                            <p className='text-lg text-center dark:text-[#D1D1D1]'>{card.des}</p>
+                            <p className='text-lg text-center text-myBlack dark:text-[#D1D1D1]'>{card.des}</p>
                         </div>))
                     }
                 </div>

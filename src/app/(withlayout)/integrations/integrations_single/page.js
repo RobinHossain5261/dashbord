@@ -16,7 +16,7 @@ const integrationsSingle = () => {
                 <Image className='h-[300px] object-cover' src={banner3} alt="banner" />
             </div>
 
-            <div className='px-2 lg:px-6 pb-6  lg:flex gap-6 relative'>
+            <div className='px-3 lg:px-6 pb-6  lg:flex gap-6 relative'>
 
                 <div className='lg:w-[600px] px-2 py-4 lg:py-7 lg:px-8 bg-white dark:bg-darkCard text-center h-full cardShadow rounded mb-6'>
                     <Image className='w-[200px] mx-auto' src={youtubeIcon} alt="icon" />

@@ -28,7 +28,7 @@ const settingsOne = () => {
                 <Image className='absolute top-2 right-10 object-cover hidden md:flex lg:flex' src={settings1} alt='settings' />
             </div>
 
-            <div className='px-2 lg:px-6 pb-6'>
+            <div className='px-3 lg:px-6 pb-6'>
                 <Tab.Group >
                     <div className='lg:flex gap-6 w-full relative'>
 
@@ -90,7 +90,7 @@ const settingsOne = () => {
 
 
                                 </Tab>
-                                <hr className='my-3 border-myLine dark:border-darkLine ' />
+                                <hr className='my-3 border-myLine dark:border-darkLine' />
                                 <Tab className=' hover:text-myBlue dark:hover:text-myGreen outline-none' as={Fragment}>
                                     {({ selected }) => (
                                         <button
@@ -132,14 +132,20 @@ const settingsOne = () => {
                             <Tab.Panel >
                                 <Team />
                             </Tab.Panel>
-                            <Tab.Panel><Belling /></Tab.Panel>
-                            <Tab.Panel><Notifications /></Tab.Panel>
-                            <Tab.Panel><API /></Tab.Panel>
+                            <Tab.Panel>
+                                <Belling />
+                            </Tab.Panel>
+                            <Tab.Panel>
+                                <Notifications />
+                            </Tab.Panel>
+                            <Tab.Panel>
+                                <API />
+                            </Tab.Panel>
                         </Tab.Panels>
                     </div>
                 </Tab.Group>
             </div>
-            <hr className='mt-6 pb-8 border-myLine dark:border-darkLine' />
+            <hr className='sm:mt-6 sm:pb-8 border-myLine dark:border-darkLine' />
         </div>
     );
 };

@@ -1,17 +1,14 @@
 "use client"
 import { useState } from 'react';
-import '../pricingOne/pricing.css';
+import '../pricing_one/pricing.css';
 import { cards } from '../../../../../public/data/pricingData';
 import { Tab } from '@headlessui/react';
 import { Fragment } from 'react';
 
 
 const PricingTwo = () => {
-
-    const [price, setPrice] = useState(true);
-
     return (
-        <div className='px-2 lg:px-6 pt-10 pb-8 bg-bgColor dark:bg-darkBg'>
+        <div className='px-3 lg:px-6 pt-10 lg:pb-8 bg-bgColor dark:bg-darkBg'>
             <h2 className='text-myBlack text-[40px] text-center font-semibold mb-5 dark:text-white'>Our Pricing</h2>
             <p className='lg:w-1/3 mx-auto text-center text-lg text-myBlack dark:text-myWhite'>Vestibulum diam risus, convallis vel blandit eu, iaculis in diam. Fusce elementum metus sem.Nulla posuere, tortor sed .</p>
 
