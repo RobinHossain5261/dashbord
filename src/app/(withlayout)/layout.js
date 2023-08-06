@@ -1,5 +1,5 @@
 "use client"
-import { Fragment, useEffect, useState } from 'react'
+import { Fragment, useEffect, useRef, useState } from 'react'
 import { Transition } from '@headlessui/react'
 import TopBar from '@/components/TopBar/TopBar';
 import Footer from '@/components/Footer/Footer';
@@ -8,15 +8,14 @@ import SideMenu from '@/components/SideMenu/SideMenu';
 
 
 export default function RootLayout({ children }) {
+
   const [showNav, setShowNav] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   function handleResize() {
-    if (innerWidth <= 640) {
-      setShowNav(!showNav);
+    if (innerWidth <= 768) {
       setIsMobile(true);
     } else {
-      setShowNav(false);
       setIsMobile(false);
     }
   }
@@ -26,16 +25,18 @@ export default function RootLayout({ children }) {
       addEventListener("resize", handleResize);
 
     }
-    if (innerWidth > 640) {
+    if (innerWidth > 768) {
       setShowNav(true)
+    }
+    if (innerWidth < 768) {
+      setShowNav(false)
     }
     return () => {
       removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [innerWidth]);
 
   return (
-
     <>
       <TopBar showNav={showNav} setShowNav={setShowNav} />
       <Transition
@@ -48,7 +49,6 @@ export default function RootLayout({ children }) {
         leaveFrom="translate-x-0"
         leaveTo="-translate-x-full"
       >
-        {/* <SideBar showNav={showNav} setShowNav={setShowNav} /> */}
         <SideMenu showNav={showNav} setShowNav={setShowNav} />
       </Transition>
       <div

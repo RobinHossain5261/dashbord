@@ -1,7 +1,5 @@
 import { forwardRef, useState } from "react";
 import Link from "next/link";
-// import { HomeIcon, CreditCardIcon, UserIcon } from "@heroicons/react/24/solid";
-import { useRouter } from "next/router";
 import { useTheme } from "next-themes";
 import AnimateHeight from 'react-animate-height';
 import logo from '@/../public/images/Logo.png';
@@ -10,18 +8,10 @@ import Image from "next/image";
 import { usePathname } from 'next/navigation';
 
 const SideMenu = forwardRef(({ showNav, setShowNav }, ref) => {
-    const { resolvedTheme, setTheme } = useTheme();
+    const { resolvedTheme } = useTheme();
     const currentRoute = usePathname();
 
-    const [activeMenu, setActiveMenu] = useState('');
-    const toggleMenu = (menuName) => {
-        if (activeMenu === menuName) {
-            setActiveMenu('');
-        }
-        else {
-            setActiveMenu(menuName);
-        }
-    };
+    const [activeMenu, setActiveMenu] = useState(1);
 
     const [height, setHeight] = useState(0);
     const [height1, setHeight1] = useState(0);
@@ -55,9 +45,7 @@ const SideMenu = forwardRef(({ showNav, setShowNav }, ref) => {
                     <div className='text-base text-myBlack dark:text-myWhite flex items-center justify-between hover:text-myBlue dark:hover:text-myGreen'
                         aria-expanded={height !== 0}
                         aria-controls="example-panel"
-                        onClick={() => {
-                            setHeight(height === 0 ? 'auto' : 0)
-                        }}
+                        onClick={() => setActiveMenu(prev => prev == 1 ? 0 : 1)}
                     >
                         <div className='flex items-center'>
                             <span className="material-symbols-outlined w-[15px] h-[15px] mr-3 mb-3">home</span>
@@ -69,13 +57,13 @@ const SideMenu = forwardRef(({ showNav, setShowNav }, ref) => {
                     <AnimateHeight
                         id="example-panel"
                         duration={500}
-                        height={height} // see props documentation below
+                        height={activeMenu == 1 ? 'auto' : 0} // see props documentation below
                     >
                         <ul>
-                            <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '#' ? 'activeDropdown' : ''}`}><Link href='#'>All Pages</Link></li>
-                            <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/dashbord/reports' ? 'activeDropdown' : ''}`}><Link href='/dashbord/reports'>Reports</Link></li>
-                            <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/dashbord/products' ? 'activeDropdown' : ''}`}><Link href='/dashbord/products'>Products</Link></li>
-                            <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/dashbord/tasks' ? 'activeDropdown' : ''}`}><Link href='/dashbord/tasks'>Tasks</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '#' ? 'activeDropdown' : ''}`}><Link href='#'>All Pages</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/dashbord/reports' ? 'activeDropdown' : ''}`}><Link href='/dashbord/reports'>Reports</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/dashbord/products' ? 'activeDropdown' : ''}`}><Link href='/dashbord/products'>Products</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/dashbord/tasks' ? 'activeDropdown' : ''}`}><Link href='/dashbord/tasks'>Tasks</Link></li>
                         </ul>
 
                     </AnimateHeight>
@@ -85,9 +73,7 @@ const SideMenu = forwardRef(({ showNav, setShowNav }, ref) => {
                     <div className='text-base text-myBlack dark:text-myWhite flex items-center justify-between hover:text-myBlue dark:hover:text-myGreen'
                         aria-expanded={height1 !== 0}
                         aria-controls="example-panel"
-                        onClick={() => {
-                            setHeight1(height1 === 0 ? 'auto' : 0)
-                        }}
+                        onClick={() => setActiveMenu(prev => prev == 2 ? 0 : 2)}
                     >
                         <div className='flex items-center'>
                             <span className="material-symbols-outlined w-[15px] h-[15px] mr-3 mb-3">
@@ -100,18 +86,18 @@ const SideMenu = forwardRef(({ showNav, setShowNav }, ref) => {
                     <AnimateHeight
                         id="example-panel"
                         duration={700}
-                        height={height1} // see props documentation below
+                        height={activeMenu == 2 ? 'auto' : 0}
                     >
 
                         <ul>
-                            <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '#' ? 'activeDropdown' : ''}`}><Link href='#'>All Pages</Link></li>
-                            <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/features/contacts' ? 'activeDropdown' : ''}`}><Link href='/features/contacts'>Contacts</Link></li>
-                            <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/features/companies' ? 'activeDropdown' : ''}`}><Link href='/features/companies'>Companies</Link></li>
-                            <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/features/projects' ? 'activeDropdown' : ''}`}><Link href='/features/projects'>Projects</Link></li>
-                            <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/features/tasks' ? 'activeDropdown' : ''}`}><Link href='/features/tasks'>Tasks</Link></li>
-                            <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/features/board' ? 'activeDropdown' : ''}`}><Link href='/features/board'>Board</Link></li>
-                            <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/features/table' ? 'activeDropdown' : ''}`}><Link href='/features/table'>Table</Link></li>
-                            <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/features/crypto' ? 'activeDropdown' : ''}`}><Link href='/features/crypto'>Crypto</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '#' ? 'activeDropdown' : ''}`}><Link href='#'>All Pages</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/features/contacts' ? 'activeDropdown' : ''}`}><Link href='/features/contacts'>Contacts</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/features/companies' ? 'activeDropdown' : ''}`}><Link href='/features/companies'>Companies</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/features/projects' ? 'activeDropdown' : ''}`}><Link href='/features/projects'>Projects</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/features/tasks' ? 'activeDropdown' : ''}`}><Link href='/features/tasks'>Tasks</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/features/board' ? 'activeDropdown' : ''}`}><Link href='/features/board'>Board</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/features/table' ? 'activeDropdown' : ''}`}><Link href='/features/table'>Table</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/features/crypto' ? 'activeDropdown' : ''}`}><Link href='/features/crypto'>Crypto</Link></li>
                         </ul>
                     </AnimateHeight>
                 </li>
@@ -119,7 +105,7 @@ const SideMenu = forwardRef(({ showNav, setShowNav }, ref) => {
                     <div className='text-base text-myBlack dark:text-myWhite flex items-center justify-between hover:text-myBlue dark:hover:text-myGreen'
                         aria-expanded={height2 !== 0}
                         aria-controls="example-panel"
-                        onClick={() => { setHeight2(height2 === 0 ? 'auto' : 0) }}
+                        onClick={() => setActiveMenu(prev => prev == 3 ? 0 : 3)}
                     >
                         <div className='flex items-center'>
                             <span className="material-symbols-outlined w-[15px] h-[15px] mr-3 mb-3">
@@ -132,13 +118,13 @@ const SideMenu = forwardRef(({ showNav, setShowNav }, ref) => {
                     <AnimateHeight
                         id="example-panel"
                         duration={500}
-                        height={height2} // see props documentation below
+                        height={activeMenu == 3 ? 'auto' : 0} // see props documentation below
                     >
                         <ul className="dropdown-menu">
-                            <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '#' ? 'activeDropdown' : ''}`}><Link href='#'>All Pages</Link></li>
-                            <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/profile/profile_one' ? 'activeDropdown' : ''}`}><Link href='/profile/profile_one'>Profile v1</Link></li>
-                            <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/profile/profile_two' ? 'activeDropdown' : ''}`}><Link href='/profile/profile_two'>Profile v2</Link></li>
-                            <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/profile/profile_three' ? 'activeDropdown' : ''}`}><Link href='/profile/profile_three'>Profile v3</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '#' ? 'activeDropdown' : ''}`}><Link href='#'>All Pages</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/profile/profile_one' ? 'activeDropdown' : ''}`}><Link href='/profile/profile_one'>Profile v1</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/profile/profile_two' ? 'activeDropdown' : ''}`}><Link href='/profile/profile_two'>Profile v2</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/profile/profile_three' ? 'activeDropdown' : ''}`}><Link href='/profile/profile_three'>Profile v3</Link></li>
                         </ul>
                     </AnimateHeight>
                 </li>
@@ -146,7 +132,7 @@ const SideMenu = forwardRef(({ showNav, setShowNav }, ref) => {
                     <div className='text-base text-myBlack dark:text-myWhite flex items-center justify-between hover:text-myBlue dark:hover:text-myGreen'
                         aria-expanded={height3 !== 0}
                         aria-controls="example-panel"
-                        onClick={() => { setHeight3(height3 === 0 ? 'auto' : 0) }}
+                        onClick={() => setActiveMenu(prev => prev == 4 ? 0 : 4)}
                     >
                         <div className='flex items-center'>
                             <span className="material-symbols-outlined w-[15px] h-[15px] mr-3 mb-3">
@@ -159,14 +145,14 @@ const SideMenu = forwardRef(({ showNav, setShowNav }, ref) => {
                     <AnimateHeight
                         id="example-panel"
                         duration={500}
-                        height={height3} // see props documentation below
+                        height={activeMenu == 4 ? 'auto' : 0} // see props documentation below
                     >
                         <ul>
-                            <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '#' ? 'activeDropdown' : ''}`}><Link href=''>All Pages</Link></li>
-                            <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/pricing/pricing_one' ? 'activeDropdown' : ''}`}><Link href='/pricing/pricing_one'>Pricing v1</Link></li>
-                            <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/pricing/pricing_two' ? 'activeDropdown' : ''}`}><Link href='/pricing/pricing_two'>Pricing v2</Link></li>
-                            <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/pricing/pricing_three' ? 'activeDropdown' : ''}`}><Link href='/pricing/pricing_three'>Pricing v3</Link></li>
-                            <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/pricing/pricing_single' ? 'activeDropdown' : ''}`}><Link href='/pricing/pricing_single'>Pricing Single</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '#' ? 'activeDropdown' : ''}`}><Link href=''>All Pages</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/pricing/pricing_one' ? 'activeDropdown' : ''}`}><Link href='/pricing/pricing_one'>Pricing v1</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/pricing/pricing_two' ? 'activeDropdown' : ''}`}><Link href='/pricing/pricing_two'>Pricing v2</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/pricing/pricing_three' ? 'activeDropdown' : ''}`}><Link href='/pricing/pricing_three'>Pricing v3</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/pricing/pricing_single' ? 'activeDropdown' : ''}`}><Link href='/pricing/pricing_single'>Pricing Single</Link></li>
                         </ul>
                     </AnimateHeight>
                 </li>
@@ -174,7 +160,7 @@ const SideMenu = forwardRef(({ showNav, setShowNav }, ref) => {
                     <div className='text-base text-myBlack dark:text-myWhite flex items-center justify-between hover:text-myBlue dark:hover:text-myGreen'
                         aria-expanded={height4 !== 0}
                         aria-controls="example-panel"
-                        onClick={() => { setHeight4(height4 === 0 ? 'auto' : 0) }}
+                        onClick={() => setActiveMenu(prev => prev == 5 ? 0 : 5)}
                     >
                         <div className='flex items-center'>
                             <span className="material-symbols-outlined w-[15px] h-[15px] mr-3 mb-3">
@@ -187,12 +173,12 @@ const SideMenu = forwardRef(({ showNav, setShowNav }, ref) => {
                     <AnimateHeight
                         id="example-panel"
                         duration={500}
-                        height={height4} // see props documentation below
+                        height={activeMenu == 5 ? 'auto' : 0} // see props documentation below
                     >
                         <ul className="dropdown-menu">
-                            <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '#' ? 'activeDropdown' : ''}`}><Link href=''>All Pages</Link></li>
-                            <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/integrations' ? 'activeDropdown' : ''}`}><Link href='/integrations'>Integrations</Link></li>
-                            <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/integrations/integrations_single' ? 'activeDropdown' : ''}`}><Link href='/integrations/integrations_single'>Integrations single</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '#' ? 'activeDropdown' : ''}`}><Link href=''>All Pages</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/integrations' ? 'activeDropdown' : ''}`}><Link href='/integrations'>Integrations</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/integrations/integrations_single' ? 'activeDropdown' : ''}`}><Link href='/integrations/integrations_single'>Integrations single</Link></li>
                         </ul>
                     </AnimateHeight>
                 </li>
@@ -201,7 +187,7 @@ const SideMenu = forwardRef(({ showNav, setShowNav }, ref) => {
                     <div className='text-base text-myBlack dark:text-myWhite flex items-center justify-between hover:text-myBlue dark:hover:text-myGreen'
                         aria-expanded={height5 !== 0}
                         aria-controls="example-panel"
-                        onClick={() => { setHeight5(height5 === 0 ? 'auto' : 0) }}
+                        onClick={() => setActiveMenu(prev => prev == 6 ? 0 : 6)}
                     >
                         <div className='flex items-center'>
                             <span className="material-symbols-outlined w-[15px] h-[15px] mr-3 mb-2">
@@ -214,13 +200,13 @@ const SideMenu = forwardRef(({ showNav, setShowNav }, ref) => {
                     <AnimateHeight
                         id="example-panel"
                         duration={500}
-                        height={height5} // see props documentation below
+                        height={activeMenu == 6 ? 'auto' : 0} // see props documentation below
                     >
                         <ul className="dropdown-menu">
-                            <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '#' ? 'activeDropdown' : ''}`}><Link href=''>All Pages</Link></li>
-                            <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/settings/settings_one' ? 'activeDropdown' : ''}`}><Link href='/settings/settings_one'>Settings v1</Link></li>
-                            <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/settings/settings_two' ? 'activeDropdown' : ''}`}><Link href='/settings/settings_two'>Settings v2</Link></li>
-                            <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/settings/settings_three' ? 'activeDropdown' : ''}`}><Link href='/settings/settings_three'>Settings v3</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '#' ? 'activeDropdown' : ''}`}><Link href=''>All Pages</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/settings/settings_one' ? 'activeDropdown' : ''}`}><Link href='/settings/settings_one'>Settings v1</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/settings/settings_two' ? 'activeDropdown' : ''}`}><Link href='/settings/settings_two'>Settings v2</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/settings/settings_three' ? 'activeDropdown' : ''}`}><Link href='/settings/settings_three'>Settings v3</Link></li>
                         </ul>
                     </AnimateHeight>
                 </li>
@@ -228,7 +214,7 @@ const SideMenu = forwardRef(({ showNav, setShowNav }, ref) => {
                     <div className='text-base text-myBlack dark:text-myWhite flex items-center justify-between hover:text-myBlue dark:hover:text-myGreen'
                         aria-expanded={height6 !== 0}
                         aria-controls="example-panel"
-                        onClick={() => { setHeight6(height6 === 0 ? 'auto' : 0) }}
+                        onClick={() => setActiveMenu(prev => prev == 7 ? 0 : 7)}
                     >
                         <div className='flex items-center'>
                             <span className="material-symbols-outlined w-[15px] h-[15px] mr-3 mb-2">
@@ -241,18 +227,18 @@ const SideMenu = forwardRef(({ showNav, setShowNav }, ref) => {
                     <AnimateHeight
                         id="example-panel"
                         duration={500}
-                        height={height6} // see props documentation below
+                        height={activeMenu == 7 ? 'auto' : 0} // see props documentation below
                     >
                         <ul>
-                            <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '#' ? 'activeDropdown' : ''}`}><Link href=''>All Pages</Link></li>
-                            <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/utillity/signup' ? 'activeDropdown' : ''}`}><Link href='/utillity/signup'>Sign up</Link></li>
-                            <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-1 py-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all'><Link href='/utillity/signin'>Sign in</Link></li>
-                            <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-1 py-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all'><Link href='/utillity/verifyemail'>Email Confirmation</Link></li>
-                            <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/notification' ? 'activeDropdown' : ''}`}><Link href='/notification'>Notification center</Link></li>
-                            <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/notes' ? 'activeDropdown' : ''}`}><Link href='/notes'>Notes</Link></li>
-                            <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-1 py-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all'><Link href='/utillity/resetpassword'>Reset password</Link></li>
-                            <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-1 py-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all'><Link href='/utillity/protected'>Password protected</Link></li>
-                            <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-1 py-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all'><Link href='/utillity/errorpage'>404 Not found</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '#' ? 'activeDropdown' : ''}`}><Link href=''>All Pages</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/utillity/signup' ? 'activeDropdown' : ''}`}><Link href='/utillity/signup'>Sign up</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-1 py-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all'><Link href='/utillity/signin'>Sign in</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-1 py-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all'><Link href='/utillity/verifyemail'>Email Confirmation</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/notification' ? 'activeDropdown' : ''}`}><Link href='/notification'>Notification center</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/notes' ? 'activeDropdown' : ''}`}><Link href='/notes'>Notes</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-1 py-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all'><Link href='/utillity/resetpassword'>Reset password</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-1 py-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all'><Link href='/utillity/protected'>Password protected</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-1 py-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all'><Link href='/utillity/errorpage'>404 Not found</Link></li>
                         </ul>
                     </AnimateHeight>
                 </li>

@@ -22,7 +22,7 @@ const people = [
 
 const Reports = () => {
     const [selectedPerson, setSelectedPerson] = useState(people[0]);
-    const { resolvedTheme, setTheme } = useTheme();
+    const { resolvedTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
 
 
@@ -106,7 +106,7 @@ const Reports = () => {
                     </div>
                 </div>
                 <hr className="my-5 lg:my-10 dark:border-darkLine" />
-                <div className="h-[250px] md:h-[350px] lg:h-[400px] w-full">
+                <div className="h-[250px] md:h-[300px] lg:h-[400px] w-full">
                     <LineChart></LineChart>
                 </div>
             </section>

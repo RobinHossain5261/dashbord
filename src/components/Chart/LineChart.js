@@ -2,15 +2,10 @@
 import { useEffect, useRef } from 'react';
 import Chart from 'chart.js/auto';
 import { useTheme } from 'next-themes';
-import { useState } from 'react';
 
 const LineChart = () => {
     const chartRef = useRef(null);
-    const { resolvedTheme, setTheme } = useTheme();
-
-    const [mounted, setMounted] = useState(false);
-
-
+    const { resolvedTheme } = useTheme();
     useEffect(() => {
         const ctx = chartRef.current.getContext('2d');
         const gradient = ctx.createLinearGradient(0, 0, 0, 400);

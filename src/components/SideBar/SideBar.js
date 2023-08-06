@@ -12,9 +12,6 @@ import './SideBar.css';
 
 const SideBar = forwardRef(({ showNav, setShowNav }, ref) => {
 
-  const [height, setHeight] = useState(0);
-  const [height1, setHeight1] = useState(0);
-
   const { resolvedTheme, setTheme } = useTheme();
   const [activeMenu, setActiveMenu] = useState('');
 
@@ -52,47 +49,10 @@ const SideBar = forwardRef(({ showNav, setShowNav }, ref) => {
       </div>
 
       <ul className='mx-6'>
-        <div className='mb-5'>
-          <div
-            className='text-base text-myBlack dark:text-myWhite flex items-center justify-between hover:text-myBlue dark:hover:text-myGreen'
-            aria-expanded={height !== 0}
-            aria-controls="example-panel"
-            onClick={() => {
-              setHeight(height === 0 ? 'auto' : 0)
-              toggleMenu('dropdown')
-            }}
-          >
-            <div className='flex items-center'>
-              <span className="material-symbols-outlined w-[15px] h-[15px] mr-3 mb-3">home</span>
-              <span className="text-base">Cheking</span>
-            </div>
-            <span className="material-symbols-outlined w-5 h-5">expand_more</span>
-          </div>
-          <AnimateHeight
-            id="example-panel"
-            duration={500}
-            height={height} // see props documentation below
-          >
-            {activeMenu === 'dropdown' && (
-              <ul>
-                <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='#'>All Pages</Link></li>
-                <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/dashbord/reports'>Reports</Link></li>
-                <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/dashbord/products'>Products</Link></li>
-                <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/dashbord/tasks'>Tasks</Link></li>
-              </ul>
-            )}
-          </AnimateHeight>
-        </div>
-
-
-
         {/* my menu list */}
         <li className="mb-5 cursor-pointer">
           <div className='text-base text-myBlack dark:text-myWhite flex items-center justify-between hover:text-myBlue dark:hover:text-myGreen'
-            aria-expanded={height1 !== 0}
-            aria-controls="example-panel"
             onClick={() => {
-              setHeight1(height1 === 0 ? 'auto' : 0)
               toggleMenu('dropdown1')
             }}>
             <div className='flex items-center'>
@@ -102,20 +62,15 @@ const SideBar = forwardRef(({ showNav, setShowNav }, ref) => {
             <span className="material-symbols-outlined w-5 h-5">expand_more</span>
           </div>
 
-          <AnimateHeight
-            id="example-panel"
-            duration={500}
-            height={height1} // see props documentation below
-          >
-            {activeMenu === 'dropdown1' && (
-              <ul>
-                <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='#'>All Pages</Link></li>
-                <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/dashbord/reports'>Reports</Link></li>
-                <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/dashbord/products'>Products</Link></li>
-                <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/dashbord/tasks'>Tasks</Link></li>
-              </ul>
-            )}
-          </AnimateHeight>
+          {activeMenu === 'dropdown1' && (
+            <ul>
+              <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='#'>All Pages</Link></li>
+              <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/dashbord/reports'>Reports</Link></li>
+              <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/dashbord/products'>Products</Link></li>
+              <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/dashbord/tasks'>Tasks</Link></li>
+            </ul>
+          )}
+
         </li>
 
         <li className='mb-5 cursor-pointer'>
@@ -130,14 +85,14 @@ const SideBar = forwardRef(({ showNav, setShowNav }, ref) => {
           </div>
           {activeMenu === 'dropdown2' && (
             <ul className="dropdown-menu">
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href=''>All Pages</Link></li>
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/features/contacts'>Contacts</Link></li>
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/features/companies'>Companies</Link></li>
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/features/projects'>Projects</Link></li>
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/features/tasks'>Tasks</Link></li>
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/features/board'>Board</Link></li>
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/features/table'>Table</Link></li>
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/features/crypto'>Crypto</Link></li>
+              <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href=''>All Pages</Link></li>
+              <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/features/contacts'>Contacts</Link></li>
+              <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/features/companies'>Companies</Link></li>
+              <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/features/projects'>Projects</Link></li>
+              <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/features/tasks'>Tasks</Link></li>
+              <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/features/board'>Board</Link></li>
+              <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/features/table'>Table</Link></li>
+              <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/features/crypto'>Crypto</Link></li>
             </ul>
           )}
         </li>
@@ -154,10 +109,10 @@ const SideBar = forwardRef(({ showNav, setShowNav }, ref) => {
           </div>
           {activeMenu === 'dropdown3' && (
             <ul className="dropdown-menu">
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href=''>All Pages</Link></li>
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/profile/profileOne'>Profile v1</Link></li>
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/profile/profileTwo'>Profile v2</Link></li>
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/profile/profileThree'>Profile v3</Link></li>
+              <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href=''>All Pages</Link></li>
+              <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/profile/profileOne'>Profile v1</Link></li>
+              <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/profile/profileTwo'>Profile v2</Link></li>
+              <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/profile/profileThree'>Profile v3</Link></li>
             </ul>
           )}
         </li>
@@ -173,11 +128,11 @@ const SideBar = forwardRef(({ showNav, setShowNav }, ref) => {
           </div>
           {activeMenu === 'dropdown4' && (
             <ul className="dropdown-menu">
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href=''>All Pages</Link></li>
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/pricing/pricingOne'>Pricing v1</Link></li>
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/pricing/pricingTwo'>Pricing v2</Link></li>
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/pricing/pricingThree'>Pricing v3</Link></li>
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/pricing/pricingSingle'>Pricing Single</Link></li>
+              <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href=''>All Pages</Link></li>
+              <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/pricing/pricingOne'>Pricing v1</Link></li>
+              <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/pricing/pricingTwo'>Pricing v2</Link></li>
+              <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/pricing/pricingThree'>Pricing v3</Link></li>
+              <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/pricing/pricingSingle'>Pricing Single</Link></li>
             </ul>
           )}
         </li>
@@ -193,9 +148,9 @@ const SideBar = forwardRef(({ showNav, setShowNav }, ref) => {
           </div>
           {activeMenu === 'dropdown5' && (
             <ul className="dropdown-menu">
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href=''>All Pages</Link></li>
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/integrations'>Integrations</Link></li>
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/integrations/integrationsSingle'>Integrations single</Link></li>
+              <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href=''>All Pages</Link></li>
+              <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/integrations'>Integrations</Link></li>
+              <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/integrations/integrationsSingle'>Integrations single</Link></li>
             </ul>
           )}
         </li>
@@ -214,10 +169,10 @@ const SideBar = forwardRef(({ showNav, setShowNav }, ref) => {
           </div>
           {activeMenu === 'dropdown6' && (
             <ul className="dropdown-menu">
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href=''>All Pages</Link></li>
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/settings/settings_one'>Settings v1</Link></li>
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/settings/settings_two'>Settings v2</Link></li>
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/settings/settings_three'>Settings v3</Link></li>
+              <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href=''>All Pages</Link></li>
+              <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/settings/settings_one'>Settings v1</Link></li>
+              <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/settings/settings_two'>Settings v2</Link></li>
+              <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/settings/settings_three'>Settings v3</Link></li>
             </ul>
           )}
         </li>
@@ -233,15 +188,15 @@ const SideBar = forwardRef(({ showNav, setShowNav }, ref) => {
           </div>
           {activeMenu === 'dropdown7' && (
             <ul className="dropdown-menu">
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href=''>All Pages</Link></li>
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/utillity/signup'>Sign up</Link></li>
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/utillity/signin'>Sign in</Link></li>
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/utillity/verifyemail'>Email Confirmation</Link></li>
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/notification'>Notification center</Link></li>
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/notes'>Notes</Link></li>
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/utillity/resetpassword'>Reset password</Link></li>
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/utillity/protected'>Password protected</Link></li>
-              <li onClick={() => innerWidth <= 640 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/utillity/errorpage'>404 Not found</Link></li>
+              <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href=''>All Pages</Link></li>
+              <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/utillity/signup'>Sign up</Link></li>
+              <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/utillity/signin'>Sign in</Link></li>
+              <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/utillity/verifyemail'>Email Confirmation</Link></li>
+              <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/notification'>Notification center</Link></li>
+              <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/notes'>Notes</Link></li>
+              <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/utillity/resetpassword'>Reset password</Link></li>
+              <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/utillity/protected'>Password protected</Link></li>
+              <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-2 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6'><Link href='/utillity/errorpage'>404 Not found</Link></li>
             </ul>
           )}
         </li>
