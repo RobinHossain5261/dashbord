@@ -69,7 +69,7 @@ const SignUp = () => {
             <div className=" lg:w-1/2 w-full relative cardShadow">
                 <div className=' flex h-[100vh] items-center justify-center'>
                     <div className='w-full lg:w-4/5 bg-white dark:bg-darkCard p-3 lg:px-8 lg:py-7 rounded'>
-                        <h3 className='text-2xl lg:text-[32px] text-myBlack dark:text-white  text-center font-semibold'>Sign In to Dashpro</h3>
+                        <h3 className='text-2xl lg:text-[32px] text-myBlack dark:text-white  text-center font-semibold'>Sign Up to Dashpro</h3>
                         <div className='flex flex-wrap justify-center gap-3 my-7'>
                             <div className='w-10 h-8 px-[10px] py-[6px] bg-[#edecfb] dark:bg-[#274346] rounded cursor-pointer'>
                                 <FaGoogle className='w-5 h-5 text-myBlue dark:text-myGreen' />

@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
     return () => {
       removeEventListener("resize", handleResize);
     };
-  }, [innerWidth]);
+  }, []);
 
   return (
     <>

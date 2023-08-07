@@ -79,7 +79,7 @@ const Notification = () => {
                                         {
                                             yesterdayNotifications.map(notification => (<div
                                                 key={notification.id}
-                                                className='flex flex-wrap gap-3  bg-bgColor dark:bg-[#1E192A] py-5 px-3 mb-2 rounded'
+                                                className='flex flex-wrap gap-3  bg-bgColor dark:bg-[#1E192A] py-5 px-3 mt-2 rounded'
                                             >
                                                 <Image className='w-[60px] h-[60px] rounded-full' src={notification.img} alt="people" />
                                                 <div>

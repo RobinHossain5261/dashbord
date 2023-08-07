@@ -13,16 +13,16 @@ const SideMenu = forwardRef(({ showNav, setShowNav }, ref) => {
 
     const [activeMenu, setActiveMenu] = useState(1);
 
-    const [height, setHeight] = useState(0);
-    const [height1, setHeight1] = useState(0);
-    const [height2, setHeight2] = useState(0);
-    const [height3, setHeight3] = useState(0);
-    const [height4, setHeight4] = useState(0);
-    const [height5, setHeight5] = useState(0);
-    const [height6, setHeight6] = useState(0);
+    const [height] = useState(0);
+    const [height1] = useState(0);
+    const [height2] = useState(0);
+    const [height3] = useState(0);
+    const [height4] = useState(0);
+    const [height5] = useState(0);
+    const [height6] = useState(0);
 
     return (
-        <nav ref={ref} className="fixed z-[6] w-full md:w-[280px] lg:w-[280px] h-full bg-white dark:bg-[#1E192A] shadow-sm overflow-y-auto">
+        <nav ref={ref} className="fixed top-0 bottom-0 z-[6] w-full md:w-[280px] lg:w-[280px] h-full bg-white dark:bg-[#1E192A] shadow-sm overflow-y-auto">
 
             <div className='flex items-center justify-between'>
                 <Link href='/' className="flex items-center gap-2 ml-6 mt-10 mb-[60px] cursor-pointer">
@@ -60,7 +60,7 @@ const SideMenu = forwardRef(({ showNav, setShowNav }, ref) => {
                         height={activeMenu == 1 ? 'auto' : 0} // see props documentation below
                     >
                         <ul>
-                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '#' ? 'activeDropdown' : ''}`}><Link href='#'>All Pages</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/dashbord' ? 'activeDropdown' : ''}`}><Link href='/dashbord'>All Pages</Link></li>
                             <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/dashbord/reports' ? 'activeDropdown' : ''}`}><Link href='/dashbord/reports'>Reports</Link></li>
                             <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/dashbord/products' ? 'activeDropdown' : ''}`}><Link href='/dashbord/products'>Products</Link></li>
                             <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/dashbord/tasks' ? 'activeDropdown' : ''}`}><Link href='/dashbord/tasks'>Tasks</Link></li>
@@ -88,9 +88,8 @@ const SideMenu = forwardRef(({ showNav, setShowNav }, ref) => {
                         duration={700}
                         height={activeMenu == 2 ? 'auto' : 0}
                     >
-
                         <ul>
-                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '#' ? 'activeDropdown' : ''}`}><Link href='#'>All Pages</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/features' ? 'activeDropdown' : ''}`}><Link href='/features'>All Pages</Link></li>
                             <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/features/contacts' ? 'activeDropdown' : ''}`}><Link href='/features/contacts'>Contacts</Link></li>
                             <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/features/companies' ? 'activeDropdown' : ''}`}><Link href='/features/companies'>Companies</Link></li>
                             <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/features/projects' ? 'activeDropdown' : ''}`}><Link href='/features/projects'>Projects</Link></li>
@@ -120,8 +119,8 @@ const SideMenu = forwardRef(({ showNav, setShowNav }, ref) => {
                         duration={500}
                         height={activeMenu == 3 ? 'auto' : 0} // see props documentation below
                     >
-                        <ul className="dropdown-menu">
-                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '#' ? 'activeDropdown' : ''}`}><Link href='#'>All Pages</Link></li>
+                        <ul>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/profile' ? 'activeDropdown' : ''}`}><Link href='/profile'>All Pages</Link></li>
                             <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/profile/profile_one' ? 'activeDropdown' : ''}`}><Link href='/profile/profile_one'>Profile v1</Link></li>
                             <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/profile/profile_two' ? 'activeDropdown' : ''}`}><Link href='/profile/profile_two'>Profile v2</Link></li>
                             <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/profile/profile_three' ? 'activeDropdown' : ''}`}><Link href='/profile/profile_three'>Profile v3</Link></li>
@@ -148,7 +147,7 @@ const SideMenu = forwardRef(({ showNav, setShowNav }, ref) => {
                         height={activeMenu == 4 ? 'auto' : 0} // see props documentation below
                     >
                         <ul>
-                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '#' ? 'activeDropdown' : ''}`}><Link href=''>All Pages</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/pricing' ? 'activeDropdown' : ''}`}><Link href='/pricing'>All Pages</Link></li>
                             <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/pricing/pricing_one' ? 'activeDropdown' : ''}`}><Link href='/pricing/pricing_one'>Pricing v1</Link></li>
                             <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/pricing/pricing_two' ? 'activeDropdown' : ''}`}><Link href='/pricing/pricing_two'>Pricing v2</Link></li>
                             <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/pricing/pricing_three' ? 'activeDropdown' : ''}`}><Link href='/pricing/pricing_three'>Pricing v3</Link></li>
@@ -176,7 +175,7 @@ const SideMenu = forwardRef(({ showNav, setShowNav }, ref) => {
                         height={activeMenu == 5 ? 'auto' : 0} // see props documentation below
                     >
                         <ul className="dropdown-menu">
-                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '#' ? 'activeDropdown' : ''}`}><Link href=''>All Pages</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/integrations/all_page' ? 'activeDropdown' : ''}`}><Link href='/integrations/all_page'>All Pages</Link></li>
                             <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/integrations' ? 'activeDropdown' : ''}`}><Link href='/integrations'>Integrations</Link></li>
                             <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/integrations/integrations_single' ? 'activeDropdown' : ''}`}><Link href='/integrations/integrations_single'>Integrations single</Link></li>
                         </ul>
@@ -203,7 +202,7 @@ const SideMenu = forwardRef(({ showNav, setShowNav }, ref) => {
                         height={activeMenu == 6 ? 'auto' : 0} // see props documentation below
                     >
                         <ul className="dropdown-menu">
-                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '#' ? 'activeDropdown' : ''}`}><Link href=''>All Pages</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/settings' ? 'activeDropdown' : ''}`}><Link href='/settings'>All Pages</Link></li>
                             <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/settings/settings_one' ? 'activeDropdown' : ''}`}><Link href='/settings/settings_one'>Settings v1</Link></li>
                             <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/settings/settings_two' ? 'activeDropdown' : ''}`}><Link href='/settings/settings_two'>Settings v2</Link></li>
                             <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/settings/settings_three' ? 'activeDropdown' : ''}`}><Link href='/settings/settings_three'>Settings v3</Link></li>
@@ -230,7 +229,7 @@ const SideMenu = forwardRef(({ showNav, setShowNav }, ref) => {
                         height={activeMenu == 7 ? 'auto' : 0} // see props documentation below
                     >
                         <ul>
-                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '#' ? 'activeDropdown' : ''}`}><Link href=''>All Pages</Link></li>
+                            <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/utility_page' ? 'activeDropdown' : ''}`}><Link href='/utility_page'>All Pages</Link></li>
                             <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className={`text-base mx-3 px-4 py-1 mt-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all ${currentRoute === '/utillity/signup' ? 'activeDropdown' : ''}`}><Link href='/utillity/signup'>Sign up</Link></li>
                             <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-1 py-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all'><Link href='/utillity/signin'>Sign in</Link></li>
                             <li onClick={() => innerWidth <= 768 ? setShowNav(!showNav) : ''} className='text-base mx-3 px-4 mt-1 py-1 rounded-full text-myBlack dark:text-myWhite dark:hover:text-myGreen hover:text-myBlue hover:ml-6 transition-all'><Link href='/utillity/verifyemail'>Email Confirmation</Link></li>

@@ -75,7 +75,7 @@ const intregrations = () => {
                         {
                             companies.map(company => (<div
                                 key={company.id}
-                                className='bg-white dark:bg-darkCard px-2 pt-2 pb-5 lg:px-8 lg:py-7 rounded text-center'
+                                className='bg-white dark:bg-darkCard px-2 pt-2 pb-5 lg:px-8 lg:py-7 rounded text-center cardShadow'
                             >
                                 <Image className='cardShadow w-20 h-20 border-8 border-white dark:border-darkBg rounded-full mx-auto' src={company.img} alt="facebook" />
                                 <h4 className='text-myBlack dark:text-white text-2xl font-semibold text-center my-3 lg:mt-6 lg:mb-5'>{company.name}</h4>
@@ -88,7 +88,7 @@ const intregrations = () => {
                         {
                             searchengine.map(company => (<div
                                 key={company.id}
-                                className='bg-white dark:bg-darkCard px-2 pt-2 pb-4 lg:px-8 lg:py-7 rounded text-center'
+                                className='bg-white dark:bg-darkCard px-2 pt-2 pb-4 lg:px-8 lg:py-7 rounded text-center cardShadow'
                             >
                                 <Image className='cardShadow w-20 h-20 border-8 border-white dark:border-darkBg rounded-full mx-auto' src={company.img} alt="facebook" />
                                 <h4 className='text-myBlack dark:text-white text-2xl font-semibold text-center my-3 lg:mt-6 lg:mb-5'>{company.name}</h4>
@@ -101,7 +101,7 @@ const intregrations = () => {
                         {
                             socialmedia.map(company => (<div
                                 key={company.id}
-                                className='bg-white dark:bg-darkCard px-2 pt-2 pb-5 lg:px-8 lg:py-7 rounded text-center'
+                                className='bg-white dark:bg-darkCard px-2 pt-2 pb-5 lg:px-8 lg:py-7 rounded text-center cardShadow'
                             >
                                 <Image className='cardShadow w-20 h-20 border-8 border-white dark:border-darkBg rounded-full mx-auto' src={company.img} alt="facebook" />
                                 <h4 className='text-myBlack dark:text-white text-2xl font-semibold text-center my-3 lg:mt-6 lg:mb-5'>{company.name}</h4>
@@ -114,7 +114,7 @@ const intregrations = () => {
                         {
                             streaming.map(company => (<div
                                 key={company.id}
-                                className='bg-white dark:bg-darkCard px-2 pt-2 pb-5 lg:px-8 lg:py-7 rounded text-center'
+                                className='bg-white dark:bg-darkCard px-2 pt-2 pb-5 lg:px-8 lg:py-7 rounded text-center cardShadow'
                             >
                                 <Image className='cardShadow w-20 h-20 border-8 border-white dark:border-darkBg rounded-full mx-auto' src={company.img} alt="facebook" />
                                 <h4 className='text-myBlack dark:text-white text-2xl font-semibold text-center my-3 lg:mt-6 lg:mb-5'>{company.name}</h4>
@@ -125,9 +125,6 @@ const intregrations = () => {
                     </Tab.Panel>
                 </Tab.Panels>
             </Tab.Group>
-
-            <hr className='mt-6 border border-myLine dark:border-darkLine' />
-
         </div>
     );
 };
