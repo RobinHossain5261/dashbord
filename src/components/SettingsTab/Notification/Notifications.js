@@ -33,7 +33,7 @@ const Notifications = () => {
                             >
                                 <span className="sr-only">Enable notifications</span>
                                 <span
-                                    className={`${enabled ? 'translate-x-7' : 'translate-x-1'
+                                    className={`${enabled ? 'translate-x-8' : 'translate-x-1'
                                         } inline-block h-5 w-5 transform rounded-full bg-white transition`}
                                 />
                             </Switch>
@@ -56,7 +56,7 @@ const Notifications = () => {
                             >
                                 <span className="sr-only">Enable notifications</span>
                                 <span
-                                    className={`${enabled1 ? 'translate-x-7' : 'translate-x-1'
+                                    className={`${enabled1 ? 'translate-x-8' : 'translate-x-1'
                                         } inline-block h-5 w-5 transform rounded-full bg-white transition`}
                                 />
                             </Switch>
@@ -79,7 +79,7 @@ const Notifications = () => {
                             >
                                 <span className="sr-only">Enable notifications</span>
                                 <span
-                                    className={`${enabled3 ? 'translate-x-7' : 'translate-x-1'
+                                    className={`${enabled3 ? 'translate-x-8' : 'translate-x-1'
                                         } inline-block h-5 w-5 transform rounded-full bg-white transition`}
                                 />
                             </Switch>
@@ -102,7 +102,7 @@ const Notifications = () => {
                             >
                                 <span className="sr-only">Enable notifications</span>
                                 <span
-                                    className={`${enabled2 ? 'translate-x-7' : 'translate-x-1'
+                                    className={`${enabled2 ? 'translate-x-8' : 'translate-x-1'
                                         } inline-block h-5 w-5 transform rounded-full bg-white transition`}
                                 />
                             </Switch>
@@ -125,7 +125,7 @@ const Notifications = () => {
                             >
                                 <span className="sr-only">Enable notifications</span>
                                 <span
-                                    className={`${enabled4 ? 'translate-x-7' : 'translate-x-1'
+                                    className={`${enabled4 ? 'translate-x-8' : 'translate-x-1'
                                         } inline-block h-5 w-5 transform rounded-full bg-white transition`}
                                 />
                             </Switch>

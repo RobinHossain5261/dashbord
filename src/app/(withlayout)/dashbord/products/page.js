@@ -7,8 +7,6 @@ import { useTheme } from 'next-themes';
 import TotalSeles from '@/components/Chart/TotalSeles';
 import { allProducts, orderProducts, productLists } from '../../../../../public/data/dashbordData';
 import { useEffect } from 'react';
-import Link from 'next/link';
-
 
 const people = [
     { id: 1, name: '14 Aug - 25 Aug', unavailable: false },
@@ -18,7 +16,7 @@ const people = [
 
 const products = () => {
     const [selectedPerson, setSelectedPerson] = useState(people[0]);
-    const { resolvedTheme, setTheme } = useTheme();
+    const { resolvedTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
@@ -61,7 +59,6 @@ const products = () => {
                     <div className="overflow-x-auto whitespace-nowrap">
                         <table className="table">
                             <tbody>
-
                                 {
                                     productLists.map(product => (<tr
                                         key={product.id}
@@ -85,7 +82,6 @@ const products = () => {
 
                                     </tr>))
                                 }
-
                             </tbody>
                         </table>
                     </div>
@@ -102,7 +98,6 @@ const products = () => {
 
                 <div className="overflow-x-auto">
                     <table className="table whitespace-nowrap">
-
                         <thead className='bg-[#F5F7FD]  dark:bg-darkBg text-lg    '>
                             <tr className='border-myLine dark:border-darkLine text-myBlack dark:text-white'>
                                 <th>
@@ -183,7 +178,6 @@ const products = () => {
                                     </th>
                                 </tr>))
                             }
-
                         </tbody>
                     </table>
                 </div>
@@ -315,7 +309,6 @@ const products = () => {
                     </table>
                 </div>
             </div>
-
             <hr className='mt-6 border-myLine dark:border-darkLine' />
         </div>
     )

@@ -31,9 +31,9 @@ const SettingsThree = () => {
                         <Image className='w-[130px] h-[130px] rounded-full mx-auto' src={profile} alt='profile' />
                         <input type='file' id="file" ref={inputFile} style={{ display: 'none' }} />
                         <button onClick={onButtonClick} className='absolute bottom-3 left-[46%]'>
-                            <div className='w-[30px] h-[30px] rounded-full bg-myBlue dark:bg-myGreen flex items-center justify-center'>
+                            <span className='w-[30px] h-[30px] rounded-full bg-myBlue dark:bg-myGreen flex items-center justify-center'>
                                 <span className="material-symbols-outlined w-6 h-6 text-white">add_photo_alternate</span>
-                            </div>
+                            </span>
                         </button>
                     </div>
                     <h5 className='text-myBlack text-xl font-semibold text-center mt-3 mb-6'>Environmental Specialist</h5>
@@ -72,10 +72,10 @@ const SettingsThree = () => {
                                             selected ? 'bg-myBlue dark:bg-myGreen text-white' : 'bg-bgColor dark:bg-darkBg text-myBlack dark:text-myWhite'
                                         }
                                     >
-                                        <div className=' flex items-center justify-center gap-4'>
+                                        <span className=' flex items-center justify-center gap-4'>
                                             <span className=' text-base'>Account</span>
                                             <span className="material-symbols-outlined">edit</span>
-                                        </div>
+                                        </span>
                                     </button>
                                 )}
                             </Tab>
@@ -88,10 +88,10 @@ const SettingsThree = () => {
                                             selected ? 'bg-myBlue dark:bg-myGreen text-white' : 'bg-bgColor dark:bg-darkBg text-myBlack dark:text-myWhite'
                                         }
                                     >
-                                        <div className=' flex items-center justify-center gap-4'>
+                                        <span className=' flex items-center justify-center gap-4'>
                                             <span className=' text-base'>Team</span>
                                             <span className="material-symbols-outlined">group</span>
-                                        </div>
+                                        </span>
                                     </button>
                                 )}
                             </Tab>
@@ -104,10 +104,10 @@ const SettingsThree = () => {
                                             selected ? 'bg-myBlue dark:bg-myGreen text-white' : 'bg-bgColor dark:bg-darkBg text-myBlack dark:text-myWhite'
                                         }
                                     >
-                                        <div className=' flex items-center justify-center gap-4'>
+                                        <span className=' flex items-center justify-center gap-4'>
                                             <span className=' text-base'>Belling</span>
                                             <span className="material-symbols-outlined">add_card</span>
-                                        </div>
+                                        </span>
                                     </button>
                                 )}
                             </Tab>
@@ -120,10 +120,10 @@ const SettingsThree = () => {
                                             selected ? 'bg-myBlue dark:bg-myGreen text-white' : 'bg-bgColor dark:bg-darkBg text-myBlack dark:text-myWhite'
                                         }
                                     >
-                                        <div className=' flex items-center justify-center gap-4'>
+                                        <span className=' flex items-center justify-center gap-4'>
                                             <span className=' text-base'>Notifications</span>
                                             <span className="material-symbols-outlined">notifications</span>
-                                        </div>
+                                        </span>
                                     </button>
                                 )}
                             </Tab>
@@ -136,10 +136,10 @@ const SettingsThree = () => {
                                             selected ? 'bg-myBlue dark:bg-myGreen text-white' : 'bg-bgColor dark:bg-darkBg text-myBlack dark:text-myWhite'
                                         }
                                     >
-                                        <div className=' flex items-center justify-center gap-4'>
+                                        <span className=' flex items-center justify-center gap-4'>
                                             <span className=' text-base'>API</span>
                                             <span className="material-symbols-outlined">settings</span>
-                                        </div>
+                                        </span>
                                     </button>
                                 )}
                             </Tab>

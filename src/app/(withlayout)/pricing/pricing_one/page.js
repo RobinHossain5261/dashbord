@@ -31,7 +31,7 @@ const PricingOne = () => {
                     >
                         <span className="sr-only">Enable notifications</span>
                         <span
-                            className={`${enabled ? 'translate-x-7' : 'translate-x-1'
+                            className={`${enabled ? 'translate-x-8' : 'translate-x-1'
                                 } inline-block h-5 w-5 transform rounded-full bg-white transition ease-in-out duration-300`}
                         />
                     </Switch>

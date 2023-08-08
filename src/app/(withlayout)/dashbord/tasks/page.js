@@ -46,7 +46,7 @@ const tasks = () => {
                                 <span className="text-myBlue dark:text-myGreen ">{task.icon}</span>
                             </div>
                             <div className='dropdown dropdown-end'>
-                                <span tabIndex={0} className='w-[18px] h-[18px] dark:text-white cursor-pointer'>{task.more}</span>
+                                <span tabIndex={0} className='w-[18px] h-[18px] text-myBlack dark:text-white cursor-pointer'>{task.more}</span>
                                 <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-white dark:bg-darkCard rounded-box ">
                                     <li ><Link className='text-myBlack dark:text-myWhite rounded hover:text-white hover:bg-myBlue dark:hover:bg-myGreen' href='#'>Delete</Link></li>
                                     <li><Link className='text-myBlack dark:text-myWhite rounded hover:text-white hover:bg-myBlue dark:hover:bg-myGreen' href='#'>Edit</Link></li>

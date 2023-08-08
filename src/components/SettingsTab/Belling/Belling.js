@@ -116,20 +116,21 @@ const Belling = () => {
                         <input type="text" placeholder='Apt, unit, suite, etc. (optional)' className="w-full lg:w-1/2 outline-none bg-[#F7F8FD] dark:bg-[#1E192A] text-sm py-2 px-[18px] rounded placeholder-myGrey dark:placeholder-myLine lg:mb-0 mb-6 text-myBlack dark:text-myWhite" />
                         <input type="text" placeholder='(+33)7 35 55 21 02' className="w-full lg:w-1/2 outline-none bg-[#F7F8FD] dark:bg-[#1E192A] text-sm py-2 px-[18px] rounded placeholder-myGrey dark:placeholder-myLine text-myBlack dark:text-myWhite" />
                     </div>
+
                     <div className='lg:flex gap-6'>
-                        <input type="text" placeholder='City' className="w-full lg:w-1/2 outline-none bg-[#F7F8FD] dark:bg-[#1E192A] text-sm py-2 px-[18px] rounded placeholder-myGrey dark:placeholder-myLine mb-6 lg:mb-0 text-myBlack dark:text-myWhite" />
+                        <input type="text" placeholder='City' className="w-full lg:w-1/2 outline-none bg-[#F7F8FD] dark:bg-[#1E192A] text-sm py-[6px] px-[18px] rounded placeholder-myGrey dark:placeholder-myLine mb-6 lg:mb-0 text-myBlack dark:text-myWhite " />
                         <div className='flex gap-6 w-full lg:w-1/2'>
                             <Listbox value={selectedPerson} onChange={setSelectedPerson}>
                                 <Listbox.Button
 
-                                    className="flex justify-between bg-[#F7F8FD] dark:bg-[#1E192A] gap-2 items-center  relative w-full cursor-pointer rounded-lg text-myGrey dark:text-myLine  py-2 px-3 text-left focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
+                                    className="flex  justify-between bg-[#F7F8FD] dark:bg-[#1E192A] gap-2 items-center  relative w-full cursor-pointer rounded-lg text-myGrey dark:text-myLine  py-[6px] px-3 text-left focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
                                     {selectedPerson.name}
                                     <span className="material-symbols-outlined text-myGrey dark:text-myLine">
                                         expand_more
                                     </span>
                                 </Listbox.Button>
                                 <Listbox.Options
-                                    className="absolute mt-1 max-h-60 max-w-60 z-10 text-center overflow-auto rounded-md bg-white dark:bg-darkBg  py-2  text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                                    className="absolute mt-1 max-h-60 max-w-60 z-10 text-center overflow-auto rounded-md bg-white dark:bg-darkBg  py-2  text-sm shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
 
                                     {people.map((person) => (
                                         <Listbox.Option
@@ -153,9 +154,10 @@ const Belling = () => {
                                     ))}
                                 </Listbox.Options>
                             </Listbox>
-                            <input type="text" placeholder='Zip code' className="w-full outline-none bg-[#F7F8FD] dark:bg-[#1E192A] text-sm py-2 px-[18px] rounded placeholder-myGrey dark:placeholder-myLine text-myBlack dark:text-myWhite" />
+                            <input type="text" placeholder='Zip code' className="w-full outline-none bg-[#F7F8FD] dark:bg-[#1E192A] text-sm py-[6px] px-[18px] rounded placeholder-myGrey dark:placeholder-myLine text-myBlack dark:text-myWhite" />
                         </div>
                     </div>
+
                     <div className='flex justify-center mt-5 lg:mt-10'>
                         <button className='text-sm bg-myBlue dark:bg-myGreen text-white px-4 py-3 rounded'>Add new card</button>
                     </div>

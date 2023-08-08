@@ -105,7 +105,7 @@ export default function TopBar({ showNav, setShowNav }) {
         },
     ]
 
-    const menuItem = <div className='flex items-center'>
+    const menuItem = <li className='flex items-center'>
         <div>
             <SelectBar></SelectBar>
         </div>
@@ -137,9 +137,9 @@ export default function TopBar({ showNav, setShowNav }) {
                 <span className="material-symbols-outlined cursor-pointer text-myBlack dark:text-myWhite w-5 h-5">notifications</span>
             </label>
             <div tabIndex={0} className="dropdown-content z-[1] menu p-2 mt-5 shadow bg-white dark:bg-[#1E192A] rounded-box w-48 md:w-52 lg:w-60">
-                <div className='lg:flex justify-between items-center'>
-                    <h3 className='text-lg font-semibold text-myBlack dark:text-white'>Notifications</h3>
-                    <span className='text-base text-myGrey hover:text-myBlue dark:hover:text-myGreen cursor-pointer dark:text-myWhite'>View All</span>
+                <div className='flex flex-wrap justify-between items-center'>
+                    <h3 className='text-base sm:text-lg font-semibold text-myBlack dark:text-white'>Notifications</h3>
+                    <span className='text-sm sm:text-base text-myGrey hover:text-myBlue dark:hover:text-myGreen cursor-pointer dark:text-myWhite'>View All</span>
                 </div>
                 <hr className='my-3 dark:border-darkLine border-myLine' />
                 <div className=''>
@@ -148,11 +148,11 @@ export default function TopBar({ showNav, setShowNav }) {
                             key={notification.id}
                             className='flex items-center border-b-2 dark:border-darkLine pb-3 cursor-pointer'
                         >
-                            <Image className='w-10 h-10' src={notification.img} alt="app" />
+                            <Image className='w-8 h-8 sm:w-10 sm:h-10 object-cover' src={notification.img} alt="app" />
                             <div className='ml-2'>
-                                <h4 className='font-semibold text-base flex-wrap text-myBlack dark:text-white'>{notification.title}</h4 >
-                                <p className="dark:text-myWhite text-myBlack">{notification.des}</p>
-                                <span className="dark:text-myWhite text-myBlack">{notification.time}</span>
+                                <h4 className='font-semibold text-sm sm:text-base flex-wrap text-myBlack dark:text-white'>{notification.title}</h4 >
+                                <p className="dark:text-myWhite text-myBlack text-sm">{notification.des}</p>
+                                <span className="dark:text-myWhite text-myBlack text-sm">{notification.time}</span>
                             </div>
 
                         </div>))
@@ -193,7 +193,7 @@ export default function TopBar({ showNav, setShowNav }) {
         </div>
 
         <div className="dropdown dropdown-end ml-7 lg:ml-10">
-            <label tabIndex={0} className="flex items-center cursor-pointer">
+            <div tabIndex={0} className="flex items-center cursor-pointer">
                 <div>
                     <div className="w-10 rounded-full mr-3">
                         <Image src={user} alt="User" />
@@ -208,54 +208,54 @@ export default function TopBar({ showNav, setShowNav }) {
                         expand_more
                     </span>
                 </div>
-            </label>
+            </div>
 
             <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 mt-5 shadow bg-white dark:bg-[#1E192A] rounded-box w-60">
-                <span className='mb-1 text-base ml-3 font-semibold text-myBlack dark:text-white'>Welcome Wade!</span>
+                <li className='mb-1 text-base ml-3 font-semibold text-myBlack dark:text-white'>Welcome Wade!</li>
                 <li >
                     <Link className="hover:bg-myBlue dark:hover:bg-myGreen hover:text-white" href='/profile/profileOne'>
-                        <span className="material-symbols-outlined mr-1 dark:text-myWhite">account_circle</span>
-                        <span className='text-base dark:text-myWhite '>Profile</span>
+                        <span className="material-symbols-outlined mr-1 text-myBlack dark:text-myWhite">account_circle</span>
+                        <span className='text-base text-myBlack dark:text-myWhite '>Profile</span>
                     </Link>
                 </li>
                 <li>
                     <Link href='' className="hover:bg-myBlue dark:hover:bg-myGreen hover:text-white">
-                        <span className="material-symbols-outlined mr-1 dark:text-myWhite">chat</span>
-                        <span className='text-base dark:text-myWhite '>Message</span>
+                        <span className="material-symbols-outlined mr-1 text-myBlack dark:text-myWhite">chat</span>
+                        <span className='text-base text-myBlack dark:text-myWhite '>Message</span>
                     </Link>
                 </li>
                 <li>
                     <Link href='/features/tasks' className="hover:bg-myBlue dark:hover:bg-myGreen hover:text-white">
-                        <span className="material-symbols-outlined mr-1 dark:text-myWhite">task</span>
-                        <span className='text-base dark:text-myWhite '>Taskbord</span>
+                        <span className="material-symbols-outlined mr-1 text-myBlack dark:text-myWhite">task</span>
+                        <span className='text-base text-myBlack dark:text-myWhite '>Taskbord</span>
                     </Link>
                 </li>
                 <li>
                     <Link href='' className="hover:bg-myBlue dark:hover:bg-myGreen hover:text-white">
-                        <span className="material-symbols-outlined mr-1 dark:text-myWhite">support</span>
-                        <span className='text-base dark:text-myWhite '>Support</span>
+                        <span className="material-symbols-outlined mr-1 text-myBlack dark:text-myWhite">support</span>
+                        <span className='text-base text-myBlack dark:text-myWhite '>Support</span>
                     </Link>
                 </li>
                 <li>
                     <Link href='/settings/settings_one' className="hover:bg-myBlue dark:hover:bg-myGreen hover:text-white">
-                        <span className="material-symbols-outlined mr-1 dark:text-myWhite">settings</span>
-                        <span className='text-base dark:text-myWhite'>Settings</span>
+                        <span className="material-symbols-outlined mr-1 text-myBlack dark:text-myWhite">settings</span>
+                        <span className='text-base text-myBlack dark:text-myWhite'>Settings</span>
                     </Link>
                 </li>
                 <li>
                     <Link href='' className="hover:bg-myBlue dark:hover:bg-myGreen hover:text-white">
-                        <span className="material-symbols-outlined mr-1 dark:text-myWhite">logout</span>
-                        <span className='text-base dark:text-myWhite '>Logout</span>
+                        <span className="material-symbols-outlined mr-1 text-myBlack dark:text-myWhite">logout</span>
+                        <span className='text-base text-myBlack dark:text-myWhite '>Logout</span>
                     </Link>
                 </li>
             </ul>
         </div>
-    </div>
+    </li>
 
     return (
         <div className={`bg-white dark:bg-[#1E192A] left-0 py-6 z-[5] fixed w-full flex justify-between items-center transition-all duration-[400ms] ${showNav ? "lg:pl-[280px] md:pl-[280px] pl-[100%]" : ""}`}>
             <div className="flex items-center md:gap-5 lg:gap-[60px] py-2">
-                <span className=" material-symbols-outlined ml-2  md:ml-6 lg:ml-[60px] cursor-pointer dark:text-myWhite"
+                <span className=" material-symbols-outlined ml-2  md:ml-6 lg:ml-[60px] cursor-pointer text-myBlack dark:text-myWhite"
                     onClick={() => setShowNav(!showNav)}
                 >menu</span>
                 <form className='hidden md:hidden lg:flex items-center border dark:border-darkLine px-4 py-3 rounded'>

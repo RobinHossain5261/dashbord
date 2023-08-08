@@ -49,10 +49,10 @@ const settingsOne = () => {
                                                 selected ? ' text-myBlue dark:text-myGreen' : 'text-myBlack dark:text-myWhite'
                                             }
                                         >
-                                            <div className='flex items-center gap-2'>
+                                            <span className='flex items-center gap-2'>
                                                 <span className="material-symbols-outlined">edit</span>
                                                 <span className=' text-base'>Account</span>
-                                            </div>
+                                            </span>
                                         </button>
                                     )}
 
@@ -65,10 +65,10 @@ const settingsOne = () => {
                                                 selected ? ' text-myBlue dark:text-myGreen' : 'text-myBlack dark:text-myWhite'
                                             }
                                         >
-                                            <div className='flex items-center gap-2'>
+                                            <span className='flex items-center gap-2'>
                                                 <span className="material-symbols-outlined">group</span>
                                                 <span className=' text-base'>Team</span>
-                                            </div>
+                                            </span>
                                         </button>
                                     )}
 
@@ -81,10 +81,10 @@ const settingsOne = () => {
                                                 selected ? ' text-myBlue dark:text-myGreen' : 'text-myBlack dark:text-myWhite'
                                             }
                                         >
-                                            <div className='flex items-center gap-2'>
+                                            <span className='flex items-center gap-2'>
                                                 <span className="material-symbols-outlined">add_card</span>
                                                 <span className=' text-base'>Billing</span>
-                                            </div>
+                                            </span>
                                         </button>
                                     )}
 
@@ -98,10 +98,10 @@ const settingsOne = () => {
                                                 selected ? ' text-myBlue dark:text-myGreen' : 'text-myBlack dark:text-myWhite'
                                             }
                                         >
-                                            <div className='flex items-center gap-2'>
+                                            <span className='flex items-center gap-2'>
                                                 <span className="material-symbols-outlined">notifications</span>
                                                 <span className=' text-base'>Notification</span>
-                                            </div>
+                                            </span>
                                         </button>
                                     )}
 
@@ -114,10 +114,10 @@ const settingsOne = () => {
                                                 selected ? ' text-myBlue dark:text-myGreen' : 'text-myBlack dark:text-myWhite'
                                             }
                                         >
-                                            <div className='flex items-center gap-2'>
+                                            <span className='flex items-center gap-2'>
                                                 <span className="material-symbols-outlined">settings</span>
                                                 <span className=' text-base'>API</span>
-                                            </div>
+                                            </span>
                                         </button>
                                     )}
 

@@ -4,6 +4,7 @@ import { useState, Fragment } from 'react'
 import { Listbox } from '@headlessui/react';
 import Image from 'next/image';
 import { allContacts, byuers } from '../../../../../public/data/featuresData';
+import Link from 'next/link';
 
 const people = [
     { id: 1, name: '14 Aug - 25 Aug', unavailable: false },
@@ -224,10 +225,10 @@ const contacts = () => {
                                     </div>
                                     <hr className='border-myLine dark:border-darkLine my-5 sm:my-10' />
                                     <div className='flex items-center justify-between'>
-                                        <div className='flex items-center gap-2 text-[#1E192A] hover:text-myBlue dark:hover:text-myGreen dark:text-myLine'>
+                                        <Link href="#" className='flex items-center gap-2 text-[#1E192A] hover:text-myBlue dark:hover:text-myGreen dark:text-myLine'>
                                             <span className='text-sm '>View details</span>
                                             <span className="material-symbols-outlined  w-5 h-5">arrow_forward</span>
-                                        </div>
+                                        </Link>
                                         <div className='text-myBlack dark:text-myWhite'>
                                             <span className="material-symbols-outlined cursor-pointer mr-1 hover:text-myBlue dark:hover:text-myGreen">auto_fix</span>
                                             <span className="material-symbols-outlined cursor-pointer hover:text-red-500">delete</span>

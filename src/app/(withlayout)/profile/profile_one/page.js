@@ -7,6 +7,7 @@ import google from '@/../public/images/google.png';
 import telegram from '@/../public/images/telegram.png';
 import Image from 'next/image';
 import { informations } from '../../../../../public/data/profileData';
+import Link from 'next/link';
 
 const profileOne = () => {
 
@@ -118,17 +119,17 @@ const profileOne = () => {
                         <hr className='border-myLine dark:border-darkLine my-4 lg:my-6' />
                         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-3 lg:gap-5'>
 
-                            <span className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-2 md:px-4 lg:px-4 border border-myLine rounded'>UI/UX Degsign</span>
+                            <Link href='' className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-2 md:px-4 lg:px-4 border border-myLine rounded'>UI/UX Degsign</Link>
 
-                            <span className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-3 md:px-4 lg:px-4 border border-myLine rounded'>Web Degsign</span>
+                            <Link href='' className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-3 md:px-4 lg:px-4 border border-myLine rounded'>Web Degsign</Link>
 
-                            <span className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-2 md:px-4 lg:px-4 border border-myLine rounded'>Development</span>
+                            <Link href='' className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-2 md:px-4 lg:px-4 border border-myLine rounded'>Development</Link>
 
-                            <span className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300 text-center py-3 px-2 md:px-4 lg:px-4 border border-myLine rounded'>Development</span>
+                            <Link href='' className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300 text-center py-3 px-2 md:px-4 lg:px-4 border border-myLine rounded'>Development</Link>
 
-                            <span className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-2 md:px-4 lg:px-4 border border-myLine rounded'>Product Design</span>
+                            <Link href='' className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-2 md:px-4 lg:px-4 border border-myLine rounded'>Product Design</Link>
 
-                            <span className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-2 md:px-4 lg:px-4 border border-myLine rounded'>Branding Design</span>
+                            <Link href='' className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-2 md:px-4 lg:px-4 border border-myLine rounded'>Branding Design</Link>
                         </div>
                     </div>
                 </div>
@@ -139,7 +140,7 @@ const profileOne = () => {
                 <h4 className='text-2xl text-myBlack dark:text-white font-semibold mb-6'>Experience</h4>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 '>
                     <div className='p-3 lg:p-5 rounded bg-white dark:bg-darkCard cardShadow'>
-                        <div className='flex items-center justify-between flex-wrap'>
+                        <div className='flex items-center justify-between flex-wrap gap-2'>
                             <div className='flex items-center gap-3'>
                                 <Image className='w-10 h-10 rounded-full' src={google} alt="google" />
                                 <div>
@@ -152,7 +153,7 @@ const profileOne = () => {
                         <p className='text-lg text-myGrey mt-4 lg:mt-8 dark:text-myLine text-justify'>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
                     </div>
                     <div className='p-3 lg:p-5 rounded bg-white dark:bg-darkCard cardShadow'>
-                        <div className='flex items-center justify-between flex-wrap'>
+                        <div className='flex items-center justify-between flex-wrap gap-2'>
                             <div className='flex items-center gap-3'>
                                 <Image className='w-10 h-10 rounded-full' src={facebook} alt="facebook" />
                                 <div>
@@ -165,7 +166,7 @@ const profileOne = () => {
                         <p className='text-lg text-myGrey mt-4 lg:mt-8 dark:text-myLine text-justify'>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
                     </div>
                     <div className='p-3 lg:p-5 rounded bg-white dark:bg-darkCard cardShadow'>
-                        <div className='flex items-center justify-between flex-wrap'>
+                        <div className='flex items-center justify-between flex-wrap gap-2'>
                             <div className='flex items-center gap-3'>
                                 <Image className='w-10 h-10 rounded-full' src={telegram} alt="telegram" />
                                 <div>

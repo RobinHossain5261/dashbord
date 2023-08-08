@@ -14,7 +14,7 @@ const people = [
 
 const RecentContacts = () => {
     const [selectedPerson, setSelectedPerson] = useState(people[0]);
-    const { resolvedTheme, setTheme } = useTheme();
+    const { resolvedTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
@@ -25,62 +25,6 @@ const RecentContacts = () => {
         return null
     }
 
-
-    // const buyers = [
-    //     {
-    //         id: 1,
-    //         name: 'Floyd Miles',
-    //         status: 'Successful',
-    //         email: 'info@example.com',
-    //         time: '1 Year ago',
-    //         image: buyer1,
-    //         color: '#4538D3',
-    //         color1: '#00E177'
-    //     },
-    //     {
-    //         id: 2,
-    //         name: 'Devon Lane',
-    //         status: 'Pending',
-    //         email: 'info@example.com',
-    //         time: '6 month ago',
-    //         image: buyer2,
-    //         color: '#725002',
-    //         color1: '#F8C140'
-    //     },
-    //     {
-    //         id: 3,
-    //         name: 'Jacob Jones',
-    //         status: 'Override',
-    //         email: 'info@example.com',
-    //         time: '1 month ago',
-    //         image: buyer3,
-    //         color: '#A82500',
-    //         color1: '#FFA5A5'
-    //     },
-    //     {
-    //         id: 4,
-    //         name: 'Cody Fisher',
-    //         status: 'Successful',
-    //         email: 'info@example.com',
-    //         time: '3 Year ago',
-    //         image: buyer4,
-    //         color: '#4538D3',
-    //         color1: '#00E177'
-
-    //     },
-    //     {
-    //         id: 5,
-    //         name: 'Jane Copper',
-    //         status: 'Successful',
-    //         email: 'info@example.com',
-    //         time: '1 Year ago',
-    //         image: buyer5,
-    //         color: '#4538D3',
-    //         color1: '#00E177'
-    //     },
-
-    // ]
-
     return (
         <div className="overflow-x-auto p-2 lg:py-8 lg:px-5  bg-white dark:bg-darkCard rounded whitespace-nowrap">
             <div className="flex justify-between items-center">
@@ -88,7 +32,6 @@ const RecentContacts = () => {
                 <div>
                     <Listbox value={selectedPerson} onChange={setSelectedPerson}>
                         <Listbox.Button
-
                             className="lg:flex hidden gap-2 items-center  relative w-full cursor-pointer rounded-lg text-[#252525] dark:text-white border-myLine dark:border-darkLine py-2 px-3 text-left border focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
                             {selectedPerson.name}
                             <span className="material-symbols-outlined">

@@ -6,6 +6,7 @@ import google from '@/../public/images/google.png';
 import telegram from '@/../public/images/telegram.png';
 import Image from 'next/image';
 import { informations } from '../../../../../public/data/profileData';
+import Link from 'next/link';
 
 const profileThree = () => {
 
@@ -100,18 +101,18 @@ const profileThree = () => {
                         <h4 className='text-myBlack text-2xl font-semibold dark:text-white'>Skills</h4>
                         <hr className='border-myLine dark:border-darkLine my-5 lg:my-10' />
                         <div className='flex flex-wrap gap-3 md:gap-5 lg:gap-5'>
-                            <span className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-4 border border-myLine rounded'>UI/UX Degsign</span>
-                            <span className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-4 border border-myLine rounded'>Web Degsign</span>
-                            <span className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-4  border border-myLine rounded'>Development</span>
-                            <span className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300 text-center py-3 px-4 border border-myLine rounded'>Development</span>
-                            <span className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-4 border border-myLine rounded'>Product Design</span>
-                            <span className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-4 border border-myLine rounded'>Branding Design</span>
+                            <Link href='' className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-4 border border-myLine rounded'>UI/UX Degsign</Link>
+                            <Link href='' className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-4 border border-myLine rounded'>Web Degsign</Link>
+                            <Link href='' className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-4  border border-myLine rounded'>Development</Link>
+                            <Link href='' className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300 text-center py-3 px-4 border border-myLine rounded'>Development</Link>
+                            <Link href='' className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-4 border border-myLine rounded'>Product Design</Link>
+                            <Link href='' className='text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-4 border border-myLine rounded'>Branding Design</Link>
                         </div>
                     </div>
                     {/* Experience part  */}
                     <div className='p-3 lg:py-7 lg:px-8 rounded bg-white dark:bg-darkCard cardShadow'>
                         <h4 className='text-2xl text-myBlack font-semibold dark:text-white mb-5 lg:mb-10'>Experience</h4>
-                        <div className='flex items-center justify-between flex-wrap'>
+                        <div className='flex items-center justify-between flex-wrap gap-2'>
                             <div className='flex items-center gap-3'>
                                 <Image className='w-10 h-10 rounded-full' src={google} alt="google" />
                                 <div>
@@ -125,7 +126,7 @@ const profileThree = () => {
                         <p className='text-lg text-myGrey mt-4 lg:mt-8 dark:text-myLine text-justify'>Lorem ipsum dolor sit amet consectetur. Et eu facilisi facilisi quis lobortis tincidunt in neque eget. Sed malesuada orci risus risus.</p>
                         <hr className='my-6 border-myLine dark:border-darkLine' />
 
-                        <div className='flex items-center justify-between flex-wrap'>
+                        <div className='flex items-center justify-between flex-wrap gap-2'>
                             <div className='flex items-center gap-3'>
                                 <Image className='w-10 h-10 rounded-full' src={facebook} alt="google" />
                                 <div>
@@ -139,7 +140,7 @@ const profileThree = () => {
                         <p className='text-lg text-myGrey mt-4 lg:mt-8 dark:text-myLine text-justify'>Lorem ipsum dolor sit amet consectetur. Et eu facilisi facilisi quis lobortis tincidunt in neque eget. Sed malesuada orci risus risus.</p>
                         <hr className='my-6 border-myLine dark:border-darkLine' />
 
-                        <div className='flex items-center justify-between flex-wrap'>
+                        <div className='flex items-center justify-between flex-wrap gap-2'>
                             <div className='flex items-center gap-3'>
                                 <Image className='w-10 h-10 rounded-full' src={telegram} alt="google" />
                                 <div>
