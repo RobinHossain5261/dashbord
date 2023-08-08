@@ -1,14 +1,11 @@
-"use client"
-import { Fragment, useEffect, useRef, useState } from 'react'
-import { Transition } from '@headlessui/react'
-import TopBar from '@/components/TopBar/TopBar';
-import Footer from '@/components/Footer/Footer';
-import SideMenu from '@/components/SideMenu/SideMenu';
-
-
+"use client";
+import { Fragment, useEffect, useRef, useState } from "react";
+import { Transition } from "@headlessui/react";
+import TopBar from "@/components/TopBar/TopBar";
+import Footer from "@/components/Footer/Footer";
+import SideMenu from "@/components/SideMenu/SideMenu";
 
 export default function RootLayout({ children }) {
-
   const [showNav, setShowNav] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -23,13 +20,12 @@ export default function RootLayout({ children }) {
   useEffect(() => {
     if (typeof window != undefined) {
       addEventListener("resize", handleResize);
-
     }
     if (innerWidth > 768) {
-      setShowNav(true)
+      setShowNav(true);
     }
     if (innerWidth < 768) {
-      setShowNav(false)
+      setShowNav(false);
     }
     return () => {
       removeEventListener("resize", handleResize);
@@ -52,14 +48,13 @@ export default function RootLayout({ children }) {
         <SideMenu showNav={showNav} setShowNav={setShowNav} />
       </Transition>
       <div
-        className={`pt-16  transition-all duration-[400ms] ${showNav && !isMobile ? "lg:pl-[280px] md:pl-[280px] pl-[100%]" : ""
-          }`}
+        className={`pt-16  transition-all duration-[400ms] ${
+          showNav && !isMobile ? "lg:pl-[280px] md:pl-[280px] pl-[100%]" : ""
+        }`}
       >
-        <div className='lg:mt-10'>{children}</div>
+        <div className="lg:mt-10">{children}</div>
         <Footer />
       </div>
-
     </>
-
-  )
+  );
 }

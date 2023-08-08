@@ -1,17 +1,13 @@
+import "./globals.css";
+import { Inter } from "next/font/google";
+import "material-symbols";
+import Provider from "@/components/DarkMode/Provider/Provider";
+import { Suspense } from "react";
+import Loading from "./loading";
 
-import './globals.css'
-import { Inter } from 'next/font/google';
-import 'material-symbols';
-import Provider from '@/components/DarkMode/Provider/Provider';
-import { Suspense } from 'react';
-import Loading from './loading';
-
-
-const inter = Inter({ subsets: ['latin'] })
-
+const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {
-
   return (
     <html lang="en">
       <head>
@@ -25,5 +21,5 @@ export default function RootLayout({ children }) {
         </Provider>
       </body>
     </html>
-  )
+  );
 }
