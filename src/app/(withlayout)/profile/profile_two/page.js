@@ -157,42 +157,42 @@ const profileTwo = () => {
             <hr className="border-myLine dark:border-darkLine my-5 lg:my-10" />
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-3 lg:gap-5 ">
               <Link
-                href=""
+                href="javascript:void(0)"
                 className="text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-2 md:px-4 lg:px-4 border border-myLine rounded"
               >
                 UI/UX Degsign
               </Link>
 
               <Link
-                href=""
+                href="javascript:void(0)"
                 className="text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-3 md:px-4 lg:px-4 border border-myLine rounded"
               >
                 Web Degsign
               </Link>
 
               <Link
-                href=""
+                href="javascript:void(0)"
                 className="text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-2 md:px-4 lg:px-4 border border-myLine rounded"
               >
                 Development
               </Link>
 
               <Link
-                href=""
+                href="javascript:void(0)"
                 className="text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300 text-center py-3 px-2 md:px-4 lg:px-4 border border-myLine rounded"
               >
                 Development
               </Link>
 
               <Link
-                href=""
+                href="javascript:void(0)"
                 className="text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-2 md:px-4 lg:px-4 border border-myLine rounded"
               >
                 Product Design
               </Link>
 
               <Link
-                href=""
+                href="javascript:void(0)"
                 className="text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-2 md:px-4 lg:px-4 border border-myLine rounded"
               >
                 Branding Design

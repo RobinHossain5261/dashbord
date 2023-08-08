@@ -262,80 +262,68 @@ export default function TopBar({ showNav, setShowNav }) {
           </li>
           <li>
             <Link
-              className="hover:bg-myBlue dark:hover:bg-myGreen hover:text-white"
+              className="hover:bg-myBlue dark:hover:bg-myGreen text-myBlack hover:text-white"
               href="/profile/profileOne"
             >
-              <span className="material-symbols-outlined mr-1 text-myBlack dark:text-myWhite">
+              <span className="material-symbols-outlined mr-1 dark:text-myWhite">
                 account_circle
               </span>
-              <span className="text-base text-myBlack dark:text-myWhite ">
-                Profile
-              </span>
+              <span className="text-base dark:text-myWhite ">Profile</span>
             </Link>
           </li>
           <li>
             <Link
-              href=""
-              className="hover:bg-myBlue dark:hover:bg-myGreen hover:text-white"
+              href="javascript:void(0)"
+              className="hover:bg-myBlue dark:hover:bg-myGreen text-myBlack hover:text-white"
             >
-              <span className="material-symbols-outlined mr-1 text-myBlack dark:text-myWhite">
+              <span className="material-symbols-outlined mr-1 dark:text-myWhite">
                 chat
               </span>
-              <span className="text-base text-myBlack dark:text-myWhite ">
-                Message
-              </span>
+              <span className="text-base dark:text-myWhite ">Message</span>
             </Link>
           </li>
           <li>
             <Link
               href="/features/tasks"
-              className="hover:bg-myBlue dark:hover:bg-myGreen hover:text-white"
+              className="hover:bg-myBlue dark:hover:bg-myGreen text-myBlack hover:text-white"
             >
-              <span className="material-symbols-outlined mr-1 text-myBlack dark:text-myWhite">
+              <span className="material-symbols-outlined mr-1 dark:text-myWhite">
                 task
               </span>
-              <span className="text-base text-myBlack dark:text-myWhite ">
-                Taskbord
-              </span>
+              <span className="text-base dark:text-myWhite ">Taskbord</span>
             </Link>
           </li>
           <li>
             <Link
-              href=""
-              className="hover:bg-myBlue dark:hover:bg-myGreen hover:text-white"
+              href="javascript:void(0)"
+              className="hover:bg-myBlue dark:hover:bg-myGreen text-myBlack hover:text-white"
             >
-              <span className="material-symbols-outlined mr-1 text-myBlack dark:text-myWhite">
+              <span className="material-symbols-outlined mr-1 dark:text-myWhite">
                 support
               </span>
-              <span className="text-base text-myBlack dark:text-myWhite ">
-                Support
-              </span>
+              <span className="text-base dark:text-myWhite ">Support</span>
             </Link>
           </li>
           <li>
             <Link
               href="/settings/settings_one"
-              className="hover:bg-myBlue dark:hover:bg-myGreen hover:text-white"
+              className="hover:bg-myBlue dark:hover:bg-myGreen text-myBlack hover:text-white"
             >
-              <span className="material-symbols-outlined mr-1 text-myBlack dark:text-myWhite">
+              <span className="material-symbols-outlined mr-1 dark:text-myWhite">
                 settings
               </span>
-              <span className="text-base text-myBlack dark:text-myWhite">
-                Settings
-              </span>
+              <span className="text-base dark:text-myWhite">Settings</span>
             </Link>
           </li>
           <li>
             <Link
-              href=""
-              className="hover:bg-myBlue dark:hover:bg-myGreen hover:text-white"
+              href="javascript:void(0)"
+              className="hover:bg-myBlue dark:hover:bg-myGreen text-myBlack hover:text-white"
             >
-              <span className="material-symbols-outlined mr-1 text-myBlack dark:text-myWhite">
+              <span className="material-symbols-outlined mr-1 dark:text-myWhite">
                 logout
               </span>
-              <span className="text-base text-myBlack dark:text-myWhite ">
-                Logout
-              </span>
+              <span className="text-base dark:text-myWhite ">Logout</span>
             </Link>
           </li>
         </ul>

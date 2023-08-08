@@ -410,9 +410,7 @@ export const tasks = [
     name: "Markating",
     des: "Lorem ipsum dolor sit amet consectetur. Arcu consectetur pellentesque vel.",
     complete: "9 Task Done",
-    icon: (
-      <span className="material-symbols-outlined text-[36px]">campaign</span>
-    ),
+    icon: <span className="material-symbols-outlined">campaign</span>,
     more: <span className="material-symbols-outlined">more_vert</span>,
     date: "12/05/2023",
     done: "90%",

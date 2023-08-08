@@ -97,7 +97,7 @@ const Features = () => {
         >
           <figure className="px-5 pt-5">
             <Image
-              src={resolvedTheme === "dark" ? projects2 : projects}
+              src={resolvedTheme === "dark" ? tasks2 : tasks}
               alt="page"
               className="rounded group-hover:scale-125 transition-all duration-500"
             />
@@ -115,7 +115,7 @@ const Features = () => {
         >
           <figure className="px-5 pt-5">
             <Image
-              src={resolvedTheme === "dark" ? tasks2 : tasks}
+              src={resolvedTheme === "dark" ? board2 : board}
               alt="page"
               className="rounded group-hover:scale-125 transition-all duration-500"
             />
@@ -133,7 +133,7 @@ const Features = () => {
         >
           <figure className="px-5 pt-5">
             <Image
-              src={resolvedTheme === "dark" ? board2 : board}
+              src={resolvedTheme === "dark" ? table2 : table}
               alt="page"
               className="rounded group-hover:scale-125 transition-all duration-500"
             />
