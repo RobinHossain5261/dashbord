@@ -168,7 +168,7 @@ const profileOne = () => {
           </p>
         </div>
         {/* Profiles details and skills */}
-        <div className="">
+        <div>
           <div className="bg-white dark:bg-darkCard p-2 lg:py-7 lg:px-5 w-full rounded cardShadow mb-6">
             <h3 className="text-[#1E192A] dark:text-white text-[32px] mt-3 lg:mt-[30px] font-semibold ">
               Profile details
@@ -212,42 +212,42 @@ const profileOne = () => {
             <hr className="border-myLine dark:border-darkLine my-4 lg:my-6" />
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-3 lg:gap-5">
               <Link
-                href="javascript:void(0)"
+                href="#"
                 className="text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-2 md:px-4 lg:px-4 border border-myLine rounded"
               >
                 UI/UX Degsign
               </Link>
 
               <Link
-                href="javascript:void(0)"
+                href="#"
                 className="text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-3 md:px-4 lg:px-4 border border-myLine rounded"
               >
                 Web Degsign
               </Link>
 
               <Link
-                href="javascript:void(0)"
+                href="#"
                 className="text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-2 md:px-4 lg:px-4 border border-myLine rounded"
               >
                 Development
               </Link>
 
               <Link
-                href="javascript:void(0)"
+                href="#"
                 className="text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300 text-center py-3 px-2 md:px-4 lg:px-4 border border-myLine rounded"
               >
                 Development
               </Link>
 
               <Link
-                href="javascript:void(0)"
+                href="#"
                 className="text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-2 md:px-4 lg:px-4 border border-myLine rounded"
               >
                 Product Design
               </Link>
 
               <Link
-                href="javascript:void(0)"
+                href="#"
                 className="text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-2 md:px-4 lg:px-4 border border-myLine rounded"
               >
                 Branding Design

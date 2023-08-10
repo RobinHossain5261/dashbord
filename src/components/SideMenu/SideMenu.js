@@ -11,7 +11,7 @@ const SideMenu = forwardRef(({ showNav, setShowNav }, ref) => {
   const { resolvedTheme } = useTheme();
   const currentRoute = usePathname();
 
-  const [activeMenu, setActiveMenu] = useState(1);
+  const [activeMenu, setActiveMenu] = useState(0);
 
   const [height] = useState(0);
   const [height1] = useState(0);
@@ -72,7 +72,7 @@ const SideMenu = forwardRef(({ showNav, setShowNav }, ref) => {
           <AnimateHeight
             id="example-panel"
             duration={500}
-            height={activeMenu == 1 ? "auto" : 0} // see props documentation below
+            height={activeMenu == 1 ? "auto" : 0}
           >
             <ul>
               <li
@@ -221,7 +221,7 @@ const SideMenu = forwardRef(({ showNav, setShowNav }, ref) => {
           <AnimateHeight
             id="example-panel"
             duration={500}
-            height={activeMenu == 3 ? "auto" : 0} // see props documentation below
+            height={activeMenu == 3 ? "auto" : 0}
           >
             <ul>
               <li
@@ -285,7 +285,7 @@ const SideMenu = forwardRef(({ showNav, setShowNav }, ref) => {
           <AnimateHeight
             id="example-panel"
             duration={500}
-            height={activeMenu == 4 ? "auto" : 0} // see props documentation below
+            height={activeMenu == 4 ? "auto" : 0}
           >
             <ul>
               <li
@@ -359,7 +359,7 @@ const SideMenu = forwardRef(({ showNav, setShowNav }, ref) => {
           <AnimateHeight
             id="example-panel"
             duration={500}
-            height={activeMenu == 5 ? "auto" : 0} // see props documentation below
+            height={activeMenu == 5 ? "auto" : 0}
           >
             <ul className="dropdown-menu">
               <li
@@ -416,7 +416,7 @@ const SideMenu = forwardRef(({ showNav, setShowNav }, ref) => {
           <AnimateHeight
             id="example-panel"
             duration={500}
-            height={activeMenu == 6 ? "auto" : 0} // see props documentation below
+            height={activeMenu == 6 ? "auto" : 0}
           >
             <ul className="dropdown-menu">
               <li
@@ -480,7 +480,7 @@ const SideMenu = forwardRef(({ showNav, setShowNav }, ref) => {
           <AnimateHeight
             id="example-panel"
             duration={500}
-            height={activeMenu == 7 ? "auto" : 0} // see props documentation below
+            height={activeMenu == 7 ? "auto" : 0}
           >
             <ul>
               <li

@@ -263,7 +263,7 @@ export default function TopBar({ showNav, setShowNav }) {
           <li>
             <Link
               className="hover:bg-myBlue dark:hover:bg-myGreen text-myBlack hover:text-white"
-              href="/profile/profileOne"
+              href="/profile/profile_one"
             >
               <span className="material-symbols-outlined mr-1 dark:text-myWhite">
                 account_circle
@@ -273,7 +273,7 @@ export default function TopBar({ showNav, setShowNav }) {
           </li>
           <li>
             <Link
-              href="javascript:void(0)"
+              href="#"
               className="hover:bg-myBlue dark:hover:bg-myGreen text-myBlack hover:text-white"
             >
               <span className="material-symbols-outlined mr-1 dark:text-myWhite">
@@ -295,7 +295,7 @@ export default function TopBar({ showNav, setShowNav }) {
           </li>
           <li>
             <Link
-              href="javascript:void(0)"
+              href="#"
               className="hover:bg-myBlue dark:hover:bg-myGreen text-myBlack hover:text-white"
             >
               <span className="material-symbols-outlined mr-1 dark:text-myWhite">
@@ -317,7 +317,7 @@ export default function TopBar({ showNav, setShowNav }) {
           </li>
           <li>
             <Link
-              href="javascript:void(0)"
+              href="#"
               className="hover:bg-myBlue dark:hover:bg-myGreen text-myBlack hover:text-white"
             >
               <span className="material-symbols-outlined mr-1 dark:text-myWhite">

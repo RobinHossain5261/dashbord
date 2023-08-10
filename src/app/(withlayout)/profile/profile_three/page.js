@@ -169,37 +169,37 @@ const profileThree = () => {
             <hr className="border-myLine dark:border-darkLine my-5 lg:my-10" />
             <div className="flex flex-wrap gap-3 md:gap-5 lg:gap-5">
               <Link
-                href="javascript:void(0)"
+                href="#"
                 className="text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-4 border border-myLine rounded"
               >
                 UI/UX Degsign
               </Link>
               <Link
-                href="javascript:void(0)"
+                href="#"
                 className="text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-4 border border-myLine rounded"
               >
                 Web Degsign
               </Link>
               <Link
-                href="javascript:void(0)"
+                href="#"
                 className="text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-4  border border-myLine rounded"
               >
                 Development
               </Link>
               <Link
-                href="javascript:void(0)"
+                href="#"
                 className="text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300 text-center py-3 px-4 border border-myLine rounded"
               >
                 Development
               </Link>
               <Link
-                href="javascript:void(0)"
+                href="#"
                 className="text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-4 border border-myLine rounded"
               >
                 Product Design
               </Link>
               <Link
-                href="javascript:void(0)"
+                href="#"
                 className="text-sm text-[#252525] dark:text-white dark:border-darkLine hover:bg-myBlue hover:text-white ease-in dark:hover:bg-myGreen duration-300  text-center py-3 px-4 border border-myLine rounded"
               >
                 Branding Design

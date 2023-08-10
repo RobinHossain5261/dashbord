@@ -5,17 +5,11 @@ const Footer = () => {
     <footer className="grid grid-cols-1 lg:grid-cols-2 justify-between items-center px-2 lg:px-6 pb-6 text-center bg-[#F7F9FC] dark:bg-darkBg">
       <p className="lg:text-start text-sm md:text-lg lg:text-lg text-myBlack dark:text-white order-last lg:order-first ">
         Copyright ©{" "}
-        <Link
-          href="javascript:void(0)"
-          className="text-myBlue dark:text-myGreen"
-        >
+        <Link href="#" className="text-myBlue dark:text-myGreen">
           DashPro
         </Link>{" "}
         | Designed by{" "}
-        <Link
-          href="javascript:void(0)"
-          className="text-myBlue dark:text-myGreen"
-        >
+        <Link href="#" className="text-myBlue dark:text-myGreen">
           Softivus
         </Link>
       </p>
@@ -23,7 +17,7 @@ const Footer = () => {
         <li>
           <Link
             className="text-sm md:text-lg lg:text-lg text-myBlack dark:text-white"
-            href="javascript:void(0)"
+            href="#"
           >
             Support
           </Link>
@@ -31,7 +25,7 @@ const Footer = () => {
         <li>
           <Link
             className="text-sm md:text-lg lg:text-lg text-myBlack dark:text-white"
-            href="javascript:void(0)"
+            href="#"
           >
             Help Center
           </Link>
@@ -39,7 +33,7 @@ const Footer = () => {
         <li>
           <Link
             className="text-sm md:text-lg lg:text-lg text-myBlack dark:text-white"
-            href="javascript:void(0)"
+            href="#"
           >
             Privacy
           </Link>
@@ -47,7 +41,7 @@ const Footer = () => {
         <li>
           <Link
             className="text-sm md:text-lg lg:text-lg text-myBlack dark:text-white"
-            href="javascript:void(0)"
+            href="#"
           >
             Terms of Service
           </Link>
