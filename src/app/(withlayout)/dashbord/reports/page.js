@@ -118,7 +118,7 @@ const Reports = () => {
         </div>
         <hr className="my-5 lg:my-10 dark:border-darkLine" />
         <div className="h-[250px] md:h-[300px] lg:h-[400px] w-full">
-          <LineChart></LineChart>
+          <LineChart/>
         </div>
       </section>
 

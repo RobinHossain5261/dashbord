@@ -38,7 +38,7 @@ const LineChart = () => {
         label: "My Dataset",
         data: [100, 200, 180, 270, 220, 256, 300, 280, 350, 330, 370, 430],
         fill: true,
-        backgroundColor: resolvedTheme === "dark" ? bgColor : bgColor1,
+        backgroundColor: resolvedTheme === "dark" ? bgColor1 : bgColor,
         borderColor: resolvedTheme === "dark" ? "#64C4F7" : "#4538D3",
         borderWidth: 2,
         pointRadius: 7,
