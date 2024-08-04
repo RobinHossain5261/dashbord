@@ -140,7 +140,7 @@ const Reports = () => {
             </div>
             <hr className="mt-4 border-line dark:border-darkLine" />
           </div>
-          <PageViews></PageViews>
+          <PageViews />
         </div>
 
         <div className="bg-white dark:bg-darkCard dark:text-white rounded boxShadow">
@@ -157,7 +157,7 @@ const Reports = () => {
             </div>
             <hr className="mt-4 border-line  dark:border-darkLine" />
           </div>
-          <Users></Users>
+          <Users />
         </div>
 
         <div className="bg-white dark:bg-darkCard dark:text-white rounded boxShadow">
@@ -176,13 +176,13 @@ const Reports = () => {
             </div>
             <hr className="mt-4 dark:border-darkLine border-myLine" />
           </div>
-          <SignUps></SignUps>
+          <SignUps />
         </div>
       </section>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 pb-6">
-        <DoughnutChart></DoughnutChart>
-        <RecentContacts></RecentContacts>
+        <DoughnutChart />
+        <RecentContacts />
       </div>
       <hr className="pb-6 dark:border-darkLine border-myLine" />
     </div>

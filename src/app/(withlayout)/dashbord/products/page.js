@@ -55,7 +55,7 @@ const products = () => {
             </div>
           </div>
           <hr className="my-5 lg:my-10 border-myLine dark:border-darkLine" />
-          <TotalSeles></TotalSeles>
+          <TotalSeles/>
         </div>
         {/* Recent order */}
         <div className="bg-white dark:bg-darkCard  rounded p-2 lg:p-10 ">
